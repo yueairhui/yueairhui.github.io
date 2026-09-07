@@ -472,102 +472,150 @@ lb.addEventListener('touchend',function(e){
 },{passive:true});
 </script>
 <style>
-/* ===== 自动滚动 ===== */
-#autoPlay{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:70;display:flex;align-items:center;gap:6px;border:1px solid rgba(166,61,47,.28);background:rgba(255,255,255,.93);color:#A63D2F;font:500 12px/1 "PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:.5px;padding:8px 16px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.10);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);cursor:pointer;transition:opacity .3s;}
-#autoPlay .ap-i{font-size:11px;}
-#autoPlay.ap-off{color:#8a6a5f;border-color:rgba(138,106,95,.35);background:rgba(255,255,255,.9);}
+/* ===== 自动滚动 v2: rAF 匀速缓动, 无常驻提示 ===== */
+#apResume{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:70;width:46px;height:46px;border-radius:50%;border:1px solid rgba(166,61,47,.22);background:rgba(255,255,255,.88);color:#A63D2F;font-size:15px;line-height:1;padding:0 0 0 3px;box-shadow:0 4px 16px rgba(0,0,0,.12);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);cursor:pointer;display:none;align-items:center;justify-content:center;transition:opacity .8s ease .4s,transform .3s;}
+#apResume.show{display:flex;}
+#apResume.dim{opacity:.25;}
 </style>
 <script>
-// ===== 自动滚动(逐屏播放, 可暂停) =====
+// ===== 自动滚动 v2: rAF 匀速+正弦缓动滚屏, 不依赖 scrollTo smooth(旧版在 iOS/微信内会瞬移) =====
 (function(){
-  if(!('scrollTo' in window))return;
-  var STOP_DELAY=3800, LAST_DELAY=6500, BACK_DELAY=2000;
-  var playing=true, timer=null, prog=false, pill=null, lastMove=0;
-  var stopsArr=[];
+  if(!('requestAnimationFrame' in window))return;
+  if('scrollRestoration' in history){history.scrollRestoration='manual';}
+  var el=document.scrollingElement||document.documentElement;
+  var playing=false,raf=null,timer=null,moving=false,stops=[],lastWrite=0,btn=null,dimTimer=null;
+  var RAMP=0.5;                 // 加减速时长(秒)
+  function vh(){return window.innerHeight||document.documentElement.clientHeight||750;}
+  function V(){var s=vh()*0.30;return Math.max(170,Math.min(270,Math.round(s)));}   // 巡航 px/s
+  function VB(){return Math.max(700,vh()*1.4);}                                    // 回顶 px/s
+  function topY(){return el.scrollTop||window.pageYOffset||0;}
+  function maxY(){return Math.max(0,(document.documentElement.scrollHeight||document.body.scrollHeight)-vh());}
+  function bodyLocked(){return document.body.style.overflow==='hidden';}
+  function cancelAnim(){clearTimeout(timer);timer=null;if(raf){cancelAnimationFrame(raf);raf=null;}moving=false;}
   function measure(){
-    var out=[0], i, el, gl;
-    var ids=['invite','info','gallery'];
-    for(i=0;i<ids.length;i++){el=document.getElementById(ids[i]);if(el)out.push(el.offsetTop-8);}
-    gl=document.querySelectorAll('#gallery .group-label');
-    for(i=0;i<gl.length;i++)out.push(gl[i].offsetTop-60);
-    el=document.querySelector('.finale');if(el)out.push(el.offsetTop-12);
-    out.push(Math.max(0,(document.documentElement.scrollHeight||document.body.scrollHeight)-window.innerHeight));
-    out.sort(function(a,b){return a-b;});
-    var r=[];for(i=0;i<out.length;i++){if(r.indexOf(out[i])<0&&out[i]>=0)r.push(out[i]);}
-    stopsArr=r;
+    var out=[];
+    function add(node,pad,dw){if(!node)return;var y=node.offsetTop-pad;if(y>=0)out.push([y,dw]);}
+    add(document.getElementById('invite'),8,2000);   // 邀请函正文: 停留久一点
+    add(document.getElementById('info'),8,2000);     // 时间地点
+    add(document.getElementById('gallery'),8,1200);
+    var gl=document.querySelectorAll('#gallery .group-label'),i;
+    for(i=0;i<gl.length;i++)add(gl[i],60,1200);      // 每组合照标题
+    add(document.querySelector('.finale'),12,2600);  // 结尾落款
+    out.push([0,1800]);                              // 封面
+    out.push([maxY(),4200]);                         // 最底部: 长停留后回顶
+    out.sort(function(a,b){return a[0]-b[0];});
+    var m=[],prev=null;
+    for(i=0;i<out.length;i++){
+      var c=out[i];
+      if(!prev||Math.abs(prev[0]-c[0])>3){m.push(c);prev=c;}
+      else if(c[1]>prev[1]){prev[1]=c[1];}
+    }
+    stops=m;
   }
-  function syncPill(){
-    if(!pill)return;
-    pill.innerHTML=playing?'<span class="ap-i">⏸</span>自动播放中':'<span class="ap-i">▶</span>继续自动播放';
-    pill.classList.toggle('ap-off',!playing);
+  function firstAfter(y){for(var i=0;i<stops.length;i++){if(stops[i][0]>y)return stops[i];}return null;}
+  // 匀速巡航 + 两端正弦加减速; 每帧增量小, 全程丝滑
+  function glide(target,spd,cb){
+    var y0=topY(),dir=target>=y0?1:-1,d=Math.abs(target-y0);
+    if(d<2){if(cb)cb();return;}
+    var R=Math.min(RAMP,d/(spd*1.5));
+    var acc=(2/Math.PI)*R*spd;
+    var cruise=Math.max(0,d-2*acc);
+    var T=2*R+(cruise/spd),t0=performance.now();
+    moving=true;
+    function step(now){
+      if(!moving)return;
+      var e=Math.min(T,(now-t0)/1000);
+      if(e>=T){
+        el.scrollTop=target;lastWrite=Date.now();
+        moving=false;raf=null;
+        if(cb)cb();
+        return;
+      }
+      var p;
+      if(e<R){p=acc*(1-Math.cos(Math.PI*e/(2*R)));}
+      else if(e<R+cruise/spd){p=acc+spd*(e-R);}
+      else{var u=T-e;p=d-acc*(1-Math.cos(Math.PI*u/(2*R)));}
+      el.scrollTop=Math.round(y0+dir*p);
+      lastWrite=Date.now();
+      raf=requestAnimationFrame(step);
+    }
+    raf=requestAnimationFrame(step);
   }
-  function makePill(){
-    if(pill)return;
-    pill=document.createElement('button');
-    pill.id='autoPlay';pill.setAttribute('aria-label','自动播放控制');
-    pill.addEventListener('click',function(e){e.stopPropagation();toggle();});
-    document.body.appendChild(pill);syncPill();
+  function dwell(ms,next){cancelAnim();timer=setTimeout(function(){if(playing&&next)next();},ms);}
+  function glideToStop(t){
+    if(!playing)return;
+    glide(Math.min(t[0],maxY()),V(),function(){
+      if(!playing)return;
+      dwell(t[1],advance);
+    });
   }
-  function toggle(){
-    playing=!playing;clearTimeout(timer);syncPill();
-    if(playing)go();
+  function advance(){
+    measure();
+    var t=firstAfter(topY());
+    if(t){glideToStop(t);return;}
+    // 已到底部(末尾停留已由最后一个 stop 完成) → 快速平滑回顶
+    glide(0,VB(),function(){
+      if(!playing)return;
+      dwell(2000,start);
+    });
   }
+  function start(){
+    if(bodyLocked()){cancelAnim();timer=setTimeout(start,500);return;}
+    measure();
+    glideToStop(stops[0]);
+  }
+  function showBtn(){
+    if(!btn)return;
+    btn.classList.add('show');btn.classList.remove('dim');
+    clearTimeout(dimTimer);
+    dimTimer=setTimeout(function(){if(!playing)btn.classList.add('dim');},8000);
+  }
+  function hideBtn(){if(btn)btn.classList.remove('show','dim');clearTimeout(dimTimer);}
   function pause(){
     if(!playing)return;
-    playing=false;clearTimeout(timer);syncPill();
+    playing=false;cancelAnim();showBtn();
   }
-  function next(i){
-    if(!playing)return;
-    var m=stopsArr, y=window.scrollY||document.documentElement.scrollTop||0;
-    if(i>=m.length-1||m[i+1]===undefined||m[i+1]<=y+40){
-      timer=setTimeout(function(){
-        if(!playing)return;
-        prog=true;window.scrollTo({top:0,behavior:'smooth'});
-        setTimeout(function(){prog=false;},1500);
-        timer=setTimeout(function(){if(playing)go();},BACK_DELAY);
-      },LAST_DELAY);
-      return;
-    }
-    prog=true;lastMove=Date.now();
-    window.scrollTo({top:m[i+1],behavior:'smooth'});
-    setTimeout(function(){prog=false;},1500);
-    timer=setTimeout(function(){next(i+1);},STOP_DELAY);
+  function resume(){
+    if(playing)return;
+    playing=true;hideBtn();measure();
+    var t=firstAfter(topY());
+    if(t){glideToStop(t);}
+    else{glide(0,VB(),function(){if(playing)dwell(2000,start);});}
   }
-  function go(){
-    clearTimeout(timer);
-    var y=window.scrollY||document.documentElement.scrollTop||0, m=stopsArr, i;
-    for(i=0;i<m.length;i++){if(m[i]>y+40)break;}
-    next(i-1);
+  function makeBtn(){
+    if(btn)return;
+    btn=document.createElement('button');
+    btn.id='apResume';btn.setAttribute('aria-label','继续自动滚动');
+    btn.innerHTML='&#9654;';
+    btn.addEventListener('click',function(e){e.stopPropagation();resume();});
+    document.body.appendChild(btn);
+  }
+  function onVis(){
+    if(document.hidden){cancelAnim();}
+    else if(playing){measure();var t=firstAfter(topY());if(t)glideToStop(t);}
   }
   function boot(){
+    makeBtn();
     measure();
     window.addEventListener('resize',function(){measure();},{passive:true});
     window.addEventListener('load',function(){measure();});
-    makePill();
-    // 用户手动操作 → 暂停自动
-    var locked=false;
-    function lock(){locked=true;setTimeout(function(){locked=false;},1500);}
-    document.addEventListener('wheel',function(){if(!locked)pause();},{passive:true});
-    document.addEventListener('touchstart',function(){
-      if(document.body.style.overflow==='hidden')return;
-      if(!locked){lock();pause();}
-    },{passive:true});
+    document.addEventListener('visibilitychange',onVis,{passive:true});
+    document.addEventListener('wheel',function(){pause();},{passive:true});
+    document.addEventListener('touchstart',function(){if(!bodyLocked())pause();},{passive:true});
     document.addEventListener('scroll',function(){
-      if(playing&&!prog&&Date.now()-lastMove>1800&&document.body.style.overflow!=='hidden')pause();
+      if(playing&&!moving&&!bodyLocked()&&Date.now()-lastWrite>600)pause();
     },{passive:true});
     document.addEventListener('keydown',function(e){
       var k=e.key;
       if(k==='ArrowDown'||k==='ArrowUp'||k==='PageDown'||k==='PageUp'||k===' '||k==='End'||k==='Home')pause();
     });
-    document.addEventListener('visibilitychange',function(){
-      if(document.hidden){clearTimeout(timer);}
-      else if(playing){timer=setTimeout(go,600);}
-    });
-    setTimeout(go,1200);
+    playing=true;
+    setTimeout(start,1000);
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',boot);}
   else{boot();}
 })();
+
 </script>
 </body>
 </html>
