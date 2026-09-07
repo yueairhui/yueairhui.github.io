@@ -471,5 +471,103 @@ lb.addEventListener('touchend',function(e){
   if(dx>46)show(cur-1);else if(dx<-46)show(cur+1);
 },{passive:true});
 </script>
+<style>
+/* ===== 自动滚动 ===== */
+#autoPlay{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:70;display:flex;align-items:center;gap:6px;border:1px solid rgba(166,61,47,.28);background:rgba(255,255,255,.93);color:#A63D2F;font:500 12px/1 "PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:.5px;padding:8px 16px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.10);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);cursor:pointer;transition:opacity .3s;}
+#autoPlay .ap-i{font-size:11px;}
+#autoPlay.ap-off{color:#8a6a5f;border-color:rgba(138,106,95,.35);background:rgba(255,255,255,.9);}
+</style>
+<script>
+// ===== 自动滚动(逐屏播放, 可暂停) =====
+(function(){
+  if(!('scrollTo' in window))return;
+  var STOP_DELAY=3800, LAST_DELAY=6500, BACK_DELAY=2000;
+  var playing=true, timer=null, prog=false, pill=null, lastMove=0;
+  var stopsArr=[];
+  function measure(){
+    var out=[0], i, el, gl;
+    var ids=['invite','info','gallery'];
+    for(i=0;i<ids.length;i++){el=document.getElementById(ids[i]);if(el)out.push(el.offsetTop-8);}
+    gl=document.querySelectorAll('#gallery .group-label');
+    for(i=0;i<gl.length;i++)out.push(gl[i].offsetTop-60);
+    el=document.querySelector('.finale');if(el)out.push(el.offsetTop-12);
+    out.push(Math.max(0,(document.documentElement.scrollHeight||document.body.scrollHeight)-window.innerHeight));
+    out.sort(function(a,b){return a-b;});
+    var r=[];for(i=0;i<out.length;i++){if(r.indexOf(out[i])<0&&out[i]>=0)r.push(out[i]);}
+    stopsArr=r;
+  }
+  function syncPill(){
+    if(!pill)return;
+    pill.innerHTML=playing?'<span class="ap-i">⏸</span>自动播放中':'<span class="ap-i">▶</span>继续自动播放';
+    pill.classList.toggle('ap-off',!playing);
+  }
+  function makePill(){
+    if(pill)return;
+    pill=document.createElement('button');
+    pill.id='autoPlay';pill.setAttribute('aria-label','自动播放控制');
+    pill.addEventListener('click',function(e){e.stopPropagation();toggle();});
+    document.body.appendChild(pill);syncPill();
+  }
+  function toggle(){
+    playing=!playing;clearTimeout(timer);syncPill();
+    if(playing)go();
+  }
+  function pause(){
+    if(!playing)return;
+    playing=false;clearTimeout(timer);syncPill();
+  }
+  function next(i){
+    if(!playing)return;
+    var m=stopsArr, y=window.scrollY||document.documentElement.scrollTop||0;
+    if(i>=m.length-1||m[i+1]===undefined||m[i+1]<=y+40){
+      timer=setTimeout(function(){
+        if(!playing)return;
+        prog=true;window.scrollTo({top:0,behavior:'smooth'});
+        setTimeout(function(){prog=false;},1500);
+        timer=setTimeout(function(){if(playing)go();},BACK_DELAY);
+      },LAST_DELAY);
+      return;
+    }
+    prog=true;lastMove=Date.now();
+    window.scrollTo({top:m[i+1],behavior:'smooth'});
+    setTimeout(function(){prog=false;},1500);
+    timer=setTimeout(function(){next(i+1);},STOP_DELAY);
+  }
+  function go(){
+    clearTimeout(timer);
+    var y=window.scrollY||document.documentElement.scrollTop||0, m=stopsArr, i;
+    for(i=0;i<m.length;i++){if(m[i]>y+40)break;}
+    next(i-1);
+  }
+  function boot(){
+    measure();
+    window.addEventListener('resize',function(){measure();},{passive:true});
+    window.addEventListener('load',function(){measure();});
+    makePill();
+    // 用户手动操作 → 暂停自动
+    var locked=false;
+    function lock(){locked=true;setTimeout(function(){locked=false;},1500);}
+    document.addEventListener('wheel',function(){if(!locked)pause();},{passive:true});
+    document.addEventListener('touchstart',function(){
+      if(document.body.style.overflow==='hidden')return;
+      if(!locked){lock();pause();}
+    },{passive:true});
+    document.addEventListener('scroll',function(){
+      if(playing&&!prog&&Date.now()-lastMove>1800&&document.body.style.overflow!=='hidden')pause();
+    },{passive:true});
+    document.addEventListener('keydown',function(e){
+      var k=e.key;
+      if(k==='ArrowDown'||k==='ArrowUp'||k==='PageDown'||k==='PageUp'||k===' '||k==='End'||k==='Home')pause();
+    });
+    document.addEventListener('visibilitychange',function(){
+      if(document.hidden){clearTimeout(timer);}
+      else if(playing){timer=setTimeout(go,600);}
+    });
+    setTimeout(go,1200);
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',boot);}
+  else{boot();}
+})();
+</script>
 </body>
 </html>
