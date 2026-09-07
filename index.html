@@ -201,7 +201,7 @@ section{padding:46px 22px;position:relative}
 <!-- ======= 首屏 ======= -->
 <header class="hero">
   <div class="hero-photo">
-    <img src="img/hero.webp" alt="龚徽与卢郁洁婚纱照">
+    <img fetchpriority="high" src="img/hero.webp" alt="龚徽与卢郁洁婚纱照">
     <div class="petals" id="petals"></div>
   </div>
   <div class="hero-copy">
@@ -339,23 +339,16 @@ section{padding:46px 22px;position:relative}
   </div>
   <p class="cap">微风草坪 · 白纱轻扬 <small>· in the breeze ·</small></p>
 
-  <!-- 7 草坪二 -->
+  <!-- 7 中式 -->
   <div class="grid-2 mg reveal">
-    <figure class="g-item port" data-i="10"><img loading="lazy" src="img/08.webp" alt="草坪新娘单人"></figure>
-    <figure class="g-item port" data-i="11"><img loading="lazy" src="img/09.webp" alt="草坪比V挥手"></figure>
-  </div>
-  <p class="cap">春风十里 · 不如你 <small>· lawn cheer ·</small></p>
-
-  <!-- 8 中式 -->
-  <div class="grid-2 mg reveal">
-    <figure class="g-item port" data-i="12"><img loading="lazy" src="img/12.webp" alt="中式灯笼座椅"></figure>
-    <figure class="g-item port" data-i="13"><img loading="lazy" src="img/16.webp" alt="中式站立红灯笼"></figure>
+    <figure class="g-item port" data-i="10"><img loading="lazy" src="img/12.webp" alt="中式灯笼座椅"></figure>
+    <figure class="g-item port" data-i="11"><img loading="lazy" src="img/16.webp" alt="中式站立红灯笼"></figure>
   </div>
   <p class="cap">红妆囍 · 良缘定 <small>· chinese red ·</small></p>
 
-  <!-- 9 收尾单列:黑纱台阶 -->
+  <!-- 8 收尾单列:黑纱台阶 -->
   <div class="solo-wrap reveal">
-    <figure class="g-item port tall-2" data-i="14"><img loading="lazy" src="img/p5.webp" alt="黑纱台阶"></figure>
+    <figure class="g-item port tall-2" data-i="12"><img loading="lazy" src="img/p5.webp" alt="黑纱台阶"></figure>
   </div>
   <p class="cap">往后余生 · 皆是你 <small>· always ·</small></p>
 </section>
@@ -384,7 +377,7 @@ section{padding:46px 22px;position:relative}
 </div>
 
 <!-- 音乐 -->
-<audio id="bgm" src="music.m4a" loop preload="none"></audio>
+<audio id="bgm" src="music.m4a" loop preload="auto"></audio>
 <div class="disc" id="disc">
   <img src="img/disc.webp" alt="音乐">
   <span class="tone"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
@@ -425,14 +418,11 @@ function tick(){
 }
 tick();setInterval(tick,1000);
 
-// ---------- 音乐(仅用户交互触发) ----------
+// ---------- 音乐(自动播放提速:微信bridge即播/预载+首触秒响) ----------
 var bgm=document.getElementById('bgm'),disc=document.getElementById('disc'),tip=document.getElementById('musicTip');
 var playing=false;
-function setPlaying(p){
-  playing=p;
-  disc.classList.toggle('playing',p);
-  tip.classList.toggle('hide',p);
-}
+function setPlaying(p){playing=p;disc.classList.toggle('playing',p);tip.classList.toggle('hide',p);}
+function startBgmLoad(){if(bgm.dataset.loaded)return;bgm.dataset.loaded='1';try{bgm.load();}catch(e){}}
 function tryPlay(){
   if(playing) return;
   if(bgm.paused){
@@ -442,10 +432,10 @@ function tryPlay(){
 }
 bgm.addEventListener('playing',function(){setPlaying(true);});
 bgm.addEventListener('pause',function(){setPlaying(false);});
-// 微信内置浏览器自动播放通道
-if(window.WeixinJSBridge&&window.WeixinJSBridge.invoke){tryPlay();}
-document.addEventListener('WeixinJSBridgeReady',tryPlay,false);
-// 首次真实触摸/点击触发(无自动延迟,避免和滚动监听打架)
+function wxTry(){startBgmLoad();tryPlay();}
+if(window.WeixinJSBridge&&window.WeixinJSBridge.invoke){wxTry();}
+document.addEventListener('WeixinJSBridgeReady',wxTry,false);
+window.addEventListener('load',function(){setTimeout(startBgmLoad,200);setTimeout(tryPlay,600);},{once:true});
 document.addEventListener('touchstart',function(){tryPlay();},{passive:true,once:true});
 document.addEventListener('click',function(){tryPlay();},{once:true});
 document.addEventListener('pointerdown',function(){tryPlay();},{once:true});
@@ -469,7 +459,7 @@ document.getElementById('copyAddr').addEventListener('click',function(){
 
 // ---------- 灯箱 ----------
 var shots=Array.prototype.slice.call(document.querySelectorAll('.g-item'));
-var caps=['初见乍欢','执子之手','执子之手','高级黑','高级黑','为你低头','为你低头','时光清浅','微风草坪','微风草坪','春风十里','春风十里','红妆囍','红妆囍','往后余生'];
+var caps=['初见乍欢','执子之手','执子之手','高级黑','高级黑','为你低头','为你低头','时光清浅','微风草坪','微风草坪','红妆囍','红妆囍','往后余生'];
 var lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),lbCount=document.getElementById('lbCount');
 var cur=0,startX=0;
 function show(i){
@@ -572,6 +562,11 @@ lb.addEventListener('touchend',function(e){
     },1400);
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+
+// 预取相册图:打开即后台加载,自动滚动到相册不卡顿
+(function(){var pf=['p1','p2','p3','p5','p6','p7','03','06','12','13','14','15','16'];
+function nx(i){if(i>=pf.length)return;var im=new Image();im.onload=function(){nx(i+1);};im.onerror=function(){nx(i+1);};im.src='img/'+pf[i]+'.webp';}
+window.addEventListener('load',function(){setTimeout(function(){nx(0);},900);},{once:true});})();
 })();
 </script>
 </body>
