@@ -151,6 +151,8 @@ section{padding:46px 22px;position:relative}
 .g-item.full{aspect-ratio:4/3}
 .g-item.wide-banner{aspect-ratio:2.2/1}
 .g-item.tall-2{aspect-ratio:3/4;width:66%;margin:0 auto}
+.g-item.land{aspect-ratio:3/2}
+.g-item.port{aspect-ratio:2/3}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .mt{margin-top:14px}
 .group-label{display:flex;align-items:center;justify-content:center;gap:12px;margin:34px 0 16px;color:var(--ink2)}
@@ -295,43 +297,26 @@ section{padding:46px 22px;position:relative}
     <p>把怦然心动的瞬间，装进这一页相册<br>滑动查看更多 · 点击照片可放大</p>
   </div>
 
-  <div class="group-label reveal"><div><div class="zh">以爱之名</div><div class="en">In The Name Of Love</div></div></div>
-  <div class="reveal"><figure class="g-item full" data-i="0"><img loading="lazy" src="img/05.webp" alt="婚纱照"></figure></div>
-  <div class="grid-2 mt reveal">
-    <figure class="g-item tall" data-i="1"><img loading="lazy" src="img/03.webp" alt="婚纱照"></figure>
-    <figure class="g-item tall" data-i="2"><img loading="lazy" src="img/06.webp" alt="婚纱照"></figure>
-  </div>
-  <div class="reveal"><figure class="g-item full" data-i="3"><img loading="lazy" src="img/04.webp" alt="婚纱照"></figure></div>
+  <div class="reveal"><figure class="g-item land" data-i="0"><img loading="lazy" src="img/p1.webp" alt="教堂婚纱照"></figure></div>
   <p class="cap">初见心动 · 久处依然 <small>· with you ·</small></p>
 
-  <div class="group-label reveal"><div><div class="zh">共赴四季</div><div class="en">Seasons Together</div></div></div>
-  <div class="reveal"><figure class="g-item full" data-i="4"><img loading="lazy" src="img/07.webp" alt="婚纱照"></figure></div>
   <div class="grid-2 mt reveal">
-    <figure class="g-item tall" data-i="5"><img loading="lazy" src="img/08.webp" alt="婚纱照"></figure>
-    <figure class="g-item tall" data-i="6"><img loading="lazy" src="img/09.webp" alt="婚纱照"></figure>
+    <figure class="g-item port" data-i="1"><img loading="lazy" src="img/p2.webp" alt="婚纱照"></figure>
+    <figure class="g-item port" data-i="2"><img loading="lazy" src="img/p3.webp" alt="婚纱照"></figure>
   </div>
-  <p class="cap">往后余生 · 请多指教 <small>· forever ·</small></p>
+  <p class="cap">执子之手 · 与子偕老 <small>· hand in hand ·</small></p>
 
-  <div class="group-label reveal"><div><div class="zh">哥特暗调</div><div class="en">Dark Romance</div></div></div>
   <div class="grid-2 reveal">
-    <figure class="g-item tall" data-i="7"><img loading="lazy" src="img/14.webp" alt="黑纱婚纱照"></figure>
-    <figure class="g-item tall" data-i="8"><img loading="lazy" src="img/15.webp" alt="黑纱婚纱照"></figure>
+    <figure class="g-item port" data-i="3"><img loading="lazy" src="img/p4.webp" alt="中式婚服照"></figure>
+    <figure class="g-item port" data-i="4"><img loading="lazy" src="img/p5.webp" alt="黑纱婚纱照"></figure>
   </div>
-  <p class="cap">玫瑰与黑纱 <small>· dark romance ·</small></p>
+  <p class="cap">红妆与黑纱 · 皆是浪漫 <small>· always ·</small></p>
 
-  <div class="group-label reveal"><div><div class="zh">佳偶天成</div><div class="en">Two Become One</div></div></div>
   <div class="grid-2 reveal">
-    <figure class="g-item tall" data-i="9"><img loading="lazy" src="img/16.webp" alt="中式婚服"></figure>
-    <figure class="g-item tall" data-i="10"><img loading="lazy" src="img/12.webp" alt="中式婚服"></figure>
+    <figure class="g-item port" data-i="5"><img loading="lazy" src="img/p6.webp" alt="草坪婚纱照"></figure>
+    <figure class="g-item port" data-i="6"><img loading="lazy" src="img/p7.webp" alt="草坪婚纱照"></figure>
   </div>
-  <div class="reveal" style="margin-top:14px"><figure class="g-item full" data-i="11"><img loading="lazy" src="img/11.webp" alt="中式婚服"></figure></div>
-  <p class="cap">凤冠霞帔 · 共许白头 <small>· 囍 ·</small></p>
-
-  <div class="group-label reveal"><div><div class="zh">以心相许</div><div class="en">The Proposal</div></div></div>
-  <div class="reveal" style="text-align:center">
-    <figure class="g-item tall-2" data-i="12" style="margin:0 auto"><img loading="lazy" src="img/13.webp" alt="求婚婚纱照"></figure>
-  </div>
-  <p class="cap">我愿意 <small>· yes, i do ·</small></p>
+  <p class="cap">微风草坪 · 白纱轻扬 <small>· in the breeze ·</small></p>
 </section>
 
 <!-- ======= 结尾 ======= -->
@@ -472,150 +457,86 @@ lb.addEventListener('touchend',function(e){
 },{passive:true});
 </script>
 <style>
-/* ===== 自动滚动 v2: rAF 匀速缓动, 无常驻提示 ===== */
-#apResume{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:70;width:46px;height:46px;border-radius:50%;border:1px solid rgba(166,61,47,.22);background:rgba(255,255,255,.88);color:#A63D2F;font-size:15px;line-height:1;padding:0 0 0 3px;box-shadow:0 4px 16px rgba(0,0,0,.12);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);cursor:pointer;display:none;align-items:center;justify-content:center;transition:opacity .8s ease .4s,transform .3s;}
+/* ===== 自动滚动 v3 ===== */
+#apResume{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:70;width:46px;height:46px;border-radius:50%;border:1px solid rgba(166,61,47,.22);background:rgba(255,255,255,.9);color:#A63D2F;font-size:15px;line-height:1;padding:0 0 0 3px;box-shadow:0 4px 16px rgba(0,0,0,.14);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);cursor:pointer;display:none;align-items:center;justify-content:center;transition:opacity .9s ease .5s;}
 #apResume.show{display:flex;}
 #apResume.dim{opacity:.25;}
 </style>
 <script>
-// ===== 自动滚动 v2: rAF 匀速+正弦缓动滚屏, 不依赖 scrollTo smooth(旧版在 iOS/微信内会瞬移) =====
+// ===== 自动滚动 v3.1: 匀速不间断丝滑滚到底(逐帧动态目标, 播放期禁用原生 smooth 防打架) =====
 (function(){
   if(!('requestAnimationFrame' in window))return;
-  if('scrollRestoration' in history){history.scrollRestoration='manual';}
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
   var el=document.scrollingElement||document.documentElement;
-  var playing=false,raf=null,timer=null,moving=false,stops=[],lastWrite=0,btn=null,dimTimer=null;
-  var RAMP=0.5;                 // 加减速时长(秒)
+  var playing=false,raf=null,moving=false,lastWrite=0,btn=null,dimTimer=null;
+  var V=85;            // 巡航速度 px/s —— 缓慢匀速
+  var R=2.2;           // 起步加速时间 s (0→V)
+  var A=V/R;           // 加速度 px/s^2
   function vh(){return window.innerHeight||document.documentElement.clientHeight||750;}
-  function V(){var s=vh()*0.30;return Math.max(170,Math.min(270,Math.round(s)));}   // 巡航 px/s
-  function VB(){return Math.max(700,vh()*1.4);}                                    // 回顶 px/s
   function topY(){return el.scrollTop||window.pageYOffset||0;}
   function maxY(){return Math.max(0,(document.documentElement.scrollHeight||document.body.scrollHeight)-vh());}
   function bodyLocked(){return document.body.style.overflow==='hidden';}
-  function cancelAnim(){clearTimeout(timer);timer=null;if(raf){cancelAnimationFrame(raf);raf=null;}moving=false;}
-  function measure(){
-    var out=[];
-    function add(node,pad,dw){if(!node)return;var y=node.offsetTop-pad;if(y>=0)out.push([y,dw]);}
-    add(document.getElementById('invite'),8,2000);   // 邀请函正文: 停留久一点
-    add(document.getElementById('info'),8,2000);     // 时间地点
-    add(document.getElementById('gallery'),8,1200);
-    var gl=document.querySelectorAll('#gallery .group-label'),i;
-    for(i=0;i<gl.length;i++)add(gl[i],60,1200);      // 每组合照标题
-    add(document.querySelector('.finale'),12,2600);  // 结尾落款
-    out.push([0,1800]);                              // 封面
-    out.push([maxY(),4200]);                         // 最底部: 长停留后回顶
-    out.sort(function(a,b){return a[0]-b[0];});
-    var m=[],prev=null;
-    for(i=0;i<out.length;i++){
-      var c=out[i];
-      if(!prev||Math.abs(prev[0]-c[0])>3){m.push(c);prev=c;}
-      else if(c[1]>prev[1]){prev[1]=c[1];}
-    }
-    stops=m;
+  function cancelAnim(){if(raf){cancelAnimationFrame(raf);raf=null;}moving=false;}
+  function makeBtn(){
+    if(document.getElementById('apResume'))return;
+    btn=document.createElement('div');btn.id='apResume';btn.title='继续自动播放';
+    btn.innerHTML='&#9654;';btn.setAttribute('aria-label','继续自动播放');
+    document.body.appendChild(btn);
+    btn.addEventListener('click',function(ev){ev.stopPropagation();resume();});
   }
-  function firstAfter(y){for(var i=0;i<stops.length;i++){if(stops[i][0]>y)return stops[i];}return null;}
-  // 匀速巡航 + 两端正弦加减速; 每帧增量小, 全程丝滑
-  function glide(target,spd,cb){
-    var y0=topY(),dir=target>=y0?1:-1,d=Math.abs(target-y0);
-    if(d<2){if(cb)cb();return;}
-    var R=Math.min(RAMP,d/(spd*1.5));
-    var acc=(2/Math.PI)*R*spd;
-    var cruise=Math.max(0,d-2*acc);
-    var T=2*R+(cruise/spd),t0=performance.now();
+  function showBtn(){if(!btn)return;btn.classList.add('show');btn.classList.remove('dim');
+    clearTimeout(dimTimer);dimTimer=setTimeout(function(){if(btn&&btn.classList.contains('show'))btn.classList.add('dim');},8000);}
+  function hideBtn(){if(!btn)return;clearTimeout(dimTimer);btn.classList.remove('show');btn.classList.remove('dim');}
+  function restoreSmooth(){if(el.style.scrollBehavior==='auto')el.style.scrollBehavior='';}
+  function pause(){
+    if(!playing)return;
+    playing=false;cancelAnim();restoreSmooth();showBtn();
+  }
+  // 长程匀速滚动: 每帧读真实 maxY, 起步 0→V 缓加速, 到底自然结束(无停顿感)
+  function glideBottom(cb){
+    cancelAnim();
+    el.style.scrollBehavior='auto';   // 关闭原生 smooth, 避免与逐帧写入打架
+    var t0=performance.now(), s=0;
     moving=true;
     function step(now){
       if(!moving)return;
-      var e=Math.min(T,(now-t0)/1000);
-      if(e>=T){
-        el.scrollTop=target;lastWrite=Date.now();
-        moving=false;raf=null;
-        if(cb)cb();
-        return;
-      }
-      var p;
-      if(e<R){p=acc*(1-Math.cos(Math.PI*e/(2*R)));}
-      else if(e<R+cruise/spd){p=acc+spd*(e-R);}
-      else{var u=T-e;p=d-acc*(1-Math.cos(Math.PI*u/(2*R)));}
-      el.scrollTop=Math.round(y0+dir*p);
-      lastWrite=Date.now();
+      var dt=Math.min(0.05,(now-t0)/1000);t0=now;
+      s=Math.min(V,s+A*dt);
+      var cur=topY(), tgt=maxY();
+      if(cur>=tgt-1.5){el.scrollTop=tgt;lastWrite=Date.now();finish();return;}
+      var px=s*dt;
+      if(cur+px>=tgt){el.scrollTop=tgt;lastWrite=Date.now();finish();return;}
+      el.scrollTop=cur+px;lastWrite=Date.now();
       raf=requestAnimationFrame(step);
     }
+    function finish(){moving=false;raf=null;restoreSmooth();if(cb)cb();}
     raf=requestAnimationFrame(step);
-  }
-  function dwell(ms,next){cancelAnim();timer=setTimeout(function(){if(playing&&next)next();},ms);}
-  function glideToStop(t){
-    if(!playing)return;
-    glide(Math.min(t[0],maxY()),V(),function(){
-      if(!playing)return;
-      dwell(t[1],advance);
-    });
-  }
-  function advance(){
-    measure();
-    var t=firstAfter(topY());
-    if(t){glideToStop(t);return;}
-    // 已到底部(末尾停留已由最后一个 stop 完成) → 快速平滑回顶
-    glide(0,VB(),function(){
-      if(!playing)return;
-      dwell(2000,start);
-    });
-  }
-  function start(){
-    if(bodyLocked()){cancelAnim();timer=setTimeout(start,500);return;}
-    measure();
-    glideToStop(stops[0]);
-  }
-  function showBtn(){
-    if(!btn)return;
-    btn.classList.add('show');btn.classList.remove('dim');
-    clearTimeout(dimTimer);
-    dimTimer=setTimeout(function(){if(!playing)btn.classList.add('dim');},8000);
-  }
-  function hideBtn(){if(btn)btn.classList.remove('show','dim');clearTimeout(dimTimer);}
-  function pause(){
-    if(!playing)return;
-    playing=false;cancelAnim();showBtn();
   }
   function resume(){
     if(playing)return;
-    playing=true;hideBtn();measure();
-    var t=firstAfter(topY());
-    if(t){glideToStop(t);}
-    else{glide(0,VB(),function(){if(playing)dwell(2000,start);});}
-  }
-  function makeBtn(){
-    if(btn)return;
-    btn=document.createElement('button');
-    btn.id='apResume';btn.setAttribute('aria-label','继续自动滚动');
-    btn.innerHTML='&#9654;';
-    btn.addEventListener('click',function(e){e.stopPropagation();resume();});
-    document.body.appendChild(btn);
-  }
-  function onVis(){
-    if(document.hidden){cancelAnim();}
-    else if(playing){measure();var t=firstAfter(topY());if(t)glideToStop(t);}
+    playing=true;hideBtn();
+    if(topY()<maxY()-2){glideBottom(function(){playing=false;});}
+    else playing=false;
   }
   function boot(){
     makeBtn();
-    measure();
-    window.addEventListener('resize',function(){measure();},{passive:true});
-    window.addEventListener('load',function(){measure();});
-    document.addEventListener('visibilitychange',onVis,{passive:true});
-    document.addEventListener('wheel',function(){pause();},{passive:true});
-    document.addEventListener('touchstart',function(){if(!bodyLocked())pause();},{passive:true});
-    document.addEventListener('scroll',function(){
-      if(playing&&!moving&&!bodyLocked()&&Date.now()-lastWrite>600)pause();
+    document.addEventListener('visibilitychange',function(){
+      if(document.hidden){if(playing){cancelAnim();restoreSmooth();}}
+      else if(playing&&!moving){glideBottom(function(){playing=false;});}
     },{passive:true});
-    document.addEventListener('keydown',function(e){
-      var k=e.key;
-      if(k==='ArrowDown'||k==='ArrowUp'||k==='PageDown'||k==='PageUp'||k===' '||k==='End'||k==='Home')pause();
-    });
+    document.addEventListener('wheel',pause,{passive:true});
+    document.addEventListener('touchstart',function(){if(!bodyLocked())pause();},{passive:true});
+    document.addEventListener('keydown',function(e){if(e.key.indexOf('Arrow')===0||e.key===' '||e.key==='PageDown'||e.key==='PageUp'||e.key==='Home'||e.key==='End')pause();});
+    document.addEventListener('scroll',function(){if(playing&&!moving&&!bodyLocked()&&Date.now()-lastWrite>600)pause();},{passive:true});
     playing=true;
-    setTimeout(start,1000);
+    setTimeout(function waitStart(){
+      if(!playing)return;
+      if(bodyLocked()){setTimeout(waitStart,500);return;}
+      glideBottom(function(){playing=false;});
+    },1400);
   }
-  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',boot);}
-  else{boot();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
-
 </script>
 </body>
 </html>
