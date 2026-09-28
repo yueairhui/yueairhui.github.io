@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>电子礼金簿 · 龚徽 × 卢郁洁</title>
+<style>
+:root{
+  --paper:#F6F4F0; --card:#FFFFFF; --ink:#22201D; --ink-2:#5B554E; --ink-3:#8E877E;
+  --line:#E6E1D8; --line-2:#EFEBE3; --accent:#963A2C; --accent-soft:#F3E7E3;
+  --gold:#B08A3E; --gold-soft:#F5EEDD; --ok:#2F6B4F; --ok-soft:#E8F2EC; --warn:#A8642A;
+  --shadow:0 1px 2px rgba(34,32,29,.04), 0 8px 24px rgba(34,32,29,.06);
+  --radius:16px; --radius-sm:10px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased;
+}
+.num{font-variant-numeric:tabular-nums; font-feature-settings:"tnum"}
+a{color:var(--accent); text-decoration:none}
+button,input,select,textarea{font:inherit; color:inherit}
+button{cursor:pointer}
+
+.hero{position:relative; overflow:hidden;
+  background:
+    radial-gradient(900px 320px at 12% -10%, #FFFFFF 0%, rgba(255,255,255,0) 60%),
+    radial-gradient(600px 260px at 92% 0%, var(--gold-soft) 0%, rgba(255,255,255,0) 62%),
+    linear-gradient(180deg,#FBF9F6 0%, #F4F0E9 100%);
+  border-bottom:1px solid var(--line);}
+.hero-inner{max-width:1120px; margin:0 auto; padding:36px 24px 24px; position:relative}
+.seal{position:absolute; right:26px; top:34px; width:74px; height:74px; border:1px solid rgba(150,58,44,.35);
+  border-radius:8px; color:var(--accent); display:flex; align-items:center; justify-content:center;
+  font-family:"Songti SC",serif; font-size:15px; line-height:1.1; letter-spacing:.06em; text-align:center;
+  background:rgba(255,255,255,.5)}
+.eyebrow{font-size:11px; letter-spacing:.34em; color:var(--gold); text-transform:uppercase}
+.hero h1{margin:10px 0 6px; font-size:37px; font-weight:600; letter-spacing:.1em;
+  font-family:"Songti SC","STSong","Source Han Serif SC","Noto Serif SC",serif}
+.couple{margin-top:2px; font-size:19px; letter-spacing:.22em; color:var(--ink-2); font-family:"Songti SC","STSong",serif}
+.couple .amp{color:var(--accent); margin:0 6px; letter-spacing:0}
+.meta{margin-top:8px; color:var(--ink-3); font-size:13px; letter-spacing:.06em}
+.statrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+.stat{background:rgba(255,255,255,.72); border:1px solid var(--line); border-radius:var(--radius-sm);
+  padding:10px 14px; min-width:112px; backdrop-filter:blur(6px)}
+.stat .k{font-size:11px; letter-spacing:.14em; color:var(--ink-3)}
+.stat .v{font-size:20px; font-weight:600; margin-top:2px}
+.stat .v small{font-size:12px; font-weight:400; color:var(--ink-3); margin-left:3px}
+
+.tabs{position:sticky; top:0; z-index:30; background:rgba(246,244,240,.88);
+  backdrop-filter:saturate(150%) blur(10px); border-bottom:1px solid var(--line)}
+.tabs-inner{max-width:1120px; margin:0 auto; padding:0 16px; display:flex; gap:2px; overflow-x:auto}
+.tab{appearance:none; background:none; border:none; padding:14px 13px; font-size:14px; color:var(--ink-2);
+  border-bottom:2px solid transparent; white-space:nowrap; letter-spacing:.04em}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--accent); border-bottom-color:var(--accent); font-weight:600}
+.tab .badge{font-size:11px; color:var(--ink-3); margin-left:6px}
+
+main{max-width:1120px; margin:0 auto; padding:22px 16px 80px}
+.view{display:none}
+.view.on{display:block}
+.card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow)}
+.card + .card{margin-top:16px}
+.card-hd{padding:15px 18px; border-bottom:1px solid var(--line-2); display:flex; align-items:center; gap:12px; flex-wrap:wrap}
+.card-hd h2{margin:0; font-size:15px; font-weight:600; letter-spacing:.06em}
+.card-bd{padding:16px 18px}
+.muted{color:var(--ink-3)}
+.spacer{flex:1; min-width:0}
+
+.toolbar{display:flex; gap:10px; flex-wrap:wrap; align-items:center; padding:13px 18px; border-bottom:1px solid var(--line-2)}
+.search{position:relative; flex:1 1 220px; min-width:180px}
+.search input{width:100%; padding:10px 12px 10px 34px; border:1px solid var(--line); border-radius:999px;
+  background:#FBFAF8; outline:none; transition:.18s}
+.search input:focus{border-color:var(--accent); background:#fff; box-shadow:0 0 0 3px var(--accent-soft)}
+.search:before{content:"⌕"; position:absolute; left:13px; top:50%; transform:translateY(-50%); color:var(--ink-3); font-size:16px}
+.chips{display:flex; gap:6px; flex-wrap:wrap}
+.chip{appearance:none; border:1px solid var(--line); background:#FBFAF8; border-radius:999px; padding:7px 12px;
+  font-size:13px; color:var(--ink-2); transition:.16s}
+.chip:hover{border-color:#D8D1C6}
+.chip.on{background:var(--accent); border-color:var(--accent); color:#fff}
+.btn{appearance:none; border:1px solid var(--line); background:#fff; border-radius:10px; padding:9px 14px;
+  font-size:13.5px; color:var(--ink); transition:.16s}
+.btn:hover{border-color:#D8D1C6; background:#FCFBF9}
+.btn.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+.btn.primary:hover{background:#84301F; border-color:#84301F}
+.btn.ghost{background:transparent; border-color:transparent; color:var(--ink-2)}
+.btn.ghost:hover{background:#F1EDE6}
+.btn.sm{padding:6px 10px; font-size:12.5px; border-radius:8px}
+
+.tblwrap{overflow:auto; max-height:70vh}
+table{width:100%; border-collapse:collapse}
+th,td{padding:11px 12px; text-align:left; border-bottom:1px solid var(--line-2); vertical-align:middle}
+th{font-size:11.5px; letter-spacing:.12em; color:var(--ink-3); font-weight:600; background:#FCFBF9;
+  position:sticky; top:0; z-index:2; border-bottom:1px solid var(--line)}
+tbody tr:hover{background:#FDFBF8}
+td.amt{text-align:right; font-weight:600; white-space:nowrap}
+td.amt.guess{color:#A8642A; border-bottom:1px dotted #E0C9A8}
+td.act{text-align:right; white-space:nowrap}
+tr.grouprow td{background:#F8F5F0; font-weight:600; letter-spacing:.06em; color:var(--ink-2); font-size:13px}
+.idx{color:var(--ink-3); font-size:12.5px; width:52px}
+.name{font-weight:500}
+.note{color:var(--ink-3); font-size:13px}
+.tag{display:inline-block; font-size:11px; padding:2px 7px; border-radius:999px; margin-left:6px; vertical-align:1px}
+.tag.draft{background:var(--gold-soft); color:#8A6520; border:1px solid #EBD9AE}
+.tag.page{background:#F1EFEA; color:var(--ink-3); border:1px solid var(--line)}
+.tag.ok{background:var(--ok-soft); color:var(--ok); border:1px solid #CBE0D4}
+.rowbtns{opacity:0; transition:.15s}
+tr:hover .rowbtns{opacity:1}
+@media (hover:none){.rowbtns{opacity:1}}
+.empty{padding:44px 18px; text-align:center; color:var(--ink-3)}
+
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+@media (max-width:820px){.grid2{grid-template-columns:1fr}}
+.bar{display:flex; align-items:center; gap:10px; margin:9px 0}
+.bar .lb{width:74px; color:var(--ink-2); font-size:13px; text-align:right}
+.bar .tr{flex:1; background:#F1EDE6; border-radius:999px; height:10px; overflow:hidden}
+.bar .fl{height:100%; background:linear-gradient(90deg,#B4543F,#963A2C); border-radius:999px}
+.bar .vl{width:104px; font-size:13px; color:var(--ink-2)}
+.kv{display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px dashed var(--line-2); font-size:14px}
+.kv:last-child{border-bottom:none}
+.kv b{font-weight:600}
+
+.scanlayout{display:grid; grid-template-columns:minmax(0,1fr) 380px; gap:16px; align-items:start}
+@media (max-width:980px){.scanlayout{grid-template-columns:1fr}}
+.pager{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px}
+.pager button{width:34px; height:34px; border-radius:9px; border:1px solid var(--line); background:#fff; font-size:12.5px; color:var(--ink-2)}
+.pager button.on{background:var(--ink); color:#fff; border-color:var(--ink)}
+.pager button.done{border-color:var(--ok); color:var(--ok)}
+.imgbox{background:#EFEBE3; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; min-height:260px}
+.imgbox img{display:block; width:100%; height:auto; cursor:zoom-in}
+.imgbox.zoom{overflow:auto; max-height:80vh}
+.imgbox.zoom img{width:auto; max-width:none; cursor:zoom-out}
+.side{position:sticky; top:64px}
+.field{margin-bottom:10px}
+.field label{display:block; font-size:12px; color:var(--ink-3); letter-spacing:.08em; margin-bottom:5px}
+.field input,.field select{width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:#FBFAF8; outline:none}
+.field input:focus,.field select:focus{border-color:var(--accent); background:#fff; box-shadow:0 0 0 3px var(--accent-soft)}
+.field input#f-amount{font-size:19px; font-weight:600}
+.quick{display:flex; gap:6px; flex-wrap:wrap; margin-top:6px}
+.quick button{border:1px solid var(--line); background:#fff; border-radius:8px; padding:6px 10px; font-size:12.5px}
+.quick button:hover{border-color:var(--accent); color:var(--accent)}
+.hint{font-size:12.5px; color:var(--ink-3); line-height:1.7}
+.balance{display:flex; gap:8px; flex-wrap:wrap; align-items:center; padding:10px 12px; border-radius:10px; margin-bottom:10px; font-size:13px}
+.balance.ok{background:var(--ok-soft); border:1px solid #CBE0D4; color:var(--ok)}
+.balance.bad{background:#FBEFE9; border:1px solid #F0D6C9; color:var(--warn)}
+.balance.unk{background:#F3F1EC; border:1px solid var(--line); color:var(--ink-3)}
+.prow{display:grid; grid-template-columns:1fr 84px 26px; gap:6px; align-items:center; padding:3px 0; border-bottom:1px dashed var(--line-2)}
+.prow input{border:1px solid transparent; background:transparent; border-radius:7px; padding:6px 8px; width:100%}
+.prow input:hover{border-color:var(--line-2)}
+.prow input:focus{border-color:var(--accent); background:#fff; box-shadow:0 0 0 3px var(--accent-soft); outline:none}
+.prow input.pa{text-align:right; font-weight:600}
+.prow .px{color:var(--ink-3); background:none; border:none; font-size:15px; line-height:1}
+.prow .px:hover{color:var(--accent)}
+.pagelist{max-height:340px; overflow:auto}
+.totalbar{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+.totchip{background:var(--gold-soft); border:1px solid #EBD9AE; color:#7E5C1C; border-radius:999px; padding:4px 10px; font-size:12px}
+.altchips{display:flex; gap:6px; flex-wrap:wrap; margin-top:6px}
+.altchips button{border:1px dashed #D8CFC0; background:#FCFBF9; border-radius:999px; padding:4px 10px; font-size:12.5px; color:var(--ink-2)}
+.altchips button:hover{border-color:var(--accent); color:var(--accent)}
+
+.mask{position:fixed; inset:0; background:rgba(30,27,24,.42); display:none; align-items:center; justify-content:center; padding:20px; z-index:60}
+.mask.on{display:flex}
+.modal{background:#fff; border-radius:18px; box-shadow:0 24px 60px rgba(0,0,0,.22); width:100%; max-width:470px; overflow:hidden}
+.modal h3{margin:0; padding:16px 20px; border-bottom:1px solid var(--line-2); font-size:15px}
+.modal .bd{padding:18px 20px}
+.modal .ft{padding:14px 20px; border-top:1px solid var(--line-2); display:flex; gap:10px; justify-content:flex-end}
+.toast{position:fixed; left:50%; bottom:28px; transform:translate(-50%,20px); opacity:0; pointer-events:none;
+  background:#22201D; color:#fff; padding:10px 16px; border-radius:999px; font-size:13px; transition:.24s; z-index:80}
+.toast.on{opacity:1; transform:translate(-50%,0)}
+
+@media print{
+  .tabs,.toolbar,.hero,.rowbtns,td.act,th.act,.side{display:none !important}
+  body{background:#fff}
+  .view{display:none !important} #view-list{display:block !important}
+  .card{border:none; box-shadow:none}
+  th{position:static}
+  .tblwrap{max-height:none}
+}
+
+/* ===== AI 复核 ===== */
+.aiwrap{display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:12px}
+.aicard{border:1px solid var(--line); border-radius:var(--radius-sm); background:var(--card); overflow:hidden;
+  display:flex; flex-direction:column; box-shadow:var(--shadow)}
+.aicard.done{opacity:.55}
+.aicard img{width:100%; height:126px; object-fit:cover; object-position:center; background:#fff;
+  border-bottom:1px solid var(--line-2); cursor:zoom-in}
+.aicard .ab{padding:10px 12px 12px; display:flex; flex-direction:column; gap:7px}
+.aicard h4{margin:0; font-size:14px; font-weight:500; display:flex; align-items:center; gap:6px; flex-wrap:wrap}
+.aicard h4 b{font-size:16px}
+.aivotes{font-size:12px; color:var(--ink-3); line-height:1.65}
+.aivotes b{color:var(--ink-2); font-weight:600}
+.aivotes .n{color:var(--warn)}
+.aiact{display:flex; gap:6px; flex-wrap:wrap; align-items:center}
+.aiact .aiin{flex:1; min-width:96px; padding:5px 8px; border:1px solid var(--line); border-radius:8px; font-size:13px}
+.tag.ai{background:#EDF3FB; color:#2C5F94; border:1px solid #CFE0F3}
+.tag.aiwarn{background:#FBF0E4; color:#9A5A16; border:1px solid #F0D9BC}
+.aifilter{display:flex; gap:8px; flex-wrap:wrap; margin:2px 0 4px}
+.aifilter .chip.on{background:var(--ink); color:#fff; border-color:var(--ink)}
+/* ===== 自定义分组 / 手机适配 (v2) ===== */
+.grow{display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:9px 0; border-bottom:1px dashed var(--line-2)}
+.grow:last-child{border-bottom:none}
+.grow input.gname{flex:1 1 130px; min-width:110px; padding:7px 9px; border:1px solid var(--line);
+  border-radius:8px; font-size:13.5px; font-family:inherit}
+.grow .gc{font-size:12.5px; color:var(--ink-3); white-space:nowrap}
+.selbar{display:flex; gap:8px; align-items:center; flex-wrap:wrap; background:#F7F2E8; border:1px solid var(--line-2);
+  border-radius:10px; padding:8px 10px; margin:0 0 10px; font-size:13px}
+.selbar[hidden]{display:none}
+th.sel,td.sel{width:32px; text-align:center}
+td.gsel select,td.gsel2 select{border:1px solid var(--line); border-radius:7px; font-size:12.5px; padding:3px 4px;
+  max-width:132px; background:#fff; font-family:inherit}
+.vbar{max-width:1080px; margin:0 auto; padding:10px 14px; font-size:13.5px; line-height:1.7;
+  background:linear-gradient(180deg,#FFF8E6,#FBEFD6); border-bottom:1px solid #EBD9AE; color:#7A5410}
+.vbar .btn{margin-left:6px}
+.warnbar{background:#FBEFE4; border:1px solid #EFD3B4; color:#8B4E13; font-size:13px; line-height:1.7;
+  padding:10px 12px; border-radius:10px; margin:10px 0}
+.warnbar[hidden]{display:none}
+.badpage{display:inline-flex; gap:6px; align-items:center; background:#FBF0E4; border:1px solid #EFD3B4; color:#8B4E13;
+  border-radius:999px; padding:4px 11px; font-size:12.5px; margin:6px 6px 0 0; cursor:pointer}
+.badpage:hover{background:#F7E4CC}
+@media (max-width:640px){
+  .hero-inner{padding:20px 14px 16px}
+  h1{font-size:26px; letter-spacing:.08em}
+  .couple{font-size:17px}
+  .statrow{grid-template-columns:repeat(2,1fr); gap:8px}
+  .tabs-inner{overflow-x:auto; -webkit-overflow-scrolling:touch; padding:0 10px; gap:2px}
+  .tab{flex:0 0 auto; padding:10px 12px; font-size:14px}
+  main{padding:12px 10px calc(26px + env(safe-area-inset-bottom))}
+  .card-bd{padding:12px}
+  .toolbar{gap:6px}
+  .search{min-width:100%}
+  .btn{min-height:38px; padding:9px 13px}
+  .btn.sm{min-height:34px}
+  table{font-size:13px}
+  .prow{gap:6px}
+  .prow input.pn{min-width:92px; min-height:34px}
+  .prow input.pa{width:84px; min-height:34px}
+  .modal{width:min(94vw,520px); padding:16px}
+  td.gsel select,td.gsel2 select{max-width:108px}
+  .grow .gc{font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="seal">囍<br>禮簿</div>
+    <div class="eyebrow">HE LI JIN BU · 2026</div>
+    <h1>电子礼金簿</h1>
+    <div class="couple">龚徽<span class="amp">×</span>卢郁洁</div>
+    <div class="meta">2026 年 9 月 24 日 · 云南镇雄 · 丰源大碗菜（伴山智慧生态城）</div>
+    <div class="statrow" id="stats"></div>
+  </div>
+</header>
+
+<div class="vbar" id="vbar" hidden></div>
+<nav class="tabs"><div class="tabs-inner" id="tabs"></div></nav>
+
+<main>
+  <section class="view on" id="view-list">
+    <div class="card">
+      <div class="toolbar">
+        <div class="search"><input id="q" placeholder="搜索姓名、备注、页号…"></div>
+        <div class="chips" id="amountchips"></div>
+        <div class="spacer"></div>
+        <button class="btn" id="btn-sort">排序：金额↓</button>
+        <button class="btn primary" id="btn-add">+ 添加记录</button>
+        <button class="btn" id="btn-export">导出 Excel</button>
+      </div>
+      <div class="chips" id="groupchips" style="margin:2px 0 8px"></div>
+      <div class="selbar" id="bulkbar" hidden>
+        <span>已选 <b id="seln" class="num">0</b> 条</span>
+        <select id="selgroup"></select>
+        <button class="btn sm primary" id="btn-assign">归入该分组</button>
+        <button class="btn sm" id="btn-selall">选中本页筛选全部</button>
+        <button class="btn sm ghost" id="btn-selnone">清空</button>
+      </div>
+      <div class="tblwrap">
+        <table>
+          <thead><tr>
+            <th class="sel"><input type="checkbox" id="chk-all" title="全选当前筛选结果"></th>
+            <th class="idx">#</th><th>姓名</th><th style="width:110px">金额</th><th>备注</th><th style="width:150px">分组</th>
+            <th class="act" style="width:92px">操作</th>
+          </tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div class="empty" id="empty" style="display:none">没有匹配的记录</div>
+    </div>
+  </section>
+
+  <section class="view" id="view-scan">
+    <div class="card">
+      <div class="card-hd">
+        <h2>扫描件核对</h2>
+        <span class="muted" style="font-size:13px">左边是原件，右边是本页识别结果 —— 对照着改，页面合计对得上就说明这页录好了</span>
+        <div class="spacer"></div>
+        <button class="btn sm" id="btn-scanopen">打开原图</button>
+      </div>
+      <div class="card-bd">
+        <div class="pager" id="pager"></div>
+        <div id="badpages"></div>
+        <div class="scanlayout">
+          <div>
+            <div class="imgbox" id="imgbox"><img id="scanimg" alt="扫描件"></div>
+          </div>
+          <div class="side">
+            <div class="card" style="box-shadow:none">
+              <div class="card-hd"><h2>本页识别结果</h2><div class="spacer"></div><span class="muted" style="font-size:12px" id="pagecount"></span></div>
+              <div class="card-bd" style="padding:12px 14px">
+                <div id="balance" class="balance unk">—</div>
+                <div style="display:flex; gap:8px; margin-bottom:10px">
+                  <button class="btn sm" id="btn-verify" style="flex:1">标记本页已核对</button>
+                </div>
+                <div class="pagelist" id="pagelist"></div>
+                <div style="margin-top:12px">
+                  <div class="field" style="margin-bottom:8px"><label>补录一条（原件上有、识别漏掉的）</label>
+                    <div style="display:flex; gap:6px"><input id="f-name" placeholder="姓名" style="flex:1.4"><input id="f-amount" class="num" placeholder="金额" inputmode="numeric" style="flex:1"></div>
+                    <select id="f-sec" style="margin-top:6px; display:none"></select>
+                  </div>
+                  <div class="quick" id="quick"></div>
+                  <button class="btn primary" id="btn-save" style="width:100%; margin-top:10px">添加本页记录 (Enter)</button>
+                </div>
+                <div class="hint" style="margin-top:10px">页码变绿 = 这一页对上了（或已手动标记）。合计对得上不代表每条都对，名字务必扫一眼；点击名字输入框会弹出识别候选，可直接选。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="view-stats">
+    <div class="grid2">
+      <div class="card"><div class="card-hd"><h2>金额分布</h2></div><div class="card-bd" id="dist"></div></div>
+      <div class="card"><div class="card-hd"><h2>分组汇总</h2></div><div class="card-bd" id="groupsum"></div></div>
+    </div>
+    <div class="card"><div class="card-hd"><h2>单笔最高</h2></div><div class="card-bd" id="top10"></div></div>
+  </section>
+
+  <section class="view" id="view-guests">
+    <div class="card"><div class="card-hd"><h2>请客名单（镇雄法院）</h2><div class="spacer"></div>
+        <span class="muted" style="font-size:13px">部门分组来自礼金登记表 · 最右列可按「我的分组」自己归类</span></div>
+      <div class="card-bd" style="padding-bottom:0"><div class="hint" id="gsum"></div></div>
+      <div class="tblwrap"><table><thead><tr><th style="width:56px">#</th><th>姓名</th><th style="width:160px">电话</th><th style="width:110px">邀请状态</th><th style="width:150px">我的分组</th></tr></thead><tbody id="gbody"></tbody></table></div>
+    </div>
+  </section>
+
+
+  <section class="view" id="view-ai">
+    <div class="wrap">
+      <div class="card">
+        <div class="card-hd"><h2>AI 复核</h2><div class="spacer"></div>
+          <span class="muted" style="font-size:12.5px" id="aisum"></span></div>
+        <div class="card-bd">
+          <div class="aifilter" id="aifilter"></div>
+          <div class="hint" id="aihint" style="margin:10px 0 14px"></div>
+          <div class="aiwrap" id="ailist"></div>
+          <div class="empty" id="aiempty" style="display:none">没有需要复核的记录 🎉</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="view" id="view-data">
+    <div class="card"><div class="card-hd"><h2>数据与备份</h2></div><div class="card-bd">
+      <div class="warnbar" id="lsfail" hidden></div>
+      <div class="hint">所有修改都保存在本机浏览器（localStorage），刷新、关机都不会丢。换设备或想留档，请用下面的导出／导入。</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+        <button class="btn" id="btn-csv">导出 Excel (CSV)</button>
+        <button class="btn" id="btn-json">导出 JSON 备份</button>
+        <button class="btn" id="btn-import">导入 JSON 备份</button>
+        <button class="btn" id="btn-print">打印 / 另存 PDF</button>
+        <button class="btn" id="btn-sync">☁️ 同步云端版本</button>
+        <button class="btn ghost" id="btn-undosync">↩︎ 撤销同步</button>
+        <button class="btn ghost" id="btn-reset">恢复为初始数据</button>
+      </div>
+      <input type="file" id="filejson" accept=".json" style="display:none">
+      <div class="hint" style="margin-top:14px" id="datastat"></div>
+    </div></div>
+    <div class="card" style="margin-top:14px"><div class="card-hd"><h2>分组管理</h2><div class="spacer"></div>
+      <span class="muted" style="font-size:12.5px">分组随便建：明细表每行右边也能直接换组</span></div><div class="card-bd">
+      <div id="groupmgr"></div>
+      <button class="btn sm primary" id="btn-newgroup" style="margin-top:10px">+ 新建分组</button>
+      <div class="hint" style="margin-top:10px">删除分组不会删记录：组里的记录会变成「未分组」，可随时再归组。这里的分组同时用于明细表和请客名单。</div>
+    </div></div>
+    <div id="diagnose" style="margin-top:14px"></div>
+  </section>
+</main>
+
+<div class="mask" id="mask"><div class="modal">
+  <h3 id="m-title">添加记录</h3>
+  <div class="bd">
+    <div class="field"><label>姓名</label><input id="m-name" list="m-altlist"><datalist id="m-altlist"></datalist></div>
+    <div id="m-alts" class="altchips"></div>
+    <div class="field" style="margin-top:10px"><label>金额</label><input id="m-amount" class="num" inputmode="numeric"></div>
+    <div class="field"><label>分组</label><select id="m-group"></select></div>
+    <div class="field" id="m-pgwrap" style="display:none"><label>页码 / 节（改错页的记录会重新归页对账）</label>
+      <div style="display:flex; gap:6px">
+        <input id="m-page" class="num" inputmode="numeric" placeholder="页码" style="flex:1">
+        <select id="m-sec" style="flex:1"></select>
+      </div></div>
+    <div class="field"><label>备注</label><input id="m-note"></div>
+  </div>
+  <div class="ft"><button class="btn" id="m-cancel">取消</button><button class="btn primary" id="m-ok">保存</button></div>
+</div></div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const DATA = {"meta":{"title":"电子礼金簿","couple":"龚徽 × 卢郁洁","date":"2026-09-24","venue":"云南镇雄 · 丰源大碗菜（伴山智慧生态城）","phone":"18849841551"},"groups":[{"id":"court","name":"法院同事"},{"id":"scan","name":"礼簿（扫描件）"},{"id":"gmujoyi7q24","name":"龚徽"}],"items":[{"id":1,"name":"王和跃","amount":999,"note":"","group":"gmujoyi7q24","draft":false},{"id":2,"name":"陈涛","amount":300,"note":"","group":"scan","draft":false},{"id":3,"name":"汪喜","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":4,"name":"黄丽","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":5,"name":"王龙玺","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":6,"name":"黄应招","amount":600,"note":"","group":"gmujoyi7q24","draft":false},{"id":7,"name":"余波","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":8,"name":"邓梦玲","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":9,"name":"邓俊锋","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":10,"name":"陈群","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":11,"name":"陈华周","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":12,"name":"许定鳌","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":13,"name":"武绍才","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":14,"name":"任刚","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":15,"name":"刘成尧","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":16,"name":"杨精","amount":666,"note":"","group":"gmujoyi7q24","draft":false},{"id":17,"name":"陈晓","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":18,"name":"许思敬","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":19,"name":"龙道洋","amount":600,"note":"","group":"gmujoyi7q24","draft":false},{"id":20,"name":"马继铭","amount":1000,"note":"","group":"gmujoyi7q24","draft":false},{"id":21,"name":"马特","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":22,"name":"郑磊","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":23,"name":"李泽贵","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":24,"name":"许朝卿","amount":600,"note":"","group":"gmujoyi7q24","draft":false},{"id":25,"name":"赵强","amount":600,"note":"","group":"gmujoyi7q24","draft":false},{"id":26,"name":"王春美","amount":500,"note":"","group":"scan","draft":false},{"id":27,"name":"钱红","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":28,"name":"邓毅","amount":300,"note":"游泳","group":"gmujoyi7q24","draft":false},{"id":29,"name":"熊雷","amount":300,"note":"游泳","group":"gmujoyi7q24","draft":false},{"id":30,"name":"朱绍光","amount":300,"note":"游泳","group":"scan","draft":false},{"id":31,"name":"刘成琳","amount":800,"note":"","group":"gmujoyi7q24","draft":false},{"id":32,"name":"龚宇","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":33,"name":"龚晓","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":34,"name":"常亚东","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":35,"name":"宋源伟","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":36,"name":"曾小琦","amount":300,"note":"木桌","group":"gmujoyi7q24","draft":false},{"id":37,"name":"丁仁","amount":600,"note":"","group":"gmujoyi7q24","draft":false},{"id":38,"name":"万欣杰","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":39,"name":"王岿然","amount":666,"note":"","group":"gmujoyi7q24","draft":false},{"id":40,"name":"邹旭","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":41,"name":"吴健","amount":400,"note":"","group":"gmujoyi7q24","draft":false},{"id":42,"name":"王曦","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":43,"name":"李云峰","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":44,"name":"王义德","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":45,"name":"杨照全","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":46,"name":"邓成友","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":47,"name":"闵猛","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":48,"name":"韩石芹","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":49,"name":"胡广","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":50,"name":"未知","amount":666,"note":"常桂 郭川","group":"gmujoyi7q24","draft":false},{"id":51,"name":"夏振红","amount":800,"note":"","group":"gmujoyi7q24","draft":false},{"id":52,"name":"张庭晶","amount":800,"note":"","group":"gmujoyi7q24","draft":false},{"id":53,"name":"李然","amount":2000,"note":"","group":"gmujoyi7q24","draft":false},{"id":54,"name":"陈诚","amount":1900,"note":"","group":"gmujoyi7q24","draft":false},{"id":55,"name":"李冉","amount":1900,"note":"","group":"gmujoyi7q24","draft":false},{"id":56,"name":"赵睿","amount":1000,"note":"","group":"gmujoyi7q24","draft":false},{"id":57,"name":"廖苑浩","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":58,"name":"李永鹏","amount":800,"note":"","group":"gmujoyi7q24","draft":false},{"id":59,"name":"罗星兵","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":60,"name":"我们爸爸妈妈","amount":1399,"note":"4人","group":"gmujoyi7q24","draft":false},{"id":61,"name":"奶奶","amount":1200,"note":"2个","group":"gmujoyi7q24","draft":false},{"id":62,"name":"罗睿","amount":600,"note":"","group":"gmujoyi7q24","draft":false},{"id":63,"name":"三爹","amount":990,"note":"2个","group":"gmujoyi7q24","draft":false},{"id":64,"name":"懂庆","amount":500,"note":"","group":"scan","draft":false},{"id":65,"name":"王云（邓成美）","amount":300,"note":"","group":"scan","draft":false},{"id":66,"name":"龚鑫","amount":400,"note":"","group":"scan","draft":false},{"id":67,"name":"龚成菊","amount":300,"note":"","group":"scan","draft":false},{"id":68,"name":"龚成飞","amount":300,"note":"","group":"scan","draft":false},{"id":69,"name":"龚成凤","amount":300,"note":"","group":"scan","draft":false},{"id":70,"name":"陈刚","amount":300,"note":"","group":"scan","draft":false},{"id":71,"name":"许盛华","amount":300,"note":"","group":"scan","draft":false},{"id":72,"name":"刘家顺","amount":200,"note":"","group":"scan","draft":false},{"id":73,"name":"张成凯","amount":200,"note":"","group":"scan","draft":false},{"id":74,"name":"成联翠","amount":200,"note":"","group":"scan","draft":false},{"id":75,"name":"高秀喜（高波）","amount":300,"note":"","group":"scan","draft":false},{"id":76,"name":"刘定华","amount":500,"note":"","group":"scan","draft":false},{"id":77,"name":"李华鑫","amount":200,"note":"","group":"scan","draft":false},{"id":78,"name":"聂明国","amount":300,"note":"","group":"scan","draft":false},{"id":79,"name":"郎维举","amount":300,"note":"","group":"scan","draft":false},{"id":80,"name":"宋德荣","amount":300,"note":"","group":"scan","draft":false},{"id":81,"name":"高彦兵","amount":200,"note":"","group":"scan","draft":false},{"id":82,"name":"申时光","amount":200,"note":"","group":"scan","draft":false},{"id":83,"name":"吴法亮","amount":200,"note":"","group":"scan","draft":false},{"id":84,"name":"易忠兴","amount":100,"note":"","group":"scan","draft":false},{"id":85,"name":"顾怀林","amount":500,"note":"","group":"scan","draft":false},{"id":86,"name":"龚明","amount":300,"note":"","group":"scan","draft":false},{"id":87,"name":"张天云","amount":300,"note":"","group":"scan","draft":false},{"id":88,"name":"钟兴勇","amount":300,"note":"","group":"scan","draft":false},{"id":89,"name":"高琼","amount":300,"note":"","group":"scan","draft":false},{"id":90,"name":"许绍仁","amount":200,"note":"","group":"scan","draft":false},{"id":91,"name":"凌育军","amount":200,"note":"","group":"scan","draft":false},{"id":92,"name":"彭玲（三妹）","amount":300,"note":"","group":"scan","draft":false},{"id":93,"name":"赵高武","amount":200,"note":"","group":"scan","draft":false},{"id":94,"name":"龚景成","amount":200,"note":"","group":"scan","draft":false},{"id":95,"name":"梁华明","amount":200,"note":"","group":"scan","draft":false},{"id":96,"name":"丁府珍","amount":200,"note":"","group":"scan","draft":false},{"id":97,"name":"陈国银","amount":300,"note":"","group":"scan","draft":false},{"id":98,"name":"杨琳","amount":300,"note":"","group":"scan","draft":false},{"id":99,"name":"刘畅","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":100,"name":"周灶祥","amount":300,"note":"烟草公司","group":"gmujoyi7q24","draft":false},{"id":101,"name":"肖勇","amount":500,"note":"","group":"scan","draft":false},{"id":102,"name":"廖德美","amount":500,"note":"","group":"scan","draft":false},{"id":103,"name":"成联登","amount":300,"note":"","group":"scan","draft":false},{"id":104,"name":"吴长伟","amount":300,"note":"","group":"scan","draft":false},{"id":105,"name":"吴长举","amount":300,"note":"","group":"scan","draft":false},{"id":106,"name":"吴长忠","amount":300,"note":"","group":"scan","draft":false},{"id":107,"name":"胡培友","amount":200,"note":"","group":"scan","draft":false},{"id":108,"name":"邓声远","amount":300,"note":"","group":"scan","draft":false},{"id":109,"name":"唐继华","amount":200,"note":"","group":"scan","draft":false},{"id":110,"name":"成联洪","amount":600,"note":"","group":"scan","draft":false},{"id":111,"name":"付权","amount":500,"note":"","group":"scan","draft":false},{"id":112,"name":"李正翠（申时贵）","amount":200,"note":"","group":"scan","draft":false},{"id":113,"name":"吴维权","amount":200,"note":"","group":"scan","draft":false},{"id":114,"name":"申时军","amount":500,"note":"","group":"scan","draft":false},{"id":115,"name":"文彬","amount":300,"note":"","group":"scan","draft":false},{"id":116,"name":"吉正友（姑基）","amount":300,"note":"","group":"scan","draft":false},{"id":117,"name":"王聪","amount":200,"note":"","group":"scan","draft":false},{"id":118,"name":"吉世全","amount":300,"note":"","group":"scan","draft":false},{"id":119,"name":"常茂","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":120,"name":"黄校军","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":121,"name":"常建勋","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":122,"name":"严义","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":123,"name":"武立宏","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":124,"name":"代玉","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":125,"name":"李开俊","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":126,"name":"文江","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":127,"name":"宛顺","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":128,"name":"马豪","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":129,"name":"曾永翠","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":130,"name":"魏瑜","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":131,"name":"彭畅","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":132,"name":"李娟","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":133,"name":"龚丽","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":134,"name":"李光健","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":135,"name":"廖培芮","amount":300,"note":"","group":"scan","draft":false},{"id":136,"name":"申时杰","amount":300,"note":"","group":"scan","draft":false},{"id":137,"name":"熊发芬","amount":200,"note":"","group":"scan","draft":false},{"id":138,"name":"申登绪","amount":200,"note":"","group":"scan","draft":false},{"id":139,"name":"涂冉","amount":200,"note":"","group":"scan","draft":false},{"id":140,"name":"安定元","amount":300,"note":"","group":"scan","draft":false},{"id":141,"name":"杜超","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":142,"name":"郑爽","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":143,"name":"阮峰","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":144,"name":"李灿","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":145,"name":"申庆刚","amount":200,"note":"","group":"scan","draft":false},{"id":146,"name":"邓鹏（邓书富）","amount":200,"note":"","group":"scan","draft":false},{"id":147,"name":"汪子柱","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":148,"name":"段斌","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":149,"name":"何高莹","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":150,"name":"龚成飞","amount":500,"note":"","group":"scan","draft":false},{"id":151,"name":"汪茜","amount":200,"note":"","group":"scan","draft":false},{"id":152,"name":"邓菊仙","amount":200,"note":"","group":"scan","draft":false},{"id":153,"name":"黄琴","amount":300,"note":"","group":"scan","draft":false},{"id":154,"name":"王雍孝","amount":200,"note":"","group":"scan","draft":false},{"id":155,"name":"余大清","amount":200,"note":"","group":"scan","draft":false},{"id":156,"name":"许镇","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":157,"name":"贾向平","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":158,"name":"刘春梅","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":159,"name":"张玲","amount":100,"note":"","group":"scan","draft":false},{"id":160,"name":"谭丽娟","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":161,"name":"李建梁","amount":100,"note":"","group":"scan","draft":false},{"id":162,"name":"王盼","amount":100,"note":"","group":"scan","draft":false},{"id":163,"name":"邓华北","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":164,"name":"游维","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":165,"name":"高嘉尧","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":166,"name":"刘富","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":167,"name":"宋成","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":168,"name":"郑祖培","amount":300,"note":"","group":"scan","draft":false},{"id":169,"name":"陈海","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":170,"name":"赵龙","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":171,"name":"李世忠","amount":300,"note":"","group":"scan","draft":false},{"id":172,"name":"李世健","amount":500,"note":"","group":"scan","draft":false},{"id":173,"name":"沈长远","amount":300,"note":"","group":"scan","draft":false},{"id":174,"name":"胡永忠","amount":300,"note":"","group":"scan","draft":false},{"id":175,"name":"胡涛","amount":1000,"note":"","group":"gmujoyi7q24","draft":false},{"id":176,"name":"范鸿昌","amount":300,"note":"","group":"scan","draft":false},{"id":177,"name":"郭川","amount":1200,"note":"","group":"gmujoyi7q24","draft":false},{"id":178,"name":"文泽斌","amount":300,"note":"","group":"scan","draft":false},{"id":179,"name":"孙前","amount":200,"note":"","group":"scan","draft":false},{"id":180,"name":"韩世英","amount":200,"note":"","group":"scan","draft":false},{"id":181,"name":"付燕","amount":300,"note":"","group":"scan","draft":false},{"id":182,"name":"杨华仙","amount":300,"note":"","group":"scan","draft":false},{"id":183,"name":"木华","amount":200,"note":"","group":"scan","draft":false},{"id":184,"name":"武东","amount":200,"note":"","group":"scan","draft":false},{"id":185,"name":"胡永会","amount":200,"note":"","group":"scan","draft":false},{"id":186,"name":"龚成贵","amount":200,"note":"","group":"scan","draft":false},{"id":187,"name":"许中仁","amount":500,"note":"","group":"scan","draft":false},{"id":188,"name":"龚声伦","amount":200,"note":"","group":"scan","draft":false},{"id":189,"name":"许中振","amount":300,"note":"","group":"scan","draft":false},{"id":190,"name":"左华","amount":300,"note":"","group":"scan","draft":false},{"id":191,"name":"陈国甦","amount":100,"note":"","group":"scan","draft":false},{"id":192,"name":"吴道友（小祖国）","amount":300,"note":"","group":"scan","draft":false},{"id":193,"name":"雷洪芝","amount":300,"note":"","group":"scan","draft":false},{"id":194,"name":"吉学富","amount":300,"note":"","group":"scan","draft":false},{"id":195,"name":"龚成曲","amount":500,"note":"","group":"scan","draft":false},{"id":196,"name":"周懿","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":197,"name":"李茂喻","amount":200,"note":"","group":"scan","draft":false},{"id":198,"name":"刘曾训","amount":200,"note":"","group":"scan","draft":false},{"id":199,"name":"宋粉","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":200,"name":"藏厚金","amount":200,"note":"","group":"scan","draft":false},{"id":201,"name":"陈超","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":202,"name":"梁同春（老二）","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":203,"name":"陈华江","amount":300,"note":"","group":"scan","draft":false},{"id":204,"name":"向成必","amount":300,"note":"","group":"scan","draft":false},{"id":205,"name":"刘荣辉","amount":300,"note":"","group":"scan","draft":false},{"id":206,"name":"张荣毅","amount":300,"note":"","group":"scan","draft":false},{"id":207,"name":"杨军","amount":300,"note":"","group":"scan","draft":false},{"id":208,"name":"陈海潮","amount":300,"note":"","group":"scan","draft":false},{"id":209,"name":"陈海波","amount":300,"note":"","group":"scan","draft":false},{"id":210,"name":"涂国端","amount":200,"note":"","group":"scan","draft":false},{"id":211,"name":"范斌","amount":500,"note":"","group":"scan","draft":false},{"id":212,"name":"范泽珍I（范三姐）","amount":500,"note":"","group":"scan","draft":false},{"id":213,"name":"范萍","amount":500,"note":"","group":"scan","draft":false},{"id":214,"name":"范勇","amount":600,"note":"","group":"scan","draft":false},{"id":215,"name":"范鑫","amount":500,"note":"","group":"scan","draft":false},{"id":216,"name":"龚成奎","amount":300,"note":"","group":"scan","draft":false},{"id":217,"name":"陈坤","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":218,"name":"宋奡玢","amount":500,"note":"","group":"gmujoyi7q24","draft":false},{"id":219,"name":"李云","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":220,"name":"赵群","amount":200,"note":"","group":"gmujoyi7q24","draft":false},{"id":221,"name":"王世琴","amount":300,"note":"罗坎食堂大姐","group":"scan","draft":false},{"id":222,"name":"小犯（宋源伟","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":223,"name":"张诸明","amount":200,"note":"","group":"scan","page":1,"sec":0,"draft":true,"alts":["张请明"],"ocr_amount":200,"guess":false,"cid":"p01s1r1"},{"id":224,"name":"龚成祥","amount":300,"note":"","group":"scan","page":1,"sec":0,"draft":false,"alts":["奕成裤"],"ocr_amount":300,"guess":false,"cid":"p01s1r2","ai":{"flag":"AI修正（OCR证据弱）","base":"奕成裤","src":{"gemma整行":"奕成祥","gemma特写":"奕成祥","qwen整行":"奕成祥"},"img":"礼金簿_files/ai/p01s1r2.jpg","amt":null}},{"id":225,"name":"龚成军","amount":300,"note":"","group":"scan","page":1,"sec":0,"draft":false,"alts":["聚成军","癸成军"],"ocr_amount":300,"guess":false,"cid":"p01s1r3"},{"id":226,"name":"杨东","amount":200,"note":"","group":"gmujoyi7q24","page":1,"sec":0,"draft":true,"alts":["梅东"],"ocr_amount":null,"guess":true,"cid":"p01s1r4"},{"id":227,"name":"谭家泉","amount":500,"note":"","group":"scan","page":1,"sec":0,"draft":true,"alts":["谭宝泉"],"ocr_amount":null,"guess":true,"cid":"p01s1r5"},{"id":228,"name":"周光元","amount":800,"note":"","group":"scan","page":1,"sec":0,"draft":false,"alts":["用光鲜花"],"ocr_amount":800,"guess":true,"cid":"p01s1r6"},{"id":229,"name":"杨华国","amount":200,"note":"姓名未识别，请对照原件填写","group":"scan","page":1,"sec":0,"draft":false,"alts":[],"ocr_amount":200,"guess":false,"cid":"p01s1r7","ai":{"flag":"AI修正（OCR证据弱）","base":"构华国","src":{"gemma整行":"杨华国","gemma特写":"杨华国","qwen整行":"杨华国"},"img":"礼金簿_files/ai/p01s1r7.jpg","amt":null}},{"id":230,"name":"朱德海","amount":200,"note":"","group":"scan","page":1,"sec":0,"draft":false,"alts":["未德海"],"ocr_amount":200,"guess":false,"cid":"p01s1r8"},{"id":231,"name":"岳顶龙","amount":200,"note":"","group":"scan","page":1,"sec":0,"draft":false,"alts":["余顶龙"],"ocr_amount":200,"guess":false,"cid":"p01s1r9"},{"id":232,"name":"常亚东","amount":500,"note":"","group":"gmujoyi7q24","page":1,"sec":0,"draft":true,"alts":["第亚东"],"ocr_amount":500,"guess":false,"cid":"p01s1r10","ai":{"flag":"AI建议","base":"第亚东","src":{"gemma整行":"常亚东","gemma特写":"常亚东","qwen整行":"第亚东"},"img":"礼金簿_files/ai/p01s1r10.jpg","amt":null}},{"id":233,"name":"李应祥","amount":200,"note":"","group":"scan","page":1,"sec":0,"draft":true,"alts":["李应","李应裤","虚应"],"ocr_amount":200,"guess":false,"cid":"p01s1r11"},{"id":234,"name":"万杨杨","amount":200,"note":"","group":"gmujoyi7q24","page":1,"sec":1,"draft":true,"alts":["万扬构","万物构","石移楠"],"ocr_amount":200,"guess":false,"cid":"p01s2r1"},{"id":235,"name":"张俊菊","amount":500,"note":"","group":"scan","page":2,"sec":0,"draft":true,"alts":[],"ocr_amount":500,"guess":false,"cid":"p02s1r1"},{"id":236,"name":"唐映秋","amount":200,"note":"","group":"scan","page":2,"sec":0,"draft":false,"alts":["鹿映秋","底映欲","虎映狄"],"ocr_amount":300,"guess":false,"cid":"p02s1r2","ai":{"flag":"AI修正（OCR仅1票）","base":"鹿映秋","src":{"gemma整行":"庞映欲","gemma特写":"庞映欲","qwen整行":"鹿映秋"},"img":"礼金簿_files/ai/p02s1r2.jpg","amt":{"old":200,"new":300,"support":1}}},{"id":237,"name":"余春秀","amount":200,"note":"","group":"scan","page":2,"sec":0,"draft":true,"alts":["余春香"],"ocr_amount":200,"guess":false,"cid":"p02s1r3"},{"id":238,"name":"王克顺","amount":200,"note":"","group":"scan","page":2,"sec":0,"draft":true,"alts":["五克顺"],"ocr_amount":200,"guess":false,"cid":"p02s1r4"},{"id":239,"name":"刘隆昆","amount":200,"note":"","group":"scan","page":2,"sec":0,"draft":false,"alts":[],"ocr_amount":200,"guess":false,"cid":"p02s1r5"},{"id":240,"name":"鲁绍英","amount":300,"note":"","group":"scan","page":2,"sec":0,"draft":true,"alts":["暑绍英","鲁织英"],"ocr_amount":300,"guess":false,"cid":"p02s1r6"},{"id":241,"name":"廖元富","amount":500,"note":"","group":"scan","page":2,"sec":0,"draft":false,"alts":[],"ocr_amount":500,"guess":false,"cid":"p02s1r7"},{"id":242,"name":"龚成东","amount":200,"note":"","group":"scan","page":2,"sec":0,"draft":false,"alts":["成东","葵龙东"],"ocr_amount":null,"guess":true,"cid":"p02s1r8","ai":{"flag":"AI修正（OCR仅1票）","base":"成东","src":{"gemma整行":"葵成东","gemma特写":"葵成东","qwen整行":"葵成东"},"img":"礼金簿_files/ai/p02s1r8.jpg","amt":null}},{"id":243,"name":"邓平（未支付）","amount":0,"note":"","group":"scan","page":2,"sec":0,"draft":false,"alts":[],"ocr_amount":200,"guess":false,"cid":"p02s1r9"},{"id":244,"name":"李明举","amount":100,"note":"","group":"scan","page":2,"sec":0,"draft":false,"alts":[],"ocr_amount":100,"guess":false,"cid":"p02s1r10"},{"id":245,"name":"吉正祥","amount":400,"note":"","group":"scan","page":2,"sec":0,"draft":true,"alts":["吉正辞","吉正裤"],"ocr_amount":400,"guess":true,"cid":"p02s1r11","ai":{"flag":"AI建议","base":"吉正辞","src":{"gemma整行":"吉正祥","gemma特写":"吉正祥","qwen整行":"吉正祥"},"img":"礼金簿_files/ai/p02s1r11 2.jpg","amt":{"old":500,"new":400,"support":1}}},{"id":246,"name":"刘邦银","amount":300,"note":"","group":"scan","page":3,"sec":0,"draft":false,"alts":["列邦银","创邦銀"],"ocr_amount":300,"guess":false,"cid":"p03s1r1"},{"id":247,"name":"刘邦友","amount":300,"note":"","group":"scan","page":3,"sec":0,"draft":false,"alts":["训都友","训郝友"],"ocr_amount":300,"guess":false,"cid":"p03s1r2","ai":{"flag":"AI建议","base":"训都友","src":{"gemma整行":"训邦友","gemma特写":"训邦友","qwen整行":"训邦友"},"img":"礼金簿_files/ai/p03s1r2.jpg","amt":null}},{"id":248,"name":"黄光会","amount":200,"note":"","group":"scan","page":3,"sec":0,"draft":true,"alts":[],"ocr_amount":null,"guess":true,"cid":"p03s1r3"},{"id":249,"name":"文荣","amount":300,"note":"","group":"scan","page":3,"sec":0,"draft":false,"alts":["文：菜"],"ocr_amount":null,"guess":true,"cid":"p03s1r4"},{"id":250,"name":"许燕","amount":300,"note":"","group":"scan","page":3,"sec":0,"draft":true,"alts":["寧女"],"ocr_amount":300,"guess":false,"cid":"p03s1r5"},{"id":251,"name":"邹红","amount":200,"note":"","group":"scan","page":3,"sec":0,"draft":true,"alts":["邻红"],"ocr_amount":200,"guess":false,"cid":"p03s1r6","ai":{"flag":"AI建议","base":"邻红","src":{"gemma整行":"邹红","gemma特写":"邹红","qwen整行":"邻红"},"img":"礼金簿_files/ai/p03s1r6.jpg","amt":null}},{"id":252,"name":"许华","amount":200,"note":"","group":"scan","page":3,"sec":0,"draft":false,"alts":["许竿"],"ocr_amount":null,"guess":true,"cid":"p03s1r7","ai":{"flag":"AI建议","base":"许竿","src":{"gemma整行":"许华","gemma特写":"许华","qwen整行":"许竿"},"img":"礼金簿_files/ai/p03s1r7.jpg","amt":null}},{"id":253,"name":"吉学芬","amount":500,"note":"","group":"scan","page":3,"sec":0,"draft":false,"alts":["古学葵","古学菱","以系"],"ocr_amount":500,"guess":false,"cid":"p03s1r8","ai":{"flag":"分歧","base":"古吉学茶","src":{"gemma整行":"古学菱","gemma特写":"古学葵","qwen整行":"古吉学茶"},"img":"礼金簿_files/ai/p03s1r8.jpg","amt":null}},{"id":254,"name":"祁勇","amount":300,"note":"","group":"scan","page":3,"sec":0,"draft":false,"alts":["爱祁勇"],"ocr_amount":300,"guess":false,"cid":"p03s1r9","ai":{"flag":"AI修正（OCR证据弱）","base":"叁恒圈","src":{"gemma整行":"鑫祁勇","gemma特写":"鑫祁勇","qwen整行":"爱祁勇"},"img":"礼金簿_files/ai/p03s1r9.jpg","amt":null}},{"id":255,"name":"王涛","amount":300,"note":"","group":"gmujoyi7q24","page":3,"sec":0,"draft":false,"alts":["$?","五涛"],"ocr_amount":300,"guess":false,"cid":"p03s1r10","ai":{"flag":"AI修正（OCR仅1票）","base":"$?","src":{"gemma整行":"之涛","gemma特写":"之涛","qwen整行":"之涛"},"img":"礼金簿_files/ai/p03s1r10.jpg","amt":null}},{"id":256,"name":"许海","amount":600,"note":"","group":"gmujoyi7q24","page":3,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p03s1r11","ai":{"flag":"AI建议","base":"许海","src":{"gemma整行":"陆酒图","gemma特写":"陆酒图","qwen整行":"陆酒图"},"img":"礼金簿_files/ai/p03s1r11.jpg","amt":null}},{"id":257,"name":"杨杰（众济）","amount":300,"note":"","group":"gmujoyi7q24","page":4,"sec":0,"draft":false,"alts":["娇构杰","树枸杰","树·枸杰"],"ocr_amount":300,"guess":false,"cid":"p04s1r1"},{"id":258,"name":"邓成虎","amount":300,"note":"","group":"scan","page":4,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p04s1r2"},{"id":259,"name":"彭会","amount":200,"note":"姓名未识别，请对照原件填写","group":"scan","page":4,"sec":0,"draft":false,"alts":[],"ocr_amount":200,"guess":false,"cid":"p04s1r3"},{"id":260,"name":"骆云","amount":300,"note":"","group":"scan","page":4,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p04s1r4"},{"id":261,"name":"蔡红","amount":500,"note":"","group":"gmujoyi7q24","page":4,"sec":0,"draft":true,"alts":["骆李;曹","骆李曹"],"ocr_amount":500,"guess":false,"cid":"p04s1r5"},{"id":262,"name":"蔡丽","amount":600,"note":"","group":"gmujoyi7q24","page":4,"sec":0,"draft":false,"alts":["曹旭"],"ocr_amount":300,"guess":false,"cid":"p04s1r6","ai":{"flag":"AI修正（OCR仅1票）","base":"曹旭","src":{"gemma整行":"红丽","gemma特写":"曹旭","qwen整行":"红丽"},"img":"礼金簿_files/ai/p04s1r6.jpg","amt":null}},{"id":263,"name":"邓申敏","amount":200,"note":"","group":"gmujoyi7q24","page":4,"sec":0,"draft":false,"alts":["即申敏"],"ocr_amount":200,"guess":true,"cid":"p04s1r7"},{"id":264,"name":"何岵霖","amount":500,"note":"","group":"gmujoyi7q24","page":4,"sec":0,"draft":false,"alts":["五制"],"ocr_amount":500,"guess":false,"cid":"p04s1r8","ai":{"flag":"AI修正（OCR证据弱）","base":"佰佰佰伯","src":{"gemma整行":"何岐霖","gemma特写":"何岐霖","qwen整行":"何岐霖","本地OCR特写":"何岐霖"},"img":"礼金簿_files/ai/p04s1r8 2.jpg","amt":null}},{"id":265,"name":"李璐","amount":500,"note":"","group":"gmujoyi7q24","page":4,"sec":1,"draft":false,"alts":["李璐"],"ocr_amount":null,"guess":true,"cid":"p04s2r1","ai":{"flag":"AI建议","base":"李璐","src":{"gemma整行":"伍饭","gemma特写":"伍饭","qwen整行":"伍饭"},"img":"礼金簿_files/ai/p04s2r1.jpg","amt":null}},{"id":266,"name":"赵玉","amount":300,"note":"","group":"gmujoyi7q24","page":4,"sec":1,"draft":true,"alts":["赵虫"],"ocr_amount":300,"guess":false,"cid":"p04s2r2"},{"id":267,"name":"藏厚明","amount":300,"note":"","group":"scan","page":4,"sec":1,"draft":false,"alts":["叁冬贰","荟减厚明","登减厚网"],"ocr_amount":300,"guess":false,"cid":"p04s2r3"},{"id":268,"name":"韩学琴","amount":200,"note":"","group":"scan","page":4,"sec":1,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p04s2r4"},{"id":269,"name":"王天寿","amount":500,"note":"","group":"scan","page":4,"sec":1,"draft":true,"alts":["陈琼","五天寿"],"ocr_amount":500,"guess":false,"cid":"p04s2r5","ai":{"flag":"AI建议","base":"五天寿","src":{"gemma整行":"王天寿","gemma特写":"王天寿","qwen整行":"陈琼"},"img":"礼金簿_files/ai/p04s2r5.jpg","amt":null}},{"id":270,"name":"张聪","amount":300,"note":"","group":"scan","page":4,"sec":1,"draft":false,"alts":["张聪","张滕","戴浆"],"ocr_amount":null,"guess":true,"cid":"p04s2r6","ai":{"flag":"分歧","base":"张聘","src":{"gemma整行":"张聘","gemma特写":"张聪"},"img":"礼金簿_files/ai/p04s2r6.jpg","amt":null}},{"id":271,"name":"王群美","amount":300,"note":"","group":"scan","page":4,"sec":1,"draft":false,"alts":["丑群美"],"ocr_amount":300,"guess":false,"cid":"p04s2r7","ai":{"flag":"AI修正（OCR仅1票）","base":"丑群美","src":{"gemma整行":"五群美","gemma特写":"五群美","qwen整行":"丑群美","本地OCR特写":"五群美"},"img":"礼金簿_files/ai/p04s2r7.jpg","amt":null}},{"id":272,"name":"余成飞","amount":500,"note":"","group":"scan","page":4,"sec":1,"draft":true,"alts":["你成飞"],"ocr_amount":500,"guess":false,"cid":"p04s2r8"},{"id":273,"name":"张炎","amount":300,"note":"","group":"scan","page":4,"sec":1,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p04s2r9"},{"id":274,"name":"汪林","amount":500,"note":"","group":"scan","page":4,"sec":1,"draft":false,"alts":["通林"],"ocr_amount":500,"guess":false,"cid":"p04s2r10","ai":{"flag":"分歧","base":"泾林","src":{"gemma整行":"泾林","gemma特写":"通林"},"img":"礼金簿_files/ai/p04s2r10.jpg","amt":null}},{"id":275,"name":"李应菊","amount":300,"note":"","group":"scan","page":5,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p05s1r1"},{"id":276,"name":"宋毅","amount":500,"note":"","group":"gmujoyi7q24","page":5,"sec":0,"draft":true,"alts":[],"ocr_amount":500,"guess":false,"cid":"p05s1r2"},{"id":277,"name":"杨纯智","amount":300,"note":"","group":"scan","page":5,"sec":0,"draft":true,"alts":["构纯智","杨纯船"],"ocr_amount":300,"guess":false,"cid":"p05s1r3"},{"id":278,"name":"胡洪斌","amount":500,"note":"","group":"gmujoyi7q24","page":5,"sec":0,"draft":false,"alts":["胡试斌","胡诚斌","胡识斌"],"ocr_amount":500,"guess":false,"cid":"p05s1r4","ai":{"flag":"AI建议（单源）/分歧","base":"胡波斌","src":{"gemma整行":"胡试斌","gemma特写":"胡诚斌"},"img":"礼金簿_files/ai/p05s1r4.jpg","amt":null}},{"id":279,"name":"刘涛","amount":300,"note":"","group":"scan","page":5,"sec":0,"draft":false,"alts":["创涛"],"ocr_amount":300,"guess":true,"cid":"p05s1r5"},{"id":280,"name":"涂忠国","amount":500,"note":"姓名未识别，请对照原件填写","group":"gmujoyi7q24","page":5,"sec":0,"draft":false,"alts":[],"ocr_amount":500,"guess":false,"cid":"p05s1r6"},{"id":281,"name":"李汉兵","amount":300,"note":"","group":"scan","page":5,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p05s1r7"},{"id":282,"name":"曾俊","amount":300,"note":"","group":"scan","page":5,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p05s1r8"},{"id":283,"name":"李贵琴","amount":300,"note":"","group":"scan","page":5,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p05s1r9"},{"id":284,"name":"雷洪琼","amount":300,"note":"","group":"scan","page":5,"sec":0,"draft":false,"alts":["雪浅琼","雪洪琼","團淡琼"],"ocr_amount":300,"guess":false,"cid":"p05s1r10","ai":{"flag":"AI建议","base":"雪浅琼","src":{"gemma整行":"廖淡琼","gemma特写":"廖淡琼"},"img":"礼金簿_files/ai/p05s1r10.jpg","amt":null}},{"id":285,"name":"曾永雄","amount":300,"note":"","group":"scan","page":5,"sec":0,"draft":true,"alts":["曾永"],"ocr_amount":300,"guess":false,"cid":"p05s1r11","ai":{"flag":"AI修正（OCR仅1票）","base":"曾永","src":{"gemma整行":"曾永雄","gemma特写":"曾永雄","本地OCR特写":"曾永雄"},"img":"礼金簿_files/ai/p05s1r11.jpg","amt":null}},{"id":286,"name":"杨正欢","amount":200,"note":"","group":"scan","page":5,"sec":1,"draft":false,"alts":["构正叹","构正欧","构亚欧"],"ocr_amount":200,"guess":false,"cid":"p05s2r1","ai":{"flag":"AI修正（OCR证据弱）","base":"构正叹","src":{"gemma整行":"构正欢","gemma特写":"构正欢"},"img":"礼金簿_files/ai/p05s2r1.jpg","amt":null}},{"id":287,"name":"徐娇","amount":200,"note":"","group":"gmujoyi7q24","page":5,"sec":1,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p05s2r2"},{"id":288,"name":"王晓红","amount":300,"note":"","group":"gmujoyi7q24","page":5,"sec":1,"draft":true,"alts":["五晓红","王晚认"],"ocr_amount":300,"guess":false,"cid":"p05s2r3","ai":{"flag":"AI修正（OCR仅1票）","base":"五晓红","src":{"gemma整行":"王晓红","gemma特写":"王晓红"},"img":"礼金簿_files/ai/p05s2r3.jpg","amt":null}},{"id":289,"name":"廖云镇","amount":200,"note":"","group":"gmujoyi7q24","page":5,"sec":1,"draft":false,"alts":["廖云领","廖云镇"],"ocr_amount":200,"guess":false,"cid":"p05s2r4","ai":{"flag":"分歧","base":"廖云","src":{"gemma整行":"廖云领","gemma特写":"廖云"},"img":"礼金簿_files/ai/p05s2r4.jpg","amt":null}},{"id":290,"name":"高英","amount":500,"note":"","group":"scan","page":5,"sec":1,"draft":true,"alts":[],"ocr_amount":500,"guess":false,"cid":"p05s2r5"},{"id":291,"name":"吕世银","amount":600,"note":"","group":"scan","page":5,"sec":1,"draft":false,"alts":["Z世裂"],"ocr_amount":600,"guess":false,"cid":"p05s2r6","ai":{"flag":"AI修正（OCR仅1票）","base":"Z世裂","src":{"gemma整行":"世裂","gemma特写":"世裂"},"img":"礼金簿_files/ai/p05s2r6.jpg","amt":null}},{"id":292,"name":"吕世英","amount":500,"note":"","group":"scan","page":5,"sec":1,"draft":false,"alts":["品世英"],"ocr_amount":500,"guess":false,"cid":"p05s2r7"},{"id":293,"name":"成联聪","amount":200,"note":"","group":"scan","page":5,"sec":1,"draft":false,"alts":["成联陈","成骇张"],"ocr_amount":200,"guess":false,"cid":"p05s2r8","ai":{"flag":"AI修正（OCR仅1票）","base":"成联陈","src":{"gemma整行":"成联张","gemma特写":"成联张"},"img":"礼金簿_files/ai/p05s2r8.jpg","amt":null}},{"id":294,"name":"胡松","amount":300,"note":"","group":"scan","page":5,"sec":1,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p05s2r9"},{"id":295,"name":"张茜","amount":200,"note":"","group":"gmujoyi7q24","page":5,"sec":1,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p05s2r10"},{"id":296,"name":"裴彬","amount":200,"note":"姓名未识别，请对照原件填写","group":"gmujoyi7q24","page":5,"sec":1,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p05s2r11","ai":{"flag":"分歧","base":"武祖园","src":{"gemma整行":"武祖园","gemma特写":"武恒圈"},"img":"礼金簿_files/ai/p05s2r11.jpg","amt":null}},{"id":297,"name":"黄智军","amount":200,"note":"","group":"gmujoyi7q24","page":6,"sec":0,"draft":false,"alts":["黄智晕"],"ocr_amount":200,"guess":false,"cid":"p06s1r1","ai":{"flag":"AI修正（OCR仅1票）","base":"黄智晕","src":{"gemma整行":"黄智景","gemma特写":"黄智景","本地OCR特写":"黄智晕"},"img":"礼金簿_files/ai/p06s1r1.jpg","amt":null}},{"id":298,"name":"张书荣","amount":200,"note":"","group":"scan","page":6,"sec":0,"draft":false,"alts":["张书豪","张书菜"],"ocr_amount":200,"guess":false,"cid":"p06s1r2"},{"id":299,"name":"窦晶艳","amount":200,"note":"","group":"gmujoyi7q24","page":6,"sec":0,"draft":true,"alts":["窦晶袍","蜜晶花"],"ocr_amount":200,"guess":false,"cid":"p06s1r3","ai":{"flag":"AI修正（OCR仅1票）","base":"窦晶袍","src":{"gemma整行":"窦晶艳","gemma特写":"窦晶艳"},"img":"礼金簿_files/ai/p06s1r3.jpg","amt":null}},{"id":300,"name":"张淑祝","amount":500,"note":"","group":"gmujoyi7q24","page":6,"sec":0,"draft":true,"alts":[],"ocr_amount":500,"guess":false,"cid":"p06s1r4"},{"id":301,"name":"沈丽涛","amount":200,"note":"","group":"scan","page":6,"sec":0,"draft":true,"alts":["观丽涛","现丽涛"],"ocr_amount":200,"guess":false,"cid":"p06s1r5"},{"id":302,"name":"王德珍","amount":200,"note":"","group":"scan","page":6,"sec":0,"draft":false,"alts":["贰饭"],"ocr_amount":200,"guess":false,"cid":"p06s1r6"},{"id":303,"name":"唐家慧","amount":200,"note":"","group":"scan","page":6,"sec":0,"draft":true,"alts":["唐求"],"ocr_amount":200,"guess":false,"cid":"p06s1r7"},{"id":305,"name":"余婷","amount":300,"note":"","group":"gmujoyi7q24","page":6,"sec":0,"draft":true,"alts":["尿婷"],"ocr_amount":300,"guess":false,"cid":"p06s1r9"},{"id":306,"name":"胥宗成","amount":300,"note":"","group":"gmujoyi7q24","page":6,"sec":0,"draft":false,"alts":["骨家成","骨烹成","骨宝成"],"ocr_amount":300,"guess":false,"cid":"p06s1r10","ai":{"flag":"AI建议","base":"骨家成","src":{"gemma整行":"骨宗成","gemma特写":"骨宗成"},"img":"礼金簿_files/ai/p06s1r10.jpg","amt":null}},{"id":307,"name":"申时勇","amount":1000,"note":"","group":"scan","page":6,"sec":0,"draft":false,"alts":["中叶勇"],"ocr_amount":1000,"guess":false,"cid":"p06s1r11","ai":{"flag":"分歧","base":"中时勇","src":{"gemma整行":"中叶勇","gemma特写":"中时勇"},"img":"礼金簿_files/ai/p06s1r11.jpg","amt":null}},{"id":308,"name":"张宏","amount":300,"note":"","group":"gmujoyi7q24","page":6,"sec":1,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p06s2r1"},{"id":309,"name":"乔家宇","amount":300,"note":"","group":"gmujoyi7q24","page":6,"sec":1,"draft":true,"alts":["乔宗宇","醉乔宗宇","臻乔宗宇"],"ocr_amount":300,"guess":false,"cid":"p06s2r2"},{"id":310,"name":"艾建东","amount":300,"note":"","group":"gmujoyi7q24","page":6,"sec":1,"draft":true,"alts":["艮法院"],"ocr_amount":300,"guess":false,"cid":"p06s2r3"},{"id":311,"name":"朱啟奎","amount":200,"note":"","group":"scan","page":6,"sec":1,"draft":false,"alts":["朱放"],"ocr_amount":200,"guess":false,"cid":"p06s2r4","ai":{"flag":"AI修正（OCR仅1票）","base":"朱放","src":{"gemma整行":"朱放奎","gemma特写":"朱放奎"},"img":"礼金簿_files/ai/p06s2r4.jpg","amt":null}},{"id":312,"name":"王林","amount":500,"note":"","group":"gmujoyi7q24","page":6,"sec":1,"draft":false,"alts":["五林","亚·林","圣.林"],"ocr_amount":500,"guess":false,"cid":"p06s2r5","ai":{"flag":"AI修正（OCR仅1票）","base":"五林","src":{"gemma整行":"圣林","gemma特写":"圣林"},"img":"礼金簿_files/ai/p06s2r5.jpg","amt":null}},{"id":313,"name":"张孟胜","amount":500,"note":"","group":"scan","page":6,"sec":1,"draft":true,"alts":["张鱼胜","张孟懒胜"],"ocr_amount":500,"guess":false,"cid":"p06s2r6"},{"id":314,"name":"张荣","amount":500,"note":"","group":"scan","page":6,"sec":1,"draft":true,"alts":["*.浆"],"ocr_amount":500,"guess":false,"cid":"p06s2r7"},{"id":315,"name":"周玉明","amount":500,"note":"","group":"scan","page":6,"sec":1,"draft":true,"alts":["闫玉明","同玉明"],"ocr_amount":500,"guess":false,"cid":"p06s2r8"},{"id":316,"name":"孔令波","amount":300,"note":"","group":"gmujoyi7q24","page":6,"sec":1,"draft":false,"alts":[],"ocr_amount":300,"guess":true,"cid":"p06s2r9"},{"id":317,"name":"彭华","amount":200,"note":"","group":"scan","page":6,"sec":1,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p06s2r10"},{"id":318,"name":"夏增","amount":200,"note":"","group":"scan","page":7,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p07s1r1"},{"id":319,"name":"熊星","amount":300,"note":"","group":"gmujoyi7q24","page":7,"sec":0,"draft":true,"alts":["熊目"],"ocr_amount":300,"guess":false,"cid":"p07s1r2"},{"id":320,"name":"张凤","amount":200,"note":"","group":"scan","page":7,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p07s1r3"},{"id":321,"name":"赵敏","amount":200,"note":"","group":"scan","page":7,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p07s1r4"},{"id":322,"name":"杨勇","amount":200,"note":"","group":"scan","page":7,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p07s1r5"},{"id":323,"name":"刘国柱","amount":200,"note":"姓名未识别，请对照原件填写","group":"scan","page":7,"sec":0,"draft":false,"alts":[],"ocr_amount":200,"guess":false,"cid":"p07s1r6","ai":{"flag":"AI修正（OCR证据弱）","base":"刘国桩","src":{"gemma整行":"刘国柱","gemma特写":"刘国柱"},"img":"礼金簿_files/ai/p07s1r6 2.jpg","amt":null}},{"id":324,"name":"幸家健","amount":500,"note":"","group":"gmujoyi7q24","page":7,"sec":0,"draft":false,"alts":[],"ocr_amount":500,"guess":false,"cid":"p07s1r7"},{"id":325,"name":"胥杰","amount":800,"note":"","group":"gmujoyi7q24","page":7,"sec":0,"draft":true,"alts":[],"ocr_amount":800,"guess":false,"cid":"p07s1r8"},{"id":326,"name":"李兴愿","amount":500,"note":"","group":"gmujoyi7q24","page":7,"sec":0,"draft":true,"alts":[],"ocr_amount":500,"guess":false,"cid":"p07s1r9"},{"id":327,"name":"朱委","amount":500,"note":"","group":"gmujoyi7q24","page":7,"sec":0,"draft":false,"alts":["朱香","朱·鹤季"],"ocr_amount":null,"guess":true,"cid":"p07s1r10","ai":{"flag":"AI修正（OCR仅1票）","base":"朱香","src":{"gemma整行":"朱鹤香","gemma特写":"朱鹤香"},"img":"礼金簿_files/ai/p07s1r10.jpg","amt":null}},{"id":328,"name":"宋昭仁","amount":500,"note":"","group":"scan","page":7,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p07s1r11"},{"id":329,"name":"李丽娟","amount":300,"note":"","group":"gmujoyi7q24","page":7,"sec":1,"draft":false,"alts":["李丽竭"],"ocr_amount":null,"guess":true,"cid":"p07s2r1"},{"id":330,"name":"侯吉铃","amount":300,"note":"","group":"gmujoyi7q24","page":7,"sec":1,"draft":true,"alts":["候吉铃","鐵俊吉铃","键俊吉铃"],"ocr_amount":null,"guess":true,"cid":"p07s2r2"},{"id":331,"name":"李顺","amount":200,"note":"","group":"gmujoyi7q24","page":7,"sec":1,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p07s2r3"},{"id":332,"name":"王帅","amount":300,"note":"","group":"gmujoyi7q24","page":7,"sec":1,"draft":true,"alts":["已帅","丑帅","过帅"],"ocr_amount":null,"guess":true,"cid":"p07s2r4"},{"id":333,"name":"汪鑫武","amount":300,"note":"","group":"gmujoyi7q24","page":7,"sec":1,"draft":false,"alts":["设鑫武","设展武"],"ocr_amount":null,"guess":true,"cid":"p07s2r5","ai":{"flag":"分歧","base":"证鑫武","src":{"gemma整行":"设鑫武","gemma特写":"证鑫武"},"img":"礼金簿_files/ai/p07s2r5.jpg","amt":null}},{"id":334,"name":"王正宽","amount":300,"note":"","group":"scan","page":7,"sec":1,"draft":false,"alts":["五亚宽"],"ocr_amount":null,"guess":true,"cid":"p07s2r6"},{"id":335,"name":"苏智","amount":200,"note":"","group":"scan","page":7,"sec":1,"draft":false,"alts":[],"ocr_amount":300,"guess":false,"cid":"p07s2r7"},{"id":336,"name":"吴道雄","amount":300,"note":"","group":"scan","page":7,"sec":1,"draft":false,"alts":["昊道雄"],"ocr_amount":200,"guess":false,"cid":"p07s2r8"},{"id":337,"name":"付宪伦","amount":300,"note":"","group":"scan","page":7,"sec":1,"draft":true,"alts":["付究伦"],"ocr_amount":300,"guess":false,"cid":"p07s2r9"},{"id":338,"name":"鲁怀友","amount":200,"note":"","group":"scan","page":7,"sec":1,"draft":false,"alts":[],"ocr_amount":300,"guess":false,"cid":"p07s2r10"},{"id":339,"name":"成联华","amount":300,"note":"","group":"scan","page":7,"sec":1,"draft":false,"alts":["成段华"],"ocr_amount":200,"guess":false,"cid":"p07s2r11"},{"id":340,"name":"王远胜","amount":300,"note":"","group":"gmujoyi7q24","page":8,"sec":0,"draft":false,"alts":["五远胜"],"ocr_amount":300,"guess":false,"cid":"p08s1r1","ai":{"flag":"AI建议","base":"五远胜","src":{"gemma整行":"卫远胜","gemma特写":"卫远胜"},"img":"礼金簿_files/ai/p08s1r1.jpg","amt":null}},{"id":341,"name":"朱腾","amount":1000,"note":"","group":"gmujoyi7q24","page":8,"sec":0,"draft":true,"alts":[],"ocr_amount":1000,"guess":false,"cid":"p08s1r2"},{"id":342,"name":"常桂","amount":300,"note":"","group":"gmujoyi7q24","page":8,"sec":0,"draft":false,"alts":[],"ocr_amount":300,"guess":false,"cid":"p08s1r3"},{"id":343,"name":"胡超","amount":800,"note":"","group":"scan","page":8,"sec":0,"draft":true,"alts":["桂起","腾桂超文"],"ocr_amount":800,"guess":false,"cid":"p08s1r4"},{"id":345,"name":"武文","amount":300,"note":"","group":"scan","page":8,"sec":0,"draft":false,"alts":[],"ocr_amount":300,"guess":false,"cid":"p08s1r6"},{"id":346,"name":"蔡义元","amount":300,"note":"","group":"scan","page":8,"sec":0,"draft":false,"alts":["蔡义"],"ocr_amount":300,"guess":false,"cid":"p08s1r7","ai":{"flag":"AI建议","base":"蔡义","src":{"gemma整行":"蔡义云","gemma特写":"蔡义云"},"img":"礼金簿_files/ai/p08s1r7.jpg","amt":null}},{"id":347,"name":"付廷举","amount":400,"note":"","group":"scan","page":8,"sec":0,"draft":false,"alts":["付延拳"],"ocr_amount":400,"guess":false,"cid":"p08s1r8"},{"id":348,"name":"丁习英","amount":300,"note":"","group":"scan","page":8,"sec":0,"draft":false,"alts":["丁习英"],"ocr_amount":300,"guess":false,"cid":"p08s1r9","ai":{"flag":"AI修正（OCR仅1票）","base":"丁习英","src":{"gemma整行":"丁月英","gemma特写":"丁月英"},"img":"礼金簿_files/ai/p08s1r9.jpg","amt":null}},{"id":349,"name":"陈祖龙","amount":300,"note":"","group":"scan","page":8,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p08s1r10"},{"id":350,"name":"申杰","amount":200,"note":"","group":"gmujoyi7q24","page":8,"sec":0,"draft":false,"alts":["中杰"],"ocr_amount":200,"guess":false,"cid":"p08s1r11","ai":{"flag":"AI修正（OCR仅1票）","base":"中杰","src":{"gemma整行":"陈中构","gemma特写":"陈中构"},"img":"礼金簿_files/ai/p08s1r11.jpg","amt":null}},{"id":351,"name":"陈华","amount":200,"note":"","group":"scan","page":8,"sec":1,"draft":false,"alts":["陈忙"],"ocr_amount":null,"guess":true,"cid":"p08s2r1"},{"id":352,"name":"高金","amount":100,"note":"","group":"scan","page":8,"sec":1,"draft":true,"alts":["乐高高姚","华全婵江"],"ocr_amount":100,"guess":false,"cid":"p08s2r2"},{"id":353,"name":"姚江","amount":200,"note":"","group":"gmujoyi7q24","page":8,"sec":1,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p08s2r3"},{"id":354,"name":"吴云山","amount":200,"note":"","group":"scan","page":8,"sec":1,"draft":false,"alts":["吴云山"],"ocr_amount":200,"guess":false,"cid":"p08s2r4"},{"id":355,"name":"徐磊","amount":200,"note":"","group":"gmujoyi7q24","page":8,"sec":1,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p08s2r5"},{"id":356,"name":"朱毅","amount":500,"note":"","group":"gmujoyi7q24","page":8,"sec":1,"draft":false,"alts":["朱馥"],"ocr_amount":500,"guess":false,"cid":"p08s2r6","ai":{"flag":"分歧","base":"朱設","src":{"gemma整行":"朱設","gemma特写":"朱馥"},"img":"礼金簿_files/ai/p08s2r6.jpg","amt":null}},{"id":357,"name":"皮永","amount":500,"note":"","group":"gmujoyi7q24","page":8,"sec":1,"draft":true,"alts":[],"ocr_amount":500,"guess":false,"cid":"p08s2r7"},{"id":358,"name":"邹清","amount":600,"note":"","group":"gmujoyi7q24","page":8,"sec":1,"draft":false,"alts":["邹请"],"ocr_amount":600,"guess":false,"cid":"p08s2r8","ai":{"flag":"分歧","base":"邻清","src":{"gemma整行":"邻清","gemma特写":"图彭划"},"img":"礼金簿_files/ai/p08s2r8.jpg","amt":null}},{"id":359,"name":"余健","amount":500,"note":"","group":"gmujoyi7q24","page":8,"sec":1,"draft":true,"alts":[],"ocr_amount":500,"guess":false,"cid":"p08s2r9"},{"id":360,"name":"刘鹏（同事）","amount":200,"note":"","group":"gmujoyi7q24","page":9,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p09s1r1"},{"id":361,"name":"龚成友","amount":300,"note":"","group":"scan","page":9,"sec":0,"draft":false,"alts":["蛮成友","袭成友"],"ocr_amount":null,"guess":true,"cid":"p09s1r2"},{"id":362,"name":"龚成顺","amount":300,"note":"","group":"scan","page":9,"sec":0,"draft":false,"alts":["龚成贩"],"ocr_amount":null,"guess":true,"cid":"p09s1r3","ai":{"flag":"分歧","base":"龚成顺","src":{"gemma整行":"龚成顺","gemma特写":"龚成贩"},"img":"礼金簿_files/ai/p09s1r3.jpg","amt":null}},{"id":363,"name":"姜文","amount":300,"note":"","group":"gmujoyi7q24","page":9,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p09s1r4"},{"id":364,"name":"陈臻","amount":300,"note":"姓名未识别，请对照原件填写","group":"gmujoyi7q24","page":9,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p09s1r5","ai":{"flag":"AI修正（OCR证据弱）","base":"冬酒园","src":{"gemma整行":"冬酒国","gemma特写":"冬酒国"},"img":"礼金簿_files/ai/p09s1r5.jpg","amt":null}},{"id":365,"name":"李约","amount":200,"note":"","group":"gmujoyi7q24","page":9,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p09s1r6"},{"id":366,"name":"曾丽红","amount":300,"note":"","group":"gmujoyi7q24","page":9,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p09s1r7"},{"id":367,"name":"王娟（法院）","amount":300,"note":"","group":"gmujoyi7q24","page":9,"sec":0,"draft":false,"alts":["法院","法卫"],"ocr_amount":300,"guess":false,"cid":"p09s1r8","ai":{"flag":"AI建议","base":"法院","src":{"gemma整行":"娟琴","gemma特写":"娟琴"},"img":"礼金簿_files/ai/p09s1r8.jpg","amt":null}},{"id":368,"name":"岳宏","amount":200,"note":"","group":"gmujoyi7q24","page":9,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p09s1r9"},{"id":369,"name":"燕梅","amount":300,"note":"","group":"gmujoyi7q24","page":9,"sec":1,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p09s2r1"},{"id":370,"name":"杨光德","amount":300,"note":"","group":"gmujoyi7q24","page":9,"sec":1,"draft":false,"alts":["光德"],"ocr_amount":200,"guess":false,"cid":"p09s2r2"},{"id":371,"name":"潘怀仲","amount":300,"note":"","group":"scan","page":9,"sec":1,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p09s2r3"},{"id":372,"name":"刘瑞珍（刘六妹）","amount":200,"note":"","group":"scan","page":9,"sec":1,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p09s2r4"},{"id":373,"name":"江斌","amount":200,"note":"","group":"scan","page":10,"sec":0,"draft":false,"alts":[],"ocr_amount":200,"guess":false,"cid":"p10s1r1"},{"id":374,"name":"夏瑞","amount":300,"note":"","group":"gmujoyi7q24","page":10,"sec":0,"draft":true,"alts":["百夏"],"ocr_amount":300,"guess":false,"cid":"p10s1r2"},{"id":375,"name":"谭星月","amount":300,"note":"","group":"gmujoyi7q24","page":10,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p10s1r3"},{"id":376,"name":"白菊","amount":200,"note":"","group":"gmujoyi7q24","page":10,"sec":0,"draft":true,"alts":["白阑","白日"],"ocr_amount":200,"guess":false,"cid":"p10s1r4","ai":{"flag":"AI建议（单源）","base":"白菊","src":{"gemma整行":"白日","gemma特写":"白阑"},"img":"礼金簿_files/ai/p10s1r4 2.jpg","amt":null}},{"id":377,"name":"杨兴群","amount":200,"note":"","group":"gmujoyi7q24","page":10,"sec":0,"draft":false,"alts":["构兴群","枸光群"],"ocr_amount":200,"guess":false,"cid":"p10s1r5","ai":{"flag":"AI修正（OCR证据弱）","base":"构兴群","src":{"gemma整行":"构光群","gemma特写":"构光群","本地OCR特写":"构兴群"},"img":"礼金簿_files/ai/p10s1r5.jpg","amt":null}},{"id":378,"name":"范玲琪","amount":300,"note":"","group":"gmujoyi7q24","page":10,"sec":0,"draft":false,"alts":["范玲琪"],"ocr_amount":300,"guess":false,"cid":"p10s1r6"},{"id":379,"name":"刘庆巧","amount":200,"note":"","group":"gmujoyi7q24","page":10,"sec":0,"draft":true,"alts":["创庆巧","副庆巧"],"ocr_amount":200,"guess":false,"cid":"p10s1r7","ai":{"flag":"AI修正（OCR仅1票）","base":"创庆巧","src":{"gemma整行":"刘庆巧","gemma特写":"刘庆巧"},"img":"礼金簿_files/ai/p10s1r7.jpg","amt":null}},{"id":380,"name":"周仕敏","amount":800,"note":"","group":"gmujoyi7q24","page":10,"sec":0,"draft":false,"alts":["周仕敏"],"ocr_amount":800,"guess":true,"cid":"p10s1r8"},{"id":381,"name":"周仕平","amount":500,"note":"","group":"scan","page":10,"sec":0,"draft":false,"alts":["用仕平","同竹平","開竹平"],"ocr_amount":500,"guess":true,"cid":"p10s1r9","ai":{"flag":"AI建议（单源）/分歧","base":"用竹平","src":{"gemma整行":"用仕平","gemma特写":"用竹平"},"img":"礼金簿_files/ai/p10s1r9.jpg","amt":null}},{"id":382,"name":"汪宗全","amount":300,"note":"","group":"scan","page":10,"sec":0,"draft":false,"alts":["泾凉金"],"ocr_amount":300,"guess":false,"cid":"p10s1r10","ai":{"flag":"分歧","base":"江家献金","src":{"gemma整行":"泾凉金","gemma特写":"江家献金"},"img":"礼金簿_files/ai/p10s1r10.jpg","amt":null}},{"id":383,"name":"温华军","amount":300,"note":"","group":"scan","page":10,"sec":0,"draft":false,"alts":["温年导","温竿晕","温竿"],"ocr_amount":300,"guess":false,"cid":"p10s1r11","ai":{"flag":"AI建议（单源）/分歧","base":"温华晕","src":{"gemma整行":"温竿晕","gemma特写":"温年导"},"img":"礼金簿_files/ai/p10s1r11.jpg","amt":null}},{"id":384,"name":"常洪","amount":300,"note":"","group":"gmujoyi7q24","page":10,"sec":0,"draft":false,"alts":[],"ocr_amount":300,"guess":false,"cid":"p10s1r12"},{"id":385,"name":"常冬云","amount":300,"note":"","group":"scan","page":10,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p10s1r13"},{"id":386,"name":"曾明友","amount":200,"note":"","group":"scan","page":10,"sec":0,"draft":true,"alts":[],"ocr_amount":null,"guess":true,"cid":"p10s1r14"},{"id":387,"name":"沈阳","amount":600,"note":"","group":"gmujoyi7q24","page":10,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p10s1r15"},{"id":388,"name":"陈斌","amount":200,"note":"","group":"scan","page":10,"sec":0,"draft":true,"alts":[],"ocr_amount":null,"guess":true,"cid":"p10s1r16"},{"id":389,"name":"张国华","amount":300,"note":"","group":"scan","page":10,"sec":0,"draft":false,"alts":["张凤年"],"ocr_amount":null,"guess":true,"cid":"p10s1r17","ai":{"flag":"AI修正（OCR证据弱）","base":"冬佰","src":{"gemma整行":"张国华","gemma特写":"张国华"},"img":"礼金簿_files/ai/p10s1r17.jpg","amt":null}},{"id":390,"name":"龚昌友","amount":300,"note":"","group":"scan","page":10,"sec":0,"draft":false,"alts":["昌友","冬值"],"ocr_amount":null,"guess":true,"cid":"p10s1r18","ai":{"flag":"AI修正（OCR仅1票）","base":"昌友","src":{"gemma整行":"龙昌友","gemma特写":"龙昌友","本地OCR特写":"龙昌友"},"img":"礼金簿_files/ai/p10s1r18.jpg","amt":null}},{"id":391,"name":"胡庆友","amount":500,"note":"","group":"scan","page":10,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p10s1r19"},{"id":392,"name":"吉雷","amount":500,"note":"","group":"scan","page":10,"sec":0,"draft":false,"alts":[],"ocr_amount":500,"guess":true,"cid":"p10s1r20"},{"id":393,"name":"刘思文","amount":500,"note":"","group":"scan","page":10,"sec":0,"draft":false,"alts":["前是文","创是文","伍饭"],"ocr_amount":500,"guess":false,"cid":"p10s1r21","ai":{"flag":"AI建议","base":"前是文","src":{"gemma整行":"刘是文","gemma特写":"刘是文"},"img":"礼金簿_files/ai/p10s1r21.jpg","amt":null}},{"id":394,"name":"刘思军","amount":300,"note":"","group":"gmujoyi7q24","page":10,"sec":0,"draft":false,"alts":["训忍"],"ocr_amount":null,"guess":true,"cid":"p10s1r22"},{"id":395,"name":"高彦贵（酒房寨）","amount":500,"note":"","group":"scan","page":10,"sec":0,"draft":false,"alts":["高废贵","洒后寨","西房赛"],"ocr_amount":500,"guess":false,"cid":"p10s1r23","ai":{"flag":"AI修正（OCR仅1票）","base":"高废贵","src":{"gemma整行":"高方贵","gemma特写":"高方贵"},"img":"礼金簿_files/ai/p10s1r23.jpg","amt":null}},{"id":396,"name":"申开勇","amount":400,"note":"","group":"scan","page":10,"sec":0,"draft":false,"alts":["串开勇"],"ocr_amount":400,"guess":true,"cid":"p10s1r24"},{"id":397,"name":"付君","amount":300,"note":"","group":"gmujoyi7q24","page":11,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p11s1r1"},{"id":398,"name":"董颖辉","amount":300,"note":"","group":"gmujoyi7q24","page":11,"sec":0,"draft":false,"alts":["频辉","墨频姆"],"ocr_amount":300,"guess":false,"cid":"p11s1r2","ai":{"flag":"AI修正（OCR仅1票）","base":"频辉","src":{"gemma整行":"墨频辉","gemma特写":"墨频辉"},"img":"礼金簿_files/ai/p11s1r2.jpg","amt":null}},{"id":399,"name":"付婷","amount":200,"note":"","group":"gmujoyi7q24","page":11,"sec":0,"draft":false,"alts":[],"ocr_amount":200,"guess":false,"cid":"p11s1r3"},{"id":400,"name":"徐丽娅","amount":200,"note":"","group":"gmujoyi7q24","page":11,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p11s1r4"},{"id":401,"name":"吕世媛","amount":200,"note":"","group":"scan","page":11,"sec":0,"draft":true,"alts":["吕世曦媛"],"ocr_amount":200,"guess":false,"cid":"p11s1r5"},{"id":402,"name":"吕世珍","amount":400,"note":"","group":"scan","page":11,"sec":0,"draft":true,"alts":["兰世","吕世"],"ocr_amount":400,"guess":false,"cid":"p11s1r6"},{"id":403,"name":"高菊","amount":300,"note":"","group":"scan","page":11,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p11s1r7"},{"id":404,"name":"张怀芬","amount":300,"note":"","group":"scan","page":11,"sec":0,"draft":true,"alts":["张怀","张怀房"],"ocr_amount":300,"guess":false,"cid":"p11s1r8","ai":{"flag":"AI建议","base":"张怀","src":{"gemma整行":"张怀芬","gemma特写":"张怀芬"},"img":"礼金簿_files/ai/p11s1r8.jpg","amt":null}},{"id":405,"name":"李玉申","amount":300,"note":"","group":"scan","page":11,"sec":0,"draft":false,"alts":["李玉申","套玉申"],"ocr_amount":300,"guess":false,"cid":"p11s1r9","ai":{"flag":"AI建议（单源）/分歧","base":"李色申","src":{"gemma整行":"套玉申","gemma特写":"李玉申"},"img":"礼金簿_files/ai/p11s1r9.jpg","amt":null}},{"id":406,"name":"李军","amount":500,"note":"","group":"scan","page":11,"sec":0,"draft":false,"alts":["恋景"],"ocr_amount":500,"guess":true,"cid":"p11s1r10","ai":{"flag":"AI修正（OCR仅1票）","base":"恋景","src":{"gemma整行":"李景","gemma特写":"李景"},"img":"礼金簿_files/ai/p11s1r10.jpg","amt":null}},{"id":407,"name":"张娇","amount":500,"note":"","group":"gmujoyi7q24","page":11,"sec":1,"draft":false,"alts":["张饼"],"ocr_amount":500,"guess":false,"cid":"p11s2r1","ai":{"flag":"分歧","base":"张饰","src":{"gemma整行":"张饰","gemma特写":"张饼"},"img":"礼金簿_files/ai/p11s2r1.jpg","amt":null}},{"id":408,"name":"李太红","amount":300,"note":"","group":"gmujoyi7q24","page":11,"sec":1,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p11s2r2"},{"id":409,"name":"李霄云","amount":500,"note":"","group":"gmujoyi7q24","page":11,"sec":1,"draft":false,"alts":["李宵云","穹云","李窝云"],"ocr_amount":500,"guess":false,"cid":"p11s2r3","ai":{"flag":"AI修正（OCR仅1票）","base":"李宵云","src":{"gemma整行":"李穹云","gemma特写":"李穹云"},"img":"礼金簿_files/ai/p11s2r3.jpg","amt":null}},{"id":410,"name":"满云东","amount":200,"note":"","group":"gmujoyi7q24","page":11,"sec":1,"draft":true,"alts":["云东"],"ocr_amount":200,"guess":false,"cid":"p11s2r4"},{"id":411,"name":"周政","amount":200,"note":"","group":"gmujoyi7q24","page":11,"sec":1,"draft":false,"alts":["周政","周赵","临周赵"],"ocr_amount":200,"guess":false,"cid":"p11s2r5"},{"id":412,"name":"赵岗","amount":300,"note":"","group":"gmujoyi7q24","page":11,"sec":1,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p11s2r6"},{"id":413,"name":"张东阳","amount":800,"note":"","group":"gmujoyi7q24","page":11,"sec":1,"draft":false,"alts":["彭你"],"ocr_amount":null,"guess":true,"cid":"p11s2r7","ai":{"flag":"AI建议（单源）/分歧","base":"张东阳","src":{"gemma整行":"彭你","gemma特写":"胡佰凤"},"img":"礼金簿_files/ai/p11s2r7.jpg","amt":null}},{"id":414,"name":"吴道宾","amount":300,"note":"","group":"scan","page":11,"sec":1,"draft":true,"alts":["吴通宾","家价","家共价乡"],"ocr_amount":300,"guess":false,"cid":"p11s2r8"},{"id":415,"name":"秦国智","amount":300,"note":"","group":"gmujoyi7q24","page":11,"sec":1,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p11s2r9","ai":{"flag":"AI修正（OCR证据弱）","base":"冬佰园","src":{"gemma整行":"秦国智","gemma特写":"秦国智"},"img":"礼金簿_files/ai/p11s2r9.jpg","amt":null}},{"id":416,"name":"成联相","amount":200,"note":"","group":"scan","page":11,"sec":1,"draft":false,"alts":["尊成联相","醇成联祖","薛成驳相"],"ocr_amount":200,"guess":false,"cid":"p11s2r10"},{"id":417,"name":"陈杰（四川）","amount":200,"note":"","group":"gmujoyi7q24","page":11,"sec":1,"draft":false,"alts":["叫陈杰"],"ocr_amount":200,"guess":false,"cid":"p11s2r11"},{"id":418,"name":"沈振新","amount":100,"note":"","group":"gmujoyi7q24","page":11,"sec":1,"draft":true,"alts":[],"ocr_amount":100,"guess":false,"cid":"p11s2r12"},{"id":419,"name":"朱加应","amount":500,"note":"","group":"gmujoyi7q24","page":12,"sec":0,"draft":true,"alts":["朱如应"],"ocr_amount":500,"guess":false,"cid":"p12s1r1"},{"id":420,"name":"罗辅梅","amount":300,"note":"","group":"gmujoyi7q24","page":12,"sec":0,"draft":true,"alts":[],"ocr_amount":null,"guess":true,"cid":"p12s1r2"},{"id":421,"name":"王洪镜","amount":300,"note":"","group":"gmujoyi7q24","page":12,"sec":0,"draft":false,"alts":["五汉镜","王溪镜","五洪镜"],"ocr_amount":null,"guess":true,"cid":"p12s1r3","ai":{"flag":"AI建议","base":"五汉镜","src":{"gemma整行":"王汉巍","gemma特写":"王汉巍"},"img":"礼金簿_files/ai/p12s1r3.jpg","amt":null}},{"id":422,"name":"吴奎","amount":300,"note":"","group":"gmujoyi7q24","page":12,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p12s1r4"},{"id":423,"name":"罗清繁","amount":500,"note":"","group":"gmujoyi7q24","page":12,"sec":0,"draft":true,"alts":["罗请繁"],"ocr_amount":500,"guess":false,"cid":"p12s1r5"},{"id":424,"name":"杨远芳","amount":300,"note":"","group":"gmujoyi7q24","page":12,"sec":0,"draft":false,"alts":["物远号","杨远"],"ocr_amount":300,"guess":false,"cid":"p12s1r6"},{"id":425,"name":"赵小庆","amount":300,"note":"","group":"gmujoyi7q24","page":12,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p12s1r7"},{"id":426,"name":"高道辉","amount":300,"note":"","group":"gmujoyi7q24","page":12,"sec":0,"draft":false,"alts":["商逍焊","商道将"],"ocr_amount":null,"guess":true,"cid":"p12s1r8"},{"id":427,"name":"曾丹丹","amount":300,"note":"","group":"gmujoyi7q24","page":12,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p12s1r9","ai":{"flag":"分歧","base":"曾丹丹","src":{"gemma整行":"冬佰國","gemma特写":"曾丹丹"},"img":"礼金簿_files/ai/p12s1r9.jpg","amt":null}},{"id":428,"name":"余志坤","amount":300,"note":"","group":"scan","page":12,"sec":1,"draft":true,"alts":["余志饰"],"ocr_amount":300,"guess":false,"cid":"p12s2r1","ai":{"flag":"AI修正（OCR仅1票）","base":"余志饰","src":{"gemma整行":"余志坤","gemma特写":"余志坤"},"img":"礼金簿_files/ai/p12s2r1 2.jpg","amt":null}},{"id":429,"name":"胡基俊","amount":300,"note":"","group":"scan","page":12,"sec":1,"draft":true,"alts":["胡墓俊"],"ocr_amount":300,"guess":false,"cid":"p12s2r2","ai":{"flag":"AI修正（OCR仅1票）","base":"胡墓俊","src":{"gemma整行":"胡基俊","gemma特写":"胡基俊"},"img":"礼金簿_files/ai/p12s2r2 2.jpg","amt":null}},{"id":430,"name":"王勇（嘉遁）","amount":300,"note":"","group":"gmujoyi7q24","page":12,"sec":1,"draft":false,"alts":["J+","嘉遁丽","叁雨"],"ocr_amount":300,"guess":false,"cid":"p12s2r3"},{"id":431,"name":"严浩","amount":300,"note":"姓名未识别，请对照原件填写","group":"gmujoyi7q24","page":12,"sec":1,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p12s2r4"},{"id":432,"name":"申进","amount":200,"note":"","group":"gmujoyi7q24","page":12,"sec":1,"draft":false,"alts":[],"ocr_amount":200,"guess":false,"cid":"p12s2r5"},{"id":433,"name":"白静","amount":200,"note":"","group":"scan","page":12,"sec":1,"draft":false,"alts":["中叶粉","中叶物"],"ocr_amount":200,"guess":false,"cid":"p12s2r6"},{"id":434,"name":"朱祥","amount":200,"note":"","group":"scan","page":12,"sec":1,"draft":false,"alts":["武恒","朱译","式恒"],"ocr_amount":null,"guess":true,"cid":"p12s2r7"},{"id":435,"name":"汪诗集","amount":300,"note":"","group":"scan","page":12,"sec":1,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p12s2r8"},{"id":436,"name":"申时旺","amount":300,"note":"","group":"gmujoyi7q24","page":12,"sec":1,"draft":false,"alts":["串时胚","中时胫"],"ocr_amount":null,"guess":true,"cid":"p12s2r9","ai":{"flag":"AI修正（OCR仅1票）","base":"串时胚","src":{"gemma整行":"申时胚","gemma特写":"申时胚"},"img":"礼金簿_files/ai/p12s2r9.jpg","amt":null}},{"id":437,"name":"黄柏璘","amount":300,"note":"","group":"gmujoyi7q24","page":13,"sec":0,"draft":false,"alts":["黄柏","黄柏琦"],"ocr_amount":null,"guess":true,"cid":"p13s1r1","ai":{"flag":"AI建议","base":"黄柏","src":{"gemma整行":"黄柏玮","gemma特写":"黄柏玮"},"img":"礼金簿_files/ai/p13s1r1 2.jpg","amt":null}},{"id":438,"name":"黄嫣","amount":300,"note":"","group":"gmujoyi7q24","page":13,"sec":0,"draft":false,"alts":["黄嫣"],"ocr_amount":300,"guess":false,"cid":"p13s1r2"},{"id":439,"name":"曾维洲","amount":200,"note":"","group":"gmujoyi7q24","page":13,"sec":0,"draft":false,"alts":[],"ocr_amount":200,"guess":false,"cid":"p13s1r3"},{"id":440,"name":"黄道燚","amount":300,"note":"","group":"gmujoyi7q24","page":13,"sec":0,"draft":false,"alts":["黄通焱","黄道焱"],"ocr_amount":300,"guess":true,"cid":"p13s1r4","ai":{"flag":"AI建议（单源）/分歧","base":"黄逍焱","src":{"gemma整行":"黄通焱","gemma特写":"黄道焱"},"img":"礼金簿_files/ai/p13s1r4.jpg","amt":null}},{"id":441,"name":"顾星","amount":200,"note":"","group":"gmujoyi7q24","page":13,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p13s1r5"},{"id":442,"name":"王秋玲","amount":300,"note":"","group":"gmujoyi7q24","page":13,"sec":0,"draft":false,"alts":["一秋孜"],"ocr_amount":300,"guess":false,"cid":"p13s1r6","ai":{"flag":"AI修正（OCR仅1票）","base":"一秋孜","src":{"gemma整行":"五秋玲","gemma特写":"五秋玲"},"img":"礼金簿_files/ai/p13s1r6 2.jpg","amt":null}},{"id":443,"name":"常开金","amount":200,"note":"","group":"scan","page":13,"sec":0,"draft":true,"alts":["第开","张学开","常开"],"ocr_amount":200,"guess":false,"cid":"p13s1r7"},{"id":444,"name":"申开祝","amount":500,"note":"","group":"scan","page":13,"sec":0,"draft":true,"alts":["全祝华","祝华","申开"],"ocr_amount":500,"guess":false,"cid":"p13s1r8"},{"id":445,"name":"周昌华","amount":300,"note":"","group":"gmujoyi7q24","page":13,"sec":0,"draft":true,"alts":["昌华"],"ocr_amount":300,"guess":false,"cid":"p13s1r9"},{"id":446,"name":"陈波","amount":200,"note":"","group":"gmujoyi7q24","page":13,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p13s1r10"},{"id":448,"name":"常菊香","amount":300,"note":"","group":"scan","page":13,"sec":1,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p13s2r2"},{"id":449,"name":"朱家雄","amount":500,"note":"","group":"gmujoyi7q24","page":13,"sec":1,"draft":true,"alts":["伍饭"],"ocr_amount":500,"guess":false,"cid":"p13s2r3"},{"id":450,"name":"赵熙","amount":300,"note":"","group":"scan","page":13,"sec":1,"draft":true,"alts":["赵，熙"],"ocr_amount":300,"guess":false,"cid":"p13s2r4"},{"id":451,"name":"赵健","amount":300,"note":"","group":"scan","page":13,"sec":1,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p13s2r5"},{"id":452,"name":"王诚嘉","amount":1000,"note":"","group":"scan","page":13,"sec":1,"draft":false,"alts":["五诫嘉"],"ocr_amount":null,"guess":true,"cid":"p13s2r6","ai":{"flag":"AI修正（OCR仅1票）","base":"五诫嘉","src":{"gemma整行":"五诚嘉","gemma特写":"五诚嘉"},"img":"礼金簿_files/ai/p13s2r6.jpg","amt":null}},{"id":453,"name":"胡燕","amount":400,"note":"","group":"scan","page":13,"sec":1,"draft":true,"alts":[],"ocr_amount":400,"guess":false,"cid":"p13s2r7"},{"id":454,"name":"成勇","amount":200,"note":"","group":"gmujoyi7q24","page":13,"sec":1,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p13s2r8"},{"id":455,"name":"李翠","amount":200,"note":"","group":"scan","page":13,"sec":1,"draft":false,"alts":[],"ocr_amount":200,"guess":false,"cid":"p13s2r9"},{"id":456,"name":"邹雄","amount":200,"note":"","group":"gmujoyi7q24","page":13,"sec":1,"draft":false,"alts":[],"ocr_amount":200,"guess":false,"cid":"p13s2r10","ai":{"flag":"AI修正（OCR仅1票）","base":"雄：凡","src":{"gemma整行":"佰风","gemma特写":"佰风"},"img":"礼金簿_files/ai/p13s2r10.jpg","amt":null}},{"id":457,"name":"陈凡","amount":200,"note":"","group":"gmujoyi7q24","page":13,"sec":1,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p13s2r11"},{"id":458,"name":"龚声德","amount":300,"note":"","group":"scan","page":14,"sec":0,"draft":false,"alts":["声德"],"ocr_amount":null,"guess":true,"cid":"p14s1r1"},{"id":459,"name":"李佳楠","amount":300,"note":"","group":"gmujoyi7q24","page":14,"sec":0,"draft":true,"alts":[],"ocr_amount":null,"guess":true,"cid":"p14s1r2"},{"id":460,"name":"罗泽坤","amount":300,"note":"","group":"gmujoyi7q24","page":14,"sec":0,"draft":true,"alts":["罗净坤"],"ocr_amount":300,"guess":false,"cid":"p14s1r3"},{"id":461,"name":"邓财银","amount":500,"note":"","group":"gmujoyi7q24","page":14,"sec":0,"draft":false,"alts":["邓财眼"],"ocr_amount":500,"guess":false,"cid":"p14s1r4"},{"id":462,"name":"申时焕","amount":300,"note":"","group":"scan","page":14,"sec":0,"draft":false,"alts":["中叶·烧","中叶烧","串时焕"],"ocr_amount":null,"guess":true,"cid":"p14s1r5","ai":{"flag":"分歧","base":"串时·焕","src":{"gemma整行":"中叶烧","gemma特写":"串时焕"},"img":"礼金簿_files/ai/p14s1r5.jpg","amt":null}},{"id":463,"name":"周杰","amount":200,"note":"","group":"scan","page":14,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p14s1r6"},{"id":464,"name":"袁成","amount":300,"note":"","group":"gmujoyi7q24","page":14,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p14s1r7"},{"id":465,"name":"汪继巧","amount":200,"note":"","group":"gmujoyi7q24","page":14,"sec":0,"draft":false,"alts":["泾继巧","長汪中"],"ocr_amount":200,"guess":false,"cid":"p14s1r8","ai":{"flag":"分歧","base":"泾巧","src":{"gemma整行":"泾巧","gemma特写":"泾继巧"},"img":"礼金簿_files/ai/p14s1r8 2.jpg","amt":null}},{"id":466,"name":"李上涌","amount":300,"note":"","group":"gmujoyi7q24","page":14,"sec":1,"draft":true,"alts":["上涌"],"ocr_amount":300,"guess":false,"cid":"p14s2r1"},{"id":467,"name":"李其平","amount":300,"note":"","group":"scan","page":14,"sec":1,"draft":true,"alts":["季其平","倒蚁多"],"ocr_amount":300,"guess":false,"cid":"p14s2r2"},{"id":468,"name":"陈菊","amount":300,"note":"","group":"scan","page":14,"sec":1,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p14s2r3"},{"id":469,"name":"范厚敏","amount":300,"note":"","group":"scan","page":14,"sec":1,"draft":false,"alts":["范厚敏"],"ocr_amount":300,"guess":false,"cid":"p14s2r4","ai":{"flag":"分歧","base":"厚敏","src":{"gemma整行":"范厚敏","gemma特写":"厚敏"},"img":"礼金簿_files/ai/p14s2r4.jpg","amt":null}},{"id":470,"name":"高艳","amount":200,"note":"","group":"scan","page":14,"sec":1,"draft":false,"alts":["敏艳","高袍","文·花"],"ocr_amount":200,"guess":false,"cid":"p14s2r5","ai":{"flag":"分歧","base":"范高","src":{"gemma整行":"范高","gemma特写":"敏艳"},"img":"礼金簿_files/ai/p14s2r5.jpg","amt":null}},{"id":471,"name":"柳玉琼","amount":200,"note":"","group":"scan","page":14,"sec":1,"draft":false,"alts":[],"ocr_amount":200,"guess":true,"cid":"p14s2r6"},{"id":472,"name":"高峰","amount":300,"note":"","group":"scan","page":14,"sec":1,"draft":true,"alts":[],"ocr_amount":null,"guess":true,"cid":"p14s2r7"},{"id":473,"name":"张飞","amount":200,"note":"","group":"gmujoyi7q24","page":14,"sec":1,"draft":false,"alts":["高张赵"],"ocr_amount":200,"guess":false,"cid":"p14s2r8"},{"id":474,"name":"赵智","amount":200,"note":"","group":"gmujoyi7q24","page":14,"sec":1,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p14s2r9"},{"id":475,"name":"申登龙","amount":300,"note":"","group":"gmujoyi7q24","page":14,"sec":1,"draft":false,"alts":[],"ocr_amount":300,"guess":false,"cid":"p14s2r10"},{"id":476,"name":"鲁波","amount":200,"note":"","group":"scan","page":15,"sec":0,"draft":true,"alts":["鲁液"],"ocr_amount":200,"guess":false,"cid":"p15s1r1","ai":{"flag":"AI建议","base":"鲁液","src":{"gemma整行":"鲁波","gemma特写":"鲁波"},"img":"礼金簿_files/ai/p15s1r1 2.jpg","amt":null}},{"id":477,"name":"童联贵","amount":200,"note":"","group":"scan","page":15,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p15s1r2"},{"id":478,"name":"童凤","amount":200,"note":"","group":"scan","page":15,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p15s1r3"},{"id":479,"name":"陈桂园","amount":200,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":false,"alts":["陈桂"],"ocr_amount":200,"guess":false,"cid":"p15s1r4","ai":{"flag":"AI建议（单源）","base":"陈硅","src":{"gemma整行":"陈硅园","gemma特写":"陈桂园"},"img":"礼金簿_files/ai/p15s1r4.jpg","amt":null}},{"id":480,"name":"宋源梅","amount":500,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":false,"alts":["爱源鸿学","試叁伍贰"],"ocr_amount":300,"guess":false,"cid":"p15s1r5","ai":{"flag":"AI建议（单源）/分歧","base":"宋梅","src":{"gemma整行":"爱源鸿学","gemma特写":"宋梅"},"img":"礼金簿_files/ai/p15s1r5.jpg","amt":null}},{"id":481,"name":"李鸿林","amount":200,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p15s1r6"},{"id":482,"name":"郎学谦","amount":200,"note":"","group":"scan","page":15,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p15s1r7"},{"id":483,"name":"朱江","amount":400,"note":"","group":"scan","page":15,"sec":0,"draft":false,"alts":[],"ocr_amount":400,"guess":true,"cid":"p15s1r8"},{"id":484,"name":"曾涛","amount":300,"note":"","group":"scan","page":15,"sec":0,"draft":false,"alts":["冬饭","分叶"],"ocr_amount":null,"guess":true,"cid":"p15s1r9","ai":{"flag":"AI修正（OCR仅1票）","base":"冬饭","src":{"gemma整行":"曾构","gemma特写":"曾构"},"img":"礼金簿_files/ai/p15s1r9.jpg","amt":null}},{"id":485,"name":"杨涛","amount":200,"note":"","group":"scan","page":15,"sec":0,"draft":false,"alts":["贰饭"],"ocr_amount":200,"guess":false,"cid":"p15s1r10"},{"id":486,"name":"张立","amount":200,"note":"","group":"scan","page":15,"sec":0,"draft":true,"alts":["张·立","QQ`"],"ocr_amount":200,"guess":false,"cid":"p15s1r11"},{"id":487,"name":"裴超顺","amount":200,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":true,"alts":["装超顺"],"ocr_amount":200,"guess":false,"cid":"p15s1r12"},{"id":488,"name":"林竹安","amount":300,"note":"","group":"scan","page":15,"sec":0,"draft":false,"alts":["林竹庄","林竹岳"],"ocr_amount":null,"guess":true,"cid":"p15s1r13"},{"id":489,"name":"王茂","amount":1000,"note":"","group":"scan","page":15,"sec":0,"draft":false,"alts":["壹件","茂州","壹件闯"],"ocr_amount":null,"guess":true,"cid":"p15s1r14"},{"id":490,"name":"李恬恬","amount":500,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":false,"alts":[],"ocr_amount":500,"guess":true,"cid":"p15s1r15"},{"id":491,"name":"邓印辰","amount":300,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":false,"alts":["下仲","即卯辰"],"ocr_amount":300,"guess":false,"cid":"p15s1r16"},{"id":492,"name":"胡彬","amount":300,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p15s1r17"},{"id":493,"name":"庄波","amount":300,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":false,"alts":["波见","庄波"],"ocr_amount":300,"guess":false,"cid":"p15s1r18","ai":{"flag":"AI建议（单源）","base":"邓胡庄高","src":{"gemma整行":"庄波","gemma特写":"波见"},"img":"礼金簿_files/ai/p15s1r18.jpg","amt":null}},{"id":494,"name":"高见","amount":300,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":false,"alts":["彬波"],"ocr_amount":300,"guess":false,"cid":"p15s1r19","ai":{"flag":"分歧","base":"怡辰彬波见辉勇梅静","src":{"gemma整行":"见辉","gemma特写":"彬波"},"img":"礼金簿_files/ai/p15s1r19.jpg","amt":null}},{"id":495,"name":"童映晖","amount":300,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":false,"alts":["童映"],"ocr_amount":null,"guess":true,"cid":"p15s1r20"},{"id":496,"name":"许勇","amount":500,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":false,"alts":[],"ocr_amount":500,"guess":true,"cid":"p15s1r21"},{"id":497,"name":"曾继","amount":300,"note":"","group":"gmujoyi7q24","page":16,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p16s1r1"},{"id":498,"name":"严睿","amount":300,"note":"","group":"gmujoyi7q24","page":16,"sec":0,"draft":false,"alts":["上年","成算"],"ocr_amount":300,"guess":false,"cid":"p16s1r2","ai":{"flag":"AI建议","base":"上年","src":{"gemma整行":"严成朱","gemma特写":"严成朱"},"img":"礼金簿_files/ai/p16s1r2.jpg","amt":null}},{"id":499,"name":"朱绍静","amount":500,"note":"","group":"scan","page":16,"sec":0,"draft":false,"alts":["招静","柒招静","朱绍静"],"ocr_amount":500,"guess":false,"cid":"p16s1r3"},{"id":500,"name":"郑文广","amount":200,"note":"","group":"scan","page":16,"sec":0,"draft":true,"alts":[],"ocr_amount":200,"guess":false,"cid":"p16s1r4"},{"id":501,"name":"吴倩","amount":300,"note":"","group":"gmujoyi7q24","page":16,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p16s1r5"},{"id":502,"name":"陈璐洁","amount":300,"note":"","group":"gmujoyi7q24","page":16,"sec":0,"draft":false,"alts":["陈璐法","陈璐诺"],"ocr_amount":300,"guess":false,"cid":"p16s1r6","ai":{"flag":"AI修正（OCR仅1票）","base":"陈璐法","src":{"gemma整行":"陈璐涛","gemma特写":"陈璐涛"},"img":"礼金簿_files/ai/p16s1r6.jpg","amt":null}},{"id":503,"name":"周雍","amount":200,"note":"","group":"scan","page":16,"sec":0,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p16s1r7","ai":{"flag":"AI修正（OCR证据弱）","base":"倩话：雍丽","src":{"gemma整行":"雍丽","gemma特写":"雍丽"},"img":"礼金簿_files/ai/p16s1r7.jpg","amt":null}},{"id":504,"name":"刘丽","amount":200,"note":"","group":"scan","page":16,"sec":0,"draft":false,"alts":["常周:刘","常周刘"],"ocr_amount":200,"guess":false,"cid":"p16s1r8"},{"id":506,"name":"朱恒巧","amount":500,"note":"","group":"scan","page":16,"sec":0,"draft":false,"alts":["恒巧","柒恒巧"],"ocr_amount":500,"guess":false,"cid":"p16s1r10","ai":{"flag":"AI修正（OCR仅1票）","base":"恒巧","src":{"gemma整行":"米恒巧","gemma特写":"米恒巧"},"img":"礼金簿_files/ai/p16s1r10.jpg","amt":null}},{"id":507,"name":"蔡啟明","amount":200,"note":"","group":"scan","page":16,"sec":1,"draft":false,"alts":["蔡放明"],"ocr_amount":200,"guess":false,"cid":"p16s2r1","ai":{"flag":"AI修正（OCR仅1票）","base":"蔡放明","src":{"gemma整行":"荣双明","gemma特写":"荣双明"},"img":"礼金簿_files/ai/p16s2r1.jpg","amt":null}},{"id":508,"name":"蔡啟华","amount":200,"note":"","group":"scan","page":16,"sec":1,"draft":false,"alts":[],"ocr_amount":200,"guess":false,"cid":"p16s2r2"},{"id":509,"name":"蔡娟","amount":500,"note":"","group":"gmujoyi7q24","page":16,"sec":1,"draft":false,"alts":[],"ocr_amount":500,"guess":false,"cid":"p16s2r3"},{"id":510,"name":"蔡文","amount":600,"note":"","group":"gmujoyi7q24","page":16,"sec":1,"draft":false,"alts":["文浪明"],"ocr_amount":null,"guess":true,"cid":"p16s2r4"},{"id":511,"name":"张雪剑","amount":500,"note":"","group":"gmujoyi7q24","page":16,"sec":1,"draft":false,"alts":["迪厨光"],"ocr_amount":500,"guess":true,"cid":"p16s2r5","ai":{"flag":"AI修正（OCR仅1票）","base":"张雪树剑","src":{"gemma整行":"图彭到","gemma特写":"图彭到"},"img":"礼金簿_files/ai/p16s2r5.jpg","amt":null}},{"id":512,"name":"吴浪","amount":300,"note":"","group":"gmujoyi7q24","page":16,"sec":1,"draft":false,"alts":["周明恩","μ周明县"],"ocr_amount":300,"guess":false,"cid":"p16s2r6","ai":{"flag":"分歧","base":"笋周明恩","src":{"gemma整行":"周明恩"},"img":"礼金簿_files/ai/p16s2r6.jpg","amt":null}},{"id":513,"name":"鲁鹏","amount":300,"note":"","group":"gmujoyi7q24","page":16,"sec":1,"draft":false,"alts":["阅明奇","同明奇"],"ocr_amount":200,"guess":false,"cid":"p16s2r7"},{"id":514,"name":"刘思明","amount":500,"note":"","group":"scan","page":16,"sec":1,"draft":false,"alts":["训界明","训果明","训是明"],"ocr_amount":500,"guess":false,"cid":"p16s2r8","ai":{"flag":"AI修正（OCR仅1票）","base":"训界明","src":{"gemma整行":"刘界明","gemma特写":"刘界明"},"img":"礼金簿_files/ai/p16s2r8.jpg","amt":null}},{"id":515,"name":"吴长庚","amount":600,"note":"","group":"gmujoyi7q24","page":17,"sec":0,"draft":true,"alts":["美长庚"],"ocr_amount":600,"guess":false,"cid":"p17s1r1"},{"id":516,"name":"郑立权","amount":500,"note":"","group":"scan","page":17,"sec":0,"draft":false,"alts":["立权","补立权"],"ocr_amount":500,"guess":false,"cid":"p17s1r2"},{"id":517,"name":"张晓杰","amount":1000,"note":"","group":"gmujoyi7q24","page":17,"sec":0,"draft":false,"alts":["张嘎杰","张啄杰"],"ocr_amount":1000,"guess":false,"cid":"p17s1r3","ai":{"flag":"分歧","base":"张杰","src":{"gemma整行":"张嘎杰","gemma特写":"张杰"},"img":"礼金簿_files/ai/p17s1r3.jpg","amt":null}},{"id":518,"name":"付显玉","amount":300,"note":"","group":"scan","page":17,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p17s1r4"},{"id":519,"name":"张帮","amount":800,"note":"","group":"gmujoyi7q24","page":17,"sec":0,"draft":false,"alts":["张木"],"ocr_amount":null,"guess":true,"cid":"p17s1r5"},{"id":520,"name":"林仕鹏","amount":200,"note":"","group":"scan","page":17,"sec":0,"draft":true,"alts":["林竹鹏"],"ocr_amount":null,"guess":true,"cid":"p17s1r6"},{"id":521,"name":"成忠文","amount":500,"note":"","group":"gmujoyi7q24","page":17,"sec":0,"draft":true,"alts":[],"ocr_amount":500,"guess":false,"cid":"p17s1r7"},{"id":522,"name":"何富玉","amount":300,"note":"","group":"gmujoyi7q24","page":17,"sec":0,"draft":false,"alts":["何窗玉","何窗"],"ocr_amount":null,"guess":true,"cid":"p17s1r8"},{"id":523,"name":"周仕发","amount":200,"note":"","group":"gmujoyi7q24","page":17,"sec":0,"draft":true,"alts":["竹发"],"ocr_amount":200,"guess":false,"cid":"p17s1r9","ai":{"flag":"AI修正（OCR仅1票）","base":"竹发","src":{"gemma整行":"周仕发","gemma特写":"周仕发"},"img":"礼金簿_files/ai/p17s1r9.jpg","amt":null}},{"id":524,"name":"姚梦玲","amount":200,"note":"","group":"scan","page":17,"sec":0,"draft":false,"alts":["桃梦","桃梦哈","梦哈"],"ocr_amount":200,"guess":false,"cid":"p17s1r10","ai":{"flag":"AI建议（单源）/分歧","base":"姚梦","src":{"gemma整行":"桃梦哈","gemma特写":"桃梦"},"img":"礼金簿_files/ai/p17s1r10.jpg","amt":null}},{"id":525,"name":"龚成萍","amount":200,"note":"","group":"scan","page":17,"sec":1,"draft":true,"alts":["葵成萍","蛮成萍"],"ocr_amount":200,"guess":false,"cid":"p17s2r1","ai":{"flag":"AI修正（OCR仅1票）","base":"葵成萍","src":{"gemma整行":"龚成萍","gemma特写":"龚成萍"},"img":"礼金簿_files/ai/p17s2r1.jpg","amt":null}},{"id":526,"name":"龚成敏","amount":200,"note":"","group":"scan","page":17,"sec":1,"draft":false,"alts":["爱成","葵成敏"],"ocr_amount":200,"guess":false,"cid":"p17s2r2"},{"id":527,"name":"龚宁","amount":300,"note":"","group":"scan","page":17,"sec":1,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p17s2r3"},{"id":528,"name":"龚华","amount":300,"note":"姓名未识别，请对照原件填写","group":"scan","page":17,"sec":1,"draft":false,"alts":[],"ocr_amount":null,"guess":true,"cid":"p17s2r4"},{"id":529,"name":"杜政义","amount":300,"note":"","group":"gmujoyi7q24","page":17,"sec":1,"draft":true,"alts":["杜政","华义！丽"],"ocr_amount":300,"guess":false,"cid":"p17s2r5","ai":{"flag":"AI修正（OCR仅1票）","base":"杜政","src":{"gemma整行":"杜政义","gemma特写":"杜政义"},"img":"礼金簿_files/ai/p17s2r5.jpg","amt":null}},{"id":530,"name":"赵祖鹏","amount":500,"note":"","group":"gmujoyi7q24","page":17,"sec":1,"draft":true,"alts":["赵祖骗","赵祖骝"],"ocr_amount":500,"guess":false,"cid":"p17s2r7"},{"id":531,"name":"赵钦","amount":300,"note":"","group":"gmujoyi7q24","page":17,"sec":1,"draft":true,"alts":["赵饮"],"ocr_amount":300,"guess":false,"cid":"p17s2r8"},{"id":532,"name":"龚吉成","amount":1000,"note":"","group":"gmujoyi7q24","page":17,"sec":1,"draft":false,"alts":["葵吉成","蛮吉成","聚吉成"],"ocr_amount":1000,"guess":false,"cid":"p17s2r9","ai":{"flag":"AI建议（单源）","base":"壹件","src":{"gemma整行":"葵吉成","gemma特写":"蛮吉成"},"img":"礼金簿_files/ai/p17s2r9.jpg","amt":null}},{"id":533,"name":"鲁绍平","amount":500,"note":"","group":"scan","page":17,"sec":1,"draft":true,"alts":["绍平"],"ocr_amount":500,"guess":false,"cid":"p17s2r10"},{"id":535,"name":"李清富","amount":300,"note":"","group":"gmujoyi7q24","page":18,"sec":0,"draft":false,"alts":["李请富"],"ocr_amount":null,"guess":true,"cid":"p18s1r1","ai":{"flag":"AI修正（OCR仅1票）","base":"李请富","src":{"gemma整行":"李清富","gemma特写":"李清富"},"img":"礼金簿_files/ai/p18s1r1.jpg","amt":null}},{"id":536,"name":"江承聪","amount":300,"note":"","group":"gmujoyi7q24","page":18,"sec":0,"draft":true,"alts":["江承","江承联"],"ocr_amount":300,"guess":false,"cid":"p18s1r2","ai":{"flag":"AI建议","base":"江承","src":{"gemma整行":"江承聪","gemma特写":"江承聪"},"img":"礼金簿_files/ai/p18s1r2 2.jpg","amt":null}},{"id":537,"name":"宋邦雄","amount":300,"note":"","group":"gmujoyi7q24","page":18,"sec":0,"draft":false,"alts":["米邦雄","宋邦雄","采邦雄"],"ocr_amount":null,"guess":true,"cid":"p18s1r3","ai":{"flag":"AI建议（单源）/分歧","base":"亲邦雄","src":{"gemma整行":"米邦雄","gemma特写":"宋邦雄"},"img":"礼金簿_files/ai/p18s1r3.jpg","amt":null}},{"id":538,"name":"申春梅","amount":300,"note":"","group":"gmujoyi7q24","page":18,"sec":0,"draft":true,"alts":["申春","中春收"],"ocr_amount":300,"guess":false,"cid":"p18s1r4"},{"id":539,"name":"宋健","amount":300,"note":"","group":"gmujoyi7q24","page":18,"sec":0,"draft":false,"alts":["宋宋走","米:宋","宋宋"],"ocr_amount":500,"guess":false,"cid":"p18s1r5","ai":{"flag":"分歧","base":"梅健强","src":{"gemma整行":"宋宋走","gemma特写":"梅健强"},"img":"礼金簿_files/ai/p18s1r5.jpg","amt":null}},{"id":540,"name":"赵振学","amount":300,"note":"","group":"gmujoyi7q24","page":18,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p18s1r6"},{"id":541,"name":"付雪梅","amount":300,"note":"","group":"scan","page":18,"sec":0,"draft":false,"alts":["付雪梅","套恒"],"ocr_amount":300,"guess":false,"cid":"p18s1r7","ai":{"flag":"AI修正（OCR仅1票）","base":"付雪梅","src":{"gemma整行":"登恒","gemma特写":"登恒"},"img":"礼金簿_files/ai/p18s1r7.jpg","amt":null}},{"id":542,"name":"范勇","amount":300,"note":"","group":"scan","page":18,"sec":0,"draft":false,"alts":["成志","成忠"],"ocr_amount":200,"guess":false,"cid":"p18s1r8"},{"id":544,"name":"李磊","amount":200,"note":"","group":"scan","page":19,"sec":0,"draft":true,"alts":["州李磊"],"ocr_amount":200,"guess":false,"cid":"p19s1r1"},{"id":545,"name":"吴帅","amount":300,"note":"","group":"scan","page":19,"sec":0,"draft":false,"alts":["以吴"],"ocr_amount":300,"guess":false,"cid":"p19s1r2","ai":{"flag":"AI修正（OCR证据弱）","base":"冬佰圈","src":{"gemma整行":"以昊","gemma特写":"以昊"},"img":"礼金簿_files/ai/p19s1r2.jpg","amt":null}},{"id":546,"name":"朱亚","amount":300,"note":"","group":"gmujoyi7q24","page":19,"sec":0,"draft":true,"alts":[],"ocr_amount":300,"guess":false,"cid":"p19s1r3"},{"id":547,"name":"申云","amount":300,"note":"","group":"gmujoyi7q24","page":19,"sec":0,"draft":false,"alts":[],"ocr_amount":300,"guess":false,"cid":"p19s1r4"},{"id":548,"name":"张斌","amount":300,"note":"","group":"gmujoyi7q24","page":19,"sec":0,"draft":true,"alts":["刀张斌","刃张斌"],"ocr_amount":300,"guess":false,"cid":"p19s1r5"},{"id":549,"name":"龚建忠","amount":300,"note":"","group":"scan","page":19,"sec":0,"draft":false,"alts":["叁饭","垄建忠","以奕建忠"],"ocr_amount":300,"guess":false,"cid":"p19s1r6","ai":{"flag":"AI建议","base":"叁饭","src":{"gemma整行":"奕建忠","gemma特写":"奕建忠"},"img":"礼金簿_files/ai/p19s1r6.jpg","amt":null}},{"id":550,"name":"胡亚兰","amount":300,"note":"","group":"gmujoyi7q24","page":19,"sec":0,"draft":false,"alts":["叁低"],"ocr_amount":300,"guess":true,"cid":"p19s1r7"},{"id":552,"name":"刘崇敏","amount":400,"note":"","group":"scan","page":2,"sec":0,"draft":false},{"id":553,"name":"余瑞雪（众济）","amount":300,"note":"","group":"gmujoyi7q24","page":3,"sec":0,"draft":false},{"id":554,"name":"李平","amount":300,"note":"","group":"scan","page":4,"sec":0,"draft":false},{"id":555,"name":"曹旭","amount":300,"note":"","group":"gmujoyi7q24","page":4,"sec":0,"draft":false},{"id":556,"name":"王钊","amount":500,"note":"","group":"gmujoyi7q24","page":4,"sec":0,"draft":false},{"id":557,"name":"吴玉林","amount":400,"note":"","group":"gmujoyi7q24","page":4,"sec":0,"draft":false},{"id":558,"name":"陈焕琼","amount":500,"note":"","group":"scan","page":4,"sec":1,"draft":false},{"id":559,"name":"付宪金","amount":200,"note":"","group":"scan","page":4,"sec":1,"draft":false},{"id":560,"name":"赵星","amount":300,"note":"","group":"gmujoyi7q24","page":5,"sec":0,"draft":false},{"id":561,"name":"付明鸟","amount":200,"note":"","group":"scan","page":5,"sec":1,"draft":false},{"id":562,"name":"程林","amount":300,"note":"","group":"gmujoyi7q24","page":6,"sec":0,"draft":false},{"id":563,"name":"李世美","amount":200,"note":"","group":"scan","page":6,"sec":0,"draft":false},{"id":564,"name":"陈宪","amount":500,"note":"","group":"scan","page":6,"sec":1,"draft":false},{"id":565,"name":"王正辉","amount":200,"note":"","group":"scan","page":6,"sec":1,"draft":false},{"id":566,"name":"马宪云","amount":300,"note":"","group":"scan","page":7,"sec":0,"draft":false},{"id":567,"name":"文彬","amount":300,"note":"","group":"gmujoyi7q24","page":7,"sec":1,"draft":false},{"id":568,"name":"杨自忠","amount":200,"note":"","group":"scan","page":8,"sec":0,"draft":false},{"id":569,"name":"申云（律师）","amount":300,"note":"","group":"gmujoyi7q24","page":8,"sec":0,"draft":false},{"id":570,"name":"高蝉","amount":200,"note":"","group":"gmujoyi7q24","page":8,"sec":1,"draft":false},{"id":571,"name":"鲁怀刚","amount":300,"note":"","group":"scan","page":8,"sec":1,"draft":false},{"id":572,"name":"鲁怀超","amount":300,"note":"","group":"scan","page":8,"sec":1,"draft":false},{"id":573,"name":"龚成德","amount":300,"note":"","group":"scan","page":9,"sec":0,"draft":false},{"id":574,"name":"王明珠","amount":200,"note":"","group":"gmujoyi7q24","page":9,"sec":0,"draft":false},{"id":575,"name":"宋潇","amount":500,"note":"","group":"gmujoyi7q24","page":9,"sec":0,"draft":false},{"id":576,"name":"曾瑰","amount":300,"note":"","group":"gmujoyi7q24","page":9,"sec":1,"draft":false},{"id":577,"name":"田华","amount":300,"note":"","group":"gmujoyi7q24","page":9,"sec":1,"draft":false},{"id":578,"name":"王晋东","amount":500,"note":"","group":"gmujoyi7q24","page":9,"sec":1,"draft":false},{"id":579,"name":"刘东","amount":500,"note":"","group":"gmujoyi7q24","page":9,"sec":1,"draft":false},{"id":581,"name":"夏彦杰","amount":400,"note":"","group":"gmujoyi7q24","page":9,"sec":1,"draft":false},{"id":582,"name":"郎啟贵","amount":200,"note":"","group":"gmujoyi7q24","page":9,"sec":1,"draft":false},{"id":583,"name":"王必成","amount":300,"note":"","group":"gmujoyi7q24","page":9,"sec":1,"draft":false},{"id":584,"name":"王家和","amount":300,"note":"","group":"gmujoyi7q24","page":9,"sec":1,"draft":false},{"id":585,"name":"刘婷婷","amount":200,"note":"","group":"gmujoyi7q24","page":11,"sec":0,"draft":false},{"id":586,"name":"张勇","amount":300,"note":"","group":"scan","page":11,"sec":0,"draft":false},{"id":587,"name":"王磊","amount":500,"note":"","group":"gmujoyi7q24","page":12,"sec":0,"draft":false},{"id":588,"name":"张宽","amount":500,"note":"","group":"gmujoyi7q24","page":12,"sec":0,"draft":false},{"id":589,"name":"刘安杰","amount":300,"note":"","group":"gmujoyi7q24","page":12,"sec":0,"draft":false},{"id":590,"name":"申时粉","amount":200,"note":"","group":"scan","page":12,"sec":1,"draft":false},{"id":591,"name":"杨亮富","amount":500,"note":"","group":"scan","page":12,"sec":1,"draft":false},{"id":592,"name":"杨云坤","amount":300,"note":"","group":"gmujoyi7q24","page":12,"sec":1,"draft":false},{"id":593,"name":"常会云","amount":300,"note":"","group":"scan","page":13,"sec":0,"draft":false},{"id":594,"name":"严隆高","amount":300,"note":"","group":"gmujoyi7q24","page":13,"sec":0,"draft":false},{"id":595,"name":"龚群","amount":200,"note":"","group":"scan","page":13,"sec":1,"draft":false},{"id":596,"name":"龚声福","amount":300,"note":"","group":"scan","page":13,"sec":1,"draft":false},{"id":597,"name":"曾宇","amount":300,"note":"","group":"gmujoyi7q24","page":14,"sec":0,"draft":false},{"id":598,"name":"朱滇","amount":200,"note":"","group":"gmujoyi7q24","page":14,"sec":0,"draft":false},{"id":599,"name":"张磊","amount":300,"note":"","group":"scan","page":14,"sec":0,"draft":false},{"id":600,"name":"王蓉芳","amount":300,"note":"","group":"scan","page":14,"sec":0,"draft":false},{"id":601,"name":"汪敏","amount":300,"note":"","group":"gmujoyi7q24","page":14,"sec":1,"draft":false},{"id":602,"name":"李霆","amount":500,"note":"","group":"gmujoyi7q24","page":14,"sec":1,"draft":false},{"id":603,"name":"周爱华","amount":300,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":false},{"id":604,"name":"王梅","amount":300,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":false},{"id":605,"name":"常静","amount":300,"note":"","group":"gmujoyi7q24","page":15,"sec":0,"draft":false},{"id":606,"name":"成卓","amount":300,"note":"","group":"gmujoyi7q24","page":16,"sec":0,"draft":false},{"id":607,"name":"成联陆","amount":300,"note":"","group":"scan","page":16,"sec":0,"draft":false},{"id":608,"name":"周明恩","amount":300,"note":"","group":"scan","page":16,"sec":1,"draft":false},{"id":609,"name":"周明奇","amount":200,"note":"","group":"scan","page":16,"sec":1,"draft":false},{"id":610,"name":"邓书文","amount":300,"note":"","group":"gmujoyi7q24","page":16,"sec":1,"draft":false},{"id":611,"name":"邓虓","amount":300,"note":"","group":"gmujoyi7q24","page":16,"sec":1,"draft":false},{"id":612,"name":"彭勇","amount":300,"note":"","group":"scan","page":17,"sec":0,"draft":false},{"id":613,"name":"刘德祥","amount":300,"note":"","group":"scan","page":17,"sec":0,"draft":false},{"id":614,"name":"成云","amount":200,"note":"","group":"gmujoyi7q24","page":17,"sec":1,"draft":false},{"id":615,"name":"田丽","amount":300,"note":"","group":"gmujoyi7q24","page":17,"sec":1,"draft":false},{"id":616,"name":"余大荣（大五哥）","amount":500,"note":"","group":"scan","page":17,"sec":1,"draft":false},{"id":617,"name":"宋强","amount":500,"note":"","group":"gmujoyi7q24","page":18,"sec":0,"draft":false},{"id":618,"name":"成忠群","amount":200,"note":"","group":"scan","page":18,"sec":0,"draft":false},{"id":619,"name":"林武","amount":200,"note":"","group":"gmujoyi7q24","page":18,"sec":0,"draft":false},{"id":620,"name":"成杨阳","amount":200,"note":"","group":"gmujoyi7q24","page":18,"sec":0,"draft":false},{"id":621,"name":"朱恒要","amount":500,"note":"","group":"gmujoyi7q24","page":19,"sec":0,"draft":false},{"id":622,"name":"陶云豪","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":623,"name":"朱德明","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":624,"name":"胡垚静","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":625,"name":"张雄伟","amount":300,"note":"","group":"gmujoyi7q24","draft":false},{"id":626,"name":"张宇","amount":600,"note":"","group":"gmujoyi7q24","draft":false}],"seq":627,"scans":[{"page":1,"src":"礼金簿_files/page01.jpg","sections":[{"total":3800,"warn":false},{"total":null,"warn":false}],"totals":[3800]},{"page":2,"src":"礼金簿_files/page02.jpg","sections":[{"total":3400,"warn":false}],"totals":[3400]},{"page":3,"src":"礼金簿_files/page03.jpg","sections":[{"total":3800,"warn":false}],"totals":[3800]},{"page":4,"src":"礼金簿_files/page04.jpg","sections":[{"total":4400,"warn":false},{"total":4400,"warn":false}],"totals":[4400,4400]},{"page":5,"src":"礼金簿_files/page05.jpg","sections":[{"total":4200,"warn":false},{"total":3600,"warn":false}],"totals":[4200,3600]},{"page":6,"src":"礼金簿_files/page06.jpg","sections":[{"total":3800,"warn":false},{"total":4300,"warn":false}],"totals":[3800,4300]},{"page":7,"src":"礼金簿_files/page07.jpg","sections":[{"total":4400,"warn":false},{"total":3300,"warn":true}],"totals":[4400,3300]},{"page":8,"src":"礼金簿_files/page08.jpg","sections":[{"total":4700,"warn":false},{"total":3800,"warn":false}],"totals":[4700,3800]},{"page":9,"src":"礼金簿_files/page09.jpg","sections":[{"total":null,"warn":false},{"total":null,"warn":false}],"totals":[]},{"page":10,"src":"礼金簿_files/page10.jpg","sections":[{"total":null,"warn":false}],"totals":[]},{"page":11,"src":"礼金簿_files/page11.jpg","sections":[{"total":3500,"warn":false},{"total":null,"warn":false}],"totals":[3500]},{"page":12,"src":"礼金簿_files/page12.jpg","sections":[{"total":4000,"warn":false},{"total":3400,"warn":true}],"totals":[4000,3400]},{"page":13,"src":"礼金簿_files/page13.jpg","sections":[{"total":3400,"warn":false},{"total":4100,"warn":false}],"totals":[3400,4100]},{"page":14,"src":"礼金簿_files/page14.jpg","sections":[{"total":2500,"warn":false},{"total":3400,"warn":false}],"totals":[2500,3400]},{"page":15,"src":"礼金簿_files/page15.jpg","sections":[{"total":4600,"warn":false}],"totals":[4600]},{"page":16,"src":"礼金簿_files/page16.jpg","sections":[{"total":3400,"warn":false},{"total":4200,"warn":false}],"totals":[3400,4200]},{"page":17,"src":"礼金簿_files/page17.jpg","sections":[{"total":5200,"warn":false},{"total":4600,"warn":false},{"total":null,"warn":false}],"totals":[5200,4600]},{"page":18,"src":"礼金簿_files/page18.jpg","sections":[{"total":3500,"warn":false},{"total":null,"warn":false}],"totals":[3500]},{"page":19,"src":"礼金簿_files/page19.jpg","sections":[{"total":2500,"warn":false},{"total":null,"warn":false}],"totals":[2500]}],"guests":[{"type":"head","text":"💒 镇雄法院同事 · 婚礼请客名单"},{"type":"head","text":"👤 邀请人: 月   📱 18849841551   💒 2026-09-24 云南镇雄   📋 共 275 人 · 27 个部门 · 名单列内自选邀请状态"},{"type":"head","text":"🏛 院领导（4人）"},{"type":"row","name":"王晋东","phone":"13887018666","status":"待定"},{"type":"row","name":"李太红","phone":"13887040776","status":"待定"},{"type":"row","name":"宋邦雄","phone":"13638841509","status":"待定"},{"type":"row","name":"汪子柱","phone":"15287791320","status":"待定"},{"type":"head","text":"🏛 审委专委（3人）"},{"type":"row","name":"张淑祝","phone":"13578090981","status":"待定"},{"type":"row","name":"余婷","phone":"13638882186","status":"待定"},{"type":"row","name":"宋强","phone":"13887069695","status":"待定"},{"type":"head","text":"🏛 派驻纪检监察组（2人）"},{"type":"head","text":"🏛 政治部（6人）"},{"type":"row","name":"成忠文","phone":"15925076677","status":"待定"},{"type":"row","name":"张雄伟","phone":"13408855168","status":"待定"},{"type":"row","name":"高见","phone":"13887035639","status":"待定"},{"type":"row","name":"常静","phone":"18313000532","status":"待定"},{"type":"row","name":"陈璐洁","phone":"13408875918","status":"待定"},{"type":"row","name":"窦晶艳","phone":"15187409551","status":"待定"},{"type":"head","text":"🏛 督察室（4人）"},{"type":"row","name":"许勇","phone":"13887111362","status":"待定"},{"type":"row","name":"朱德明","phone":"13578040049","status":"待定"},{"type":"row","name":"付在川","phone":"15012331363","status":"待定"},{"type":"row","name":"刘庆巧","phone":"19987867317","status":"待定"},{"type":"head","text":"🏛 审管办（3人）"},{"type":"row","name":"周雍","phone":"15125365968","status":"待定"},{"type":"row","name":"王明天","phone":"15094287032","status":"待定"},{"type":"row","name":"王梅","phone":"19806909459","status":"待定"},{"type":"head","text":"🏛 案件质量评查中心（5人）"},{"type":"row","name":"邓成友","phone":"15808638386","status":"待定"},{"type":"row","name":"胡彬","phone":"13887128120","status":"待定"},{"type":"row","name":"申时焕","phone":"13638873599","status":"待定"},{"type":"row","name":"申开勇","phone":"13638872788","status":"待定"},{"type":"row","name":"夏彦杰","phone":"13638838198","status":"待定"},{"type":"head","text":"🏛 综合办公室（14人）"},{"type":"row","name":"刘东","phone":"15012283332","status":"待定"},{"type":"row","name":"王定志","phone":"15912686898","status":"待定"},{"type":"row","name":"申春梅","phone":"13608706308","status":"待定"},{"type":"row","name":"康崑","phone":"13578012314","status":"待定"},{"type":"row","name":"吴云山","phone":"13887105488","status":"待定"},{"type":"row","name":"申时旺","phone":"13887113848","status":"待定"},{"type":"row","name":"严睿","phone":"13578003158","status":"待定"},{"type":"row","name":"徐磊","phone":"15969008802","status":"待定"},{"type":"row","name":"姚江","phone":"13883934654","status":"待定"},{"type":"row","name":"高婵","phone":"15894207057","status":"待定"},{"type":"row","name":"陈华","phone":"13638809519","status":"待定"},{"type":"row","name":"王义德","phone":"15012280588","status":"待定"},{"type":"row","name":"黄智军","phone":"13887122528","status":"待定"},{"type":"row","name":"李灿","phone":"13887038697","status":"待定"},{"type":"head","text":"🏛 刑事审判庭（23人）"},{"type":"row","name":"严隆高","phone":"13887115085","status":"待定"},{"type":"row","name":"赵振学","phone":"15925505556","status":"待定"},{"type":"row","name":"白菊","phone":"13578079603","status":"待定"},{"type":"row","name":"吴旭","phone":"13638886012","status":"待定"},{"type":"row","name":"黄恩泽","phone":"13628709159","status":"待定"},{"type":"row","name":"范玲琪","phone":"15287158531","status":"待定"},{"type":"row","name":"杨兴群","phone":"18287011686","status":"待定"},{"type":"row","name":"胡淞","phone":"15925505335","status":"待定"},{"type":"row","name":"阮锋","phone":"13887138312","status":"待定"},{"type":"row","name":"张茜","phone":"13408822292","status":"待定"},{"type":"row","name":"李燕","phone":"15877974644","status":"待定"},{"type":"row","name":"王杰","phone":"15758080501","status":"待定"},{"type":"row","name":"谭星月","phone":"18314451398","status":"待定"},{"type":"row","name":"朱梦","phone":"18887042211","status":"待定"},{"type":"row","name":"裴彬","phone":"13908702865","status":"待定"},{"type":"row","name":"沈阳","phone":"13578011786","status":"待定"},{"type":"row","name":"朱啟奎","phone":"13887020269","status":"待定"},{"type":"row","name":"张书荣","phone":"15969038695","status":"待定"},{"type":"row","name":"沙进","phone":"18849889623","status":"待定"},{"type":"row","name":"胡亚兰","phone":"15087216609","status":"待定"},{"type":"row","name":"熊星月","phone":"13578089349","status":"待定"},{"type":"row","name":"付朝江","phone":"18987002809","status":"待定"},{"type":"row","name":"申睿婕","phone":"15752453702","status":"待定"},{"type":"head","text":"🏛 立案庭（27人）"},{"type":"row","name":"段斌","phone":"15969006766","status":"待定"},{"type":"row","name":"周雪","phone":"15758062574","status":"待定"},{"type":"row","name":"赵亚丽","phone":"13578095530","status":"待定"},{"type":"row","name":"刘畅","phone":"18287032665","status":"待定"},{"type":"row","name":"陶云豪","phone":"15108640298","status":"待定"},{"type":"row","name":"王晓红","phone":"13466221739","status":"待定"},{"type":"row","name":"曾龙先","phone":"15974813520","status":"待定"},{"type":"row","name":"谢学艳","phone":"19169337736","status":"待定"},{"type":"row","name":"李绍基","phone":"13887126331","status":"待定"},{"type":"row","name":"马宪云","phone":"13887138106","status":"待定"},{"type":"row","name":"杨远芳","phone":"13887127485","status":"待定"},{"type":"row","name":"常红艳","phone":"17608705786","status":"待定"},{"type":"row","name":"姚晓","phone":"15126685545","status":"待定"},{"type":"row","name":"许亮","phone":"19984022658","status":"待定"},{"type":"row","name":"高彦劭","phone":"18087029971","status":"待定"},{"type":"row","name":"沈丽涛","phone":"13578050056","status":"待定"},{"type":"row","name":"赵星","phone":"18869525360","status":"待定"},{"type":"row","name":"杨琴","phone":"18589363226","status":"待定"},{"type":"row","name":"曹毅","phone":"13648700488","status":"待定"},{"type":"row","name":"吴春泉","phone":"13578057219","status":"待定"},{"type":"row","name":"童映晖","phone":"13638841123","status":"待定"},{"type":"row","name":"曾永雄","phone":"13887105881","status":"待定"},{"type":"row","name":"李磊","phone":"13578087703","status":"待定"},{"type":"row","name":"吴柏华","phone":"13887125576","status":"待定"},{"type":"row","name":"罗辅梅","phone":"18287076829","status":"待定"},{"type":"row","name":"杨正欢","phone":"13211866369","status":"待定"},{"type":"row","name":"雷天龙","phone":"13887041278","status":"待定"},{"type":"head","text":"🏛 民一庭（16人）"},{"type":"row","name":"皮永","phone":"18287011862","status":"待定"},{"type":"row","name":"齐永成","phone":"13116993898","status":"待定"},{"type":"row","name":"李顺","phone":"13887070321","status":"待定"},{"type":"row","name":"李熙","phone":"17868949520","status":"待定"},{"type":"row","name":"李砚舟","phone":"18440927583","status":"待定"},{"type":"row","name":"邹雄","phone":"13408810601","status":"待定"},{"type":"row","name":"陈梅","phone":"18789055290","status":"待定"},{"type":"row","name":"马丽芳","phone":"19869570767","status":"待定"},{"type":"row","name":"张宏","phone":"15877946293","status":"待定"},{"type":"row","name":"王秋玲","phone":"15987914879","status":"待定"},{"type":"row","name":"周杜鹃","phone":"15240841870","status":"待定"},{"type":"row","name":"吴涛","phone":"13649680003","status":"待定"},{"type":"row","name":"游本洲","phone":"15125317063","status":"待定"},{"type":"row","name":"燕梅","phone":"15287716253","status":"待定"},{"type":"row","name":"王明珠","phone":"15126611069","status":"待定"},{"type":"row","name":"宋贶姝","phone":"15911800938","status":"待定"},{"type":"head","text":"🏛 民二庭（25人）"},{"type":"row","name":"张帮","phone":"15911812560","status":"待定"},{"type":"row","name":"郭灿","phone":"15925531821","status":"待定"},{"type":"row","name":"鲁娟","phone":"18869431582","status":"待定"},{"type":"row","name":"成红梅","phone":"18206813171","status":"待定"},{"type":"row","name":"刘成尧","phone":"13648705768","status":"待定"},{"type":"row","name":"叶育涛","phone":"13638818919","status":"待定"},{"type":"row","name":"王科吉春","phone":"13408857050","status":"待定"},{"type":"row","name":"曾瑰","phone":"15925506108","status":"待定"},{"type":"row","name":"田华","phone":"13638875628","status":"待定"},{"type":"row","name":"岳廷婷","phone":"15287036641","status":"待定"},{"type":"row","name":"王荣芳","phone":"15125310518","status":"待定"},{"type":"row","name":"鲁桦","phone":"18187082884","status":"待定"},{"type":"row","name":"唐璐瑶","phone":"19906046865","status":"待定"},{"type":"row","name":"李清富","phone":"13638895693","status":"待定"},{"type":"row","name":"李翠","phone":"18849875579","status":"待定"},{"type":"row","name":"杨婷","phone":"19116282357","status":"待定"},{"type":"row","name":"黄道燚","phone":"13408872520","status":"待定"},{"type":"row","name":"周敏","phone":"18387028848","status":"待定"},{"type":"row","name":"李宥霖","phone":"15812097803","status":"待定"},{"type":"row","name":"吴倩","phone":"15750140002","status":"待定"},{"type":"row","name":"周冬梅","phone":"15125308831","status":"待定"},{"type":"row","name":"孙吉雯","phone":"13330426939","status":"待定"},{"type":"row","name":"胥宗成","phone":"13408819029","status":"待定"},{"type":"row","name":"王娟","phone":"15012294420","status":"待定"},{"type":"row","name":"吴长庚","phone":"13628702110","status":"待定"},{"type":"head","text":"🏛 执行局（30人）"},{"type":"row","name":"杨光德","phone":"13408822662","status":"待定"},{"type":"row","name":"何高莹","phone":"13578009766","status":"待定"},{"type":"row","name":"秦国智","phone":"13638864789","status":"待定"},{"type":"row","name":"宋健","phone":"13887115016","status":"待定"},{"type":"row","name":"游维","phone":"15125464500","status":"待定"},{"type":"row","name":"潘怀仲","phone":"13887076789","status":"待定"},{"type":"row","name":"程林","phone":"15894236641","status":"待定"},{"type":"row","name":"罗泽坤","phone":"15750180254","status":"待定"},{"type":"row","name":"邓财银","phone":"18313886309","status":"待定"},{"type":"row","name":"陈晓","phone":"13887070868","status":"待定"},{"type":"row","name":"董颖辉","phone":"15187059059","status":"待定"},{"type":"row","name":"艾弘","phone":"18788525881","status":"待定"},{"type":"row","name":"付婷","phone":"15808798115","status":"待定"},{"type":"row","name":"涂冉","phone":"18487388075","status":"待定"},{"type":"row","name":"文彬","phone":"15287018622","status":"待定"},{"type":"row","name":"高全","phone":"13887056545","status":"待定"},{"type":"row","name":"鲁朋","phone":"15752445625","status":"待定"},{"type":"row","name":"郎啟贵","phone":"15287046660","status":"待定"},{"type":"row","name":"赵喜","phone":"19527055759","status":"待定"},{"type":"row","name":"成勇","phone":"15125406356","status":"待定"},{"type":"row","name":"申登云","phone":"15752407550","status":"待定"},{"type":"row","name":"徐丽娅","phone":"15187000108","status":"待定"},{"type":"row","name":"赵小庆","phone":"15094268073","status":"待定"},{"type":"row","name":"李霄云","phone":"18849872374","status":"待定"},{"type":"row","name":"赵岗","phone":"15974877637","status":"待定"},{"type":"row","name":"王媛","phone":"15094285071","status":"待定"},{"type":"row","name":"沈振新","phone":"15752443072","status":"待定"},{"type":"row","name":"陈凡","phone":"15287059728","status":"待定"},{"type":"row","name":"顾星","phone":"13577440750","status":"待定"},{"type":"row","name":"张东会","phone":"15750292760","status":"待定"},{"type":"head","text":"🏛 法警大队（23人）"},{"type":"row","name":"陈焕昆","phone":"13638876299","status":"待定"},{"type":"row","name":"曾继","phone":"18387099881","status":"待定"},{"type":"row","name":"高峰","phone":"13887118088","status":"待定"},{"type":"row","name":"杨思军","phone":"13578089158","status":"待定"},{"type":"row","name":"付明鸟","phone":"13508703896","status":"待定"},{"type":"row","name":"李仕","phone":"13887115065","status":"待定"},{"type":"row","name":"刘鹏","phone":"13658707541","status":"待定"},{"type":"row","name":"殷洪龙","phone":"13211849746","status":"待定"},{"type":"row","name":"龚声正","phone":"17702305751","status":"待定"},{"type":"row","name":"吴长武","phone":"14769108837","status":"待定"},{"type":"row","name":"韩贤进","phone":"17347395163","status":"待定"},{"type":"row","name":"邓荣佳","phone":"19987185114","status":"待定"},{"type":"row","name":"刘华菊","phone":"15911804151","status":"待定"},{"type":"row","name":"周仕美","phone":"15012345252","status":"待定"},{"type":"row","name":"雷梅","phone":"13638829985","status":"待定"},{"type":"row","name":"赵国","phone":"18387021128","status":"待定"},{"type":"row","name":"何涛","phone":"15877966646","status":"待定"},{"type":"row","name":"付贵","phone":"15750118349","status":"待定"},{"type":"row","name":"秦龙凤","phone":"13578037203","status":"待定"},{"type":"row","name":"赵桃","phone":"15287771238","status":"待定"},{"type":"row","name":"蒋忠宇","phone":"15708818570","status":"待定"},{"type":"row","name":"夏赟","phone":"13278675817","status":"待定"},{"type":"row","name":"罗裕兴","phone":"15287056030","status":"待定"},{"type":"head","text":"🏛 行政庭（6人）"},{"type":"row","name":"曾永翠","phone":"13578028318","status":"待定"},{"type":"row","name":"李鸿林","phone":"15969006966","status":"待定"},{"type":"row","name":"赵智","phone":"13887122060","status":"待定"},{"type":"row","name":"张飞","phone":"13887036170","status":"待定"},{"type":"row","name":"郎学谦","phone":"15398359699","status":"待定"},{"type":"row","name":"程平","phone":"18287079642","status":"待定"},{"type":"head","text":"🏛 芒部法庭（11人）"},{"type":"row","name":"张东阳","phone":"15752962855","status":"待定"},{"type":"row","name":"申登龙","phone":"18388727436","status":"待定"},{"type":"row","name":"谭丽娟","phone":"15310281505","status":"待定"},{"type":"row","name":"吴浪","phone":"13211959397","status":"待定"},{"type":"row","name":"曾丽红","phone":"17360075743","status":"待定"},{"type":"row","name":"高嘉尧","phone":"13648855663","status":"待定"},{"type":"row","name":"满云东","phone":"19587000657","status":"待定"},{"type":"row","name":"王琴","phone":"15125313061","status":"待定"},{"type":"row","name":"汪喜","phone":"15240807029","status":"待定"},{"type":"row","name":"姜文","phone":"19887020126","status":"待定"},{"type":"row","name":"万欣杰","phone":"18214264729","status":"待定"},{"type":"head","text":"🏛 以勒法庭（11人）"},{"type":"row","name":"宋奡玢","phone":"18708734760","status":"待定"},{"type":"row","name":"李云","phone":"15096586828","status":"待定"},{"type":"row","name":"夏瑞","phone":"15398339613","status":"待定"},{"type":"row","name":"赵群","phone":"15687735960","status":"待定"},{"type":"row","name":"李开俊","phone":"18708502519","status":"待定"},{"type":"row","name":"杨勇","phone":"15094264066","status":"待定"},{"type":"row","name":"李汉兵","phone":"18987012219","status":"待定"},{"type":"row","name":"刘国柱","phone":"15911830753","status":"待定"},{"type":"row","name":"张凤","phone":"18388751716","status":"待定"},{"type":"row","name":"赵敏","phone":"18182904424","status":"待定"},{"type":"row","name":"陈云庆","phone":"15808606475","status":"待定"},{"type":"head","text":"🏛 场坝法庭（9人）"},{"type":"row","name":"张宽","phone":"15087291599","status":"待定"},{"type":"row","name":"袁成","phone":"15012293368","status":"待定"},{"type":"row","name":"付君","phone":"18388694510","status":"待定"},{"type":"row","name":"汪继巧","phone":"15012263335","status":"待定"},{"type":"row","name":"邹催","phone":"19048700656","status":"待定"},{"type":"row","name":"张梅","phone":"13211848225","status":"待定"},{"type":"row","name":"周杰","phone":"15096844577","status":"待定"},{"type":"row","name":"李璇","phone":"19048696156","status":"待定"},{"type":"row","name":"邱仕艳","phone":"18869596239","status":"待定"},{"type":"head","text":"🏛 罗坎法庭（9人）"},{"type":"row","name":"龚徽","phone":"18849841551","status":"待定"},{"type":"row","name":"胥杰","phone":"15082081750","status":"待定"},{"type":"row","name":"幸家健","phone":"18208707904","status":"待定"},{"type":"row","name":"宋毅","phone":"19387080558","status":"待定"},{"type":"row","name":"李丽娟","phone":"16687015615","status":"待定"},{"type":"row","name":"侯吉玲","phone":"19811679516","status":"待定"},{"type":"row","name":"王钊","phone":"13872253773","status":"待定"},{"type":"row","name":"杨允昆","phone":"18849841551","status":"待定"},{"type":"row","name":"周昌华","phone":"19278800314","status":"待定"},{"type":"head","text":"🏛 泼机法庭（9人）"},{"type":"row","name":"朱亚","phone":"15198827175","status":"待定"},{"type":"row","name":"廖云镇","phone":"18388791358","status":"待定"},{"type":"row","name":"刘春梅","phone":"18206831304","status":"待定"},{"type":"row","name":"张玲","phone":"18387044339","status":"待定"},{"type":"row","name":"贾向平","phone":"18388462770","status":"待定"},{"type":"row","name":"许镇","phone":"15368287459","status":"待定"},{"type":"row","name":"李建梁","phone":"18213534585","status":"待定"},{"type":"row","name":"王盼","phone":"15925506774","status":"待定"},{"type":"row","name":"成杨阳","phone":"18387019119","status":"待定"},{"type":"head","text":"🏛 五德法庭（12人）"},{"type":"row","name":"申云","phone":"13578084989","status":"待定"},{"type":"row","name":"宋潇","phone":"15187021117","status":"待定"},{"type":"row","name":"李约","phone":"13064233518","status":"待定"},{"type":"row","name":"杜政义","phone":"15071006470","status":"待定"},{"type":"row","name":"项玉波","phone":"18314319101","status":"待定"},{"type":"row","name":"岳宏","phone":"15287052319","status":"待定"},{"type":"row","name":"陈臻","phone":"15096599901","status":"待定"},{"type":"row","name":"曾宇","phone":"15398363667","status":"待定"},{"type":"row","name":"朱滇","phone":"17842441551","status":"待定"},{"type":"row","name":"胡炫","phone":"13628876139","status":"待定"},{"type":"row","name":"周政","phone":"13772193189","status":"待定"},{"type":"row","name":"欧来堂","phone":"19527058198","status":"待定"},{"type":"head","text":"🏛 母享法庭（9人）"},{"type":"row","name":"吴玉林","phone":"18869518689","status":"待定"},{"type":"row","name":"汪五磊","phone":"13466232668","status":"待定"},{"type":"row","name":"刘才龙","phone":"15925520211","status":"待定"},{"type":"row","name":"熊国江","phone":"15987126639","status":"待定"},{"type":"row","name":"田丽","phone":"18288995814","status":"待定"},{"type":"row","name":"江琴","phone":"18313960954","status":"待定"},{"type":"row","name":"吴秀林","phone":"17387082605","status":"待定"},{"type":"row","name":"涂文亮","phone":"17842379013","status":"待定"},{"type":"row","name":"杨平","phone":"13887098055","status":"待定"},{"type":"head","text":"🏛 抽调挂职(乡镇政法副书记)（4人）"},{"type":"row","name":"杨照全","phone":"13466218962","status":"待定"},{"type":"row","name":"彭勇","phone":"13908708027","status":"待定"},{"type":"row","name":"江承聪","phone":"13638819086","status":"待定"},{"type":"row","name":"邓华北","phone":"18288789445","status":"待定"},{"type":"head","text":"🏛 驻母享村（3人）"},{"type":"row","name":"严义","phone":"15974890276","status":"待定"},{"type":"row","name":"李霆","phone":"13508700819","status":"待定"},{"type":"row","name":"陈桂园","phone":"18887035565","status":"待定"},{"type":"head","text":"🏛 驻平桥村（3人）"},{"type":"row","name":"朱恒要","phone":"13887060012","status":"待定"},{"type":"row","name":"庄波","phone":"13578086639","status":"待定"},{"type":"row","name":"曾维州","phone":"13508701689","status":"待定"},{"type":"head","text":"🏛 驻三合村（3人）"},{"type":"row","name":"王家和","phone":"13887134489","status":"待定"},{"type":"row","name":"王必成","phone":"13638819102","status":"待定"},{"type":"row","name":"徐娇","phone":"15023219441","status":"待定"},{"type":"head","text":"🏛 驻稻香社区（1人）"},{"type":"row","name":"周爱华","phone":"19948656369","status":"待定"},{"type":"head","text":"📌 合计: 275 人 · 27 个部门"}],"verified":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"aidec":{"311":{"act":"adopt","name":"朱放","at":1790477649760},"421":{"act":"adopt","name":"五汉镜","at":1790498303649},"549":{"act":"manual","name":"龚建忠","at":1790499931552}},"gassign":{},"dv":"20260928-618"};
+</script>
+<script>
+const LS_KEY = 'hljb_v1';
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+let store = load();
+let state = { aiFilter:'todo', view:'list', group:'all', amount:'all', q:'', sort:'amount_desc', page:1, editingId:null, needReview:false, sel:new Set() };
+let lsFail = false;
+try{ localStorage.setItem('__hljb_probe','1'); localStorage.removeItem('__hljb_probe'); }catch(e){ lsFail = true; }
+
+function normStore(s){
+  s = JSON.parse(JSON.stringify(s));
+  if(!Array.isArray(s.groups) || !s.groups.length) s.groups = JSON.parse(JSON.stringify(DATA.groups));
+  s.groups = s.groups.filter(g=>g && g.id).map(g=>({id:String(g.id), name:String(g.name||g.id)}));
+  if(!s.gassign || typeof s.gassign!=='object') s.gassign = JSON.parse(JSON.stringify(DATA.gassign||{}));
+  if(!Array.isArray(s.verified)) s.verified = JSON.parse(JSON.stringify(DATA.verified||[]));
+  if(!s.aidec || typeof s.aidec!=='object') s.aidec = JSON.parse(JSON.stringify(DATA.aidec||{}));
+  if(typeof s.dv!=='string') s.dv = '';
+  return s;
+}
+function load(){
+  try{ const raw = localStorage.getItem(LS_KEY);
+    if(raw){ const s = JSON.parse(raw); if(s && Array.isArray(s.items)) return normStore(s); } }catch(e){}
+  return normStore({items: DATA.items, seq: DATA.seq||1, groups: DATA.groups, gassign: DATA.gassign, verified: DATA.verified, aidec: DATA.aidec, dv: DATA.dv});
+}
+function save(){
+  try{ localStorage.setItem(LS_KEY, JSON.stringify(store)); lsFail=false; }
+  catch(e){ lsFail = true; showLSFail('浏览器不给这个页面留数据（磁盘满或 file:// 权限限制）'); }
+}
+function syncCloud(){
+  fetch('sync.json?t=' + Date.now(), {cache:'no-store'}).then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); }).then(j=>{
+    if(!j || !Array.isArray(j.items)) return toast('云端数据格式不对');
+    const cs = j.items.reduce((a,x)=>a+Number(x.amount||0),0), ms = store.items.reduce((a,x)=>a+Number(x.amount||0),0);
+    if(!confirm('云端版本：' + j.items.length + ' 条 / ' + cs + ' 元\n本机版本：' + store.items.length + ' 条 / ' + ms + ' 元\n\n用云端版本覆盖本机？（同步前的本机会留一份，可点「撤销同步」找回）')) return;
+    try{ localStorage.setItem(LS_KEY + '_bak', JSON.stringify(store)); }catch(e){}
+    store = normStore({items:j.items, groups:j.groups, gassign:j.gassign, verified:j.verified, aidec:j.aidec, seq:j.seq, dv: DATA.dv});
+    save(); renderAll(); toast('已同步云端版本：' + store.items.length + ' 条');
+  }).catch(e=>{
+    alert('同步失败：' + e.message + '\n\n' + '（在电脑上用 file:// 打开时读不到云端数据，请在手机或浏览器打开 https://yueairhui.top/lijinbu/ 再点同步）');
+  });
+}
+function undoCloud(){
+  try{ const raw = localStorage.getItem(LS_KEY + '_bak'); if(!raw) return toast('没有可恢复的版本');
+    store = normStore(JSON.parse(raw)); save(); renderAll(); toast('已恢复同步前的本机版本：' + store.items.length + ' 条');
+  }catch(e){ toast('恢复失败'); }
+}
+function showLSFail(why){
+  const w = document.getElementById('lsfail'); if(!w) return;
+  w.hidden = false;
+  w.innerHTML = '⚠️ ' + (why || '本机不让这个页面保存修改') + '：<b>你现在的改动只在当前窗口有效，一刷新就没了。</b><br>'
+    + '想长期保存：① 点下面「导出 JSON 备份」留档；② 或在手机/电脑浏览器打开 <b>https://yueairhui.top/lijinbu/</b>（备案域名，能正常保存）。';
+}
+
+const money = n => (n==null||n==='') ? '—' : Number(n).toLocaleString('zh-CN');
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('on'); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove('on'),1900); }
+function groupList(){ return store.groups || []; }
+function groupName(id){
+  if(!id) return '未分组';
+  const g = groupList().find(g=>g.id===id);
+  return g ? g.name : String(id);
+}
+function groupById(id){ return groupList().find(g=>g.id===id); }
+function inNoGroup(it){ return !groupList().some(g=>g.id===it.group); }
+function groupOptions(cur){
+  const gs = groupList();
+  let h = '';
+  if(!gs.some(g=>g.id===cur)) h += `<option value="" selected>未分组</option>`;
+  h += gs.map(g=>`<option value="${esc(g.id)}"${g.id===cur?' selected':''}>${esc(g.name)}</option>`).join('');
+  return h + `<option value="__new">＋新分组…</option>`;
+}
+function newGroupId(){ return 'g' + Date.now().toString(36) + Math.floor(Math.random()*90+10); }
+function gkey(x){ return String(x.name||'') + '|' + String(x.phone||''); }
+function guestGroup(x){ return (store.gassign||{})[gkey(x)] || ''; }
+const pageOf = pg => (DATA.scans||[]).find(p=>p.page===pg);
+
+function filtered(){
+  let list = store.items.slice();
+  if(state.group==='none') list = list.filter(inNoGroup);
+  else if(state.group!=='all') list = list.filter(i=>i.group===state.group);
+  if(state.needReview) list = list.filter(i=>i.draft);
+  if(state.amount!=='all'){
+    if(state.amount==='1000+') list = list.filter(i=>Number(i.amount)>=1000);
+    else list = list.filter(i=>String(Number(i.amount))===state.amount);
+  }
+  const q = state.q.trim().toLowerCase();
+  if(q) list = list.filter(i => (String(i.name||'')+' '+String(i.note||'')+' '+(i.page?('第'+i.page+'页'):'')).toLowerCase().includes(q));
+  const [k,dir] = state.sort.split('_'); const mul = dir==='asc'?1:-1;
+  list.sort((a,b)=>{
+    if(k==='amount') return (Number(a.amount)-Number(b.amount))*mul || String(a.name).localeCompare(String(b.name),'zh');
+    if(k==='name') return String(a.name).localeCompare(String(b.name),'zh')*mul;
+    if(k==='page') return (Number(a.page||999)-Number(b.page||999))*mul;
+    return (a.id-b.id)*mul;
+  });
+  return list;
+}
+
+function renderStats(){
+  const its = store.items;
+  const total = its.reduce((s,i)=>s+Number(i.amount||0),0);
+  const n = its.length, avg = n?Math.round(total/n):0;
+  const max = its.reduce((m,i)=>Math.max(m,Number(i.amount||0)),0);
+  const draft = its.filter(i=>i.draft).length;
+  const cells = [['总人数',n,'位'],['礼金合计',money(total),'元'],['人均',money(avg),'元'],['最高单笔',money(max),'元']];
+  if(draft) cells.push(['待核对',draft,'条']);
+  $('#stats').innerHTML = cells.map(([k,v,u])=>`<div class="stat"><div class="k">${k}</div><div class="v num">${v}<small>${u}</small></div></div>`).join('');
+}
+function renderTabs(){
+  const draftN = store.items.filter(i=>i.draft).length;
+  const aiN = store.items.filter(i=>i.ai && !aiDone(i)).length;
+  const tabs = [{id:'list',label:'明细'},{id:'scan',label:'扫描件核对'},
+                {id:'ai',label:'AI 复核',badge:aiN},{id:'stats',label:'统计'},
+                {id:'guests',label:'请客名单',badge:DATA.guests.length},{id:'data',label:'数据备份'}];
+  $('#tabs').innerHTML = tabs.map(t=>`<button class="tab ${state.view===t.id?'on':''}" data-view="${t.id}">${t.label}${t.badge?`<span class="badge">${t.badge}</span>`:''}</button>`).join('')
+    + `<button class="tab ${state.needReview?'on':''}" id="tab-review" style="margin-left:auto">只看待核对${draftN?`<span class="badge">${draftN}</span>`:''}</button>`;
+  $$('#tabs .tab[data-view]').forEach(b=>b.onclick=()=>{ state.view=b.dataset.view; renderAll(); });
+  $('#tab-review').onclick=()=>{ state.needReview=!state.needReview; state.view='list'; renderAll(); };
+}
+function renderToolbar(){
+  const amounts = {};
+  store.items.forEach(i=>{ const a=Number(i.amount||0); if(a) amounts[a]=(amounts[a]||0)+1; });
+  const keys = Object.keys(amounts).map(Number).sort((a,b)=>a-b);
+  let html = `<button class="chip ${state.amount==='all'?'on':''}" data-amt="all">全部金额</button>`;
+  html += keys.filter(k=>k<1000).map(k=>`<button class="chip ${String(state.amount)===String(k)?'on':''}" data-amt="${k}">${k}<span style="opacity:.55;font-size:11px"> ·${amounts[k]}</span></button>`).join('');
+  if(keys.some(k=>k>=1000)) html += `<button class="chip ${state.amount==='1000+'?'on':''}" data-amt="1000+">1000+</button>`;
+  $('#amountchips').innerHTML = html;
+  $$('#amountchips .chip').forEach(b=>b.onclick=()=>{ state.amount=b.dataset.amt; renderAll(); });
+  // 分组筛选
+  const gs = groupList();
+  let gh = `<button class="chip ${state.group==='all'?'on':''}" data-g="all">全部分组</button>`;
+  gh += gs.map(g=>{
+    const c = store.items.filter(i=>i.group===g.id).length;
+    return `<button class="chip ${state.group===g.id?'on':''}" data-g="${esc(g.id)}">${esc(g.name)}<span style="opacity:.55;font-size:11px"> ·${c}</span></button>`;
+  }).join('');
+  const cNone = store.items.filter(inNoGroup).length;
+  if(cNone) gh += `<button class="chip ${state.group==='none'?'on':''}" data-g="none">未分组<span style="opacity:.55;font-size:11px"> ·${cNone}</span></button>`;
+  $('#groupchips').innerHTML = gh;
+  $$('#groupchips .chip').forEach(b=>b.onclick=()=>{ state.group=b.dataset.g; state.sel.clear(); renderAll(); });
+  $('#m-group').innerHTML = gs.map(g=>`<option value="${esc(g.id)}">${esc(g.name)}</option>`).join('') + `<option value="">未分组</option>`;
+}
+function renderTable(){
+  const list = filtered(), tbody = $('#tbody');
+  let html='';
+  const gsAll = groupList();
+  if(state.group==='all' && state.sort.startsWith('id')){
+    const buckets = gsAll.slice();
+    if(store.items.some(inNoGroup)) buckets.push({id:'__none', name:'未分组'});
+    buckets.forEach(g=>{
+      const sub = g.id==='__none' ? list.filter(inNoGroup) : list.filter(i=>i.group===g.id);
+      if(!sub.length) return;
+      const sum = sub.reduce((s,i)=>s+Number(i.amount||0),0);
+      html += `<tr class="grouprow"><td class="sel"></td><td>${esc(g.name)}</td><td colspan="5">${sub.length} 条 · 合计 ${money(sum)} 元</td></tr>`;
+      html += sub.map((it,ix)=>rowHtml(it, ix+1)).join('');
+    });
+  } else html = list.map((it,ix)=>rowHtml(it, ix+1)).join('');
+  tbody.innerHTML = html;
+  $('#empty').style.display = list.length? 'none':'block';
+  tbody.onclick = e=>{
+    const tr = e.target.closest('tr'); if(!tr || !tr.dataset.id) return;
+    const id = Number(tr.dataset.id), act = e.target.dataset.act;
+    if(act==='del'){ const it=store.items.find(i=>i.id===id);
+      if(confirm(`删除「${it?it.name:''}」这条记录？`)){ store.items=store.items.filter(i=>i.id!==id); save(); renderAll(); toast('已删除'); } }
+    if(act==='edit') openModal(id);
+  };
+  $$('#tbody td.amt[data-id]').forEach(td=>{
+    td.style.cursor='text'; td.title='双击可直接改金额';
+    td.ondblclick=()=>{ const id=Number(td.dataset.id), it=store.items.find(i=>i.id===id);
+      const v=prompt(`「${it.name}」的金额：`, it.amount); if(v==null) return;
+      const n=parseFloat(v); if(!isFinite(n)) return toast('请输入数字');
+      it.amount=n; it.draft=false; save(); renderAll(); };
+  });
+  // 勾选
+  $$('#tbody input.rsel').forEach(c=>c.onchange=()=>{
+    const id=Number(c.dataset.id);
+    if(c.checked) state.sel.add(id); else state.sel.delete(id);
+    const tr=c.closest('tr'); if(tr) tr.classList.toggle('on', c.checked);
+    updateSelBar();
+  });
+  // 行内改分组
+  $$('#tbody select.gselv').forEach(s=>s.onchange=()=>{
+    const it = store.items.find(i=>i.id===Number(s.dataset.gid)); if(!it) return;
+    if(s.value==='__new'){
+      const nm=(prompt('新分组名称（例如：亲戚 / 朋友 / 邻居）：')||'').trim();
+      if(!nm){ renderAll(); return; }
+      const g={id:newGroupId(), name:nm}; store.groups.push(g); it.group=g.id; toast('已新建分组：'+nm);
+    } else it.group = s.value;
+    save(); renderAll();
+  });
+  const ca = $('#chk-all');
+  if(ca){ ca.checked = list.length>0 && list.every(i=>state.sel.has(i.id));
+    ca.onchange = e=>{ list.forEach(i=>{ if(e.target.checked) state.sel.add(i.id); else state.sel.delete(i.id); }); renderTable(); updateSelBar(); }; }
+  updateSelBar();
+}
+function updateSelBar(){
+  const bar = $('#bulkbar'); if(!bar) return;
+  const n = state.sel.size;
+  $('#seln').textContent = n;
+  bar.hidden = n === 0;
+  const sg = $('#selgroup');
+  if(sg) sg.innerHTML = groupList().map(g=>`<option value="${esc(g.id)}">${esc(g.name)}</option>`).join('') + `<option value="__new">＋新建分组…</option>`;
+}
+function applyAssign(gid){
+  let k = 0;
+  store.items.forEach(i=>{ if(state.sel.has(i.id)){ i.group = gid; k++; } });
+  save(); state.sel.clear(); renderAll();
+  toast(`已把 ${k} 条归入「${groupName(gid)}」`);
+}
+function rowHtml(it, ix){
+  const flag = it.draft ? `<span class="tag draft">待核对</span>` : `<span class="tag ok">已核对</span>`;
+  const pg = it.page ? `<span class="tag page">第${it.page}页</span>` : '';
+  const aiTag = (it.ai && !aiDone(it)) ? `<span class="tag ${aiSug(it)?'aiwarn':'ai'}" title="AI 复核：${esc(aiDesc(it))}">AI${aiSug(it)?'建议 '+esc(aiSug(it)):'已复核'}</span>` : '';
+  const chosen = state.sel.has(it.id);
+  return `<tr data-id="${it.id}" class="${chosen?'on':''}"><td class="sel"><input type="checkbox" class="rsel" data-id="${it.id}"${chosen?' checked':''}></td>
+    <td class="idx num">${ix}</td>
+    <td class="name">${esc(it.name)}${flag}${pg}${aiTag}</td>
+    <td class="amt num ${it.guess?'guess':''}" data-id="${it.id}" title="${it.guess?'金额由该页原件合计推算，建议核对原件':''}">${money(it.amount)}${it.guess?'<sup style="color:#A8642A">*</sup>':''}</td>
+    <td class="note">${esc(it.note||'')}</td>
+    <td class="gsel2"><select class="gselv" data-gid="${it.id}" title="改分组">${groupOptions(it.group)}</select></td>
+    <td class="act"><span class="rowbtns"><button class="btn sm" data-act="edit">改</button> <button class="btn sm" data-act="del">删</button></span></td></tr>`;
+}
+function renderStatsView(){
+  const its = store.items, buckets = {};
+  its.forEach(i=>{ const a=Number(i.amount||0); if(!a) return; const b=a>=1000?'1000+':String(a); buckets[b]=(buckets[b]||0)+1; });
+  const keys = Object.keys(buckets).sort((a,b)=>(a==='1000+'?1e9:Number(a))-(b==='1000+'?1e9:Number(b)));
+  const maxN = Math.max(1,...keys.map(k=>buckets[k]));
+  $('#dist').innerHTML = keys.map(k=>`<div class="bar"><div class="lb num">${k} 元</div><div class="tr"><div class="fl" style="width:${(buckets[k]/maxN*100).toFixed(1)}%"></div></div><div class="vl num">${buckets[k]} 人 · ${money((k==='1000+'?0:Number(k))*buckets[k])}${k==='1000+'?'+':''}</div></div>`).join('') || '<div class="muted">暂无数据</div>';
+  const gsAll = groupList();
+  const bucketList = gsAll.map(g=>({id:g.id, name:g.name, sub: its.filter(i=>i.group===g.id)}));
+  if(its.some(inNoGroup)) bucketList.push({id:'__none', name:'未分组', sub: its.filter(inNoGroup)});
+  $('#groupsum').innerHTML = bucketList.filter(b=>b.sub.length).map(b=>{
+    const sum = b.sub.reduce((s,i)=>s+Number(i.amount||0),0);
+    return `<div class="kv"><span>${esc(b.name)}<span class="muted" style="font-size:12px"> · ${b.sub.length} 条</span></span><b class="num">${money(sum)} 元</b></div>`;
+  }).join('') || '<div class="muted">暂无数据</div>';
+  $('#top10').innerHTML = its.slice().sort((a,b)=>Number(b.amount)-Number(a.amount)).slice(0,10)
+    .map((i,ix)=>`<div class="kv"><span>${ix+1}. ${esc(i.name)} <span class="muted" style="font-size:12px">${esc(groupName(i.group))}${i.note?' · '+esc(i.note):''}</span></span><b class="num">${money(i.amount)} 元</b></div>`).join('') || '<div class="muted">暂无数据</div>';
+}
+function renderGuests(){
+  const gsAll = groupList();
+  const rows = (DATA.guests||[]).filter(g=>g.type==='row');
+  const tally = gsAll.map(g=>({g, n: rows.filter(x=>guestGroup(x)===g.id).length})).filter(x=>x.n);
+  const noneN = rows.filter(x=>!guestGroup(x)).length;
+  $('#gsum').innerHTML = (tally.length || noneN)
+    ? '按我的分组：' + tally.map(x=>`<b>${esc(x.g.name)}</b> ${x.n} 人`).join(' · ')
+      + (noneN? ` <span class="muted">· 还没分组 ${noneN} 人</span>`:'')
+      + ` <span class="muted">（共 ${rows.length} 人）</span>`
+    : `还没给名单分组：右边每行的下拉框选一个即可；分组在「数据备份 → 分组管理」里增删（共 ${rows.length} 人）`;
+  $('#gbody').innerHTML = DATA.guests.map((g,ix)=>{
+    if(g.type==='head') return `<tr class="grouprow"><td colspan="5">${esc(g.text)}</td></tr>`;
+    return `<tr><td class="idx num">${ix+1}</td><td class="name">${esc(g.name)}</td><td class="num note">${esc(g.phone||'')}</td><td class="note">${esc(g.status||'')}</td>
+      <td class="gsel"><select class="ggsel" data-gk="${esc(gkey(g))}">${groupOptions(guestGroup(g))}</select></td></tr>`;
+  }).join('');
+  $$('#gbody select.ggsel').forEach(s=>s.onchange=()=>{
+    store.gassign = store.gassign || {};
+    const k = s.dataset.gk;
+    if(s.value==='__new'){
+      const nm=(prompt('新分组名称：')||'').trim();
+      if(!nm){ renderGuests(); return; }
+      const g={id:newGroupId(), name:nm}; store.groups.push(g); store.gassign[k]=g.id; toast('已新建分组：'+nm);
+    } else if(s.value){ store.gassign[k]=s.value; }
+    else delete store.gassign[k];
+    save(); renderGuests(); renderGroupMgr(); renderToolbar(); renderStatsView();
+  });
+}
+function renderGroupMgr(){
+  const gsAll = groupList();
+  const box = $('#groupmgr'); if(!box) return;
+  const rowsHtml = gsAll.map((g,ix)=>{
+    const sub = store.items.filter(i=>i.group===g.id);
+    const sum = sub.reduce((s,i)=>s+Number(i.amount||0),0);
+    const gn = (DATA.guests||[]).filter(x=>x.type==='row' && guestGroup(x)===g.id).length;
+    return `<div class="grow"><input class="gname" data-gid="${esc(g.id)}" value="${esc(g.name)}" title="改个名字">
+      <span class="gc num">礼金 ${sub.length} 条 · ${money(sum)} 元</span>
+      ${gn?`<span class="gc num">名单 ${gn} 人</span>`:''}
+      <button class="btn sm" data-gup="${ix}" title="上移"${ix===0?' disabled':''}>↑</button>
+      <button class="btn sm" data-gdn="${ix}" title="下移"${ix===gsAll.length-1?' disabled':''}>↓</button>
+      <button class="btn sm" data-gdel="${esc(g.id)}">删除</button></div>`;
+  }).join('') || '<div class="muted">还没有分组，点下面新建一个（例如：亲戚 / 朋友 / 邻居 / 同事）</div>';
+  const none = store.items.filter(inNoGroup);
+  const noneHtml = none.length ? `<div class="grow"><span style="flex:1 1 130px; color:var(--ink-2)">未分组</span>
+      <span class="gc num">礼金 ${none.length} 条 · ${money(none.reduce((s,i)=>s+Number(i.amount||0),0))} 元</span>
+      <select id="noneassign" style="border:1px solid var(--line);border-radius:8px;padding:5px 7px">${gsAll.map(g=>`<option value="${esc(g.id)}">${esc(g.name)}</option>`).join('')}</select>
+      <button class="btn sm" id="btn-noneassign">全部归入</button></div>` : '';
+  box.innerHTML = rowsHtml + noneHtml;
+  $$('#groupmgr input.gname').forEach(inp=>inp.onchange=()=>{
+    const g = groupById(inp.dataset.gid); if(!g) return;
+    const v = inp.value.trim(); if(!v){ inp.value = g.name; return; }
+    g.name = v; save(); renderAll(); toast('分组已改名：'+v);
+  });
+  $$('#groupmgr [data-gdel]').forEach(b=>b.onclick=()=>{
+    const g = groupById(b.dataset.gdel); if(!g) return;
+    const c = store.items.filter(i=>i.group===g.id).length;
+    if(!confirm(`删除分组「${g.name}」？\n组里 ${c} 条礼金记录会变成「未分组」（记录不删），请客名单里归到该组的人也会取消分组。`)) return;
+    store.groups = store.groups.filter(x=>x.id!==g.id);
+    store.items.forEach(i=>{ if(i.group===g.id) delete i.group; });
+    Object.keys(store.gassign||{}).forEach(k=>{ if(store.gassign[k]===g.id) delete store.gassign[k]; });
+    save(); renderAll(); toast('已删除分组');
+  });
+  $$('#groupmgr [data-gup]').forEach(b=>b.onclick=()=>{
+    const i = Number(b.dataset.gup); if(i<=0) return;
+    const gs2 = store.groups; [gs2[i-1], gs2[i]] = [gs2[i], gs2[i-1]];
+    save(); renderAll();
+  });
+  $$('#groupmgr [data-gdn]').forEach(b=>b.onclick=()=>{
+    const i = Number(b.dataset.gdn); const gs2 = store.groups; if(i>=gs2.length-1) return;
+    [gs2[i+1], gs2[i]] = [gs2[i], gs2[i+1]];
+    save(); renderAll();
+  });
+  const na = $('#btn-noneassign');
+  if(na) na.onclick = ()=>{ const v = $('#noneassign').value; if(!v) return; applyAssign(v); };
+}
+function sectionsOf(cur){
+  const rows = store.items.filter(i=>i.page===cur.page);
+  const meta = cur.sections||[];
+  let n = Math.max(1, meta.length);
+  rows.forEach(r=>{ n = Math.max(n, (r.sec||0)+1); });
+  const out=[];
+  for(let s=0;s<n;s++){
+    const rs = rows.filter(r=>(r.sec||0)===s);
+    const total = meta[s]? meta[s].total : null;
+    out.push({sec:s, rows:rs, total, sum: rs.reduce((a,i)=>a+Number(i.amount||0),0)});
+  }
+  return out;
+}
+function pageBalanced(cur){
+  if((store.verified||[]).includes(cur.page)) return true;
+  const secs = sectionsOf(cur);
+  if(!secs.length) return false;
+  return secs.every(s=> s.total ? s.sum===s.total : false);
+}
+function isVerified(pg){ return (store.verified||[]).includes(pg); }
+function toggleVerified(pg){
+  store.verified = (store.verified||[]).slice();
+  const i = store.verified.indexOf(pg);
+  if(i>=0) store.verified.splice(i,1); else store.verified.push(pg);
+  save(); renderAll();
+}
+function balanceHtml(cur){
+  const secs = sectionsOf(cur);
+  const meta = cur.sections||[];
+  const parts = secs.map(s=>{
+    const warn = (meta[s.sec]&&meta[s.sec].warn) ? ' ⚠识别可能不全，建议逐条复核' : '';
+    if(!s.total) return `第${s.sec+1}节 · ${s.rows.length} 条 · <b class="num">${money(s.sum)}</b> 元（原件合计未识别，请人工核对）`;
+    if(s.sum===s.total) return `✓ 第${s.sec+1}节 ${money(s.sum)} / ${money(s.total)} 元${warn}`;
+    return `✗ 第${s.sec+1}节 已录 <b class="num">${money(s.sum)}</b> / 原件 ${money(s.total)} 元（差 ${money(s.total-s.sum)}）${warn}`;
+  });
+  const ok = isVerified(cur.page) || (secs.length>0 && secs.every(s=> s.total ? s.sum===s.total : false));
+  const allTotals = secs.length>0 && secs.every(s=>s.total);
+  const cls = ok ? 'ok' : (allTotals ? 'bad' : 'unk');
+  const tail = isVerified(cur.page) ? ' &nbsp;·&nbsp; 已标记核对完成' : '';
+  return {cls, text: parts.join(' &nbsp;·&nbsp; ') + tail};
+}
+function renderScan(){
+  const pages = DATA.scans||[];
+  $('#pager').innerHTML = pages.map(p=>{
+    const n = store.items.filter(i=>i.page===p.page).length;
+    const ok = pageBalanced(p);
+    return `<button data-page="${p.page}" class="${state.page===p.page?'on':''} ${ok?'done':''}" title="第${p.page}页：已录 ${n} 条">${p.page}</button>`;
+  }).join('');
+  $$('#pager button').forEach(b=>b.onclick=()=>{ state.page=Number(b.dataset.page); renderScan(); });
+  // 对账体检：还没对上的页
+  const bad = [];
+  pages.forEach(p=>{
+    if(isVerified(p.page)) return;
+    sectionsOf(p).forEach(s=>{
+      if(s.total && s.sum!==s.total) bad.push({page:p.page, sec:s.sec+1, d:s.total-s.sum});
+      else if(!s.total) bad.push({page:p.page, sec:s.sec+1, d:null});
+    });
+  });
+  const bp = $('#badpages');
+  if(bp) bp.innerHTML = bad.length
+    ? `<div class="hint" style="margin-top:8px">对账体检 · 还没对上的页（点一下跳过去逐条核）</div>`
+      + bad.map(b=>`<button class="badpage" data-bp="${b.page}">第${b.page}页 第${b.sec}节 ${b.d===null?'原件合计未识别':'差 '+money(b.d)+' 元'}</button>`).join('')
+    : `<div class="hint" style="margin-top:8px">✓ 每一页的合计都对得上</div>`;
+  $$('#badpages [data-bp]').forEach(b=>b.onclick=()=>{ state.page=Number(b.dataset.bp); renderScan(); });
+  const cur = pageOf(state.page) || pages[0]; if(!cur) return;
+  const img = $('#scanimg'); img.src = cur.src; img.alt = `第 ${cur.page} 页`;
+  img.onclick = ()=> $('#imgbox').classList.toggle('zoom');
+  $('#pagecount').textContent = `第 ${cur.page} 页`;
+  const vbtn = $('#btn-verify');
+  vbtn.textContent = isVerified(cur.page) ? '取消已核对标记' : '标记本页已核对';
+  vbtn.onclick = ()=>toggleVerified(cur.page);
+  const secs = sectionsOf(cur);
+  const fsec = $('#f-sec');
+  if(secs.length>1){ fsec.style.display='block'; fsec.innerHTML = secs.map(s=>`<option value="${s.sec}">归入第 ${s.sec+1} 节</option>`).join(''); }
+  else { fsec.style.display='none'; fsec.innerHTML=''; }
+  renderPageList(cur);
+  const q = [100,200,300,500,600,800,1000];
+  $('#quick').innerHTML = q.map(v=>`<button data-v="${v}">${v}</button>`).join('');
+  $$('#quick button').forEach(b=>b.onclick=()=>{ $('#f-amount').value=b.dataset.v; $('#f-name').focus(); });
+}
+function renderPageList(cur){
+  const secs = sectionsOf(cur);
+  const b = balanceHtml(cur);
+  const bal = $('#balance'); bal.className = 'balance ' + b.cls; bal.innerHTML = b.text;
+  $('#pagelist').innerHTML = secs.map(s=>{
+    const head = secs.length>1 ? `<div class="hint" style="margin:8px 0 2px">第 ${s.sec+1} 节${s.total?` · 原件合计 ${money(s.total)} 元`:''}</div>` : '';
+    const rows = s.rows.map(i=>{
+      const opts = (i.alts||[]).map(a=>`<option value="${esc(a)}">`).join('');
+      const aib = (i.ai && !aiDone(i) && aiSug(i))
+        ? `<button class="btn sm" data-aiid="${i.id}" title="AI 复核：${esc(aiDesc(i))}">AI→${esc(aiSug(i))}</button>` : '';
+      return `<div class="prow"><input class="pn" data-id="${i.id}" value="${esc(i.name)}" list="pl-${i.id}" title="识别候选：${esc((i.alts||[]).join(' / '))||'无'}">
+        <datalist id="pl-${i.id}">${opts}</datalist>
+        <input class="pa num" data-id="${i.id}" value="${i.amount||''}" inputmode="numeric">
+        ${aib}<button class="px" data-id="${i.id}" title="删除">×</button></div>`;
+    }).join('');
+    return head + (rows || '<div class="hint">（本小节没有识别到记录）</div>');
+  }).join('');
+  $$('#pagelist .pn').forEach(inp=>inp.onchange=()=>{
+    const it = store.items.find(x=>x.id===Number(inp.dataset.id));
+    it.name = inp.value.trim(); it.draft=false; save(); renderPageList(cur); renderStats(); renderTabs();
+  });
+  $$('#pagelist .pa').forEach(inp=>inp.onchange=()=>{
+    const it = store.items.find(x=>x.id===Number(inp.dataset.id));
+    const v = parseFloat(inp.value); if(isFinite(v)){ it.amount=v; it.draft=false; save(); renderPageList(cur); renderScanSummaryOnly(cur); }
+  });
+  $$('#pagelist [data-aiid]').forEach(b=>b.onclick=()=>{
+    const it = store.items.find(x=>x.id===Number(b.dataset.aiid));
+    if(!it || !it.ai) return;
+    const _s = aiSug(it); it.name = _s; it.draft = false; aiMark(it, 'adopt', _s);
+    save(); renderPageList(cur); renderStats(); renderTabs(); toast('已采用 AI 建议：'+_s);
+  });
+  $$('#pagelist .px').forEach(b=>b.onclick=()=>{
+    const it = store.items.find(x=>x.id===Number(b.dataset.id));
+    if(confirm(`删除本页记录「${it.name} ${it.amount}」？`)){ store.items=store.items.filter(x=>x.id!==it.id); save(); renderAll(); }
+  });
+}
+function renderScanSummaryOnly(cur){
+  const b = balanceHtml(cur);
+  const bal = $('#balance'); bal.className='balance '+b.cls; bal.innerHTML = b.text;
+  renderStats(); renderTabs();
+}
+
+/* ====== AI 复核 ====== */
+function aiDone(it){ const d=(store.aidec||{})[it.id]; return !!(d && d.act); }
+function aiMark(it, act, name){
+  store.aidec = store.aidec || {};
+  store.aidec[it.id] = {act:act, name:name||it.name, at:Date.now()};
+}
+function aiItems(){ return store.items.filter(i=>i.ai && ((i.ai.flag&&i.ai.flag!=='一致') || i.ai.amt)); }
+function aiSug(it){ const a = (it.alts||[]).find(x=>x && x!==it.name); return a || ''; }
+function aiDesc(it){
+  const a = it.ai || {}, parts = [];
+  if(a.base && a.base!==it.name) parts.push('原件读作「'+a.base+'」');
+  const sg = aiSug(it); if(sg && sg!==a.base) parts.push('AI 建议「'+sg+'」');
+  const src = a.src||{};
+  Object.keys(src).forEach(k=>{ if(src[k] && src[k]!==it.name) parts.push(k+'：'+src[k]); });
+  if(a.amt) parts.push('金额 '+a.amt.old+' → '+a.amt.new);
+  return parts.join('；') || '读法与候选一致';
+}
+function aiDecide(id, act, name){
+  const it = store.items.find(x=>x.id===id); if(!it) return;
+  if(act==='adopt'){ it.name = name; it.draft=false; toast('已采用：'+name); }
+  else if(act==='keep'){ it.draft = false; toast('保持 OCR 结果'); }
+  else { it.name = name; it.draft=false; toast('已填：'+name); }
+  aiMark(it, act, name);
+  save(); renderAI(); renderTable(); renderTabs(); renderStats();
+}
+function renderAI(){
+  const all = aiItems();
+  if(!all.length){ $('#ailist').innerHTML=''; $('#aiempty').style.display='block'; $('#aisum').textContent=''; return; }
+  const doneN = all.filter(aiDone).length;
+  const withSug = all.filter(i=>aiSug(i)).length;
+  state.aiFilter = state.aiFilter || 'todo';
+  const filters = [['todo','待复核',''],['sug','AI 建议不同',''],['amt','金额被修正',''],['star','多源分歧',''],['all','全部',''],['done','已处理','']];
+  const cnt = k => k==='todo' ? (all.length-doneN) : k==='done' ? doneN
+    : k==='sug' ? all.filter(i=>aiSug(i) && !aiDone(i)).length
+    : k==='amt' ? all.filter(i=>i.ai.amt && !aiDone(i)).length
+    : k==='star' ? all.filter(i=>(i.ai.flag||'').indexOf('分歧')>=0 && !aiDone(i)).length : all.length;
+  $('#aifilter').innerHTML = filters.map(([k,lb])=>
+    `<button class="chip ${state.aiFilter===k?'on':''}" data-aif="${k}">${lb}<span style="opacity:.55;font-size:11px"> ·${cnt(k)}</span></button>`).join('');
+  $$('#aifilter [data-aif]').forEach(b=>b.onclick=()=>{ state.aiFilter=b.dataset.aif; renderAI(); });
+  let list = all.slice();
+  if(state.aiFilter==='todo') list = list.filter(i=>!aiDone(i));
+  else if(state.aiFilter==='done') list = list.filter(aiDone);
+  else if(state.aiFilter==='sug') list = list.filter(i=>aiSug(i) && !aiDone(i));
+  else if(state.aiFilter==='amt') list = list.filter(i=>i.ai.amt && !aiDone(i));
+  else if(state.aiFilter==='star') list = list.filter(i=>(i.ai.flag||'').indexOf('分歧')>=0 && !aiDone(i));
+  list.sort((a,b)=>(a.page||0)-(b.page||0) || (a.id-b.id));
+  $('#aisum').textContent = `共 ${all.length} 条需复核 · 已处理 ${doneN} 条`;
+  $('#aihint').innerHTML = '这里列出的是 OCR 与视觉模型（gemma 整行 / gemma 特写 / 本地 PP-OCR 特写 / qwen 整行）读法不一致或金额被合计约束修正过的记录，'
+    + '每条都带原行截图：请对着截图确认，点「采用」或「保持原样」，也可直接输入正确姓名。';
+  $('#ailist').innerHTML = list.map(it=>{
+    const a = it.ai||{}, done = aiDone(it), dec = (store.aidec||{})[it.id];
+    const fl = a.flag||'';
+    const flCls = fl.indexOf('分歧')>=0 ? 'aiwarn' : 'ai';
+    const votes = Object.keys(a.src||{}).map(k=>`<div>${esc(k)}：<b>${esc(a.src[k])}</b></div>`).join('');
+    const amt = a.amt ? `<div class="n">金额：<b>${money(a.amt.old)}</b> → <b>${money(a.amt.new)}</b> 元（${a.amt.support>=2?'多源一致':'按本页合计推算'}）</div>` : '';
+    const amtBtn = a.amt ? `<button class="btn sm" data-aiamt="${it.id}">采用金额 ${money(a.amt.new)}</button>` : '';
+    const sug = aiSug(it);
+    const sugIsBase = sug && sug === (a.base || '');
+    const sugLb = !sug ? '' : (sugIsBase ? '改回原件读法「' + sug + '」'
+                 : (a.flag === 'AI建议' ? '采用 AI 建议「' + sug + '」' : '采用候选「' + sug + '」'));
+    const sugBtn = sug ? `<button class="btn sm primary" data-aiadopt="${it.id}" data-name="${esc(sug)}">${esc(sugLb)}</button>` : '';
+    const cands = (it.alts||[]).length ? `<div>其他候选：<b>${esc((it.alts||[]).join(' / '))}</b></div>` : '';
+    return `<div class="aicard ${done?'done':''}" data-id="${it.id}">
+      <img src="${esc(a.img||'')}" data-zoom="${esc(a.img||'')}" alt="第${it.page}页 ${esc(it.name)}" loading="lazy">
+      <div class="ab">
+        <h4>当前：<b>${esc(it.name)}</b><span class="tag page">第${it.page}页</span><span class="tag ${flCls}">${esc(fl||'复核')}</span>
+          ${amt?`<span class="tag aiwarn">金额修正</span>`:''}${done?`<span class="tag ok">已处理·${esc((dec&&dec.act)==='adopt'?'采用建议':(dec&&dec.act)==='keep'?'保持原样':'手动填写')}</span>`:''}</h4>
+        <div class="aivotes">
+          <div>原件 OCR：<b>${esc(a.base||'')}</b>${a.base===it.name?'（与当前一致）':''}</div>
+          ${votes}${cands}${amt}
+        </div>
+        <div class="aiact">
+          ${sugBtn}${amtBtn}
+          <button class="btn sm" data-aikeep="${it.id}">保持原样</button>
+          <input class="aiin" data-aiin="${it.id}" placeholder="或输入正确姓名" value="">
+        </div>
+      </div></div>`;
+  }).join('') || '<div class="hint">这个筛选下没有记录</div>';
+  $('#aiempty').style.display = list.length? 'none':'block';
+  $$('#ailist [data-aiadopt]').forEach(b=>b.onclick=()=>aiDecide(Number(b.dataset.aiadopt),'adopt',b.dataset.name));
+  $$('#ailist [data-aikeep]').forEach(b=>b.onclick=()=>aiDecide(Number(b.dataset.aikeep),'keep'));
+  $$('#ailist [data-aiamt]').forEach(b=>b.onclick=()=>{
+    const it = store.items.find(x=>x.id===Number(b.dataset.aiamt)); if(!it || !it.ai.amt) return;
+    it.amount = it.ai.amt.new; it.ocr_amount = it.ai.amt.old; it.guess = false;
+    aiMark(it, 'adopt', it.name); save(); renderAI(); renderTable(); toast('已采用金额 '+it.ai.amt.new);
+  });
+  $$('#ailist [data-aiin]').forEach(inp=>inp.onchange=()=>{
+    const v = inp.value.trim(); if(!v) return;
+    aiDecide(Number(inp.dataset.aiin), 'manual', v);
+  });
+  $$('#ailist img[data-zoom]').forEach(im=>im.onclick=()=>window.open(im.dataset.zoom,'_blank'));
+}
+function renderDiagnose(){
+  const box = $('#diagnose'); if(!box) return;
+  const bad = [];
+  (DATA.scans||[]).forEach(p=>{
+    if(isVerified(p.page)) return;
+    sectionsOf(p).forEach(s=>{
+      if(s.total && s.sum!==s.total) bad.push({page:p.page, sec:s.sec+1, sum:s.sum, total:s.total, d:s.total-s.sum, n:s.rows.length});
+      else if(!s.total) bad.push({page:p.page, sec:s.sec+1, sum:s.sum, total:null, d:null, n:s.rows.length});
+    });
+  });
+  const total = store.items.reduce((a,i)=>a+Number(i.amount||0),0);
+  const scanSum = store.items.filter(i=>i.page).reduce((a,i)=>a+Number(i.amount||0),0);
+  const noPage = store.items.filter(i=>(i.group==='scan') && !i.page).length;
+  box.innerHTML = `<div class="card"><div class="card-hd"><h2>对账体检</h2><div class="spacer"></div>
+      <span class="muted" style="font-size:12.5px">扫描件每一节「已录金额 vs 原件合计」的差异</span></div><div class="card-bd">
+      <div class="kv"><span>全部记录合计</span><b class="num">${money(total)} 元（${store.items.length} 条）</b></div>
+      <div class="kv"><span>已归页的记录合计</span><b class="num">${money(scanSum)} 元${noPage?` · 还有 ${noPage} 条扫描件没页码`:''}</b></div>
+      ${bad.length ? bad.map(b=>`<div class="kv"><span>第 ${b.page} 页 第 ${b.sec} 节 <span class="muted" style="font-size:12px">${b.n} 条</span></span>
+        <b class="num" style="color:var(--warn)">${b.total===null? `已录 ${money(b.sum)} 元 · 原件合计未识别`
+          : `已录 ${money(b.sum)} / 原件 ${money(b.total)} · 差 ${money(b.d)}`}</b></div>`).join('')
+        : '<div class="kv"><span>✓ 所有页的合计都对得上</span><b class="num">—</b></div>'}
+      <div class="hint" style="margin-top:10px">对不上的页，去「扫描件核对」逐条看原件；改完金额/补录漏掉的人，这里会自动更新。页号错了的记录：点「改」在弹窗里改页码和节。</div>
+    </div></div>`;
+}
+function nextId(){ store.seq = (store.seq||1); return store.seq++; }
+function addFromForm(){
+  const name = $('#f-name').value.trim(), amount = parseFloat($('#f-amount').value);
+  if(!name) return toast('请填写姓名');
+  if(!isFinite(amount)||amount<=0) return toast('请填写金额');
+  const secSel = $('#f-sec');
+  const sec = (secSel && secSel.style.display!=='none') ? Number(secSel.value||0) : 0;
+  store.items.push({id:nextId(), name, amount, note:'', group:'scan', page:state.page, sec, draft:false});
+  save(); $('#f-name').value=''; $('#f-amount').value=''; $('#f-name').focus();
+  renderAll(); toast(`已添加：${name} ${amount} 元`);
+}
+function openModal(id){
+  state.editingId = id||null;
+  const it = id ? store.items.find(i=>i.id===id) : null;
+  $('#m-title').textContent = id? '编辑记录':'添加记录';
+  $('#m-name').value = it? it.name : '';
+  $('#m-amount').value = it? it.amount : '';
+  $('#m-note').value = it? (it.note||'') : '';
+  $('#m-group').value = it ? (it.group||'') : (groupById(state.group) ? state.group : '');
+  const isScan = it ? (it.page!=null || it.group==='scan') : (state.view==='scan' || state.group==='scan');
+  const wrap = $('#m-pgwrap'); wrap.style.display = isScan ? 'block' : 'none';
+  if(!it && isScan && !$('#m-group').value){ const dg = groupById('scan') ? 'scan' : ((groupList()[0]||{}).id||''); $('#m-group').value = dg; }
+  if(isScan){
+    const pg = it && it.page ? it.page : (pageOf(state.page) ? state.page : '');
+    $('#m-page').value = pg || '';
+    const secN = Math.max(1, ((pageOf(pg)||pageOf(state.page)||{sections:[]}).sections||[]).length, ((it&&it.sec)||0)+1, 2);
+    $('#m-sec').innerHTML = Array.from({length:secN}, (_,k)=>`<option value="${k}"${((it&&it.sec)||0)===k?' selected':''}>第 ${k+1} 节</option>`).join('');
+  }
+  const alts = (it && it.alts) || [];
+  $('#m-altlist').innerHTML = alts.map(a=>`<option value="${esc(a)}">`).join('');
+  $('#m-alts').innerHTML = alts.map(a=>`<button type="button" data-alt="${esc(a)}">识别候选：${esc(a)}</button>`).join('');
+  $$('#m-alts button').forEach(b=>b.onclick=()=>{ $('#m-name').value=b.dataset.alt; });
+  $('#mask').classList.add('on'); setTimeout(()=>$('#m-name').focus(),30);
+}
+function closeModal(){ $('#mask').classList.remove('on'); state.editingId=null; }
+function saveModal(){
+  const name=$('#m-name').value.trim(), amount=parseFloat($('#m-amount').value), note=$('#m-note').value.trim(), group=$('#m-group').value;
+  if(!name) return toast('请填写姓名');
+  if(!isFinite(amount)) return toast('请填写金额');
+  const isScan = $('#m-pgwrap').style.display!=='none';
+  const pgv = parseInt($('#m-page').value, 10), secv = Number($('#m-sec').value||0);
+  if(state.editingId){
+    const it=store.items.find(i=>i.id===state.editingId);
+    Object.assign(it,{name,amount,note,group:group||undefined,draft:false,alts:[]});
+    if(isScan){ if(isFinite(pgv) && pgv>0){ it.page=pgv; it.sec=secv; } else { delete it.page; delete it.sec; } }
+  } else {
+    const o={id:nextId(), name, amount, note, group:group||undefined, draft:false};
+    if(isScan && isFinite(pgv) && pgv>0){ o.page=pgv; o.sec=secv; }
+    store.items.push(o);
+  }
+  save(); closeModal(); renderAll(); toast('已保存');
+}
+function download(name, text, type){
+  const blob = new Blob([text], {type:type||'text/plain;charset=utf-8'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
+}
+function today(){ const d=new Date(), p=n=>String(n).padStart(2,'0'); return `${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}`; }
+function exportCSV(){
+  const rows = [['序号','姓名','金额','分组','备注','页号','状态']];
+  store.items.forEach((i,ix)=>rows.push([ix+1,i.name,i.amount,groupName(i.group),i.note||'',i.page||'',i.draft?'待核对':'已核对']));
+  rows.push([]); rows.push(['合计', store.items.length+'人', store.items.reduce((s,i)=>s+Number(i.amount||0),0)]);
+  const csv = rows.map(r=>r.map(c=>{ const s=String(c==null?'':c); return /[",\n]/.test(s)? '"'+s.replace(/"/g,'""')+'"' : s; }).join(',')).join('\r\n');
+  download('电子礼金簿_'+today()+'.csv', '\ufeff'+csv, 'text/csv;charset=utf-8');
+  toast('已导出 CSV（Excel 可直接打开）');
+}
+function exportJSON(){
+  download('礼金簿备份_'+today()+'.json', JSON.stringify({v:2, exportedAt:new Date().toISOString(),
+    items:store.items, groups:store.groups, gassign:store.gassign, verified:store.verified||[], aidec:store.aidec||{}, seq:store.seq}, null, 1), 'application/json');
+  toast('已导出 JSON 备份');
+}
+function renderAll(){
+  const vb = $('#vbar');
+  if(vb){
+    const cloud = DATA.dv || '', mine = store.dv || '';
+    if(cloud && mine !== cloud){
+      vb.hidden = false;
+      vb.innerHTML = '🔄 云端数据已更新（本机 ' + store.items.length + ' 条 · 云端 ' + (DATA.items||[]).length + ' 条）：'
+        + '<button class="btn sm primary" id="vbar-sync">☁️ 用云端版本覆盖本机</button>'
+        + '<span class="muted" style="font-size:12.5px">（覆盖前会留一份，可点「↩︎ 撤销同步」找回）</span>';
+      const b = $('#vbar-sync'); if(b) b.onclick = syncCloud;
+    } else vb.hidden = true;
+  }
+  renderStats(); renderTabs(); renderToolbar(); renderTable(); renderStatsView(); renderGuests(); renderScan(); renderAI();
+  renderGroupMgr(); renderDiagnose();
+  $$('.view').forEach(v=>v.classList.toggle('on', v.id==='view-'+state.view));
+  const label = state.sort==='amount_desc'?'排序：金额↓':state.sort==='amount_asc'?'排序：金额↑':state.sort==='name_asc'?'排序：姓名':'排序：录入顺序';
+  $('#btn-sort').textContent = label;
+  const gsNow = groupList();
+  const nNone = store.items.filter(inNoGroup).length;
+  $('#datastat').innerHTML = `当前共 <b>${store.items.length}</b> 条记录 · `
+    + (gsNow.map(g=>`${esc(g.name)} ${store.items.filter(i=>i.group===g.id).length}`).join(' · ') || '（还没有分组）')
+    + (nNone? ` · 未分组 ${nNone}`:'')
+    + ` · 待核对 ${store.items.filter(i=>i.draft).length}`;
+}
+$('#q').oninput = e=>{ state.q=e.target.value; renderTable(); };
+$('#btn-add').onclick = ()=>openModal(null);
+$('#btn-sort').onclick = ()=>{ const o=['amount_desc','amount_asc','name_asc','id_asc']; state.sort=o[(o.indexOf(state.sort)+1)%o.length]; renderAll(); };
+$('#btn-export').onclick = exportCSV;
+$('#m-cancel').onclick = closeModal; $('#m-ok').onclick = saveModal;
+$('#mask').onclick = e=>{ if(e.target.id==='mask') closeModal(); };
+$('#btn-save').onclick = addFromForm;
+$('#f-name').addEventListener('keydown', e=>{ if(e.key==='Enter') addFromForm(); });
+$('#f-amount').addEventListener('keydown', e=>{ if(e.key==='Enter') addFromForm(); });
+$('#btn-scanopen').onclick = ()=>{ const c=pageOf(state.page); if(c) window.open(c.src,'_blank'); };
+$('#btn-csv').onclick = exportCSV; $('#btn-json').onclick = exportJSON;
+$('#btn-print').onclick = ()=>window.print();
+$('#btn-sync').onclick = syncCloud;
+$('#btn-undosync').onclick = undoCloud;
+$('#btn-reset').onclick = ()=>{ if(confirm('放弃本机所有修改，恢复为初始数据？')){ localStorage.removeItem(LS_KEY); store=load(); renderAll(); toast('已恢复初始数据'); } };
+$('#btn-import').onclick = ()=>$('#filejson').click();
+$('#filejson').onchange = e=>{ const f=e.target.files[0]; if(!f) return; const r=new FileReader();
+  r.onload=()=>{ try{ const j=JSON.parse(r.result); if(!j.items||!Array.isArray(j.items)) throw 0;
+      store=normStore({items:j.items, groups:j.groups, gassign:j.gassign, verified:j.verified, aidec:j.aidec,
+        seq:j.seq||(Math.max(0,...j.items.map(i=>i.id))+1)});
+      save(); state.sel.clear(); renderAll(); toast('导入成功：'+store.items.length+' 条 · '+groupList().length+' 个分组'); }
+    catch(err){ toast('文件格式不对'); } }; r.readAsText(f); };
+$('#btn-newgroup').onclick = ()=>{ const nm=(prompt('新分组名称（例如：亲戚 / 朋友 / 邻居 / 同学）：')||'').trim();
+  if(!nm) return; store.groups.push({id:newGroupId(), name:nm}); save(); renderAll(); toast('已新建分组：'+nm); };
+$('#btn-assign').onclick = ()=>{
+  if(!state.sel.size) return toast('先在左边勾选记录');
+  const v = $('#selgroup').value;
+  if(v==='__new'){ const nm=(prompt('新分组名称：')||'').trim(); if(!nm) return;
+    const g={id:newGroupId(), name:nm}; store.groups.push(g); applyAssign(g.id); }
+  else applyAssign(v);
+};
+$('#btn-selall').onclick = ()=>{ filtered().forEach(i=>state.sel.add(i.id)); renderTable(); toast('已选中 '+state.sel.size+' 条'); };
+$('#btn-selnone').onclick = ()=>{ state.sel.clear(); renderTable(); toast('已清空选择'); };
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+if(lsFail) showLSFail();
+renderAll();
+</script>
+</body>
+</html>

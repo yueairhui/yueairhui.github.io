@@ -1,0 +1,10793 @@
+{
+ "meta": {
+  "title": "电子礼金簿",
+  "couple": "龚徽 × 卢郁洁",
+  "date": "2026-09-24",
+  "venue": "云南镇雄 · 丰源大碗菜（伴山智慧生态城）",
+  "phone": "18849841551"
+ },
+ "groups": [
+  {
+   "id": "court",
+   "name": "法院同事"
+  },
+  {
+   "id": "scan",
+   "name": "礼簿（扫描件）"
+  },
+  {
+   "id": "gmujoyi7q24",
+   "name": "龚徽"
+  }
+ ],
+ "items": [
+  {
+   "id": 1,
+   "name": "王和跃",
+   "amount": 999,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 2,
+   "name": "陈涛",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 3,
+   "name": "汪喜",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 4,
+   "name": "黄丽",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 5,
+   "name": "王龙玺",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 6,
+   "name": "黄应招",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 7,
+   "name": "余波",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 8,
+   "name": "邓梦玲",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 9,
+   "name": "邓俊锋",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 10,
+   "name": "陈群",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 11,
+   "name": "陈华周",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 12,
+   "name": "许定鳌",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 13,
+   "name": "武绍才",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 14,
+   "name": "任刚",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 15,
+   "name": "刘成尧",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 16,
+   "name": "杨精",
+   "amount": 666,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 17,
+   "name": "陈晓",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 18,
+   "name": "许思敬",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 19,
+   "name": "龙道洋",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 20,
+   "name": "马继铭",
+   "amount": 1000,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 21,
+   "name": "马特",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 22,
+   "name": "郑磊",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 23,
+   "name": "李泽贵",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 24,
+   "name": "许朝卿",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 25,
+   "name": "赵强",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 26,
+   "name": "王春美",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 27,
+   "name": "钱红",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 28,
+   "name": "邓毅",
+   "amount": 300,
+   "note": "游泳",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 29,
+   "name": "熊雷",
+   "amount": 300,
+   "note": "游泳",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 30,
+   "name": "朱绍光",
+   "amount": 300,
+   "note": "游泳",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 31,
+   "name": "刘成琳",
+   "amount": 800,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 32,
+   "name": "龚宇",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 33,
+   "name": "龚晓",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 34,
+   "name": "常亚东",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 35,
+   "name": "宋源伟",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 36,
+   "name": "曾小琦",
+   "amount": 300,
+   "note": "木桌",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 37,
+   "name": "丁仁",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 38,
+   "name": "万欣杰",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 39,
+   "name": "王岿然",
+   "amount": 666,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 40,
+   "name": "邹旭",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 41,
+   "name": "吴健",
+   "amount": 400,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 42,
+   "name": "王曦",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 43,
+   "name": "李云峰",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 44,
+   "name": "王义德",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 45,
+   "name": "杨照全",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 46,
+   "name": "邓成友",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 47,
+   "name": "闵猛",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 48,
+   "name": "韩石芹",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 49,
+   "name": "胡广",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 50,
+   "name": "未知",
+   "amount": 666,
+   "note": "常桂 郭川",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 51,
+   "name": "夏振红",
+   "amount": 800,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 52,
+   "name": "张庭晶",
+   "amount": 800,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 53,
+   "name": "李然",
+   "amount": 2000,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 54,
+   "name": "陈诚",
+   "amount": 1900,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 55,
+   "name": "李冉",
+   "amount": 1900,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 56,
+   "name": "赵睿",
+   "amount": 1000,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 57,
+   "name": "廖苑浩",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 58,
+   "name": "李永鹏",
+   "amount": 800,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 59,
+   "name": "罗星兵",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 60,
+   "name": "我们爸爸妈妈",
+   "amount": 1399,
+   "note": "4人",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 61,
+   "name": "奶奶",
+   "amount": 1200,
+   "note": "2个",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 62,
+   "name": "罗睿",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 63,
+   "name": "三爹",
+   "amount": 990,
+   "note": "2个",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 64,
+   "name": "懂庆",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 65,
+   "name": "王云（邓成美）",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 66,
+   "name": "龚鑫",
+   "amount": 400,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 67,
+   "name": "龚成菊",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 68,
+   "name": "龚成飞",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 69,
+   "name": "龚成凤",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 70,
+   "name": "陈刚",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 71,
+   "name": "许盛华",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 72,
+   "name": "刘家顺",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 73,
+   "name": "张成凯",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 74,
+   "name": "成联翠",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 75,
+   "name": "高秀喜（高波）",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 76,
+   "name": "刘定华",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 77,
+   "name": "李华鑫",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 78,
+   "name": "聂明国",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 79,
+   "name": "郎维举",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 80,
+   "name": "宋德荣",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 81,
+   "name": "高彦兵",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 82,
+   "name": "申时光",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 83,
+   "name": "吴法亮",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 84,
+   "name": "易忠兴",
+   "amount": 100,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 85,
+   "name": "顾怀林",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 86,
+   "name": "龚明",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 87,
+   "name": "张天云",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 88,
+   "name": "钟兴勇",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 89,
+   "name": "高琼",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 90,
+   "name": "许绍仁",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 91,
+   "name": "凌育军",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 92,
+   "name": "彭玲（三妹）",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 93,
+   "name": "赵高武",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 94,
+   "name": "龚景成",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 95,
+   "name": "梁华明",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 96,
+   "name": "丁府珍",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 97,
+   "name": "陈国银",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 98,
+   "name": "杨琳",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 99,
+   "name": "刘畅",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 100,
+   "name": "周灶祥",
+   "amount": 300,
+   "note": "烟草公司",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 101,
+   "name": "肖勇",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 102,
+   "name": "廖德美",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 103,
+   "name": "成联登",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 104,
+   "name": "吴长伟",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 105,
+   "name": "吴长举",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 106,
+   "name": "吴长忠",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 107,
+   "name": "胡培友",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 108,
+   "name": "邓声远",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 109,
+   "name": "唐继华",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 110,
+   "name": "成联洪",
+   "amount": 600,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 111,
+   "name": "付权",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 112,
+   "name": "李正翠（申时贵）",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 113,
+   "name": "吴维权",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 114,
+   "name": "申时军",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 115,
+   "name": "文彬",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 116,
+   "name": "吉正友（姑基）",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 117,
+   "name": "王聪",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 118,
+   "name": "吉世全",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 119,
+   "name": "常茂",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 120,
+   "name": "黄校军",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 121,
+   "name": "常建勋",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 122,
+   "name": "严义",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 123,
+   "name": "武立宏",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 124,
+   "name": "代玉",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 125,
+   "name": "李开俊",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 126,
+   "name": "文江",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 127,
+   "name": "宛顺",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 128,
+   "name": "马豪",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 129,
+   "name": "曾永翠",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 130,
+   "name": "魏瑜",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 131,
+   "name": "彭畅",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 132,
+   "name": "李娟",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 133,
+   "name": "龚丽",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 134,
+   "name": "李光健",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 135,
+   "name": "廖培芮",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 136,
+   "name": "申时杰",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 137,
+   "name": "熊发芬",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 138,
+   "name": "申登绪",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 139,
+   "name": "涂冉",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 140,
+   "name": "安定元",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 141,
+   "name": "杜超",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 142,
+   "name": "郑爽",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 143,
+   "name": "阮峰",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 144,
+   "name": "李灿",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 145,
+   "name": "申庆刚",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 146,
+   "name": "邓鹏（邓书富）",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 147,
+   "name": "汪子柱",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 148,
+   "name": "段斌",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 149,
+   "name": "何高莹",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 150,
+   "name": "龚成飞",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 151,
+   "name": "汪茜",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 152,
+   "name": "邓菊仙",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 153,
+   "name": "黄琴",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 154,
+   "name": "王雍孝",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 155,
+   "name": "余大清",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 156,
+   "name": "许镇",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 157,
+   "name": "贾向平",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 158,
+   "name": "刘春梅",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 159,
+   "name": "张玲",
+   "amount": 100,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 160,
+   "name": "谭丽娟",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 161,
+   "name": "李建梁",
+   "amount": 100,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 162,
+   "name": "王盼",
+   "amount": 100,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 163,
+   "name": "邓华北",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 164,
+   "name": "游维",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 165,
+   "name": "高嘉尧",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 166,
+   "name": "刘富",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 167,
+   "name": "宋成",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 168,
+   "name": "郑祖培",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 169,
+   "name": "陈海",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 170,
+   "name": "赵龙",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 171,
+   "name": "李世忠",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 172,
+   "name": "李世健",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 173,
+   "name": "沈长远",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 174,
+   "name": "胡永忠",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 175,
+   "name": "胡涛",
+   "amount": 1000,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 176,
+   "name": "范鸿昌",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 177,
+   "name": "郭川",
+   "amount": 1200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 178,
+   "name": "文泽斌",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 179,
+   "name": "孙前",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 180,
+   "name": "韩世英",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 181,
+   "name": "付燕",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 182,
+   "name": "杨华仙",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 183,
+   "name": "木华",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 184,
+   "name": "武东",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 185,
+   "name": "胡永会",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 186,
+   "name": "龚成贵",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 187,
+   "name": "许中仁",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 188,
+   "name": "龚声伦",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 189,
+   "name": "许中振",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 190,
+   "name": "左华",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 191,
+   "name": "陈国甦",
+   "amount": 100,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 192,
+   "name": "吴道友（小祖国）",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 193,
+   "name": "雷洪芝",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 194,
+   "name": "吉学富",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 195,
+   "name": "龚成曲",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 196,
+   "name": "周懿",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 197,
+   "name": "李茂喻",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 198,
+   "name": "刘曾训",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 199,
+   "name": "宋粉",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 200,
+   "name": "藏厚金",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 201,
+   "name": "陈超",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 202,
+   "name": "梁同春（老二）",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 203,
+   "name": "陈华江",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 204,
+   "name": "向成必",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 205,
+   "name": "刘荣辉",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 206,
+   "name": "张荣毅",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 207,
+   "name": "杨军",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 208,
+   "name": "陈海潮",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 209,
+   "name": "陈海波",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 210,
+   "name": "涂国端",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 211,
+   "name": "范斌",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 212,
+   "name": "范泽珍I（范三姐）",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 213,
+   "name": "范萍",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 214,
+   "name": "范勇",
+   "amount": 600,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 215,
+   "name": "范鑫",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 216,
+   "name": "龚成奎",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 217,
+   "name": "陈坤",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 218,
+   "name": "宋奡玢",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 219,
+   "name": "李云",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 220,
+   "name": "赵群",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 221,
+   "name": "王世琴",
+   "amount": 300,
+   "note": "罗坎食堂大姐",
+   "group": "scan",
+   "draft": false
+  },
+  {
+   "id": 222,
+   "name": "小犯（宋源伟",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 223,
+   "name": "张诸明",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 1,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "张请明"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p01s1r1"
+  },
+  {
+   "id": 224,
+   "name": "龚成祥",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 1,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "奕成裤"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p01s1r2",
+   "ai": {
+    "flag": "AI修正（OCR证据弱）",
+    "base": "奕成裤",
+    "src": {
+     "gemma整行": "奕成祥",
+     "gemma特写": "奕成祥",
+     "qwen整行": "奕成祥"
+    },
+    "img": "礼金簿_files/ai/p01s1r2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 225,
+   "name": "龚成军",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 1,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "聚成军",
+    "癸成军"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p01s1r3"
+  },
+  {
+   "id": 226,
+   "name": "杨东",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 1,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "梅东"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p01s1r4"
+  },
+  {
+   "id": 227,
+   "name": "谭家泉",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 1,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "谭宝泉"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p01s1r5"
+  },
+  {
+   "id": 228,
+   "name": "周光元",
+   "amount": 800,
+   "note": "",
+   "group": "scan",
+   "page": 1,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "用光鲜花"
+   ],
+   "ocr_amount": 800,
+   "guess": true,
+   "cid": "p01s1r6"
+  },
+  {
+   "id": 229,
+   "name": "杨华国",
+   "amount": 200,
+   "note": "姓名未识别，请对照原件填写",
+   "group": "scan",
+   "page": 1,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p01s1r7",
+   "ai": {
+    "flag": "AI修正（OCR证据弱）",
+    "base": "构华国",
+    "src": {
+     "gemma整行": "杨华国",
+     "gemma特写": "杨华国",
+     "qwen整行": "杨华国"
+    },
+    "img": "礼金簿_files/ai/p01s1r7.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 230,
+   "name": "朱德海",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 1,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "未德海"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p01s1r8"
+  },
+  {
+   "id": 231,
+   "name": "岳顶龙",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 1,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "余顶龙"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p01s1r9"
+  },
+  {
+   "id": 232,
+   "name": "常亚东",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 1,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "第亚东"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p01s1r10",
+   "ai": {
+    "flag": "AI建议",
+    "base": "第亚东",
+    "src": {
+     "gemma整行": "常亚东",
+     "gemma特写": "常亚东",
+     "qwen整行": "第亚东"
+    },
+    "img": "礼金簿_files/ai/p01s1r10.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 233,
+   "name": "李应祥",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 1,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "李应",
+    "李应裤",
+    "虚应"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p01s1r11"
+  },
+  {
+   "id": 234,
+   "name": "万杨杨",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 1,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "万扬构",
+    "万物构",
+    "石移楠"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p01s2r1"
+  },
+  {
+   "id": 235,
+   "name": "张俊菊",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 2,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p02s1r1"
+  },
+  {
+   "id": 236,
+   "name": "唐映秋",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 2,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "鹿映秋",
+    "底映欲",
+    "虎映狄"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p02s1r2",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "鹿映秋",
+    "src": {
+     "gemma整行": "庞映欲",
+     "gemma特写": "庞映欲",
+     "qwen整行": "鹿映秋"
+    },
+    "img": "礼金簿_files/ai/p02s1r2.jpg",
+    "amt": {
+     "old": 200,
+     "new": 300,
+     "support": 1
+    }
+   }
+  },
+  {
+   "id": 237,
+   "name": "余春秀",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 2,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "余春香"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p02s1r3"
+  },
+  {
+   "id": 238,
+   "name": "王克顺",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 2,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "五克顺"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p02s1r4"
+  },
+  {
+   "id": 239,
+   "name": "刘隆昆",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 2,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p02s1r5"
+  },
+  {
+   "id": 240,
+   "name": "鲁绍英",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 2,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "暑绍英",
+    "鲁织英"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p02s1r6"
+  },
+  {
+   "id": 241,
+   "name": "廖元富",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 2,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p02s1r7"
+  },
+  {
+   "id": 242,
+   "name": "龚成东",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 2,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "成东",
+    "葵龙东"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p02s1r8",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "成东",
+    "src": {
+     "gemma整行": "葵成东",
+     "gemma特写": "葵成东",
+     "qwen整行": "葵成东"
+    },
+    "img": "礼金簿_files/ai/p02s1r8.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 243,
+   "name": "邓平（未支付）",
+   "amount": 0,
+   "note": "",
+   "group": "scan",
+   "page": 2,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p02s1r9"
+  },
+  {
+   "id": 244,
+   "name": "李明举",
+   "amount": 100,
+   "note": "",
+   "group": "scan",
+   "page": 2,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 100,
+   "guess": false,
+   "cid": "p02s1r10"
+  },
+  {
+   "id": 245,
+   "name": "吉正祥",
+   "amount": 400,
+   "note": "",
+   "group": "scan",
+   "page": 2,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "吉正辞",
+    "吉正裤"
+   ],
+   "ocr_amount": 400,
+   "guess": true,
+   "cid": "p02s1r11",
+   "ai": {
+    "flag": "AI建议",
+    "base": "吉正辞",
+    "src": {
+     "gemma整行": "吉正祥",
+     "gemma特写": "吉正祥",
+     "qwen整行": "吉正祥"
+    },
+    "img": "礼金簿_files/ai/p02s1r11 2.jpg",
+    "amt": {
+     "old": 500,
+     "new": 400,
+     "support": 1
+    }
+   }
+  },
+  {
+   "id": 246,
+   "name": "刘邦银",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 3,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "列邦银",
+    "创邦銀"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p03s1r1"
+  },
+  {
+   "id": 247,
+   "name": "刘邦友",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 3,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "训都友",
+    "训郝友"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p03s1r2",
+   "ai": {
+    "flag": "AI建议",
+    "base": "训都友",
+    "src": {
+     "gemma整行": "训邦友",
+     "gemma特写": "训邦友",
+     "qwen整行": "训邦友"
+    },
+    "img": "礼金簿_files/ai/p03s1r2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 248,
+   "name": "黄光会",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 3,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p03s1r3"
+  },
+  {
+   "id": 249,
+   "name": "文荣",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 3,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "文：菜"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p03s1r4"
+  },
+  {
+   "id": 250,
+   "name": "许燕",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 3,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "寧女"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p03s1r5"
+  },
+  {
+   "id": 251,
+   "name": "邹红",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 3,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "邻红"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p03s1r6",
+   "ai": {
+    "flag": "AI建议",
+    "base": "邻红",
+    "src": {
+     "gemma整行": "邹红",
+     "gemma特写": "邹红",
+     "qwen整行": "邻红"
+    },
+    "img": "礼金簿_files/ai/p03s1r6.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 252,
+   "name": "许华",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 3,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "许竿"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p03s1r7",
+   "ai": {
+    "flag": "AI建议",
+    "base": "许竿",
+    "src": {
+     "gemma整行": "许华",
+     "gemma特写": "许华",
+     "qwen整行": "许竿"
+    },
+    "img": "礼金簿_files/ai/p03s1r7.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 253,
+   "name": "吉学芬",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 3,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "古学葵",
+    "古学菱",
+    "以系"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p03s1r8",
+   "ai": {
+    "flag": "分歧",
+    "base": "古吉学茶",
+    "src": {
+     "gemma整行": "古学菱",
+     "gemma特写": "古学葵",
+     "qwen整行": "古吉学茶"
+    },
+    "img": "礼金簿_files/ai/p03s1r8.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 254,
+   "name": "祁勇",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 3,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "爱祁勇"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p03s1r9",
+   "ai": {
+    "flag": "AI修正（OCR证据弱）",
+    "base": "叁恒圈",
+    "src": {
+     "gemma整行": "鑫祁勇",
+     "gemma特写": "鑫祁勇",
+     "qwen整行": "爱祁勇"
+    },
+    "img": "礼金簿_files/ai/p03s1r9.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 255,
+   "name": "王涛",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 3,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "$?",
+    "五涛"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p03s1r10",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "$?",
+    "src": {
+     "gemma整行": "之涛",
+     "gemma特写": "之涛",
+     "qwen整行": "之涛"
+    },
+    "img": "礼金簿_files/ai/p03s1r10.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 256,
+   "name": "许海",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 3,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p03s1r11",
+   "ai": {
+    "flag": "AI建议",
+    "base": "许海",
+    "src": {
+     "gemma整行": "陆酒图",
+     "gemma特写": "陆酒图",
+     "qwen整行": "陆酒图"
+    },
+    "img": "礼金簿_files/ai/p03s1r11.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 257,
+   "name": "杨杰（众济）",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 4,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "娇构杰",
+    "树枸杰",
+    "树·枸杰"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p04s1r1"
+  },
+  {
+   "id": 258,
+   "name": "邓成虎",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p04s1r2"
+  },
+  {
+   "id": 259,
+   "name": "彭会",
+   "amount": 200,
+   "note": "姓名未识别，请对照原件填写",
+   "group": "scan",
+   "page": 4,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p04s1r3"
+  },
+  {
+   "id": 260,
+   "name": "骆云",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p04s1r4"
+  },
+  {
+   "id": 261,
+   "name": "蔡红",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 4,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "骆李;曹",
+    "骆李曹"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p04s1r5"
+  },
+  {
+   "id": 262,
+   "name": "蔡丽",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 4,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "曹旭"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p04s1r6",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "曹旭",
+    "src": {
+     "gemma整行": "红丽",
+     "gemma特写": "曹旭",
+     "qwen整行": "红丽"
+    },
+    "img": "礼金簿_files/ai/p04s1r6.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 263,
+   "name": "邓申敏",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 4,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "即申敏"
+   ],
+   "ocr_amount": 200,
+   "guess": true,
+   "cid": "p04s1r7"
+  },
+  {
+   "id": 264,
+   "name": "何岵霖",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 4,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "五制"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p04s1r8",
+   "ai": {
+    "flag": "AI修正（OCR证据弱）",
+    "base": "佰佰佰伯",
+    "src": {
+     "gemma整行": "何岐霖",
+     "gemma特写": "何岐霖",
+     "qwen整行": "何岐霖",
+     "本地OCR特写": "何岐霖"
+    },
+    "img": "礼金簿_files/ai/p04s1r8 2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 265,
+   "name": "李璐",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 4,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "李璐"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p04s2r1",
+   "ai": {
+    "flag": "AI建议",
+    "base": "李璐",
+    "src": {
+     "gemma整行": "伍饭",
+     "gemma特写": "伍饭",
+     "qwen整行": "伍饭"
+    },
+    "img": "礼金簿_files/ai/p04s2r1.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 266,
+   "name": "赵玉",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 4,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "赵虫"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p04s2r2"
+  },
+  {
+   "id": 267,
+   "name": "藏厚明",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "叁冬贰",
+    "荟减厚明",
+    "登减厚网"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p04s2r3"
+  },
+  {
+   "id": 268,
+   "name": "韩学琴",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p04s2r4"
+  },
+  {
+   "id": 269,
+   "name": "王天寿",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "陈琼",
+    "五天寿"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p04s2r5",
+   "ai": {
+    "flag": "AI建议",
+    "base": "五天寿",
+    "src": {
+     "gemma整行": "王天寿",
+     "gemma特写": "王天寿",
+     "qwen整行": "陈琼"
+    },
+    "img": "礼金簿_files/ai/p04s2r5.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 270,
+   "name": "张聪",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "张聪",
+    "张滕",
+    "戴浆"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p04s2r6",
+   "ai": {
+    "flag": "分歧",
+    "base": "张聘",
+    "src": {
+     "gemma整行": "张聘",
+     "gemma特写": "张聪"
+    },
+    "img": "礼金簿_files/ai/p04s2r6.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 271,
+   "name": "王群美",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "丑群美"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p04s2r7",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "丑群美",
+    "src": {
+     "gemma整行": "五群美",
+     "gemma特写": "五群美",
+     "qwen整行": "丑群美",
+     "本地OCR特写": "五群美"
+    },
+    "img": "礼金簿_files/ai/p04s2r7.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 272,
+   "name": "余成飞",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "你成飞"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p04s2r8"
+  },
+  {
+   "id": 273,
+   "name": "张炎",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p04s2r9"
+  },
+  {
+   "id": 274,
+   "name": "汪林",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "通林"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p04s2r10",
+   "ai": {
+    "flag": "分歧",
+    "base": "泾林",
+    "src": {
+     "gemma整行": "泾林",
+     "gemma特写": "通林"
+    },
+    "img": "礼金簿_files/ai/p04s2r10.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 275,
+   "name": "李应菊",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p05s1r1"
+  },
+  {
+   "id": 276,
+   "name": "宋毅",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 5,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p05s1r2"
+  },
+  {
+   "id": 277,
+   "name": "杨纯智",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "构纯智",
+    "杨纯船"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p05s1r3"
+  },
+  {
+   "id": 278,
+   "name": "胡洪斌",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 5,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "胡试斌",
+    "胡诚斌",
+    "胡识斌"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p05s1r4",
+   "ai": {
+    "flag": "AI建议（单源）/分歧",
+    "base": "胡波斌",
+    "src": {
+     "gemma整行": "胡试斌",
+     "gemma特写": "胡诚斌"
+    },
+    "img": "礼金簿_files/ai/p05s1r4.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 279,
+   "name": "刘涛",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "创涛"
+   ],
+   "ocr_amount": 300,
+   "guess": true,
+   "cid": "p05s1r5"
+  },
+  {
+   "id": 280,
+   "name": "涂忠国",
+   "amount": 500,
+   "note": "姓名未识别，请对照原件填写",
+   "group": "gmujoyi7q24",
+   "page": 5,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p05s1r6"
+  },
+  {
+   "id": 281,
+   "name": "李汉兵",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p05s1r7"
+  },
+  {
+   "id": 282,
+   "name": "曾俊",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p05s1r8"
+  },
+  {
+   "id": 283,
+   "name": "李贵琴",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p05s1r9"
+  },
+  {
+   "id": 284,
+   "name": "雷洪琼",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "雪浅琼",
+    "雪洪琼",
+    "團淡琼"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p05s1r10",
+   "ai": {
+    "flag": "AI建议",
+    "base": "雪浅琼",
+    "src": {
+     "gemma整行": "廖淡琼",
+     "gemma特写": "廖淡琼"
+    },
+    "img": "礼金簿_files/ai/p05s1r10.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 285,
+   "name": "曾永雄",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "曾永"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p05s1r11",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "曾永",
+    "src": {
+     "gemma整行": "曾永雄",
+     "gemma特写": "曾永雄",
+     "本地OCR特写": "曾永雄"
+    },
+    "img": "礼金簿_files/ai/p05s1r11.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 286,
+   "name": "杨正欢",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "构正叹",
+    "构正欧",
+    "构亚欧"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p05s2r1",
+   "ai": {
+    "flag": "AI修正（OCR证据弱）",
+    "base": "构正叹",
+    "src": {
+     "gemma整行": "构正欢",
+     "gemma特写": "构正欢"
+    },
+    "img": "礼金簿_files/ai/p05s2r1.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 287,
+   "name": "徐娇",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 5,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p05s2r2"
+  },
+  {
+   "id": 288,
+   "name": "王晓红",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 5,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "五晓红",
+    "王晚认"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p05s2r3",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "五晓红",
+    "src": {
+     "gemma整行": "王晓红",
+     "gemma特写": "王晓红"
+    },
+    "img": "礼金簿_files/ai/p05s2r3.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 289,
+   "name": "廖云镇",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 5,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "廖云领",
+    "廖云镇"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p05s2r4",
+   "ai": {
+    "flag": "分歧",
+    "base": "廖云",
+    "src": {
+     "gemma整行": "廖云领",
+     "gemma特写": "廖云"
+    },
+    "img": "礼金簿_files/ai/p05s2r4.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 290,
+   "name": "高英",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p05s2r5"
+  },
+  {
+   "id": 291,
+   "name": "吕世银",
+   "amount": 600,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "Z世裂"
+   ],
+   "ocr_amount": 600,
+   "guess": false,
+   "cid": "p05s2r6",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "Z世裂",
+    "src": {
+     "gemma整行": "世裂",
+     "gemma特写": "世裂"
+    },
+    "img": "礼金簿_files/ai/p05s2r6.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 292,
+   "name": "吕世英",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "品世英"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p05s2r7"
+  },
+  {
+   "id": 293,
+   "name": "成联聪",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "成联陈",
+    "成骇张"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p05s2r8",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "成联陈",
+    "src": {
+     "gemma整行": "成联张",
+     "gemma特写": "成联张"
+    },
+    "img": "礼金簿_files/ai/p05s2r8.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 294,
+   "name": "胡松",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p05s2r9"
+  },
+  {
+   "id": 295,
+   "name": "张茜",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 5,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p05s2r10"
+  },
+  {
+   "id": 296,
+   "name": "裴彬",
+   "amount": 200,
+   "note": "姓名未识别，请对照原件填写",
+   "group": "gmujoyi7q24",
+   "page": 5,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p05s2r11",
+   "ai": {
+    "flag": "分歧",
+    "base": "武祖园",
+    "src": {
+     "gemma整行": "武祖园",
+     "gemma特写": "武恒圈"
+    },
+    "img": "礼金簿_files/ai/p05s2r11.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 297,
+   "name": "黄智军",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 6,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "黄智晕"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p06s1r1",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "黄智晕",
+    "src": {
+     "gemma整行": "黄智景",
+     "gemma特写": "黄智景",
+     "本地OCR特写": "黄智晕"
+    },
+    "img": "礼金簿_files/ai/p06s1r1.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 298,
+   "name": "张书荣",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "张书豪",
+    "张书菜"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p06s1r2"
+  },
+  {
+   "id": 299,
+   "name": "窦晶艳",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 6,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "窦晶袍",
+    "蜜晶花"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p06s1r3",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "窦晶袍",
+    "src": {
+     "gemma整行": "窦晶艳",
+     "gemma特写": "窦晶艳"
+    },
+    "img": "礼金簿_files/ai/p06s1r3.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 300,
+   "name": "张淑祝",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 6,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p06s1r4"
+  },
+  {
+   "id": 301,
+   "name": "沈丽涛",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "观丽涛",
+    "现丽涛"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p06s1r5"
+  },
+  {
+   "id": 302,
+   "name": "王德珍",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "贰饭"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p06s1r6"
+  },
+  {
+   "id": 303,
+   "name": "唐家慧",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "唐求"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p06s1r7"
+  },
+  {
+   "id": 305,
+   "name": "余婷",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 6,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "尿婷"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p06s1r9"
+  },
+  {
+   "id": 306,
+   "name": "胥宗成",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 6,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "骨家成",
+    "骨烹成",
+    "骨宝成"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p06s1r10",
+   "ai": {
+    "flag": "AI建议",
+    "base": "骨家成",
+    "src": {
+     "gemma整行": "骨宗成",
+     "gemma特写": "骨宗成"
+    },
+    "img": "礼金簿_files/ai/p06s1r10.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 307,
+   "name": "申时勇",
+   "amount": 1000,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "中叶勇"
+   ],
+   "ocr_amount": 1000,
+   "guess": false,
+   "cid": "p06s1r11",
+   "ai": {
+    "flag": "分歧",
+    "base": "中时勇",
+    "src": {
+     "gemma整行": "中叶勇",
+     "gemma特写": "中时勇"
+    },
+    "img": "礼金簿_files/ai/p06s1r11.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 308,
+   "name": "张宏",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 6,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p06s2r1"
+  },
+  {
+   "id": 309,
+   "name": "乔家宇",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 6,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "乔宗宇",
+    "醉乔宗宇",
+    "臻乔宗宇"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p06s2r2"
+  },
+  {
+   "id": 310,
+   "name": "艾建东",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 6,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "艮法院"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p06s2r3"
+  },
+  {
+   "id": 311,
+   "name": "朱啟奎",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "朱放"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p06s2r4",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "朱放",
+    "src": {
+     "gemma整行": "朱放奎",
+     "gemma特写": "朱放奎"
+    },
+    "img": "礼金簿_files/ai/p06s2r4.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 312,
+   "name": "王林",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 6,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "五林",
+    "亚·林",
+    "圣.林"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p06s2r5",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "五林",
+    "src": {
+     "gemma整行": "圣林",
+     "gemma特写": "圣林"
+    },
+    "img": "礼金簿_files/ai/p06s2r5.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 313,
+   "name": "张孟胜",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "张鱼胜",
+    "张孟懒胜"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p06s2r6"
+  },
+  {
+   "id": 314,
+   "name": "张荣",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "*.浆"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p06s2r7"
+  },
+  {
+   "id": 315,
+   "name": "周玉明",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "闫玉明",
+    "同玉明"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p06s2r8"
+  },
+  {
+   "id": 316,
+   "name": "孔令波",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 6,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": true,
+   "cid": "p06s2r9"
+  },
+  {
+   "id": 317,
+   "name": "彭华",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p06s2r10"
+  },
+  {
+   "id": 318,
+   "name": "夏增",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 7,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p07s1r1"
+  },
+  {
+   "id": 319,
+   "name": "熊星",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 7,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "熊目"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p07s1r2"
+  },
+  {
+   "id": 320,
+   "name": "张凤",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 7,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p07s1r3"
+  },
+  {
+   "id": 321,
+   "name": "赵敏",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 7,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p07s1r4"
+  },
+  {
+   "id": 322,
+   "name": "杨勇",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 7,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p07s1r5"
+  },
+  {
+   "id": 323,
+   "name": "刘国柱",
+   "amount": 200,
+   "note": "姓名未识别，请对照原件填写",
+   "group": "scan",
+   "page": 7,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p07s1r6",
+   "ai": {
+    "flag": "AI修正（OCR证据弱）",
+    "base": "刘国桩",
+    "src": {
+     "gemma整行": "刘国柱",
+     "gemma特写": "刘国柱"
+    },
+    "img": "礼金簿_files/ai/p07s1r6 2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 324,
+   "name": "幸家健",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 7,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p07s1r7"
+  },
+  {
+   "id": 325,
+   "name": "胥杰",
+   "amount": 800,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 7,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 800,
+   "guess": false,
+   "cid": "p07s1r8"
+  },
+  {
+   "id": 326,
+   "name": "李兴愿",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 7,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p07s1r9"
+  },
+  {
+   "id": 327,
+   "name": "朱委",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 7,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "朱香",
+    "朱·鹤季"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p07s1r10",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "朱香",
+    "src": {
+     "gemma整行": "朱鹤香",
+     "gemma特写": "朱鹤香"
+    },
+    "img": "礼金簿_files/ai/p07s1r10.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 328,
+   "name": "宋昭仁",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 7,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p07s1r11"
+  },
+  {
+   "id": 329,
+   "name": "李丽娟",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 7,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "李丽竭"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p07s2r1"
+  },
+  {
+   "id": 330,
+   "name": "侯吉铃",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 7,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "候吉铃",
+    "鐵俊吉铃",
+    "键俊吉铃"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p07s2r2"
+  },
+  {
+   "id": 331,
+   "name": "李顺",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 7,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p07s2r3"
+  },
+  {
+   "id": 332,
+   "name": "王帅",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 7,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "已帅",
+    "丑帅",
+    "过帅"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p07s2r4"
+  },
+  {
+   "id": 333,
+   "name": "汪鑫武",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 7,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "设鑫武",
+    "设展武"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p07s2r5",
+   "ai": {
+    "flag": "分歧",
+    "base": "证鑫武",
+    "src": {
+     "gemma整行": "设鑫武",
+     "gemma特写": "证鑫武"
+    },
+    "img": "礼金簿_files/ai/p07s2r5.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 334,
+   "name": "王正宽",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 7,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "五亚宽"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p07s2r6"
+  },
+  {
+   "id": 335,
+   "name": "苏智",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 7,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p07s2r7"
+  },
+  {
+   "id": 336,
+   "name": "吴道雄",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 7,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "昊道雄"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p07s2r8"
+  },
+  {
+   "id": 337,
+   "name": "付宪伦",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 7,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "付究伦"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p07s2r9"
+  },
+  {
+   "id": 338,
+   "name": "鲁怀友",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 7,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p07s2r10"
+  },
+  {
+   "id": 339,
+   "name": "成联华",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 7,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "成段华"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p07s2r11"
+  },
+  {
+   "id": 340,
+   "name": "王远胜",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 8,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "五远胜"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p08s1r1",
+   "ai": {
+    "flag": "AI建议",
+    "base": "五远胜",
+    "src": {
+     "gemma整行": "卫远胜",
+     "gemma特写": "卫远胜"
+    },
+    "img": "礼金簿_files/ai/p08s1r1.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 341,
+   "name": "朱腾",
+   "amount": 1000,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 8,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 1000,
+   "guess": false,
+   "cid": "p08s1r2"
+  },
+  {
+   "id": 342,
+   "name": "常桂",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 8,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p08s1r3"
+  },
+  {
+   "id": 343,
+   "name": "胡超",
+   "amount": 800,
+   "note": "",
+   "group": "scan",
+   "page": 8,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "桂起",
+    "腾桂超文"
+   ],
+   "ocr_amount": 800,
+   "guess": false,
+   "cid": "p08s1r4"
+  },
+  {
+   "id": 345,
+   "name": "武文",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 8,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p08s1r6"
+  },
+  {
+   "id": 346,
+   "name": "蔡义元",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 8,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "蔡义"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p08s1r7",
+   "ai": {
+    "flag": "AI建议",
+    "base": "蔡义",
+    "src": {
+     "gemma整行": "蔡义云",
+     "gemma特写": "蔡义云"
+    },
+    "img": "礼金簿_files/ai/p08s1r7.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 347,
+   "name": "付廷举",
+   "amount": 400,
+   "note": "",
+   "group": "scan",
+   "page": 8,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "付延拳"
+   ],
+   "ocr_amount": 400,
+   "guess": false,
+   "cid": "p08s1r8"
+  },
+  {
+   "id": 348,
+   "name": "丁习英",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 8,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "丁习英"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p08s1r9",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "丁习英",
+    "src": {
+     "gemma整行": "丁月英",
+     "gemma特写": "丁月英"
+    },
+    "img": "礼金簿_files/ai/p08s1r9.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 349,
+   "name": "陈祖龙",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 8,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p08s1r10"
+  },
+  {
+   "id": 350,
+   "name": "申杰",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 8,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "中杰"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p08s1r11",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "中杰",
+    "src": {
+     "gemma整行": "陈中构",
+     "gemma特写": "陈中构"
+    },
+    "img": "礼金簿_files/ai/p08s1r11.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 351,
+   "name": "陈华",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 8,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "陈忙"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p08s2r1"
+  },
+  {
+   "id": 352,
+   "name": "高金",
+   "amount": 100,
+   "note": "",
+   "group": "scan",
+   "page": 8,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "乐高高姚",
+    "华全婵江"
+   ],
+   "ocr_amount": 100,
+   "guess": false,
+   "cid": "p08s2r2"
+  },
+  {
+   "id": 353,
+   "name": "姚江",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 8,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p08s2r3"
+  },
+  {
+   "id": 354,
+   "name": "吴云山",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 8,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "吴云山"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p08s2r4"
+  },
+  {
+   "id": 355,
+   "name": "徐磊",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 8,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p08s2r5"
+  },
+  {
+   "id": 356,
+   "name": "朱毅",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 8,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "朱馥"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p08s2r6",
+   "ai": {
+    "flag": "分歧",
+    "base": "朱設",
+    "src": {
+     "gemma整行": "朱設",
+     "gemma特写": "朱馥"
+    },
+    "img": "礼金簿_files/ai/p08s2r6.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 357,
+   "name": "皮永",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 8,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p08s2r7"
+  },
+  {
+   "id": 358,
+   "name": "邹清",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 8,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "邹请"
+   ],
+   "ocr_amount": 600,
+   "guess": false,
+   "cid": "p08s2r8",
+   "ai": {
+    "flag": "分歧",
+    "base": "邻清",
+    "src": {
+     "gemma整行": "邻清",
+     "gemma特写": "图彭划"
+    },
+    "img": "礼金簿_files/ai/p08s2r8.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 359,
+   "name": "余健",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 8,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p08s2r9"
+  },
+  {
+   "id": 360,
+   "name": "刘鹏（同事）",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p09s1r1"
+  },
+  {
+   "id": 361,
+   "name": "龚成友",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 9,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "蛮成友",
+    "袭成友"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p09s1r2"
+  },
+  {
+   "id": 362,
+   "name": "龚成顺",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 9,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "龚成贩"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p09s1r3",
+   "ai": {
+    "flag": "分歧",
+    "base": "龚成顺",
+    "src": {
+     "gemma整行": "龚成顺",
+     "gemma特写": "龚成贩"
+    },
+    "img": "礼金簿_files/ai/p09s1r3.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 363,
+   "name": "姜文",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p09s1r4"
+  },
+  {
+   "id": 364,
+   "name": "陈臻",
+   "amount": 300,
+   "note": "姓名未识别，请对照原件填写",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p09s1r5",
+   "ai": {
+    "flag": "AI修正（OCR证据弱）",
+    "base": "冬酒园",
+    "src": {
+     "gemma整行": "冬酒国",
+     "gemma特写": "冬酒国"
+    },
+    "img": "礼金簿_files/ai/p09s1r5.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 365,
+   "name": "李约",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p09s1r6"
+  },
+  {
+   "id": 366,
+   "name": "曾丽红",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p09s1r7"
+  },
+  {
+   "id": 367,
+   "name": "王娟（法院）",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "法院",
+    "法卫"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p09s1r8",
+   "ai": {
+    "flag": "AI建议",
+    "base": "法院",
+    "src": {
+     "gemma整行": "娟琴",
+     "gemma特写": "娟琴"
+    },
+    "img": "礼金簿_files/ai/p09s1r8.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 368,
+   "name": "岳宏",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p09s1r9"
+  },
+  {
+   "id": 369,
+   "name": "燕梅",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p09s2r1"
+  },
+  {
+   "id": 370,
+   "name": "杨光德",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "光德"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p09s2r2"
+  },
+  {
+   "id": 371,
+   "name": "潘怀仲",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 9,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p09s2r3"
+  },
+  {
+   "id": 372,
+   "name": "刘瑞珍（刘六妹）",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 9,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p09s2r4"
+  },
+  {
+   "id": 373,
+   "name": "江斌",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p10s1r1"
+  },
+  {
+   "id": 374,
+   "name": "夏瑞",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 10,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "百夏"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p10s1r2"
+  },
+  {
+   "id": 375,
+   "name": "谭星月",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 10,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p10s1r3"
+  },
+  {
+   "id": 376,
+   "name": "白菊",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 10,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "白阑",
+    "白日"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p10s1r4",
+   "ai": {
+    "flag": "AI建议（单源）",
+    "base": "白菊",
+    "src": {
+     "gemma整行": "白日",
+     "gemma特写": "白阑"
+    },
+    "img": "礼金簿_files/ai/p10s1r4 2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 377,
+   "name": "杨兴群",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "构兴群",
+    "枸光群"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p10s1r5",
+   "ai": {
+    "flag": "AI修正（OCR证据弱）",
+    "base": "构兴群",
+    "src": {
+     "gemma整行": "构光群",
+     "gemma特写": "构光群",
+     "本地OCR特写": "构兴群"
+    },
+    "img": "礼金簿_files/ai/p10s1r5.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 378,
+   "name": "范玲琪",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "范玲琪"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p10s1r6"
+  },
+  {
+   "id": 379,
+   "name": "刘庆巧",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 10,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "创庆巧",
+    "副庆巧"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p10s1r7",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "创庆巧",
+    "src": {
+     "gemma整行": "刘庆巧",
+     "gemma特写": "刘庆巧"
+    },
+    "img": "礼金簿_files/ai/p10s1r7.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 380,
+   "name": "周仕敏",
+   "amount": 800,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "周仕敏"
+   ],
+   "ocr_amount": 800,
+   "guess": true,
+   "cid": "p10s1r8"
+  },
+  {
+   "id": 381,
+   "name": "周仕平",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "用仕平",
+    "同竹平",
+    "開竹平"
+   ],
+   "ocr_amount": 500,
+   "guess": true,
+   "cid": "p10s1r9",
+   "ai": {
+    "flag": "AI建议（单源）/分歧",
+    "base": "用竹平",
+    "src": {
+     "gemma整行": "用仕平",
+     "gemma特写": "用竹平"
+    },
+    "img": "礼金簿_files/ai/p10s1r9.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 382,
+   "name": "汪宗全",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "泾凉金"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p10s1r10",
+   "ai": {
+    "flag": "分歧",
+    "base": "江家献金",
+    "src": {
+     "gemma整行": "泾凉金",
+     "gemma特写": "江家献金"
+    },
+    "img": "礼金簿_files/ai/p10s1r10.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 383,
+   "name": "温华军",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "温年导",
+    "温竿晕",
+    "温竿"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p10s1r11",
+   "ai": {
+    "flag": "AI建议（单源）/分歧",
+    "base": "温华晕",
+    "src": {
+     "gemma整行": "温竿晕",
+     "gemma特写": "温年导"
+    },
+    "img": "礼金簿_files/ai/p10s1r11.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 384,
+   "name": "常洪",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p10s1r12"
+  },
+  {
+   "id": 385,
+   "name": "常冬云",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p10s1r13"
+  },
+  {
+   "id": 386,
+   "name": "曾明友",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p10s1r14"
+  },
+  {
+   "id": 387,
+   "name": "沈阳",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p10s1r15"
+  },
+  {
+   "id": 388,
+   "name": "陈斌",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p10s1r16"
+  },
+  {
+   "id": 389,
+   "name": "张国华",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "张凤年"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p10s1r17",
+   "ai": {
+    "flag": "AI修正（OCR证据弱）",
+    "base": "冬佰",
+    "src": {
+     "gemma整行": "张国华",
+     "gemma特写": "张国华"
+    },
+    "img": "礼金簿_files/ai/p10s1r17.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 390,
+   "name": "龚昌友",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "昌友",
+    "冬值"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p10s1r18",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "昌友",
+    "src": {
+     "gemma整行": "龙昌友",
+     "gemma特写": "龙昌友",
+     "本地OCR特写": "龙昌友"
+    },
+    "img": "礼金簿_files/ai/p10s1r18.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 391,
+   "name": "胡庆友",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p10s1r19"
+  },
+  {
+   "id": 392,
+   "name": "吉雷",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": true,
+   "cid": "p10s1r20"
+  },
+  {
+   "id": 393,
+   "name": "刘思文",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "前是文",
+    "创是文",
+    "伍饭"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p10s1r21",
+   "ai": {
+    "flag": "AI建议",
+    "base": "前是文",
+    "src": {
+     "gemma整行": "刘是文",
+     "gemma特写": "刘是文"
+    },
+    "img": "礼金簿_files/ai/p10s1r21.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 394,
+   "name": "刘思军",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "训忍"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p10s1r22"
+  },
+  {
+   "id": 395,
+   "name": "高彦贵（酒房寨）",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "高废贵",
+    "洒后寨",
+    "西房赛"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p10s1r23",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "高废贵",
+    "src": {
+     "gemma整行": "高方贵",
+     "gemma特写": "高方贵"
+    },
+    "img": "礼金簿_files/ai/p10s1r23.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 396,
+   "name": "申开勇",
+   "amount": 400,
+   "note": "",
+   "group": "scan",
+   "page": 10,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "串开勇"
+   ],
+   "ocr_amount": 400,
+   "guess": true,
+   "cid": "p10s1r24"
+  },
+  {
+   "id": 397,
+   "name": "付君",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p11s1r1"
+  },
+  {
+   "id": 398,
+   "name": "董颖辉",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "频辉",
+    "墨频姆"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p11s1r2",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "频辉",
+    "src": {
+     "gemma整行": "墨频辉",
+     "gemma特写": "墨频辉"
+    },
+    "img": "礼金簿_files/ai/p11s1r2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 399,
+   "name": "付婷",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p11s1r3"
+  },
+  {
+   "id": 400,
+   "name": "徐丽娅",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p11s1r4"
+  },
+  {
+   "id": 401,
+   "name": "吕世媛",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 11,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "吕世曦媛"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p11s1r5"
+  },
+  {
+   "id": 402,
+   "name": "吕世珍",
+   "amount": 400,
+   "note": "",
+   "group": "scan",
+   "page": 11,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "兰世",
+    "吕世"
+   ],
+   "ocr_amount": 400,
+   "guess": false,
+   "cid": "p11s1r6"
+  },
+  {
+   "id": 403,
+   "name": "高菊",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 11,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p11s1r7"
+  },
+  {
+   "id": 404,
+   "name": "张怀芬",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 11,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "张怀",
+    "张怀房"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p11s1r8",
+   "ai": {
+    "flag": "AI建议",
+    "base": "张怀",
+    "src": {
+     "gemma整行": "张怀芬",
+     "gemma特写": "张怀芬"
+    },
+    "img": "礼金簿_files/ai/p11s1r8.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 405,
+   "name": "李玉申",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 11,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "李玉申",
+    "套玉申"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p11s1r9",
+   "ai": {
+    "flag": "AI建议（单源）/分歧",
+    "base": "李色申",
+    "src": {
+     "gemma整行": "套玉申",
+     "gemma特写": "李玉申"
+    },
+    "img": "礼金簿_files/ai/p11s1r9.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 406,
+   "name": "李军",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 11,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "恋景"
+   ],
+   "ocr_amount": 500,
+   "guess": true,
+   "cid": "p11s1r10",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "恋景",
+    "src": {
+     "gemma整行": "李景",
+     "gemma特写": "李景"
+    },
+    "img": "礼金簿_files/ai/p11s1r10.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 407,
+   "name": "张娇",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "张饼"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p11s2r1",
+   "ai": {
+    "flag": "分歧",
+    "base": "张饰",
+    "src": {
+     "gemma整行": "张饰",
+     "gemma特写": "张饼"
+    },
+    "img": "礼金簿_files/ai/p11s2r1.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 408,
+   "name": "李太红",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p11s2r2"
+  },
+  {
+   "id": 409,
+   "name": "李霄云",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "李宵云",
+    "穹云",
+    "李窝云"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p11s2r3",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "李宵云",
+    "src": {
+     "gemma整行": "李穹云",
+     "gemma特写": "李穹云"
+    },
+    "img": "礼金簿_files/ai/p11s2r3.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 410,
+   "name": "满云东",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "云东"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p11s2r4"
+  },
+  {
+   "id": 411,
+   "name": "周政",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "周政",
+    "周赵",
+    "临周赵"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p11s2r5"
+  },
+  {
+   "id": 412,
+   "name": "赵岗",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p11s2r6"
+  },
+  {
+   "id": 413,
+   "name": "张东阳",
+   "amount": 800,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "彭你"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p11s2r7",
+   "ai": {
+    "flag": "AI建议（单源）/分歧",
+    "base": "张东阳",
+    "src": {
+     "gemma整行": "彭你",
+     "gemma特写": "胡佰凤"
+    },
+    "img": "礼金簿_files/ai/p11s2r7.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 414,
+   "name": "吴道宾",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 11,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "吴通宾",
+    "家价",
+    "家共价乡"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p11s2r8"
+  },
+  {
+   "id": 415,
+   "name": "秦国智",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p11s2r9",
+   "ai": {
+    "flag": "AI修正（OCR证据弱）",
+    "base": "冬佰园",
+    "src": {
+     "gemma整行": "秦国智",
+     "gemma特写": "秦国智"
+    },
+    "img": "礼金簿_files/ai/p11s2r9.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 416,
+   "name": "成联相",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 11,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "尊成联相",
+    "醇成联祖",
+    "薛成驳相"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p11s2r10"
+  },
+  {
+   "id": 417,
+   "name": "陈杰（四川）",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "叫陈杰"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p11s2r11"
+  },
+  {
+   "id": 418,
+   "name": "沈振新",
+   "amount": 100,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 100,
+   "guess": false,
+   "cid": "p11s2r12"
+  },
+  {
+   "id": 419,
+   "name": "朱加应",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "朱如应"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p12s1r1"
+  },
+  {
+   "id": 420,
+   "name": "罗辅梅",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p12s1r2"
+  },
+  {
+   "id": 421,
+   "name": "王洪镜",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "五汉镜",
+    "王溪镜",
+    "五洪镜"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p12s1r3",
+   "ai": {
+    "flag": "AI建议",
+    "base": "五汉镜",
+    "src": {
+     "gemma整行": "王汉巍",
+     "gemma特写": "王汉巍"
+    },
+    "img": "礼金簿_files/ai/p12s1r3.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 422,
+   "name": "吴奎",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p12s1r4"
+  },
+  {
+   "id": 423,
+   "name": "罗清繁",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "罗请繁"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p12s1r5"
+  },
+  {
+   "id": 424,
+   "name": "杨远芳",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "物远号",
+    "杨远"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p12s1r6"
+  },
+  {
+   "id": 425,
+   "name": "赵小庆",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p12s1r7"
+  },
+  {
+   "id": 426,
+   "name": "高道辉",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "商逍焊",
+    "商道将"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p12s1r8"
+  },
+  {
+   "id": 427,
+   "name": "曾丹丹",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p12s1r9",
+   "ai": {
+    "flag": "分歧",
+    "base": "曾丹丹",
+    "src": {
+     "gemma整行": "冬佰國",
+     "gemma特写": "曾丹丹"
+    },
+    "img": "礼金簿_files/ai/p12s1r9.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 428,
+   "name": "余志坤",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 12,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "余志饰"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p12s2r1",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "余志饰",
+    "src": {
+     "gemma整行": "余志坤",
+     "gemma特写": "余志坤"
+    },
+    "img": "礼金簿_files/ai/p12s2r1 2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 429,
+   "name": "胡基俊",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 12,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "胡墓俊"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p12s2r2",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "胡墓俊",
+    "src": {
+     "gemma整行": "胡基俊",
+     "gemma特写": "胡基俊"
+    },
+    "img": "礼金簿_files/ai/p12s2r2 2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 430,
+   "name": "王勇（嘉遁）",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "J+",
+    "嘉遁丽",
+    "叁雨"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p12s2r3"
+  },
+  {
+   "id": 431,
+   "name": "严浩",
+   "amount": 300,
+   "note": "姓名未识别，请对照原件填写",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p12s2r4"
+  },
+  {
+   "id": 432,
+   "name": "申进",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p12s2r5"
+  },
+  {
+   "id": 433,
+   "name": "白静",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 12,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "中叶粉",
+    "中叶物"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p12s2r6"
+  },
+  {
+   "id": 434,
+   "name": "朱祥",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 12,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "武恒",
+    "朱译",
+    "式恒"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p12s2r7"
+  },
+  {
+   "id": 435,
+   "name": "汪诗集",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 12,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p12s2r8"
+  },
+  {
+   "id": 436,
+   "name": "申时旺",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "串时胚",
+    "中时胫"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p12s2r9",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "串时胚",
+    "src": {
+     "gemma整行": "申时胚",
+     "gemma特写": "申时胚"
+    },
+    "img": "礼金簿_files/ai/p12s2r9.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 437,
+   "name": "黄柏璘",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "黄柏",
+    "黄柏琦"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p13s1r1",
+   "ai": {
+    "flag": "AI建议",
+    "base": "黄柏",
+    "src": {
+     "gemma整行": "黄柏玮",
+     "gemma特写": "黄柏玮"
+    },
+    "img": "礼金簿_files/ai/p13s1r1 2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 438,
+   "name": "黄嫣",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "黄嫣"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p13s1r2"
+  },
+  {
+   "id": 439,
+   "name": "曾维洲",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p13s1r3"
+  },
+  {
+   "id": 440,
+   "name": "黄道燚",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "黄通焱",
+    "黄道焱"
+   ],
+   "ocr_amount": 300,
+   "guess": true,
+   "cid": "p13s1r4",
+   "ai": {
+    "flag": "AI建议（单源）/分歧",
+    "base": "黄逍焱",
+    "src": {
+     "gemma整行": "黄通焱",
+     "gemma特写": "黄道焱"
+    },
+    "img": "礼金簿_files/ai/p13s1r4.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 441,
+   "name": "顾星",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p13s1r5"
+  },
+  {
+   "id": 442,
+   "name": "王秋玲",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "一秋孜"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p13s1r6",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "一秋孜",
+    "src": {
+     "gemma整行": "五秋玲",
+     "gemma特写": "五秋玲"
+    },
+    "img": "礼金簿_files/ai/p13s1r6 2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 443,
+   "name": "常开金",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 13,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "第开",
+    "张学开",
+    "常开"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p13s1r7"
+  },
+  {
+   "id": 444,
+   "name": "申开祝",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 13,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "全祝华",
+    "祝华",
+    "申开"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p13s1r8"
+  },
+  {
+   "id": 445,
+   "name": "周昌华",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "昌华"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p13s1r9"
+  },
+  {
+   "id": 446,
+   "name": "陈波",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p13s1r10"
+  },
+  {
+   "id": 448,
+   "name": "常菊香",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 13,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p13s2r2"
+  },
+  {
+   "id": 449,
+   "name": "朱家雄",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "伍饭"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p13s2r3"
+  },
+  {
+   "id": 450,
+   "name": "赵熙",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 13,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "赵，熙"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p13s2r4"
+  },
+  {
+   "id": 451,
+   "name": "赵健",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 13,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p13s2r5"
+  },
+  {
+   "id": 452,
+   "name": "王诚嘉",
+   "amount": 1000,
+   "note": "",
+   "group": "scan",
+   "page": 13,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "五诫嘉"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p13s2r6",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "五诫嘉",
+    "src": {
+     "gemma整行": "五诚嘉",
+     "gemma特写": "五诚嘉"
+    },
+    "img": "礼金簿_files/ai/p13s2r6.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 453,
+   "name": "胡燕",
+   "amount": 400,
+   "note": "",
+   "group": "scan",
+   "page": 13,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 400,
+   "guess": false,
+   "cid": "p13s2r7"
+  },
+  {
+   "id": 454,
+   "name": "成勇",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p13s2r8"
+  },
+  {
+   "id": 455,
+   "name": "李翠",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 13,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p13s2r9"
+  },
+  {
+   "id": 456,
+   "name": "邹雄",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p13s2r10",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "雄：凡",
+    "src": {
+     "gemma整行": "佰风",
+     "gemma特写": "佰风"
+    },
+    "img": "礼金簿_files/ai/p13s2r10.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 457,
+   "name": "陈凡",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p13s2r11"
+  },
+  {
+   "id": 458,
+   "name": "龚声德",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 14,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "声德"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p14s1r1"
+  },
+  {
+   "id": 459,
+   "name": "李佳楠",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p14s1r2"
+  },
+  {
+   "id": 460,
+   "name": "罗泽坤",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "罗净坤"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p14s1r3"
+  },
+  {
+   "id": 461,
+   "name": "邓财银",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "邓财眼"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p14s1r4"
+  },
+  {
+   "id": 462,
+   "name": "申时焕",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 14,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "中叶·烧",
+    "中叶烧",
+    "串时焕"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p14s1r5",
+   "ai": {
+    "flag": "分歧",
+    "base": "串时·焕",
+    "src": {
+     "gemma整行": "中叶烧",
+     "gemma特写": "串时焕"
+    },
+    "img": "礼金簿_files/ai/p14s1r5.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 463,
+   "name": "周杰",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 14,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p14s1r6"
+  },
+  {
+   "id": 464,
+   "name": "袁成",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p14s1r7"
+  },
+  {
+   "id": 465,
+   "name": "汪继巧",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "泾继巧",
+    "長汪中"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p14s1r8",
+   "ai": {
+    "flag": "分歧",
+    "base": "泾巧",
+    "src": {
+     "gemma整行": "泾巧",
+     "gemma特写": "泾继巧"
+    },
+    "img": "礼金簿_files/ai/p14s1r8 2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 466,
+   "name": "李上涌",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "上涌"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p14s2r1"
+  },
+  {
+   "id": 467,
+   "name": "李其平",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 14,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "季其平",
+    "倒蚁多"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p14s2r2"
+  },
+  {
+   "id": 468,
+   "name": "陈菊",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 14,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p14s2r3"
+  },
+  {
+   "id": 469,
+   "name": "范厚敏",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 14,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "范厚敏"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p14s2r4",
+   "ai": {
+    "flag": "分歧",
+    "base": "厚敏",
+    "src": {
+     "gemma整行": "范厚敏",
+     "gemma特写": "厚敏"
+    },
+    "img": "礼金簿_files/ai/p14s2r4.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 470,
+   "name": "高艳",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 14,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "敏艳",
+    "高袍",
+    "文·花"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p14s2r5",
+   "ai": {
+    "flag": "分歧",
+    "base": "范高",
+    "src": {
+     "gemma整行": "范高",
+     "gemma特写": "敏艳"
+    },
+    "img": "礼金簿_files/ai/p14s2r5.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 471,
+   "name": "柳玉琼",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 14,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": true,
+   "cid": "p14s2r6"
+  },
+  {
+   "id": 472,
+   "name": "高峰",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 14,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p14s2r7"
+  },
+  {
+   "id": 473,
+   "name": "张飞",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "高张赵"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p14s2r8"
+  },
+  {
+   "id": 474,
+   "name": "赵智",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 1,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p14s2r9"
+  },
+  {
+   "id": 475,
+   "name": "申登龙",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p14s2r10"
+  },
+  {
+   "id": 476,
+   "name": "鲁波",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 15,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "鲁液"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p15s1r1",
+   "ai": {
+    "flag": "AI建议",
+    "base": "鲁液",
+    "src": {
+     "gemma整行": "鲁波",
+     "gemma特写": "鲁波"
+    },
+    "img": "礼金簿_files/ai/p15s1r1 2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 477,
+   "name": "童联贵",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 15,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p15s1r2"
+  },
+  {
+   "id": 478,
+   "name": "童凤",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 15,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p15s1r3"
+  },
+  {
+   "id": 479,
+   "name": "陈桂园",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "陈桂"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p15s1r4",
+   "ai": {
+    "flag": "AI建议（单源）",
+    "base": "陈硅",
+    "src": {
+     "gemma整行": "陈硅园",
+     "gemma特写": "陈桂园"
+    },
+    "img": "礼金簿_files/ai/p15s1r4.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 480,
+   "name": "宋源梅",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "爱源鸿学",
+    "試叁伍贰"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p15s1r5",
+   "ai": {
+    "flag": "AI建议（单源）/分歧",
+    "base": "宋梅",
+    "src": {
+     "gemma整行": "爱源鸿学",
+     "gemma特写": "宋梅"
+    },
+    "img": "礼金簿_files/ai/p15s1r5.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 481,
+   "name": "李鸿林",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p15s1r6"
+  },
+  {
+   "id": 482,
+   "name": "郎学谦",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 15,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p15s1r7"
+  },
+  {
+   "id": 483,
+   "name": "朱江",
+   "amount": 400,
+   "note": "",
+   "group": "scan",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 400,
+   "guess": true,
+   "cid": "p15s1r8"
+  },
+  {
+   "id": 484,
+   "name": "曾涛",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "冬饭",
+    "分叶"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p15s1r9",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "冬饭",
+    "src": {
+     "gemma整行": "曾构",
+     "gemma特写": "曾构"
+    },
+    "img": "礼金簿_files/ai/p15s1r9.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 485,
+   "name": "杨涛",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "贰饭"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p15s1r10"
+  },
+  {
+   "id": 486,
+   "name": "张立",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 15,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "张·立",
+    "QQ`"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p15s1r11"
+  },
+  {
+   "id": 487,
+   "name": "裴超顺",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "装超顺"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p15s1r12"
+  },
+  {
+   "id": 488,
+   "name": "林竹安",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "林竹庄",
+    "林竹岳"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p15s1r13"
+  },
+  {
+   "id": 489,
+   "name": "王茂",
+   "amount": 1000,
+   "note": "",
+   "group": "scan",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "壹件",
+    "茂州",
+    "壹件闯"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p15s1r14"
+  },
+  {
+   "id": 490,
+   "name": "李恬恬",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": true,
+   "cid": "p15s1r15"
+  },
+  {
+   "id": 491,
+   "name": "邓印辰",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "下仲",
+    "即卯辰"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p15s1r16"
+  },
+  {
+   "id": 492,
+   "name": "胡彬",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p15s1r17"
+  },
+  {
+   "id": 493,
+   "name": "庄波",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "波见",
+    "庄波"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p15s1r18",
+   "ai": {
+    "flag": "AI建议（单源）",
+    "base": "邓胡庄高",
+    "src": {
+     "gemma整行": "庄波",
+     "gemma特写": "波见"
+    },
+    "img": "礼金簿_files/ai/p15s1r18.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 494,
+   "name": "高见",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "彬波"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p15s1r19",
+   "ai": {
+    "flag": "分歧",
+    "base": "怡辰彬波见辉勇梅静",
+    "src": {
+     "gemma整行": "见辉",
+     "gemma特写": "彬波"
+    },
+    "img": "礼金簿_files/ai/p15s1r19.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 495,
+   "name": "童映晖",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "童映"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p15s1r20"
+  },
+  {
+   "id": 496,
+   "name": "许勇",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": true,
+   "cid": "p15s1r21"
+  },
+  {
+   "id": 497,
+   "name": "曾继",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 16,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p16s1r1"
+  },
+  {
+   "id": 498,
+   "name": "严睿",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 16,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "上年",
+    "成算"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p16s1r2",
+   "ai": {
+    "flag": "AI建议",
+    "base": "上年",
+    "src": {
+     "gemma整行": "严成朱",
+     "gemma特写": "严成朱"
+    },
+    "img": "礼金簿_files/ai/p16s1r2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 499,
+   "name": "朱绍静",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 16,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "招静",
+    "柒招静",
+    "朱绍静"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p16s1r3"
+  },
+  {
+   "id": 500,
+   "name": "郑文广",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 16,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p16s1r4"
+  },
+  {
+   "id": 501,
+   "name": "吴倩",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 16,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p16s1r5"
+  },
+  {
+   "id": 502,
+   "name": "陈璐洁",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 16,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "陈璐法",
+    "陈璐诺"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p16s1r6",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "陈璐法",
+    "src": {
+     "gemma整行": "陈璐涛",
+     "gemma特写": "陈璐涛"
+    },
+    "img": "礼金簿_files/ai/p16s1r6.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 503,
+   "name": "周雍",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 16,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p16s1r7",
+   "ai": {
+    "flag": "AI修正（OCR证据弱）",
+    "base": "倩话：雍丽",
+    "src": {
+     "gemma整行": "雍丽",
+     "gemma特写": "雍丽"
+    },
+    "img": "礼金簿_files/ai/p16s1r7.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 504,
+   "name": "刘丽",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 16,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "常周:刘",
+    "常周刘"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p16s1r8"
+  },
+  {
+   "id": 506,
+   "name": "朱恒巧",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 16,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "恒巧",
+    "柒恒巧"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p16s1r10",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "恒巧",
+    "src": {
+     "gemma整行": "米恒巧",
+     "gemma特写": "米恒巧"
+    },
+    "img": "礼金簿_files/ai/p16s1r10.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 507,
+   "name": "蔡啟明",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 16,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "蔡放明"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p16s2r1",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "蔡放明",
+    "src": {
+     "gemma整行": "荣双明",
+     "gemma特写": "荣双明"
+    },
+    "img": "礼金簿_files/ai/p16s2r1.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 508,
+   "name": "蔡啟华",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 16,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p16s2r2"
+  },
+  {
+   "id": 509,
+   "name": "蔡娟",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 16,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p16s2r3"
+  },
+  {
+   "id": 510,
+   "name": "蔡文",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 16,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "文浪明"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p16s2r4"
+  },
+  {
+   "id": 511,
+   "name": "张雪剑",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 16,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "迪厨光"
+   ],
+   "ocr_amount": 500,
+   "guess": true,
+   "cid": "p16s2r5",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "张雪树剑",
+    "src": {
+     "gemma整行": "图彭到",
+     "gemma特写": "图彭到"
+    },
+    "img": "礼金簿_files/ai/p16s2r5.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 512,
+   "name": "吴浪",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 16,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "周明恩",
+    "μ周明县"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p16s2r6",
+   "ai": {
+    "flag": "分歧",
+    "base": "笋周明恩",
+    "src": {
+     "gemma整行": "周明恩"
+    },
+    "img": "礼金簿_files/ai/p16s2r6.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 513,
+   "name": "鲁鹏",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 16,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "阅明奇",
+    "同明奇"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p16s2r7"
+  },
+  {
+   "id": 514,
+   "name": "刘思明",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 16,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "训界明",
+    "训果明",
+    "训是明"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p16s2r8",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "训界明",
+    "src": {
+     "gemma整行": "刘界明",
+     "gemma特写": "刘界明"
+    },
+    "img": "礼金簿_files/ai/p16s2r8.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 515,
+   "name": "吴长庚",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 17,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "美长庚"
+   ],
+   "ocr_amount": 600,
+   "guess": false,
+   "cid": "p17s1r1"
+  },
+  {
+   "id": 516,
+   "name": "郑立权",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 17,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "立权",
+    "补立权"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p17s1r2"
+  },
+  {
+   "id": 517,
+   "name": "张晓杰",
+   "amount": 1000,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 17,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "张嘎杰",
+    "张啄杰"
+   ],
+   "ocr_amount": 1000,
+   "guess": false,
+   "cid": "p17s1r3",
+   "ai": {
+    "flag": "分歧",
+    "base": "张杰",
+    "src": {
+     "gemma整行": "张嘎杰",
+     "gemma特写": "张杰"
+    },
+    "img": "礼金簿_files/ai/p17s1r3.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 518,
+   "name": "付显玉",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 17,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p17s1r4"
+  },
+  {
+   "id": 519,
+   "name": "张帮",
+   "amount": 800,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 17,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "张木"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p17s1r5"
+  },
+  {
+   "id": 520,
+   "name": "林仕鹏",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 17,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "林竹鹏"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p17s1r6"
+  },
+  {
+   "id": 521,
+   "name": "成忠文",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 17,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p17s1r7"
+  },
+  {
+   "id": 522,
+   "name": "何富玉",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 17,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "何窗玉",
+    "何窗"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p17s1r8"
+  },
+  {
+   "id": 523,
+   "name": "周仕发",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 17,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "竹发"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p17s1r9",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "竹发",
+    "src": {
+     "gemma整行": "周仕发",
+     "gemma特写": "周仕发"
+    },
+    "img": "礼金簿_files/ai/p17s1r9.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 524,
+   "name": "姚梦玲",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 17,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "桃梦",
+    "桃梦哈",
+    "梦哈"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p17s1r10",
+   "ai": {
+    "flag": "AI建议（单源）/分歧",
+    "base": "姚梦",
+    "src": {
+     "gemma整行": "桃梦哈",
+     "gemma特写": "桃梦"
+    },
+    "img": "礼金簿_files/ai/p17s1r10.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 525,
+   "name": "龚成萍",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 17,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "葵成萍",
+    "蛮成萍"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p17s2r1",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "葵成萍",
+    "src": {
+     "gemma整行": "龚成萍",
+     "gemma特写": "龚成萍"
+    },
+    "img": "礼金簿_files/ai/p17s2r1.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 526,
+   "name": "龚成敏",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 17,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "爱成",
+    "葵成敏"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p17s2r2"
+  },
+  {
+   "id": 527,
+   "name": "龚宁",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 17,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p17s2r3"
+  },
+  {
+   "id": 528,
+   "name": "龚华",
+   "amount": 300,
+   "note": "姓名未识别，请对照原件填写",
+   "group": "scan",
+   "page": 17,
+   "sec": 1,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p17s2r4"
+  },
+  {
+   "id": 529,
+   "name": "杜政义",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 17,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "杜政",
+    "华义！丽"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p17s2r5",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "杜政",
+    "src": {
+     "gemma整行": "杜政义",
+     "gemma特写": "杜政义"
+    },
+    "img": "礼金簿_files/ai/p17s2r5.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 530,
+   "name": "赵祖鹏",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 17,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "赵祖骗",
+    "赵祖骝"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p17s2r7"
+  },
+  {
+   "id": 531,
+   "name": "赵钦",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 17,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "赵饮"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p17s2r8"
+  },
+  {
+   "id": 532,
+   "name": "龚吉成",
+   "amount": 1000,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 17,
+   "sec": 1,
+   "draft": false,
+   "alts": [
+    "葵吉成",
+    "蛮吉成",
+    "聚吉成"
+   ],
+   "ocr_amount": 1000,
+   "guess": false,
+   "cid": "p17s2r9",
+   "ai": {
+    "flag": "AI建议（单源）",
+    "base": "壹件",
+    "src": {
+     "gemma整行": "葵吉成",
+     "gemma特写": "蛮吉成"
+    },
+    "img": "礼金簿_files/ai/p17s2r9.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 533,
+   "name": "鲁绍平",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 17,
+   "sec": 1,
+   "draft": true,
+   "alts": [
+    "绍平"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p17s2r10"
+  },
+  {
+   "id": 535,
+   "name": "李清富",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 18,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "李请富"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p18s1r1",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "李请富",
+    "src": {
+     "gemma整行": "李清富",
+     "gemma特写": "李清富"
+    },
+    "img": "礼金簿_files/ai/p18s1r1.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 536,
+   "name": "江承聪",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 18,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "江承",
+    "江承联"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p18s1r2",
+   "ai": {
+    "flag": "AI建议",
+    "base": "江承",
+    "src": {
+     "gemma整行": "江承聪",
+     "gemma特写": "江承聪"
+    },
+    "img": "礼金簿_files/ai/p18s1r2 2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 537,
+   "name": "宋邦雄",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 18,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "米邦雄",
+    "宋邦雄",
+    "采邦雄"
+   ],
+   "ocr_amount": null,
+   "guess": true,
+   "cid": "p18s1r3",
+   "ai": {
+    "flag": "AI建议（单源）/分歧",
+    "base": "亲邦雄",
+    "src": {
+     "gemma整行": "米邦雄",
+     "gemma特写": "宋邦雄"
+    },
+    "img": "礼金簿_files/ai/p18s1r3.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 538,
+   "name": "申春梅",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 18,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "申春",
+    "中春收"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p18s1r4"
+  },
+  {
+   "id": 539,
+   "name": "宋健",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 18,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "宋宋走",
+    "米:宋",
+    "宋宋"
+   ],
+   "ocr_amount": 500,
+   "guess": false,
+   "cid": "p18s1r5",
+   "ai": {
+    "flag": "分歧",
+    "base": "梅健强",
+    "src": {
+     "gemma整行": "宋宋走",
+     "gemma特写": "梅健强"
+    },
+    "img": "礼金簿_files/ai/p18s1r5.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 540,
+   "name": "赵振学",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 18,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p18s1r6"
+  },
+  {
+   "id": 541,
+   "name": "付雪梅",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 18,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "付雪梅",
+    "套恒"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p18s1r7",
+   "ai": {
+    "flag": "AI修正（OCR仅1票）",
+    "base": "付雪梅",
+    "src": {
+     "gemma整行": "登恒",
+     "gemma特写": "登恒"
+    },
+    "img": "礼金簿_files/ai/p18s1r7.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 542,
+   "name": "范勇",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 18,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "成志",
+    "成忠"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p18s1r8"
+  },
+  {
+   "id": 544,
+   "name": "李磊",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 19,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "州李磊"
+   ],
+   "ocr_amount": 200,
+   "guess": false,
+   "cid": "p19s1r1"
+  },
+  {
+   "id": 545,
+   "name": "吴帅",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 19,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "以吴"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p19s1r2",
+   "ai": {
+    "flag": "AI修正（OCR证据弱）",
+    "base": "冬佰圈",
+    "src": {
+     "gemma整行": "以昊",
+     "gemma特写": "以昊"
+    },
+    "img": "礼金簿_files/ai/p19s1r2.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 546,
+   "name": "朱亚",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 19,
+   "sec": 0,
+   "draft": true,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p19s1r3"
+  },
+  {
+   "id": 547,
+   "name": "申云",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 19,
+   "sec": 0,
+   "draft": false,
+   "alts": [],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p19s1r4"
+  },
+  {
+   "id": 548,
+   "name": "张斌",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 19,
+   "sec": 0,
+   "draft": true,
+   "alts": [
+    "刀张斌",
+    "刃张斌"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p19s1r5"
+  },
+  {
+   "id": 549,
+   "name": "龚建忠",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 19,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "叁饭",
+    "垄建忠",
+    "以奕建忠"
+   ],
+   "ocr_amount": 300,
+   "guess": false,
+   "cid": "p19s1r6",
+   "ai": {
+    "flag": "AI建议",
+    "base": "叁饭",
+    "src": {
+     "gemma整行": "奕建忠",
+     "gemma特写": "奕建忠"
+    },
+    "img": "礼金簿_files/ai/p19s1r6.jpg",
+    "amt": null
+   }
+  },
+  {
+   "id": 550,
+   "name": "胡亚兰",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 19,
+   "sec": 0,
+   "draft": false,
+   "alts": [
+    "叁低"
+   ],
+   "ocr_amount": 300,
+   "guess": true,
+   "cid": "p19s1r7"
+  },
+  {
+   "id": 552,
+   "name": "刘崇敏",
+   "amount": 400,
+   "note": "",
+   "group": "scan",
+   "page": 2,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 553,
+   "name": "余瑞雪（众济）",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 3,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 554,
+   "name": "李平",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 555,
+   "name": "曹旭",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 4,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 556,
+   "name": "王钊",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 4,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 557,
+   "name": "吴玉林",
+   "amount": 400,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 4,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 558,
+   "name": "陈焕琼",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 559,
+   "name": "付宪金",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 4,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 560,
+   "name": "赵星",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 5,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 561,
+   "name": "付明鸟",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 5,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 562,
+   "name": "程林",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 6,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 563,
+   "name": "李世美",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 564,
+   "name": "陈宪",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 565,
+   "name": "王正辉",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 6,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 566,
+   "name": "马宪云",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 7,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 567,
+   "name": "文彬",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 7,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 568,
+   "name": "杨自忠",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 8,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 569,
+   "name": "申云（律师）",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 8,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 570,
+   "name": "高蝉",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 8,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 571,
+   "name": "鲁怀刚",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 8,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 572,
+   "name": "鲁怀超",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 8,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 573,
+   "name": "龚成德",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 9,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 574,
+   "name": "王明珠",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 575,
+   "name": "宋潇",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 576,
+   "name": "曾瑰",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 577,
+   "name": "田华",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 578,
+   "name": "王晋东",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 579,
+   "name": "刘东",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 581,
+   "name": "夏彦杰",
+   "amount": 400,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 582,
+   "name": "郎啟贵",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 583,
+   "name": "王必成",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 584,
+   "name": "王家和",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 9,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 585,
+   "name": "刘婷婷",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 11,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 586,
+   "name": "张勇",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 11,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 587,
+   "name": "王磊",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 588,
+   "name": "张宽",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 589,
+   "name": "刘安杰",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 590,
+   "name": "申时粉",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 12,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 591,
+   "name": "杨亮富",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 12,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 592,
+   "name": "杨云坤",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 12,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 593,
+   "name": "常会云",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 13,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 594,
+   "name": "严隆高",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 13,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 595,
+   "name": "龚群",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 13,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 596,
+   "name": "龚声福",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 13,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 597,
+   "name": "曾宇",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 598,
+   "name": "朱滇",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 599,
+   "name": "张磊",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 14,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 600,
+   "name": "王蓉芳",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 14,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 601,
+   "name": "汪敏",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 602,
+   "name": "李霆",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 14,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 603,
+   "name": "周爱华",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 604,
+   "name": "王梅",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 605,
+   "name": "常静",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 15,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 606,
+   "name": "成卓",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 16,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 607,
+   "name": "成联陆",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 16,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 608,
+   "name": "周明恩",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 16,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 609,
+   "name": "周明奇",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 16,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 610,
+   "name": "邓书文",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 16,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 611,
+   "name": "邓虓",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 16,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 612,
+   "name": "彭勇",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 17,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 613,
+   "name": "刘德祥",
+   "amount": 300,
+   "note": "",
+   "group": "scan",
+   "page": 17,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 614,
+   "name": "成云",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 17,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 615,
+   "name": "田丽",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 17,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 616,
+   "name": "余大荣（大五哥）",
+   "amount": 500,
+   "note": "",
+   "group": "scan",
+   "page": 17,
+   "sec": 1,
+   "draft": false
+  },
+  {
+   "id": 617,
+   "name": "宋强",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 18,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 618,
+   "name": "成忠群",
+   "amount": 200,
+   "note": "",
+   "group": "scan",
+   "page": 18,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 619,
+   "name": "林武",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 18,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 620,
+   "name": "成杨阳",
+   "amount": 200,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 18,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 621,
+   "name": "朱恒要",
+   "amount": 500,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "page": 19,
+   "sec": 0,
+   "draft": false
+  },
+  {
+   "id": 622,
+   "name": "陶云豪",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 623,
+   "name": "朱德明",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 624,
+   "name": "胡垚静",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 625,
+   "name": "张雄伟",
+   "amount": 300,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  },
+  {
+   "id": 626,
+   "name": "张宇",
+   "amount": 600,
+   "note": "",
+   "group": "gmujoyi7q24",
+   "draft": false
+  }
+ ],
+ "seq": 627,
+ "scans": [
+  {
+   "page": 1,
+   "src": "礼金簿_files/page01.jpg",
+   "sections": [
+    {
+     "total": 3800,
+     "warn": false
+    },
+    {
+     "total": null,
+     "warn": false
+    }
+   ],
+   "totals": [
+    3800
+   ]
+  },
+  {
+   "page": 2,
+   "src": "礼金簿_files/page02.jpg",
+   "sections": [
+    {
+     "total": 3400,
+     "warn": false
+    }
+   ],
+   "totals": [
+    3400
+   ]
+  },
+  {
+   "page": 3,
+   "src": "礼金簿_files/page03.jpg",
+   "sections": [
+    {
+     "total": 3800,
+     "warn": false
+    }
+   ],
+   "totals": [
+    3800
+   ]
+  },
+  {
+   "page": 4,
+   "src": "礼金簿_files/page04.jpg",
+   "sections": [
+    {
+     "total": 4400,
+     "warn": false
+    },
+    {
+     "total": 4400,
+     "warn": false
+    }
+   ],
+   "totals": [
+    4400,
+    4400
+   ]
+  },
+  {
+   "page": 5,
+   "src": "礼金簿_files/page05.jpg",
+   "sections": [
+    {
+     "total": 4200,
+     "warn": false
+    },
+    {
+     "total": 3600,
+     "warn": false
+    }
+   ],
+   "totals": [
+    4200,
+    3600
+   ]
+  },
+  {
+   "page": 6,
+   "src": "礼金簿_files/page06.jpg",
+   "sections": [
+    {
+     "total": 3800,
+     "warn": false
+    },
+    {
+     "total": 4300,
+     "warn": false
+    }
+   ],
+   "totals": [
+    3800,
+    4300
+   ]
+  },
+  {
+   "page": 7,
+   "src": "礼金簿_files/page07.jpg",
+   "sections": [
+    {
+     "total": 4400,
+     "warn": false
+    },
+    {
+     "total": 3300,
+     "warn": true
+    }
+   ],
+   "totals": [
+    4400,
+    3300
+   ]
+  },
+  {
+   "page": 8,
+   "src": "礼金簿_files/page08.jpg",
+   "sections": [
+    {
+     "total": 4700,
+     "warn": false
+    },
+    {
+     "total": 3800,
+     "warn": false
+    }
+   ],
+   "totals": [
+    4700,
+    3800
+   ]
+  },
+  {
+   "page": 9,
+   "src": "礼金簿_files/page09.jpg",
+   "sections": [
+    {
+     "total": null,
+     "warn": false
+    },
+    {
+     "total": null,
+     "warn": false
+    }
+   ],
+   "totals": []
+  },
+  {
+   "page": 10,
+   "src": "礼金簿_files/page10.jpg",
+   "sections": [
+    {
+     "total": null,
+     "warn": false
+    }
+   ],
+   "totals": []
+  },
+  {
+   "page": 11,
+   "src": "礼金簿_files/page11.jpg",
+   "sections": [
+    {
+     "total": 3500,
+     "warn": false
+    },
+    {
+     "total": null,
+     "warn": false
+    }
+   ],
+   "totals": [
+    3500
+   ]
+  },
+  {
+   "page": 12,
+   "src": "礼金簿_files/page12.jpg",
+   "sections": [
+    {
+     "total": 4000,
+     "warn": false
+    },
+    {
+     "total": 3400,
+     "warn": true
+    }
+   ],
+   "totals": [
+    4000,
+    3400
+   ]
+  },
+  {
+   "page": 13,
+   "src": "礼金簿_files/page13.jpg",
+   "sections": [
+    {
+     "total": 3400,
+     "warn": false
+    },
+    {
+     "total": 4100,
+     "warn": false
+    }
+   ],
+   "totals": [
+    3400,
+    4100
+   ]
+  },
+  {
+   "page": 14,
+   "src": "礼金簿_files/page14.jpg",
+   "sections": [
+    {
+     "total": 2500,
+     "warn": false
+    },
+    {
+     "total": 3400,
+     "warn": false
+    }
+   ],
+   "totals": [
+    2500,
+    3400
+   ]
+  },
+  {
+   "page": 15,
+   "src": "礼金簿_files/page15.jpg",
+   "sections": [
+    {
+     "total": 4600,
+     "warn": false
+    }
+   ],
+   "totals": [
+    4600
+   ]
+  },
+  {
+   "page": 16,
+   "src": "礼金簿_files/page16.jpg",
+   "sections": [
+    {
+     "total": 3400,
+     "warn": false
+    },
+    {
+     "total": 4200,
+     "warn": false
+    }
+   ],
+   "totals": [
+    3400,
+    4200
+   ]
+  },
+  {
+   "page": 17,
+   "src": "礼金簿_files/page17.jpg",
+   "sections": [
+    {
+     "total": 5200,
+     "warn": false
+    },
+    {
+     "total": 4600,
+     "warn": false
+    },
+    {
+     "total": null,
+     "warn": false
+    }
+   ],
+   "totals": [
+    5200,
+    4600
+   ]
+  },
+  {
+   "page": 18,
+   "src": "礼金簿_files/page18.jpg",
+   "sections": [
+    {
+     "total": 3500,
+     "warn": false
+    },
+    {
+     "total": null,
+     "warn": false
+    }
+   ],
+   "totals": [
+    3500
+   ]
+  },
+  {
+   "page": 19,
+   "src": "礼金簿_files/page19.jpg",
+   "sections": [
+    {
+     "total": 2500,
+     "warn": false
+    },
+    {
+     "total": null,
+     "warn": false
+    }
+   ],
+   "totals": [
+    2500
+   ]
+  }
+ ],
+ "guests": [
+  {
+   "type": "head",
+   "text": "💒 镇雄法院同事 · 婚礼请客名单"
+  },
+  {
+   "type": "head",
+   "text": "👤 邀请人: 月   📱 18849841551   💒 2026-09-24 云南镇雄   📋 共 275 人 · 27 个部门 · 名单列内自选邀请状态"
+  },
+  {
+   "type": "head",
+   "text": "🏛 院领导（4人）"
+  },
+  {
+   "type": "row",
+   "name": "王晋东",
+   "phone": "13887018666",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李太红",
+   "phone": "13887040776",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "宋邦雄",
+   "phone": "13638841509",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "汪子柱",
+   "phone": "15287791320",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 审委专委（3人）"
+  },
+  {
+   "type": "row",
+   "name": "张淑祝",
+   "phone": "13578090981",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "余婷",
+   "phone": "13638882186",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "宋强",
+   "phone": "13887069695",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 派驻纪检监察组（2人）"
+  },
+  {
+   "type": "head",
+   "text": "🏛 政治部（6人）"
+  },
+  {
+   "type": "row",
+   "name": "成忠文",
+   "phone": "15925076677",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "张雄伟",
+   "phone": "13408855168",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "高见",
+   "phone": "13887035639",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "常静",
+   "phone": "18313000532",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "陈璐洁",
+   "phone": "13408875918",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "窦晶艳",
+   "phone": "15187409551",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 督察室（4人）"
+  },
+  {
+   "type": "row",
+   "name": "许勇",
+   "phone": "13887111362",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "朱德明",
+   "phone": "13578040049",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "付在川",
+   "phone": "15012331363",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "刘庆巧",
+   "phone": "19987867317",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 审管办（3人）"
+  },
+  {
+   "type": "row",
+   "name": "周雍",
+   "phone": "15125365968",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王明天",
+   "phone": "15094287032",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王梅",
+   "phone": "19806909459",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 案件质量评查中心（5人）"
+  },
+  {
+   "type": "row",
+   "name": "邓成友",
+   "phone": "15808638386",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "胡彬",
+   "phone": "13887128120",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "申时焕",
+   "phone": "13638873599",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "申开勇",
+   "phone": "13638872788",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "夏彦杰",
+   "phone": "13638838198",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 综合办公室（14人）"
+  },
+  {
+   "type": "row",
+   "name": "刘东",
+   "phone": "15012283332",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王定志",
+   "phone": "15912686898",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "申春梅",
+   "phone": "13608706308",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "康崑",
+   "phone": "13578012314",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "吴云山",
+   "phone": "13887105488",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "申时旺",
+   "phone": "13887113848",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "严睿",
+   "phone": "13578003158",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "徐磊",
+   "phone": "15969008802",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "姚江",
+   "phone": "13883934654",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "高婵",
+   "phone": "15894207057",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "陈华",
+   "phone": "13638809519",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王义德",
+   "phone": "15012280588",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "黄智军",
+   "phone": "13887122528",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李灿",
+   "phone": "13887038697",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 刑事审判庭（23人）"
+  },
+  {
+   "type": "row",
+   "name": "严隆高",
+   "phone": "13887115085",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "赵振学",
+   "phone": "15925505556",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "白菊",
+   "phone": "13578079603",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "吴旭",
+   "phone": "13638886012",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "黄恩泽",
+   "phone": "13628709159",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "范玲琪",
+   "phone": "15287158531",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "杨兴群",
+   "phone": "18287011686",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "胡淞",
+   "phone": "15925505335",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "阮锋",
+   "phone": "13887138312",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "张茜",
+   "phone": "13408822292",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李燕",
+   "phone": "15877974644",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王杰",
+   "phone": "15758080501",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "谭星月",
+   "phone": "18314451398",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "朱梦",
+   "phone": "18887042211",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "裴彬",
+   "phone": "13908702865",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "沈阳",
+   "phone": "13578011786",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "朱啟奎",
+   "phone": "13887020269",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "张书荣",
+   "phone": "15969038695",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "沙进",
+   "phone": "18849889623",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "胡亚兰",
+   "phone": "15087216609",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "熊星月",
+   "phone": "13578089349",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "付朝江",
+   "phone": "18987002809",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "申睿婕",
+   "phone": "15752453702",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 立案庭（27人）"
+  },
+  {
+   "type": "row",
+   "name": "段斌",
+   "phone": "15969006766",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "周雪",
+   "phone": "15758062574",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "赵亚丽",
+   "phone": "13578095530",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "刘畅",
+   "phone": "18287032665",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "陶云豪",
+   "phone": "15108640298",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王晓红",
+   "phone": "13466221739",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "曾龙先",
+   "phone": "15974813520",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "谢学艳",
+   "phone": "19169337736",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李绍基",
+   "phone": "13887126331",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "马宪云",
+   "phone": "13887138106",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "杨远芳",
+   "phone": "13887127485",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "常红艳",
+   "phone": "17608705786",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "姚晓",
+   "phone": "15126685545",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "许亮",
+   "phone": "19984022658",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "高彦劭",
+   "phone": "18087029971",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "沈丽涛",
+   "phone": "13578050056",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "赵星",
+   "phone": "18869525360",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "杨琴",
+   "phone": "18589363226",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "曹毅",
+   "phone": "13648700488",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "吴春泉",
+   "phone": "13578057219",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "童映晖",
+   "phone": "13638841123",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "曾永雄",
+   "phone": "13887105881",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李磊",
+   "phone": "13578087703",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "吴柏华",
+   "phone": "13887125576",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "罗辅梅",
+   "phone": "18287076829",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "杨正欢",
+   "phone": "13211866369",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "雷天龙",
+   "phone": "13887041278",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 民一庭（16人）"
+  },
+  {
+   "type": "row",
+   "name": "皮永",
+   "phone": "18287011862",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "齐永成",
+   "phone": "13116993898",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李顺",
+   "phone": "13887070321",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李熙",
+   "phone": "17868949520",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李砚舟",
+   "phone": "18440927583",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "邹雄",
+   "phone": "13408810601",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "陈梅",
+   "phone": "18789055290",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "马丽芳",
+   "phone": "19869570767",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "张宏",
+   "phone": "15877946293",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王秋玲",
+   "phone": "15987914879",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "周杜鹃",
+   "phone": "15240841870",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "吴涛",
+   "phone": "13649680003",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "游本洲",
+   "phone": "15125317063",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "燕梅",
+   "phone": "15287716253",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王明珠",
+   "phone": "15126611069",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "宋贶姝",
+   "phone": "15911800938",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 民二庭（25人）"
+  },
+  {
+   "type": "row",
+   "name": "张帮",
+   "phone": "15911812560",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "郭灿",
+   "phone": "15925531821",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "鲁娟",
+   "phone": "18869431582",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "成红梅",
+   "phone": "18206813171",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "刘成尧",
+   "phone": "13648705768",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "叶育涛",
+   "phone": "13638818919",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王科吉春",
+   "phone": "13408857050",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "曾瑰",
+   "phone": "15925506108",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "田华",
+   "phone": "13638875628",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "岳廷婷",
+   "phone": "15287036641",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王荣芳",
+   "phone": "15125310518",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "鲁桦",
+   "phone": "18187082884",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "唐璐瑶",
+   "phone": "19906046865",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李清富",
+   "phone": "13638895693",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李翠",
+   "phone": "18849875579",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "杨婷",
+   "phone": "19116282357",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "黄道燚",
+   "phone": "13408872520",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "周敏",
+   "phone": "18387028848",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李宥霖",
+   "phone": "15812097803",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "吴倩",
+   "phone": "15750140002",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "周冬梅",
+   "phone": "15125308831",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "孙吉雯",
+   "phone": "13330426939",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "胥宗成",
+   "phone": "13408819029",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王娟",
+   "phone": "15012294420",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "吴长庚",
+   "phone": "13628702110",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 执行局（30人）"
+  },
+  {
+   "type": "row",
+   "name": "杨光德",
+   "phone": "13408822662",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "何高莹",
+   "phone": "13578009766",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "秦国智",
+   "phone": "13638864789",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "宋健",
+   "phone": "13887115016",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "游维",
+   "phone": "15125464500",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "潘怀仲",
+   "phone": "13887076789",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "程林",
+   "phone": "15894236641",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "罗泽坤",
+   "phone": "15750180254",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "邓财银",
+   "phone": "18313886309",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "陈晓",
+   "phone": "13887070868",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "董颖辉",
+   "phone": "15187059059",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "艾弘",
+   "phone": "18788525881",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "付婷",
+   "phone": "15808798115",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "涂冉",
+   "phone": "18487388075",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "文彬",
+   "phone": "15287018622",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "高全",
+   "phone": "13887056545",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "鲁朋",
+   "phone": "15752445625",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "郎啟贵",
+   "phone": "15287046660",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "赵喜",
+   "phone": "19527055759",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "成勇",
+   "phone": "15125406356",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "申登云",
+   "phone": "15752407550",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "徐丽娅",
+   "phone": "15187000108",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "赵小庆",
+   "phone": "15094268073",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李霄云",
+   "phone": "18849872374",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "赵岗",
+   "phone": "15974877637",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王媛",
+   "phone": "15094285071",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "沈振新",
+   "phone": "15752443072",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "陈凡",
+   "phone": "15287059728",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "顾星",
+   "phone": "13577440750",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "张东会",
+   "phone": "15750292760",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 法警大队（23人）"
+  },
+  {
+   "type": "row",
+   "name": "陈焕昆",
+   "phone": "13638876299",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "曾继",
+   "phone": "18387099881",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "高峰",
+   "phone": "13887118088",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "杨思军",
+   "phone": "13578089158",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "付明鸟",
+   "phone": "13508703896",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李仕",
+   "phone": "13887115065",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "刘鹏",
+   "phone": "13658707541",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "殷洪龙",
+   "phone": "13211849746",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "龚声正",
+   "phone": "17702305751",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "吴长武",
+   "phone": "14769108837",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "韩贤进",
+   "phone": "17347395163",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "邓荣佳",
+   "phone": "19987185114",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "刘华菊",
+   "phone": "15911804151",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "周仕美",
+   "phone": "15012345252",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "雷梅",
+   "phone": "13638829985",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "赵国",
+   "phone": "18387021128",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "何涛",
+   "phone": "15877966646",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "付贵",
+   "phone": "15750118349",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "秦龙凤",
+   "phone": "13578037203",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "赵桃",
+   "phone": "15287771238",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "蒋忠宇",
+   "phone": "15708818570",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "夏赟",
+   "phone": "13278675817",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "罗裕兴",
+   "phone": "15287056030",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 行政庭（6人）"
+  },
+  {
+   "type": "row",
+   "name": "曾永翠",
+   "phone": "13578028318",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李鸿林",
+   "phone": "15969006966",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "赵智",
+   "phone": "13887122060",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "张飞",
+   "phone": "13887036170",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "郎学谦",
+   "phone": "15398359699",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "程平",
+   "phone": "18287079642",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 芒部法庭（11人）"
+  },
+  {
+   "type": "row",
+   "name": "张东阳",
+   "phone": "15752962855",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "申登龙",
+   "phone": "18388727436",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "谭丽娟",
+   "phone": "15310281505",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "吴浪",
+   "phone": "13211959397",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "曾丽红",
+   "phone": "17360075743",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "高嘉尧",
+   "phone": "13648855663",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "满云东",
+   "phone": "19587000657",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王琴",
+   "phone": "15125313061",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "汪喜",
+   "phone": "15240807029",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "姜文",
+   "phone": "19887020126",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "万欣杰",
+   "phone": "18214264729",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 以勒法庭（11人）"
+  },
+  {
+   "type": "row",
+   "name": "宋奡玢",
+   "phone": "18708734760",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李云",
+   "phone": "15096586828",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "夏瑞",
+   "phone": "15398339613",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "赵群",
+   "phone": "15687735960",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李开俊",
+   "phone": "18708502519",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "杨勇",
+   "phone": "15094264066",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李汉兵",
+   "phone": "18987012219",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "刘国柱",
+   "phone": "15911830753",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "张凤",
+   "phone": "18388751716",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "赵敏",
+   "phone": "18182904424",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "陈云庆",
+   "phone": "15808606475",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 场坝法庭（9人）"
+  },
+  {
+   "type": "row",
+   "name": "张宽",
+   "phone": "15087291599",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "袁成",
+   "phone": "15012293368",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "付君",
+   "phone": "18388694510",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "汪继巧",
+   "phone": "15012263335",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "邹催",
+   "phone": "19048700656",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "张梅",
+   "phone": "13211848225",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "周杰",
+   "phone": "15096844577",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李璇",
+   "phone": "19048696156",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "邱仕艳",
+   "phone": "18869596239",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 罗坎法庭（9人）"
+  },
+  {
+   "type": "row",
+   "name": "龚徽",
+   "phone": "18849841551",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "胥杰",
+   "phone": "15082081750",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "幸家健",
+   "phone": "18208707904",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "宋毅",
+   "phone": "19387080558",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李丽娟",
+   "phone": "16687015615",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "侯吉玲",
+   "phone": "19811679516",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王钊",
+   "phone": "13872253773",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "杨允昆",
+   "phone": "18849841551",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "周昌华",
+   "phone": "19278800314",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 泼机法庭（9人）"
+  },
+  {
+   "type": "row",
+   "name": "朱亚",
+   "phone": "15198827175",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "廖云镇",
+   "phone": "18388791358",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "刘春梅",
+   "phone": "18206831304",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "张玲",
+   "phone": "18387044339",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "贾向平",
+   "phone": "18388462770",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "许镇",
+   "phone": "15368287459",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李建梁",
+   "phone": "18213534585",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王盼",
+   "phone": "15925506774",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "成杨阳",
+   "phone": "18387019119",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 五德法庭（12人）"
+  },
+  {
+   "type": "row",
+   "name": "申云",
+   "phone": "13578084989",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "宋潇",
+   "phone": "15187021117",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李约",
+   "phone": "13064233518",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "杜政义",
+   "phone": "15071006470",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "项玉波",
+   "phone": "18314319101",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "岳宏",
+   "phone": "15287052319",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "陈臻",
+   "phone": "15096599901",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "曾宇",
+   "phone": "15398363667",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "朱滇",
+   "phone": "17842441551",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "胡炫",
+   "phone": "13628876139",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "周政",
+   "phone": "13772193189",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "欧来堂",
+   "phone": "19527058198",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 母享法庭（9人）"
+  },
+  {
+   "type": "row",
+   "name": "吴玉林",
+   "phone": "18869518689",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "汪五磊",
+   "phone": "13466232668",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "刘才龙",
+   "phone": "15925520211",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "熊国江",
+   "phone": "15987126639",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "田丽",
+   "phone": "18288995814",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "江琴",
+   "phone": "18313960954",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "吴秀林",
+   "phone": "17387082605",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "涂文亮",
+   "phone": "17842379013",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "杨平",
+   "phone": "13887098055",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 抽调挂职(乡镇政法副书记)（4人）"
+  },
+  {
+   "type": "row",
+   "name": "杨照全",
+   "phone": "13466218962",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "彭勇",
+   "phone": "13908708027",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "江承聪",
+   "phone": "13638819086",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "邓华北",
+   "phone": "18288789445",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 驻母享村（3人）"
+  },
+  {
+   "type": "row",
+   "name": "严义",
+   "phone": "15974890276",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "李霆",
+   "phone": "13508700819",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "陈桂园",
+   "phone": "18887035565",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 驻平桥村（3人）"
+  },
+  {
+   "type": "row",
+   "name": "朱恒要",
+   "phone": "13887060012",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "庄波",
+   "phone": "13578086639",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "曾维州",
+   "phone": "13508701689",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 驻三合村（3人）"
+  },
+  {
+   "type": "row",
+   "name": "王家和",
+   "phone": "13887134489",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "王必成",
+   "phone": "13638819102",
+   "status": "待定"
+  },
+  {
+   "type": "row",
+   "name": "徐娇",
+   "phone": "15023219441",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "🏛 驻稻香社区（1人）"
+  },
+  {
+   "type": "row",
+   "name": "周爱华",
+   "phone": "19948656369",
+   "status": "待定"
+  },
+  {
+   "type": "head",
+   "text": "📌 合计: 275 人 · 27 个部门"
+  }
+ ],
+ "verified": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19
+ ],
+ "aidec": {
+  "311": {
+   "act": "adopt",
+   "name": "朱放",
+   "at": 1790477649760
+  },
+  "421": {
+   "act": "adopt",
+   "name": "五汉镜",
+   "at": 1790498303649
+  },
+  "549": {
+   "act": "manual",
+   "name": "龚建忠",
+   "at": 1790499931552
+  }
+ },
+ "gassign": {}
+}
