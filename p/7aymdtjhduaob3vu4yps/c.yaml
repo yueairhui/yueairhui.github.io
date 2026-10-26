@@ -1,0 +1,314 @@
+mixed-port: 7897
+allow-lan: true
+lan-allowed-ips:
+- 0.0.0.0/0
+mode: rule
+log-level: warning
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: 'off'
+external-controller: 127.0.0.1:9099
+secret: refreshtoken
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - '*.lan'
+  - '*.local'
+  - '*.arpa'
+  - localhost.ptlogin2.qq.com
+  - '*.msftncsi.com'
+  - www.msftconnecttest.com
+  - +.market.xiaomi.com
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  proxy-server-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+proxies:
+- type: vless
+  server: au6.pad-sservice.lat
+  port: 8443
+  udp: true
+  skip-cert-verify: true
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  tls: true
+  servername: au6.pad-sservice.lat
+  network: ws
+  ws-opts:
+    path: /AU6W
+    headers:
+      Host: au6.pad-sservice.lat
+  name: 01｜  3.5M｜vless
+- server: 193.160.141.27
+  port: 443
+  type: vless
+  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: abuse.ozon.ru
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 02｜  3.0M｜vless
+- server: au2.pad-sservice.lat
+  port: 8443
+  type: vless
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  tls: true
+  servername: au2.pad-sservice.lat
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /A11U
+    headers:
+      Host: au2.pad-service.com
+  udp: true
+  name: 03｜  2.9M｜vless
+- alpn:
+  - h2
+  client-fingerprint: firefox
+  network: xhttp
+  port: 443
+  server: 188.72.103.4
+  servername: ru.nnight.cfd
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9737cc16-7266-45ce-94d9-6e05a45e0b9c
+  xhttp-opts:
+    host: ru.nnight.cfd
+    mode: packet-up
+    path: /api/v4/media/session/poll
+    seq-key: offset
+    seq-placement: query
+    uplink-data-key: X-Playback-Token
+    uplink-data-placement: header
+    uplink-http-method: GET
+    x-padding-bytes: 48-320
+    x-padding-key: q
+    x-padding-method: tokenish
+    x-padding-obfs-mode: true
+    x-padding-placement: query
+  name: 04｜  2.9M｜vless
+- type: anytls
+  server: 98416548.df6h451rh.xin
+  port: 443
+  password: 0324fbc29561
+  udp: true
+  skip-cert-verify: true
+  name: 05｜  2.9M｜anytls
+- server: 45.151.71.159
+  port: 443
+  type: vless
+  uuid: 680e92ac-1688-49e0-af96-7327fbc30ce8
+  flow: xtls-rprx-vision
+  tls: true
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  servername: gb.ozon.ru
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  network: tcp
+  udp: true
+  name: 06｜  2.8M｜vless
+- network: ws
+  port: 443
+  server: 31.57.190.89
+  servername: ccc.010304.xyz
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /fp=chromefp=chrome
+  name: 07｜  2.4M｜vless
+- type: ss
+  server: 202.50.253.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  skip-cert-verify: true
+  udp: true
+  name: 08｜  2.2M｜ss
+- type: anytls
+  server: 684616s4.df6h451rh.xin
+  port: 443
+  password: 0324fbc29561
+  udp: true
+  sni: px.ads.linkedin.com
+  skip-cert-verify: true
+  name: 09｜  2.2M｜anytls
+- type: ss
+  server: 202.50.253.99
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  skip-cert-verify: true
+  udp: true
+  name: 10｜  2.1M｜ss
+- password: db62309c-486a-4fd5-abc4-4e91ac495d38
+  port: 12686
+  server: user01.godvpn.lol
+  skip-cert-verify: true
+  type: anytls
+  udp: true
+  name: 11｜  1.8M｜anytls
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  port: 24667
+  protocol: udp
+  server: 62.210.70.191
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+  name: 12｜  1.7M｜hysteria
+- server: de12b.h1cloud.net
+  port: 25172
+  type: vless
+  uuid: 5a519754-a673-4462-83f6-5eb25d2af141
+  tls: true
+  reality-opts:
+    public-key: Xr55Hig_JTeUluiGfSnma6zMHG2Uv5Xu30ZODGF5xGA
+    short-id: f09ac427e1abd14b
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 13｜  1.2M｜vless
+- client-fingerprint: chrome
+  encryption: none
+  fingerprint: CD6E838B9BFE31CAB8B3D5C858B0D6223FE84ECE236C1FDB281BE93C302E1E6E
+  network: ws
+  port: 443
+  server: 167.82.64.64
+  servername: cdn.akamai.steamstatic.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: f9a9aa1f-75fb-4490-9155-85567af7a0ff
+  ws-opts:
+    headers:
+      Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
+      User-Agent: Mozilla/5.0 (Linux; Android 8.0.0; FIG-LX3 Build/HUAWEIFIG-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36
+    path: ''
+  xudp: true
+  name: 14｜  0.8M｜vless
+- password: 13f0acfa-38c1-4e82-a758-583aa31740df
+  port: 60005
+  server: svip.skycon808.com
+  skip-cert-verify: true
+  type: anytls
+  udp: true
+  name: 15｜  0.6M｜anytls
+- type: vless
+  server: 2.26.6.1
+  port: 2087
+  uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  name: 16｜  0.6M｜vless
+- type: vmess
+  server: 112.132.215.108
+  port: 50002
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+  name: 17｜  0.5M｜vmess
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - 🔯 故障转移
+  - ♻️ 自动选择
+  - DIRECT
+  - 01｜  3.5M｜vless
+  - 02｜  3.0M｜vless
+  - 03｜  2.9M｜vless
+  - 04｜  2.9M｜vless
+  - 05｜  2.9M｜anytls
+  - 06｜  2.8M｜vless
+  - 07｜  2.4M｜vless
+  - 08｜  2.2M｜ss
+  - 09｜  2.2M｜anytls
+  - 10｜  2.1M｜ss
+  - 11｜  1.8M｜anytls
+  - 12｜  1.7M｜hysteria
+  - 13｜  1.2M｜vless
+  - 14｜  0.8M｜vless
+  - 15｜  0.6M｜anytls
+  - 16｜  0.6M｜vless
+  - 17｜  0.5M｜vmess
+- name: 🔯 故障转移
+  type: fallback
+  proxies: &id001
+  - 01｜  3.5M｜vless
+  - 02｜  3.0M｜vless
+  - 03｜  2.9M｜vless
+  - 04｜  2.9M｜vless
+  - 05｜  2.9M｜anytls
+  - 06｜  2.8M｜vless
+  - 07｜  2.4M｜vless
+  - 08｜  2.2M｜ss
+  - 09｜  2.2M｜anytls
+  - 10｜  2.1M｜ss
+  - 11｜  1.8M｜anytls
+  - 12｜  1.7M｜hysteria
+  - 13｜  1.2M｜vless
+  - 14｜  0.8M｜vless
+  - 15｜  0.6M｜anytls
+  - 16｜  0.6M｜vless
+  - 17｜  0.5M｜vmess
+  url: http://www.gstatic.com/generate_204
+  interval: 120
+- name: ♻️ 自动选择
+  type: url-test
+  proxies: *id001
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 100
+  lazy: false
+- name: 🌍 国外媒体
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - 🔯 故障转移
+  - ♻️ 自动选择
+  - DIRECT
+- name: 🍎 苹果服务
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 节点选择
+- name: 🎯 全球直连
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 节点选择
+rules:
+- GEOIP,lan,DIRECT,no-resolve
+- GEOSITE,private,DIRECT
+- GEOSITE,category-ads-all,REJECT
+- GEOIP,CN,DIRECT
+- GEOSITE,apple-cn,DIRECT
+- MATCH,🚀 节点选择
