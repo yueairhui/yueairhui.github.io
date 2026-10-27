@@ -1,16 +1,72 @@
-// 红牛 — AppleCMS -> NowShowTime JS 源 (generated)
+// 红牛 — AppleCMS -> NowShowTime JS 源 (generated, multi-runtime)
 const BASE = "https://www.hongniuzy2.com/api.php/provide/vod/";
 const NAME = "红牛";
 const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1';
 
 function _h() { return { 'User-Agent': UA, 'Accept': 'application/json,text/plain,*/*' }; }
 function _q(s) { return BASE + (BASE.indexOf('?') > -1 ? '&' : '?') + s; }
-function _j(r) {
-  var d = (r && r.data !== undefined) ? r.data : r;
-  if (!d) return {};
-  if (typeof d === 'string') { try { return JSON.parse(d); } catch (e) { return {}; } }
-  return d;
+
+/* 把各种返回值统一成字符串 */
+function _asText(r) {
+  if (r === null || r === undefined) return '';
+  if (typeof r === 'string') return r;
+  if (typeof r === 'object') {
+    if (typeof r.data === 'string') return r.data;
+    if (typeof r.body === 'string') return r.body;
+    if (typeof r.text === 'string') return r.text;
+    if (r.data && typeof r.data.text === 'string') return r.data.text;
+    if (r.data && typeof r.data.data === 'string') return r.data.data;
+    try { return JSON.stringify(r); } catch (e) { return ''; }
+  }
+  return String(r);
 }
+
+/* 依次尝试运行时提供的 HTTP 能力，哪个先成功用哪个 */
+async function _get(url) {
+  var H = _h();
+  var s = '';
+  try {
+    if (typeof $fetch !== 'undefined' && $fetch && typeof $fetch.get === 'function') {
+      s = _asText(await $fetch.get(url, { headers: H, userAgent: UA })); if (s) return s;
+    }
+  } catch (e) {}
+  try {
+    if (typeof $http !== 'undefined' && $http && typeof $http.get === 'function') {
+      s = _asText(await $http.get(url, { headers: H })); if (s) return s;
+    }
+  } catch (e) {}
+  try {
+    if (typeof req === 'function') { s = _asText(await req(url, { headers: H, method: 'GET' })); if (s) return s; }
+  } catch (e) {}
+  try {
+    if (typeof request === 'function') { s = _asText(await request(url, { headers: H, method: 'GET' })); if (s) return s; }
+  } catch (e) {}
+  var objs = [];
+  try { if (typeof http !== 'undefined') objs.push(http); } catch (e) {}
+  try { if (typeof okhttp !== 'undefined') objs.push(okhttp); } catch (e) {}
+  try { if (typeof $okhttp !== 'undefined') objs.push($okhttp); } catch (e) {}
+  for (var i = 0; i < objs.length; i++) {
+    try {
+      if (objs[i] && typeof objs[i].get === 'function') {
+        s = _asText(await objs[i].get(url, { headers: H })); if (s) return s;
+      }
+    } catch (e) {}
+  }
+  try {
+    if (typeof fetch === 'function') {
+      var r = await fetch(url, { headers: H });
+      if (typeof r.text === 'function') { s = await r.text(); if (s) return s; }
+    }
+  } catch (e) {}
+  return '';
+}
+
+function _j(t) {
+  if (!t) return {};
+  if (typeof t === 'object') return t;
+  try { return JSON.parse(t); } catch (e) { return {}; }
+}
+
 var _cache = {};
 
 function _map(list) {
@@ -32,7 +88,7 @@ async function getWebsiteInfo() {
 
 async function getCategories() {
   if (_cats && _cats.length) return _cats;
-  var j = _j(await $fetch.get(_q('ac=list'), { headers: _h(), userAgent: UA }));
+  var j = _j(await _get(_q('ac=list')));
   var cls = (j.class || []).slice(0, 60).map(function (c) {
     return { id: String(c.type_id), name: c.type_name, ext: { url: _q('ac=detail&t=' + c.type_id + '&pg=1') } };
   });
@@ -43,17 +99,15 @@ async function getCategories() {
 
 function _ok(j) { return j && j.list && j.list.length; }
 
-function _list(q, fallback) {
-  return (async function () {
-    var j = _j(await $fetch.get(_q('ac=detail&' + q), { headers: _h(), userAgent: UA }));
-    if (!_ok(j)) j = _j(await $fetch.get(_q('ac=list&' + q), { headers: _h(), userAgent: UA }));
-    if (!_ok(j)) j = _j(await $fetch.get(_q('ac=videolist&' + q), { headers: _h(), userAgent: UA }));
-    if (!_ok(j) && fallback) {
-      j = _j(await $fetch.get(_q('ac=detail&' + fallback), { headers: _h(), userAgent: UA }));
-      if (!_ok(j)) j = _j(await $fetch.get(_q('ac=list&' + fallback), { headers: _h(), userAgent: UA }));
-    }
-    return j;
-  })();
+async function _list(q, fallback) {
+  var j = _j(await _get(_q('ac=detail&' + q)));
+  if (!_ok(j)) j = _j(await _get(_q('ac=list&' + q)));
+  if (!_ok(j)) j = _j(await _get(_q('ac=videolist&' + q)));
+  if (!_ok(j) && fallback) {
+    j = _j(await _get(_q('ac=detail&' + fallback)));
+    if (!_ok(j)) j = _j(await _get(_q('ac=list&' + fallback)));
+  }
+  return j;
 }
 
 async function getVideoList(page) {
@@ -68,11 +122,9 @@ async function getVideosByCategory(categoryId, page, sort) {
 
 async function getPlayUrl(episodeUrl) {
   if (!episodeUrl) return '';
-  if (/\.(m3u8|mp4)(\?|$)/i.test(episodeUrl)) return episodeUrl;
+  if (/\.(m3u8?|mp4|flv)(\?|$)/i.test(episodeUrl)) return episodeUrl;
   try {
-    var r = await $fetch.get(episodeUrl, { headers: { 'User-Agent': UA, 'Referer': episodeUrl }, userAgent: UA });
-    var h = (r && r.data) || '';
-    if (typeof h !== 'string') return episodeUrl;
+    var h = String(await _get(episodeUrl) || '');
     var m = h.match(/https?:\/\/[^\s"'\\<>]{6,240}?\.m3u8[^\s"'\\<>]{0,80}/);
     if (m) return m[0];
     var m2 = h.match(/src\s*=\s*["']([^"']+)/);
@@ -84,7 +136,7 @@ async function getPlayUrl(episodeUrl) {
 async function getVideoDetail(videoId) {
   var v = _cache[String(videoId)] || {};
   if (!v.vod_play_url) {
-    var j = _j(await $fetch.get(_q('ac=detail&ids=' + videoId), { headers: _h(), userAgent: UA }));
+    var j = _j(await _get(_q('ac=detail&ids=' + videoId)));
     v = (j.list || [])[0] || v;
   }
   var res = [];
@@ -106,6 +158,6 @@ async function getVideoDetail(videoId) {
 }
 
 async function search(keyword, page) {
-  var j = _j(await $fetch.get(_q('ac=detail&wd=' + encodeURIComponent(keyword) + '&pg=' + (page || 1)), { headers: _h(), userAgent: UA }));
+  var j = _j(await _get(_q('ac=detail&wd=' + encodeURIComponent(keyword) + '&pg=' + (page || 1))));
   return _map(j.list);
 }
