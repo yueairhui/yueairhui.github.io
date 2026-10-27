@@ -152,3 +152,15 @@ with open(os.path.join(ROOT, "yb.json"), "w", encoding="utf-8") as f:
     json.dump(cfg, f, ensure_ascii=False, indent=1)
 
 print("generated", len(cfg_sites), "js files;", os.path.join(ROOT, "yb.json"))
+
+# 映盒/猫影视 index.js（脚本源入口）：顶层 var sites + config + module.exports 三写法兼容
+idx = []
+idx.append("/* 野人影视源 index.js for 映盒/CatVod-style script source */")
+idx.append("var sites = " + json.dumps(cfg_sites, ensure_ascii=False, indent=1) + ";")
+idx.append("var parses = [];")
+idx.append("var lives = [];")
+idx.append("var config = { name: " + json.dumps(cfg["name"], ensure_ascii=False) + ", sites: sites, parses: parses, lives: lives };")
+idx.append("if (typeof module !== 'undefined' && module.exports) { module.exports = config; }")
+with open(os.path.join(ROOT, "index.js"), "w", encoding="utf-8") as f:
+    f.write("\n".join(idx) + "\n")
+print("wrote", os.path.join(ROOT, "index.js"))
