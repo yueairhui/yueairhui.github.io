@@ -36,100 +36,79 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- server: rabin.142.251.153.7.savfasf.ir
-  port: 41432
-  type: vless
-  uuid: 09931b77-0f40-4734-9b36-5df6e2308e4e
-  tls: false
-  network: tcp
-  udp: true
-  name: 01｜  5.6M｜vless
 - alpn:
   - h2
-  - http/1.1
   client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
+  grpc-opts:
+    grpc-service-name: vlgrpc
+  network: grpc
   port: 443
-  server: softice.net
-  servername: softice.net
+  server: 201.24.121.243
+  servername: kk-ru24a1.testkknegr.online
   tls: true
   type: vless
-  udp: true
-  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
-  xudp: true
-  name: 02｜  4.9M｜vless
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  network: tcp
+  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
+  name: 01｜  4.2M｜vless
+- server: 66.163.122.7
   port: 443
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  server: 147.45.47.188
-  servername: ozon.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: 54d1afe5-f5aa-47e6-a02f-6c41a6f886b3
-  name: 03｜  4.5M｜vless
-- server: 31.76.2.57
-  port: 443
-  type: vless
-  uuid: abca037b-bee5-41cc-a888-0668e4c66176
-  tls: true
-  servername: 823bcb90.con.fernarchive.online
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /conv4/stream/77dd2aeeb94331fbff325bb48850392b
-  udp: true
-  name: 04｜  4.1M｜vless
-- server: 199.232.78.170
-  port: 443
-  type: vless
-  uuid: XpnTeam-54
-  tls: true
-  alpn:
-  - http/1.1
-  servername: ssl.fastly.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: Appxdn.global.ssl.fastly.net
-  udp: true
-  name: 05｜  4.0M｜vless
-- server: promo3.betust.net
-  port: 443
-  type: hysteria2
-  password: 94c2b91777f8de3a5bc12d2a91b732c2
-  auth: 94c2b91777f8de3a5bc12d2a91b732c2
-  sni: promo3.betust.net
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
   skip-cert-verify: true
-  name: 06｜  3.3M｜hysteria2
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: 55 Mbps
-  port: 24667
-  protocol: udp
-  server: 62.210.70.191
+  udp: true
+  name: 02｜  3.0M｜trojan
+- server: 216.152.156.42
+  port: 443
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com
   skip-cert-verify: true
-  sni: bing.com
-  type: hysteria
-  up: 11 Mbps
-  name: 07｜  3.1M｜hysteria
-- auth: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  port: 2060
-  server: xby.mangshe.xyz
+  udp: true
+  name: 03｜  2.1M｜trojan
+- password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 216.152.156.65
   skip-cert-verify: true
-  sni: xby.mangshe.xyz
+  sni: learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
+  type: trojan
+  udp: true
+  name: 04｜  1.6M｜trojan
+- password: 0324fbc29561
+  port: 443
+  server: er8u54dh.df6h451rh.xin
+  skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  type: anytls
+  udp: true
+  name: 05｜  1.3M｜anytls
+- auth: 4b1be712-774c-4b65-8491-a3339e124a70
+  password: 4b1be712-774c-4b65-8491-a3339e124a70
+  port: 443
+  server: 195.177.94.166
+  skip-cert-verify: true
+  sni: fr2-cl3.happy-glonaris.top
   tls: false
   type: hysteria2
-  name: 08｜  2.5M｜hysteria2
+  name: 06｜  1.3M｜hysteria2
+- password: 0324fbc29561
+  port: 443
+  server: 654968169.df6h451rh.xin
+  skip-cert-verify: true
+  sni: images.ctfassets.net
+  type: anytls
+  udp: true
+  name: 07｜  1.3M｜anytls
+- server: 31.210.43.142
+  port: 443
+  type: vless
+  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
+  tls: true
+  flow: xtls-rprx-vision
+  servername: flooraccount.net
+  client-fingerprint: ios
+  network: tcp
+  udp: true
+  name: 08｜  0.9M｜vless
 - type: vless
   server: ee.h1cloud.net
   port: 25895
@@ -142,47 +121,21 @@ proxies:
   reality-opts:
     public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
     short-id: a73f0410d728c823
-  name: 09｜  2.3M｜vless
-- server: 13.143.172.34
-  port: 443
-  type: vless
-  uuid: fafc7c16-f890-45ee-a856-02df225172dd
+  name: 09｜  0.8M｜vless
+- client-fingerprint: chrome
+  network: ws
+  port: 2096
+  server: 2.27.13.152
+  servername: st4834a.rumedia-cdn.com
   tls: true
-  reality-opts:
-    public-key: cHJfClQkyUnSxMCi9kmfC8j5OpMrUpyvrjVboO50YXM
-    short-id: 4f135b9a6e5da9c5
-  servername: yastatic.net
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /api/v1/stream
-    host: yastatic.net
-    mode: stream-up
+  type: vless
   udp: true
-  name: 10｜  2.2M｜vless
-- server: 684616s4.df6h451rh.xin
-  port: 443
-  type: anytls
-  password: 0324fbc29561
-  udp: true
-  sni: px.ads.linkedin.com
-  skip-cert-verify: true
-  name: 11｜  1.4M｜anytls
-- server: 654968169.df6h451rh.xin
-  port: 443
-  type: anytls
-  password: 0324fbc29561
-  udp: true
-  sni: images.ctfassets.net
-  skip-cert-verify: true
-  name: 12｜  0.7M｜anytls
-- server: 177.202.111.19
-  port: 56137
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: uvKNudV-N8AUCrykPiyznA
-  udp: true
-  name: 13｜  0.5M｜ss
+  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
+  ws-opts:
+    headers:
+      Host: st4834a.rumedia-cdn.com
+    path: /cdn/v3/live
+  name: 10｜  0.6M｜vless
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -190,35 +143,29 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  5.6M｜vless
-  - 02｜  4.9M｜vless
-  - 03｜  4.5M｜vless
-  - 04｜  4.1M｜vless
-  - 05｜  4.0M｜vless
-  - 06｜  3.3M｜hysteria2
-  - 07｜  3.1M｜hysteria
-  - 08｜  2.5M｜hysteria2
-  - 09｜  2.3M｜vless
-  - 10｜  2.2M｜vless
-  - 11｜  1.4M｜anytls
-  - 12｜  0.7M｜anytls
-  - 13｜  0.5M｜ss
+  - 01｜  4.2M｜vless
+  - 02｜  3.0M｜trojan
+  - 03｜  2.1M｜trojan
+  - 04｜  1.6M｜trojan
+  - 05｜  1.3M｜anytls
+  - 06｜  1.3M｜hysteria2
+  - 07｜  1.3M｜anytls
+  - 08｜  0.9M｜vless
+  - 09｜  0.8M｜vless
+  - 10｜  0.6M｜vless
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  5.6M｜vless
-  - 02｜  4.9M｜vless
-  - 03｜  4.5M｜vless
-  - 04｜  4.1M｜vless
-  - 05｜  4.0M｜vless
-  - 06｜  3.3M｜hysteria2
-  - 07｜  3.1M｜hysteria
-  - 08｜  2.5M｜hysteria2
-  - 09｜  2.3M｜vless
-  - 10｜  2.2M｜vless
-  - 11｜  1.4M｜anytls
-  - 12｜  0.7M｜anytls
-  - 13｜  0.5M｜ss
+  - 01｜  4.2M｜vless
+  - 02｜  3.0M｜trojan
+  - 03｜  2.1M｜trojan
+  - 04｜  1.6M｜trojan
+  - 05｜  1.3M｜anytls
+  - 06｜  1.3M｜hysteria2
+  - 07｜  1.3M｜anytls
+  - 08｜  0.9M｜vless
+  - 09｜  0.8M｜vless
+  - 10｜  0.6M｜vless
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
