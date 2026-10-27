@@ -36,30 +36,6 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- server: 201.58.181.179
-  port: 4443
-  type: hysteria2
-  password: c0242d1b-db7a-4dcf-95ff-e10a3ef1c1a3
-  auth: c0242d1b-db7a-4dcf-95ff-e10a3ef1c1a3
-  sni: pl1.shvpn.ru
-  skip-cert-verify: true
-  name: 01｜  6.5M｜hysteria2
-- server: 2.27.206.215
-  port: 2095
-  type: vless
-  uuid: fafc7c16-f890-45ee-a856-02df225172dd
-  tls: true
-  reality-opts:
-    public-key: 3ds1sPK8MuZVr6IOAwjRx0h_2IZMZ2v_RzNGl3iYwno
-    short-id: e3a7297623f766ad
-  servername: ya.ru
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: grpcx2
-  udp: true
-  name: 02｜  6.4M｜vless
 - server: rabin.142.251.153.7.savfasf.ir
   port: 41432
   type: vless
@@ -67,34 +43,7 @@ proxies:
   tls: false
   network: tcp
   udp: true
-  name: 03｜  6.0M｜vless
-- server: ge-s-1.pythonmakemigreat.wiki
-  port: 443
-  type: vless
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8
-    short-id: 2c9a2790ad5900b2
-  servername: ge-s-1.pythonmakemigreat.wiki
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-  name: 04｜  5.8M｜vless
-- server: 193.160.141.27
-  port: 443
-  type: vless
-  uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: abuse.ozon.ru
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-  name: 05｜  5.5M｜vless
+  name: 01｜  5.6M｜vless
 - alpn:
   - h2
   - http/1.1
@@ -110,7 +59,56 @@ proxies:
   udp: true
   uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
   xudp: true
-  name: 06｜  5.1M｜vless
+  name: 02｜  4.9M｜vless
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 147.45.47.188
+  servername: ozon.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 54d1afe5-f5aa-47e6-a02f-6c41a6f886b3
+  name: 03｜  4.5M｜vless
+- server: 31.76.2.57
+  port: 443
+  type: vless
+  uuid: abca037b-bee5-41cc-a888-0668e4c66176
+  tls: true
+  servername: 823bcb90.con.fernarchive.online
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /conv4/stream/77dd2aeeb94331fbff325bb48850392b
+  udp: true
+  name: 04｜  4.1M｜vless
+- server: 199.232.78.170
+  port: 443
+  type: vless
+  uuid: XpnTeam-54
+  tls: true
+  alpn:
+  - http/1.1
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+  udp: true
+  name: 05｜  4.0M｜vless
+- server: promo3.betust.net
+  port: 443
+  type: hysteria2
+  password: 94c2b91777f8de3a5bc12d2a91b732c2
+  auth: 94c2b91777f8de3a5bc12d2a91b732c2
+  sni: promo3.betust.net
+  skip-cert-verify: true
+  name: 06｜  3.3M｜hysteria2
 - alpn:
   - h3
   auth-str: dongtaiwang.com
@@ -122,77 +120,54 @@ proxies:
   sni: bing.com
   type: hysteria
   up: 11 Mbps
-  name: 07｜  5.1M｜hysteria
-- server: 31.76.89.226
+  name: 07｜  3.1M｜hysteria
+- auth: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
+  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
+  port: 2060
+  server: xby.mangshe.xyz
+  skip-cert-verify: true
+  sni: xby.mangshe.xyz
+  tls: false
+  type: hysteria2
+  name: 08｜  2.5M｜hysteria2
+- type: vless
+  server: ee.h1cloud.net
+  port: 25895
+  udp: true
+  skip-cert-verify: true
+  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  tls: true
+  servername: www.samsung.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
+    short-id: a73f0410d728c823
+  name: 09｜  2.3M｜vless
+- server: 13.143.172.34
   port: 443
   type: vless
-  uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+  uuid: fafc7c16-f890-45ee-a856-02df225172dd
   tls: true
-  flow: xtls-rprx-vision
   reality-opts:
-    public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
-  servername: ai.eosshop.net
+    public-key: cHJfClQkyUnSxMCi9kmfC8j5OpMrUpyvrjVboO50YXM
+    short-id: 4f135b9a6e5da9c5
+  servername: yastatic.net
   client-fingerprint: chrome
-  network: tcp
+  network: xhttp
+  xhttp-opts:
+    path: /api/v1/stream
+    host: yastatic.net
+    mode: stream-up
   udp: true
-  name: 08｜  4.5M｜vless
-- server: ikuk204.zxom.eu.org
-  port: 20022
-  type: trojan
-  password: 5e4a2c58499345c3
-  skip-cert-verify: true
-  udp: true
-  name: 09｜  4.3M｜trojan
-- type: vless
-  server: 63.141.128.30
-  port: 8880
-  udp: true
-  skip-cert-verify: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime42.workers.dev
-  name: 10｜  3.7M｜vless
-- server: 2.27.118.10
+  name: 10｜  2.2M｜vless
+- server: 684616s4.df6h451rh.xin
   port: 443
-  type: vless
-  uuid: d9fe2431-8351-41eb-b956-75d96dec5d4a
-  tls: true
-  reality-opts:
-    public-key: goey7Sc4Xm6Nvdukb_DuoUnrkPSV0p4hPWbAmk2_AHc
-    short-id: ecf1d9f7caa6ba67
-  servername: ph-nl-s3784.cybercat.network
-  client-fingerprint: chrome
-  network: tcp
+  type: anytls
+  password: 0324fbc29561
   udp: true
-  name: 11｜  3.6M｜vless
-- type: vless
-  server: 23.227.39.30
-  port: 8880
-  udp: true
+  sni: px.ads.linkedin.com
   skip-cert-verify: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime17.workers.dev
-  name: 12｜  3.1M｜vless
-- server: 177.202.111.19
-  port: 56137
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: uvKNudV-N8AUCrykPiyznA
-  udp: true
-  name: 13｜  1.9M｜ss
-- cipher: chacha20-ietf-poly1305
-  password: uvKNudV-N8AUCrykPiyznA
-  port: 56137
-  server: 177.202.111.18
-  type: ss
-  name: 14｜  1.9M｜ss
+  name: 11｜  1.4M｜anytls
 - server: 654968169.df6h451rh.xin
   port: 443
   type: anytls
@@ -200,7 +175,14 @@ proxies:
   udp: true
   sni: images.ctfassets.net
   skip-cert-verify: true
-  name: 15｜  0.8M｜anytls
+  name: 12｜  0.7M｜anytls
+- server: 177.202.111.19
+  port: 56137
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: uvKNudV-N8AUCrykPiyznA
+  udp: true
+  name: 13｜  0.5M｜ss
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -208,39 +190,35 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  6.5M｜hysteria2
-  - 02｜  6.4M｜vless
-  - 03｜  6.0M｜vless
-  - 04｜  5.8M｜vless
-  - 05｜  5.5M｜vless
-  - 06｜  5.1M｜vless
-  - 07｜  5.1M｜hysteria
-  - 08｜  4.5M｜vless
-  - 09｜  4.3M｜trojan
-  - 10｜  3.7M｜vless
-  - 11｜  3.6M｜vless
-  - 12｜  3.1M｜vless
-  - 13｜  1.9M｜ss
-  - 14｜  1.9M｜ss
-  - 15｜  0.8M｜anytls
+  - 01｜  5.6M｜vless
+  - 02｜  4.9M｜vless
+  - 03｜  4.5M｜vless
+  - 04｜  4.1M｜vless
+  - 05｜  4.0M｜vless
+  - 06｜  3.3M｜hysteria2
+  - 07｜  3.1M｜hysteria
+  - 08｜  2.5M｜hysteria2
+  - 09｜  2.3M｜vless
+  - 10｜  2.2M｜vless
+  - 11｜  1.4M｜anytls
+  - 12｜  0.7M｜anytls
+  - 13｜  0.5M｜ss
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  6.5M｜hysteria2
-  - 02｜  6.4M｜vless
-  - 03｜  6.0M｜vless
-  - 04｜  5.8M｜vless
-  - 05｜  5.5M｜vless
-  - 06｜  5.1M｜vless
-  - 07｜  5.1M｜hysteria
-  - 08｜  4.5M｜vless
-  - 09｜  4.3M｜trojan
-  - 10｜  3.7M｜vless
-  - 11｜  3.6M｜vless
-  - 12｜  3.1M｜vless
-  - 13｜  1.9M｜ss
-  - 14｜  1.9M｜ss
-  - 15｜  0.8M｜anytls
+  - 01｜  5.6M｜vless
+  - 02｜  4.9M｜vless
+  - 03｜  4.5M｜vless
+  - 04｜  4.1M｜vless
+  - 05｜  4.0M｜vless
+  - 06｜  3.3M｜hysteria2
+  - 07｜  3.1M｜hysteria
+  - 08｜  2.5M｜hysteria2
+  - 09｜  2.3M｜vless
+  - 10｜  2.2M｜vless
+  - 11｜  1.4M｜anytls
+  - 12｜  0.7M｜anytls
+  - 13｜  0.5M｜ss
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
