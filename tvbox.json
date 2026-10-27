@@ -1,0 +1,146 @@
+{
+ "sites": [
+  {
+   "key": "vod1",
+   "name": "影视·爱奇艺",
+   "type": 1,
+   "api": "https://iqiyizyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "直链"
+  },
+  {
+   "key": "vod2",
+   "name": "影视·猫眼",
+   "type": 1,
+   "api": "https://api.maoyanapi.top/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "直链"
+  },
+  {
+   "key": "vod3",
+   "name": "影视·360",
+   "type": 1,
+   "api": "https://360zy.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "直链"
+  },
+  {
+   "key": "vod4",
+   "name": "影视·最大",
+   "type": 1,
+   "api": "https://api.zuidapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "直链"
+  },
+  {
+   "key": "vod5",
+   "name": "影视·牛牛",
+   "type": 1,
+   "api": "https://api.niuniuzy.me/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "直链"
+  },
+  {
+   "key": "vod6",
+   "name": "影视·百度",
+   "type": 1,
+   "api": "https://api.apibdzy.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "直链"
+  },
+  {
+   "key": "vod7",
+   "name": "影视·光速",
+   "type": 1,
+   "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "直链"
+  },
+  {
+   "key": "vod8",
+   "name": "影视·魔都",
+   "type": 1,
+   "api": "https://www.mdzyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "直链"
+  },
+  {
+   "key": "vod9",
+   "name": "影视·量子",
+   "type": 1,
+   "api": "https://cj.lziapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "直链"
+  },
+  {
+   "key": "vod10",
+   "name": "影视·非凡",
+   "type": 1,
+   "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "需解析"
+  },
+  {
+   "key": "vod11",
+   "name": "影视·天堂",
+   "type": 1,
+   "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "需解析"
+  },
+  {
+   "key": "vod12",
+   "name": "网飞·红牛",
+   "type": 1,
+   "api": "https://hongniuzy2.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "需解析"
+  },
+  {
+   "key": "vod13",
+   "name": "★4K·巨量",
+   "type": 1,
+   "api": "https://api.juliang.live/api/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "直链"
+  },
+  {
+   "key": "vod14",
+   "name": "★高清·西瓜",
+   "type": 1,
+   "api": "https://caiji.xgzyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "filterable": 1,
+   "group": "需解析"
+  }
+ ],
+ "lives": [],
+ "name": "野人影视源"
+}
