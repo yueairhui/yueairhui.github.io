@@ -199,9 +199,21 @@ for key, name, base in sites:
         "playerType": "", "icon": "",
     })
 
-cfg = {"name": "野人影视源", "sites": cfg_sites, "parses": [], "lives": []}
+# yb.json —— TVBox/CatVod 配置：type=1 CMS 接口直连（映盒「添加猫源」用这个）
+cms_sites = []
+for key, name, base in sites:
+    cms_sites.append({
+        "key": key, "name": name, "type": 1, "api": base,
+        "searchable": 1, "quickSearch": 1, "filterable": 1,
+    })
+cfg = {"name": "野人影视源", "sites": cms_sites, "parses": [], "lives": []}
 with open(os.path.join(ROOT, "yb.json"), "w", encoding="utf-8") as f:
     json.dump(cfg, f, ensure_ascii=False, indent=1)
+
+# yb-script.json —— type=3 + JS 脚本地址（若 App 支持 js 源则用这份）
+cfg_js = {"name": "野人影视源JS", "sites": cfg_sites, "parses": [], "lives": []}
+with open(os.path.join(ROOT, "yb-script.json"), "w", encoding="utf-8") as f:
+    json.dump(cfg_js, f, ensure_ascii=False, indent=1)
 
 print("generated", len(cfg_sites), "js files")
 
