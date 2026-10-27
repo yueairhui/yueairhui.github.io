@@ -1,70 +1,43 @@
 {
- "name": "野人影视源",
- "sites": [
-  {
-   "key": "juliang",
-   "name": "巨量4K",
-   "type": 1,
-   "api": "https://api.juliang.live/api/provide/vod/",
-   "searchable": 1,
-   "quickSearch": 1,
-   "filterable": 1
-  },
-  {
-   "key": "iqiyi",
-   "name": "爱奇艺",
-   "type": 1,
-   "api": "https://iqiyizyapi.com/api.php/provide/vod/",
-   "searchable": 1,
-   "quickSearch": 1,
-   "filterable": 1
-  },
-  {
-   "key": "maoyan",
-   "name": "猫眼",
-   "type": 1,
-   "api": "https://api.maoyanapi.top/api.php/provide/vod/",
-   "searchable": 1,
-   "quickSearch": 1,
-   "filterable": 1
-  },
-  {
-   "key": "san360",
-   "name": "360",
-   "type": 1,
-   "api": "https://360zy.com/api.php/provide/vod/",
-   "searchable": 1,
-   "quickSearch": 1,
-   "filterable": 1
-  },
-  {
-   "key": "zuid",
-   "name": "最大",
-   "type": 1,
-   "api": "https://api.zuidapi.com/api/provide/vod/",
-   "searchable": 1,
-   "quickSearch": 1,
-   "filterable": 1
-  },
-  {
-   "key": "baidu",
-   "name": "百度",
-   "type": 1,
-   "api": "https://api.apibdzy.com/api/provide/vod/",
-   "searchable": 1,
-   "quickSearch": 1,
-   "filterable": 1
-  },
-  {
-   "key": "hongniu",
-   "name": "红牛",
-   "type": 1,
-   "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
-   "searchable": 1,
-   "quickSearch": 1,
-   "filterable": 1
-  }
- ],
- "parses": [],
- "lives": []
+  "name": "野人影视源",
+  "sites": [
+    {
+      "key": "juliang",
+      "name": "巨量4K",
+      "type": 1,
+      "api": "https://api.juliang.live/api/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "san360",
+      "name": "360影视",
+      "type": 1,
+      "api": "https://360zy.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "hongniu",
+      "name": "红牛影视",
+      "type": 1,
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "baidu",
+      "name": "百度影视",
+      "type": 1,
+      "api": "https://api.apibdzy.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    }
+  ],
+  "parses": [],
+  "lives": []
 }
