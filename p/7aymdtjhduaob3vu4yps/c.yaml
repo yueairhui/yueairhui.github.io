@@ -36,106 +36,172 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: vlgrpc
-  network: grpc
-  port: 443
-  server: 201.24.121.243
-  servername: kk-ru24a1.testkknegr.online
-  tls: true
-  type: vless
-  uuid: 32b5ca9b-3f81-4031-965d-e8b074216e8d
-  name: 01｜  4.2M｜vless
-- server: 66.163.122.7
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: true
-  udp: true
-  name: 02｜  3.0M｜trojan
-- server: 216.152.156.42
-  port: 443
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  skip-cert-verify: true
-  udp: true
-  name: 03｜  2.1M｜trojan
-- password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.152.156.65
-  skip-cert-verify: true
-  sni: learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-  type: trojan
-  udp: true
-  name: 04｜  1.6M｜trojan
-- password: 0324fbc29561
-  port: 443
-  server: er8u54dh.df6h451rh.xin
-  skip-cert-verify: true
-  sni: px.ads.linkedin.com
-  type: anytls
-  udp: true
-  name: 05｜  1.3M｜anytls
-- auth: 4b1be712-774c-4b65-8491-a3339e124a70
-  password: 4b1be712-774c-4b65-8491-a3339e124a70
-  port: 443
-  server: 195.177.94.166
-  skip-cert-verify: true
-  sni: fr2-cl3.happy-glonaris.top
-  tls: false
+- server: bl2.nexfile.net
+  port: 4444
   type: hysteria2
-  name: 06｜  1.3M｜hysteria2
-- password: 0324fbc29561
-  port: 443
-  server: 654968169.df6h451rh.xin
+  password: 10be1dad-9952-4c5e-aa30-db435f69b727
+  auth: 10be1dad-9952-4c5e-aa30-db435f69b727
   skip-cert-verify: true
-  sni: images.ctfassets.net
-  type: anytls
-  udp: true
-  name: 07｜  1.3M｜anytls
-- server: 31.210.43.142
+  name: 01｜  5.7M｜hysteria2
+- type: vmess
+  server: HXMarEzmv8TUfjNG.v.3dns.vip
+  port: 443
+  uuid: 78b3f149-f037-465d-b2fb-11adb6f73ff8
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: HXMarEzmv8TUfjNG.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: HXMarEzmv8TUfjNG.v.3dns.vip
+  name: 02｜  5.0M｜vmess
+- server: 45.9.12.110
   port: 443
   type: vless
-  uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
+  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
   tls: true
   flow: xtls-rprx-vision
-  servername: flooraccount.net
-  client-fingerprint: ios
+  reality-opts:
+    public-key: myIjvlXZS0rm1eg4q2w5WsQBuj80i2rBA0HpRGCUg1w
+    short-id: 86d1efde
+  servername: ru.letsconnectpoint.com
+  client-fingerprint: firefox
   network: tcp
   udp: true
-  name: 08｜  0.9M｜vless
-- type: vless
-  server: ee.h1cloud.net
-  port: 25895
-  udp: true
+  name: 03｜  4.8M｜vless
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  port: 24667
+  protocol: udp
+  server: 62.210.70.191
   skip-cert-verify: true
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  tls: true
-  servername: www.samsung.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-    short-id: a73f0410d728c823
-  name: 09｜  0.8M｜vless
-- client-fingerprint: chrome
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+  name: 04｜  4.7M｜hysteria
+- type: vless
+  server: 152.69.226.63
+  port: 25555
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
   network: ws
-  port: 2096
-  server: 2.27.13.152
-  servername: st4834a.rumedia-cdn.com
+  ws-opts:
+    path: /
+  name: 05｜  3.6M｜vless
+- type: vmess
+  server: UNhdjTDyIk9ro8lw.v.3dns.vip
+  port: 443
+  uuid: 78b3f149-f037-465d-b2fb-11adb6f73ff8
+  alterId: 0
+  cipher: auto
   tls: true
+  servername: UNhdjTDyIk9ro8lw.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: UNhdjTDyIk9ro8lw.v.3dns.vip
+  name: 06｜  3.5M｜vmess
+- password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.122.7
+  skip-cert-verify: false
+  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
+  type: trojan
+  name: 07｜  3.4M｜trojan
+- type: vmess
+  server: OicDYwxD66LU02hc.v.3dns.vip
+  port: 443
+  uuid: d237ab38-1974-4b36-94a3-0665ce8587b9
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: OicDYwxD66LU02hc.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: OicDYwxD66LU02hc.v.3dns.vip
+  name: 08｜  2.5M｜vmess
+- type: vmess
+  server: StMONzfjYcGgEOmG.v.3dns.vip
+  port: 443
+  uuid: 0b80814e-7b96-4ec2-bbe2-fd17435e33b4
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: StMONzfjYcGgEOmG.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: StMONzfjYcGgEOmG.v.3dns.vip
+  name: 09｜  2.5M｜vmess
+- type: vmess
+  server: F5rot0Sdq2OdLpAs.v.3dns.vip
+  port: 443
+  uuid: 78b3f149-f037-465d-b2fb-11adb6f73ff8
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: F5rot0Sdq2OdLpAs.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: F5rot0Sdq2OdLpAs.v.3dns.vip
+  name: 10｜  1.8M｜vmess
+- server: er8u54dh.df6h451rh.xin
+  port: 443
+  type: anytls
+  password: 0324fbc29561
+  udp: true
+  sni: px.ads.linkedin.com
+  skip-cert-verify: true
+  name: 11｜  1.3M｜anytls
+- encryption: none
+  network: ws
+  port: 8880
+  server: 155.46.167.30
   type: vless
   udp: true
-  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   ws-opts:
     headers:
-      Host: st4834a.rumedia-cdn.com
-    path: /cdn/v3/live
-  name: 10｜  0.6M｜vless
+      Host: vms.lifetime50.workers.dev
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36
+    path: ''
+  xudp: true
+  name: 12｜  1.3M｜vless
+- type: vmess
+  server: W27rDXRPNwLD5jCX.v.3dns.vip
+  port: 443
+  uuid: d237ab38-1974-4b36-94a3-0665ce8587b9
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: W27rDXRPNwLD5jCX.v.3dns.vip
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: W27rDXRPNwLD5jCX.v.3dns.vip
+  name: 13｜  0.7M｜vmess
+- type: vless
+  server: 5.253.28.240
+  port: 40443
+  uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: deepl.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
+    short-id: 88b6
+  name: 14｜  0.6M｜vless
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -143,29 +209,37 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  4.2M｜vless
-  - 02｜  3.0M｜trojan
-  - 03｜  2.1M｜trojan
-  - 04｜  1.6M｜trojan
-  - 05｜  1.3M｜anytls
-  - 06｜  1.3M｜hysteria2
-  - 07｜  1.3M｜anytls
-  - 08｜  0.9M｜vless
-  - 09｜  0.8M｜vless
-  - 10｜  0.6M｜vless
+  - 01｜  5.7M｜hysteria2
+  - 02｜  5.0M｜vmess
+  - 03｜  4.8M｜vless
+  - 04｜  4.7M｜hysteria
+  - 05｜  3.6M｜vless
+  - 06｜  3.5M｜vmess
+  - 07｜  3.4M｜trojan
+  - 08｜  2.5M｜vmess
+  - 09｜  2.5M｜vmess
+  - 10｜  1.8M｜vmess
+  - 11｜  1.3M｜anytls
+  - 12｜  1.3M｜vless
+  - 13｜  0.7M｜vmess
+  - 14｜  0.6M｜vless
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  4.2M｜vless
-  - 02｜  3.0M｜trojan
-  - 03｜  2.1M｜trojan
-  - 04｜  1.6M｜trojan
-  - 05｜  1.3M｜anytls
-  - 06｜  1.3M｜hysteria2
-  - 07｜  1.3M｜anytls
-  - 08｜  0.9M｜vless
-  - 09｜  0.8M｜vless
-  - 10｜  0.6M｜vless
+  - 01｜  5.7M｜hysteria2
+  - 02｜  5.0M｜vmess
+  - 03｜  4.8M｜vless
+  - 04｜  4.7M｜hysteria
+  - 05｜  3.6M｜vless
+  - 06｜  3.5M｜vmess
+  - 07｜  3.4M｜trojan
+  - 08｜  2.5M｜vmess
+  - 09｜  2.5M｜vmess
+  - 10｜  1.8M｜vmess
+  - 11｜  1.3M｜anytls
+  - 12｜  1.3M｜vless
+  - 13｜  0.7M｜vmess
+  - 14｜  0.6M｜vless
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
