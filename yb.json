@@ -1,20 +1,20 @@
 {
-  "name": "野人影视源",
+  "name": "野人聚合",
   "sites": [
     {
-      "key": "juliang",
-      "name": "巨量4K",
+      "key": "yeren",
+      "name": "野人聚合",
       "type": 1,
-      "api": "https://api.juliang.live/api/provide/vod/",
+      "api": "http://192.168.0.124:8899/cms/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
     },
     {
-      "key": "san360",
-      "name": "360影视",
+      "key": "juliang",
+      "name": "巨量4K(直连)",
       "type": 1,
-      "api": "https://360zy.com/api.php/provide/vod/",
+      "api": "https://api.juliang.live/api/provide/vod/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
