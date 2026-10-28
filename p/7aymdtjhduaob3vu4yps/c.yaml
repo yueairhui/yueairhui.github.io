@@ -36,41 +36,120 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- server: bl2.nexfile.net
-  port: 4444
-  type: hysteria2
+- auth: 10be1dad-9952-4c5e-aa30-db435f69b727
   password: 10be1dad-9952-4c5e-aa30-db435f69b727
-  auth: 10be1dad-9952-4c5e-aa30-db435f69b727
+  port: 4444
+  server: bl2.nexfile.net
   skip-cert-verify: true
-  name: 01｜  5.7M｜hysteria2
-- type: vmess
-  server: HXMarEzmv8TUfjNG.v.3dns.vip
-  port: 443
-  uuid: 78b3f149-f037-465d-b2fb-11adb6f73ff8
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: HXMarEzmv8TUfjNG.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: HXMarEzmv8TUfjNG.v.3dns.vip
-  name: 02｜  5.0M｜vmess
-- server: 45.9.12.110
-  port: 443
+  tls: false
+  type: hysteria2
+  name: 01｜  3.3M｜hysteria2
+- server: 156.229.160.98
+  port: 9443
   type: vless
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
+  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
   tls: true
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: myIjvlXZS0rm1eg4q2w5WsQBuj80i2rBA0HpRGCUg1w
-    short-id: 86d1efde
-  servername: ru.letsconnectpoint.com
-  client-fingerprint: firefox
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  servername: www.amazon.com
+  client-fingerprint: chrome
   network: tcp
   udp: true
-  name: 03｜  4.8M｜vless
+  name: 02｜  2.6M｜vless
+- server: 213.152.180.55
+  port: 2095
+  type: vless
+  uuid: 16107a06-1b5e-4060-8b48-e13a04b15e56
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: OKksVHWL5JepTv7if7Ta_L_7vn8OxW0INwV71HJM1jI
+    short-id: 3869d49a9a79e06a
+  servername: www.apple.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 03｜  2.6M｜vless
+- type: vless
+  server: 213.152.180.104
+  port: 2092
+  uuid: 4d8cc1c2-2605-43c4-8e17-dcafa86d9757
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+    short-id: 716b7eba38125f3a
+  name: 04｜  2.3M｜vless
+- server: 213.152.180.55
+  port: 2092
+  type: vless
+  uuid: 4d8cc1c2-2605-43c4-8e17-dcafa86d9757
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
+    short-id: 716b7eba38125f3a
+  servername: www.apple.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 05｜  1.9M｜vless
+- http-opts:
+    headers:
+      Host:
+      - play.googleapis.com
+    method: GET
+    path:
+    - /
+  network: http
+  port: 443
+  server: 51.20.192.255
+  tls: false
+  type: vless
+  udp: true
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  name: 06｜  1.9M｜vless
+- type: vless
+  server: 213.152.180.104
+  port: 2093
+  uuid: 19456d94-8f54-4f82-ae9c-0e19afb5c29c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
+    short-id: 8a9725533854a7e8
+  name: 07｜  1.8M｜vless
+- type: anytls
+  server: 684616s4.df6h451rh.xin
+  port: 443
+  password: 0324fbc29561
+  udp: true
+  sni: px.ads.linkedin.com
+  skip-cert-verify: true
+  name: 08｜  1.4M｜anytls
+- server: 77.42.12.225
+  port: 443
+  type: vless
+  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
+  tls: true
+  reality-opts:
+    public-key: GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18
+    short-id: 09d0a94a1c6fc9d5
+  servername: 8fc752g.fi3.h1clayd.click
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: f345a414c040
+  udp: true
+  name: 09｜  1.3M｜vless
 - alpn:
   - h3
   auth-str: dongtaiwang.com
@@ -82,126 +161,7 @@ proxies:
   sni: bing.com
   type: hysteria
   up: 11 Mbps
-  name: 04｜  4.7M｜hysteria
-- type: vless
-  server: 152.69.226.63
-  port: 25555
-  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
-  network: ws
-  ws-opts:
-    path: /
-  name: 05｜  3.6M｜vless
-- type: vmess
-  server: UNhdjTDyIk9ro8lw.v.3dns.vip
-  port: 443
-  uuid: 78b3f149-f037-465d-b2fb-11adb6f73ff8
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: UNhdjTDyIk9ro8lw.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: UNhdjTDyIk9ro8lw.v.3dns.vip
-  name: 06｜  3.5M｜vmess
-- password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 66.163.122.7
-  skip-cert-verify: false
-  sni: www.searchnationwidecareerchangehelperandguidancetoday.com
-  type: trojan
-  name: 07｜  3.4M｜trojan
-- type: vmess
-  server: OicDYwxD66LU02hc.v.3dns.vip
-  port: 443
-  uuid: d237ab38-1974-4b36-94a3-0665ce8587b9
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: OicDYwxD66LU02hc.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: OicDYwxD66LU02hc.v.3dns.vip
-  name: 08｜  2.5M｜vmess
-- type: vmess
-  server: StMONzfjYcGgEOmG.v.3dns.vip
-  port: 443
-  uuid: 0b80814e-7b96-4ec2-bbe2-fd17435e33b4
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: StMONzfjYcGgEOmG.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: StMONzfjYcGgEOmG.v.3dns.vip
-  name: 09｜  2.5M｜vmess
-- type: vmess
-  server: F5rot0Sdq2OdLpAs.v.3dns.vip
-  port: 443
-  uuid: 78b3f149-f037-465d-b2fb-11adb6f73ff8
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: F5rot0Sdq2OdLpAs.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: F5rot0Sdq2OdLpAs.v.3dns.vip
-  name: 10｜  1.8M｜vmess
-- server: er8u54dh.df6h451rh.xin
-  port: 443
-  type: anytls
-  password: 0324fbc29561
-  udp: true
-  sni: px.ads.linkedin.com
-  skip-cert-verify: true
-  name: 11｜  1.3M｜anytls
-- encryption: none
-  network: ws
-  port: 8880
-  server: 155.46.167.30
-  type: vless
-  udp: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  ws-opts:
-    headers:
-      Host: vms.lifetime50.workers.dev
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36
-    path: ''
-  xudp: true
-  name: 12｜  1.3M｜vless
-- type: vmess
-  server: W27rDXRPNwLD5jCX.v.3dns.vip
-  port: 443
-  uuid: d237ab38-1974-4b36-94a3-0665ce8587b9
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: W27rDXRPNwLD5jCX.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: W27rDXRPNwLD5jCX.v.3dns.vip
-  name: 13｜  0.7M｜vmess
-- type: vless
-  server: 5.253.28.240
-  port: 40443
-  uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
-    short-id: 88b6
-  name: 14｜  0.6M｜vless
+  name: 10｜  1.3M｜hysteria
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -209,37 +169,29 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  5.7M｜hysteria2
-  - 02｜  5.0M｜vmess
-  - 03｜  4.8M｜vless
-  - 04｜  4.7M｜hysteria
-  - 05｜  3.6M｜vless
-  - 06｜  3.5M｜vmess
-  - 07｜  3.4M｜trojan
-  - 08｜  2.5M｜vmess
-  - 09｜  2.5M｜vmess
-  - 10｜  1.8M｜vmess
-  - 11｜  1.3M｜anytls
-  - 12｜  1.3M｜vless
-  - 13｜  0.7M｜vmess
-  - 14｜  0.6M｜vless
+  - 01｜  3.3M｜hysteria2
+  - 02｜  2.6M｜vless
+  - 03｜  2.6M｜vless
+  - 04｜  2.3M｜vless
+  - 05｜  1.9M｜vless
+  - 06｜  1.9M｜vless
+  - 07｜  1.8M｜vless
+  - 08｜  1.4M｜anytls
+  - 09｜  1.3M｜vless
+  - 10｜  1.3M｜hysteria
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  5.7M｜hysteria2
-  - 02｜  5.0M｜vmess
-  - 03｜  4.8M｜vless
-  - 04｜  4.7M｜hysteria
-  - 05｜  3.6M｜vless
-  - 06｜  3.5M｜vmess
-  - 07｜  3.4M｜trojan
-  - 08｜  2.5M｜vmess
-  - 09｜  2.5M｜vmess
-  - 10｜  1.8M｜vmess
-  - 11｜  1.3M｜anytls
-  - 12｜  1.3M｜vless
-  - 13｜  0.7M｜vmess
-  - 14｜  0.6M｜vless
+  - 01｜  3.3M｜hysteria2
+  - 02｜  2.6M｜vless
+  - 03｜  2.6M｜vless
+  - 04｜  2.3M｜vless
+  - 05｜  1.9M｜vless
+  - 06｜  1.9M｜vless
+  - 07｜  1.8M｜vless
+  - 08｜  1.4M｜anytls
+  - 09｜  1.3M｜vless
+  - 10｜  1.3M｜hysteria
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
