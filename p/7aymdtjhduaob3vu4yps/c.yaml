@@ -36,6 +36,16 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
+- server: 171.22.119.74
+  port: 8446
+  type: trojan
+  password: Pass-Client-1
+  skip-cert-verify: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-video-call
+  udp: true
+  name: 01｜  5.2M｜trojan
 - auth: 10be1dad-9952-4c5e-aa30-db435f69b727
   password: 10be1dad-9952-4c5e-aa30-db435f69b727
   port: 4444
@@ -43,7 +53,63 @@ proxies:
   skip-cert-verify: true
   tls: false
   type: hysteria2
-  name: 01｜  3.3M｜hysteria2
+  name: 02｜  4.2M｜hysteria2
+- server: ca001.zestapp778.com
+  port: 32355
+  type: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  tls: true
+  servername: ca001.zestapp778.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 03｜  4.0M｜vless
+- server: tr2.h1cloud.net
+  port: 25021
+  type: vless
+  uuid: 2446e2e2-1ce3-4502-9050-1dd32bacc68c
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: od79bUkYtqQtsGrrTdhmkDflx5c9al4vqxwWApvc-Dg
+    short-id: 17fa3af0924c88b3
+  servername: www.samsung.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 04｜  4.0M｜vless
+- server: 45.32.157.84
+  port: 443
+  type: trojan
+  password: Tg3RnK7Xp8B1
+  sni: ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com
+  skip-cert-verify: true
+  udp: true
+  name: 05｜  3.5M｜trojan
+- type: vless
+  server: 185.148.104.30
+  port: 8880
+  udp: true
+  skip-cert-verify: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime51.workers.dev
+  name: 06｜  3.0M｜vless
+- client-fingerprint: chrome
+  network: xhttp
+  port: 443
+  server: 31.76.70.90
+  servername: 597dad6b.con.fernarchive.online
+  tls: true
+  type: vless
+  udp: true
+  uuid: abca037b-bee5-41cc-a888-0668e4c66176
+  xhttp-opts:
+    path: /conv4/stream/77dd2aeeb94331fbff325bb48850392b
+  name: 07｜  2.9M｜vless
 - server: 156.229.160.98
   port: 9443
   type: vless
@@ -57,111 +123,83 @@ proxies:
   client-fingerprint: chrome
   network: tcp
   udp: true
-  name: 02｜  2.6M｜vless
-- server: 213.152.180.55
-  port: 2095
+  name: 08｜  2.6M｜vless
+- server: fr001.zestapp778.com
+  port: 28484
   type: vless
-  uuid: 16107a06-1b5e-4060-8b48-e13a04b15e56
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
   tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: OKksVHWL5JepTv7if7Ta_L_7vn8OxW0INwV71HJM1jI
-    short-id: 3869d49a9a79e06a
-  servername: www.apple.com
+  servername: fr001.zestapp778.com
   client-fingerprint: chrome
   network: tcp
   udp: true
-  name: 03｜  2.6M｜vless
+  name: 09｜  2.5M｜vless
 - type: vless
-  server: 213.152.180.104
-  port: 2092
-  uuid: 4d8cc1c2-2605-43c4-8e17-dcafa86d9757
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.apple.com
-  skip-cert-verify: true
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
-    short-id: 716b7eba38125f3a
-  name: 04｜  2.3M｜vless
-- server: 213.152.180.55
-  port: 2092
-  type: vless
-  uuid: 4d8cc1c2-2605-43c4-8e17-dcafa86d9757
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
-    short-id: 716b7eba38125f3a
-  servername: www.apple.com
-  client-fingerprint: chrome
-  network: tcp
+  server: 80.93.202.40
+  port: 8880
   udp: true
-  name: 05｜  1.9M｜vless
-- http-opts:
+  skip-cert-verify: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
     headers:
-      Host:
-      - play.googleapis.com
-    method: GET
-    path:
-    - /
-  network: http
+      Host: vms.lifetime02.workers.dev
+  name: 10｜  2.2M｜vless
+- password: 0324fbc29561
   port: 443
-  server: 51.20.192.255
-  tls: false
-  type: vless
+  server: 684616s4.df6h451rh.xin
+  skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  type: anytls
   udp: true
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  name: 06｜  1.9M｜vless
+  name: 11｜  2.2M｜anytls
+- server: 156.224.79.61
+  port: 9443
+  type: vless
+  uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  servername: www.amazon.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 12｜  1.7M｜vless
+- server: dns8.m3hrzd.ir
+  port: 8044
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: U5Jk0BhRNKjb5wQBBOXx2wwkWZ_yWU0N
+  udp: true
+  name: 13｜  1.6M｜ss
+- server: nl-central.v8x2b.lol
+  port: 443
+  type: vless
+  uuid: 846cedee-2a52-0002-a0b9-11850ead6a8b
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: q3UXFUE5yYxNE4ugLUnYdpc9WRtR-sjsDTrKsiqzDHE
+  servername: nl-central.v8x2b.lol
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 14｜  1.2M｜vless
 - type: vless
-  server: 213.152.180.104
-  port: 2093
-  uuid: 19456d94-8f54-4f82-ae9c-0e19afb5c29c
+  server: cz-prg.dontblockmepls.com
+  port: 2063
+  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
   flow: xtls-rprx-vision
   tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM
-    short-id: 8a9725533854a7e8
-  name: 07｜  1.8M｜vless
-- type: anytls
-  server: 684616s4.df6h451rh.xin
-  port: 443
-  password: 0324fbc29561
-  udp: true
-  sni: px.ads.linkedin.com
+  servername: rusbid.de
   skip-cert-verify: true
-  name: 08｜  1.4M｜anytls
-- server: 77.42.12.225
-  port: 443
-  type: vless
-  uuid: 056405e8-de9f-4d0d-8145-956f13cc34da
-  tls: true
-  reality-opts:
-    public-key: GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18
-    short-id: 09d0a94a1c6fc9d5
-  servername: 8fc752g.fi3.h1clayd.click
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: f345a414c040
-  udp: true
-  name: 09｜  1.3M｜vless
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: 55 Mbps
-  port: 24667
-  protocol: udp
-  server: 62.210.70.191
-  skip-cert-verify: true
-  sni: bing.com
-  type: hysteria
-  up: 11 Mbps
-  name: 10｜  1.3M｜hysteria
+  reality-opts:
+    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+  name: 15｜  1.1M｜vless
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -169,29 +207,39 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  3.3M｜hysteria2
-  - 02｜  2.6M｜vless
-  - 03｜  2.6M｜vless
-  - 04｜  2.3M｜vless
-  - 05｜  1.9M｜vless
-  - 06｜  1.9M｜vless
-  - 07｜  1.8M｜vless
-  - 08｜  1.4M｜anytls
-  - 09｜  1.3M｜vless
-  - 10｜  1.3M｜hysteria
+  - 01｜  5.2M｜trojan
+  - 02｜  4.2M｜hysteria2
+  - 03｜  4.0M｜vless
+  - 04｜  4.0M｜vless
+  - 05｜  3.5M｜trojan
+  - 06｜  3.0M｜vless
+  - 07｜  2.9M｜vless
+  - 08｜  2.6M｜vless
+  - 09｜  2.5M｜vless
+  - 10｜  2.2M｜vless
+  - 11｜  2.2M｜anytls
+  - 12｜  1.7M｜vless
+  - 13｜  1.6M｜ss
+  - 14｜  1.2M｜vless
+  - 15｜  1.1M｜vless
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  3.3M｜hysteria2
-  - 02｜  2.6M｜vless
-  - 03｜  2.6M｜vless
-  - 04｜  2.3M｜vless
-  - 05｜  1.9M｜vless
-  - 06｜  1.9M｜vless
-  - 07｜  1.8M｜vless
-  - 08｜  1.4M｜anytls
-  - 09｜  1.3M｜vless
-  - 10｜  1.3M｜hysteria
+  - 01｜  5.2M｜trojan
+  - 02｜  4.2M｜hysteria2
+  - 03｜  4.0M｜vless
+  - 04｜  4.0M｜vless
+  - 05｜  3.5M｜trojan
+  - 06｜  3.0M｜vless
+  - 07｜  2.9M｜vless
+  - 08｜  2.6M｜vless
+  - 09｜  2.5M｜vless
+  - 10｜  2.2M｜vless
+  - 11｜  2.2M｜anytls
+  - 12｜  1.7M｜vless
+  - 13｜  1.6M｜ss
+  - 14｜  1.2M｜vless
+  - 15｜  1.1M｜vless
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
