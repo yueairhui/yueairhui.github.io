@@ -36,71 +36,53 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- server: 91.107.147.12
-  port: 46605
-  type: vless
-  uuid: 0c45be70-e001-41e5-b39d-39351fe4a2d7
-  tls: false
-  network: tcp
-  udp: true
-  name: 01｜  6.3M｜vless
-- server: 199.232.78.170
-  port: 443
-  type: vless
-  uuid: XpnTeam-63
-  tls: true
-  alpn:
-  - http/1.1
-  servername: ssl.fastly.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: Appxdn.global.ssl.fastly.net
-  udp: true
-  name: 02｜  5.7M｜vless
-- server: ee-2e06d85dc0.shamanapp.online
-  port: 34451
-  type: vless
-  uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
-  tls: true
-  servername: ee-2e06d85dc0.shamanapp.online
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /ShamanXHTTP2026
-    host: ee-2e06d85dc0.shamanapp.online
-    mode: stream-up
-  udp: true
-  name: 03｜  4.5M｜vless
-- server: 186.246.9.29
-  port: 443
-  type: vless
-  uuid: b2847c3b-5278-4b06-9c66-bc919d2dfec7
-  tls: true
-  reality-opts:
-    public-key: MPNMomAMn_lu9YMYjD2jAQWrI-rTM4hj9Jgg9d6qzTA
-    short-id: 50ad5564
-  servername: wordpress.com
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-  name: 04｜  3.9M｜vless
 - client-fingerprint: chrome
-  encryption: none
   network: xhttp
   port: 443
-  server: 144.31.217.28
-  servername: 9187bd6f.con.fernarchive.online
+  server: 177.3.214.133
+  servername: planktonmanager.xyz
   tls: true
   type: vless
   udp: true
-  uuid: abca037b-bee5-41cc-a888-0668e4c66176
+  uuid: 4023b626-ce42-4a8f-a1c4-93e263118e7c
   xhttp-opts:
-    path: /conv4/stream/77dd2aeeb94331fbff325bb48850392b
-  xudp: true
-  name: 05｜  3.7M｜vless
+    host: planktonmanager.xyz
+    mode: auto
+    path: /assets/e4e35f44b368/3eaeda2dcb5e/index.html
+  name: 01｜  2.9M｜vless
+- server: 189.74.114.119
+  port: 443
+  type: vless
+  uuid: abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5
+  tls: true
+  servername: api.mediaklenov.cc
+  client-fingerprint: safari
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: 3e99d50d5740985d
+  udp: true
+  name: 02｜  2.7M｜vless
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  http-opts:
+    headers:
+      Host:
+      - aesafdfaesfv.asopardaz.ir
+    method: GET
+    path:
+    - /f9bGbG7ZNy5L0tdQpUbLXHHIAlGv
+  network: http
+  port: 80
+  server: aesafdfaesfv.asopardaz.ir
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: ce71b8c2-54a4-4dd0-b780-a4521b16f2fd
+  name: 03｜  2.0M｜vmess
 - server: 172.67.203.46
   port: 443
   type: trojan
@@ -115,149 +97,62 @@ proxies:
     headers:
       Host: www.cordweave.com
   udp: true
-  name: 06｜  3.5M｜trojan
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  port: 2063
-  reality-opts:
-    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-    short-id: ''
-  server: 31.77.13.22
-  servername: rusbid.de
-  tls: true
-  type: vless
+  name: 04｜  2.0M｜trojan
+- type: ss
+  server: 202.50.253.72
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  skip-cert-verify: true
   udp: true
-  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-  xudp: true
-  name: 07｜  3.4M｜vless
-- server: 94.249.195.81
-  port: 43000
-  type: vless
-  uuid: 6ddd64ac-972b-4809-8399-9ada51b64837
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: pR4VpawT5rTi2LKtKvRtAiaW5p1ZGRNiao6_5TAkawI
-    short-id: c6552fdd
-  client-fingerprint: chrome
-  network: tcp
-  name: 08｜  3.1M｜vless
-- server: 151.101.67.6
-  port: 443
-  type: vless
-  uuid: bdf38176-48e9-40f1-9d1c-d501c333b464
-  tls: true
-  alpn:
-  - h3
-  servername: amp-api-edge.apps.apple.com
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /crownnet
-    host: kkbr.tm
-    mode: auto
+  name: 05｜  2.0M｜ss
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.63
+  type: ss
   udp: true
-  name: 09｜  3.1M｜vless
-- server: 144.31.213.229
-  port: 443
-  type: vless
-  uuid: abca037b-bee5-41cc-a888-0668e4c66176
-  tls: true
-  servername: 6d160a52.con.fernarchive.online
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /conv4/stream/77dd2aeeb94331fbff325bb48850392b
+  name: 06｜  1.8M｜ss
+- type: ss
+  server: 202.50.253.90
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  skip-cert-verify: true
   udp: true
-  name: 10｜  3.0M｜vless
-- server: jp.vpber.info
+  name: 07｜  0.3M｜ss
+- type: ss
+  server: 202.50.253.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  skip-cert-verify: true
+  udp: true
+  name: 08｜  0.3M｜ss
+- type: ss
+  server: 202.50.253.45
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  skip-cert-verify: true
+  udp: true
+  name: 09｜  0.2M｜ss
+- type: vless
+  network: ws
+  server: z1q3pv4g78.rucdncomp.pro
   port: 443
-  type: vless
-  uuid: b85b119a-b8c8-43ea-8a35-7f2140366e39
+  uuid: c720cb74-4c84-4fce-b8ae-637dbaa16199
+  servername: z1q3pv4g78.rucdncomp.pro
+  skip-cert-verify: true
   tls: true
-  reality-opts:
-    public-key: opzTAV_yfzjz3zAWZEpFUoz6VPwvVAx78XvLX9V-ohc
-    short-id: 9be4130078ebed0a
-  servername: jp.vpber.info
+  udp: true
+  tfo: false
   client-fingerprint: firefox
-  network: xhttp
-  xhttp-opts:
-    path: /api_v3/
-    host: jp.vpber.info
-    mode: auto
-  udp: true
-  name: 11｜  2.9M｜vless
-- server: 187.52.44.20
-  port: 47443
-  type: vless
-  uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: g5am2VhZkx_xH2TSKfUU8OYLxAzFrmcszNQg8AbOenE
-    short-id: ae97223a8f799872
-  servername: nl4.waspnest.space
-  client-fingerprint: firefox
-  network: tcp
-  name: 12｜  2.7M｜vless
-- server: 213.152.180.104
-  port: 2089
-  type: vless
-  uuid: 492e3bca-472f-406f-8bbb-2fdcc1560508
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: oRmj7gTi5H2oIClNYxxgOjqp8-j5kFYtGFU8CNuMj34
-    short-id: deccc6fac1ddb0ff
-  servername: www.apple.com
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-  name: 13｜  2.0M｜vless
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  port: 2091
-  reality-opts:
-    public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
-    short-id: 08a4b1f473932632
-  server: 213.152.180.104
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 847a6dbf-c3b7-40c1-841c-2047c6418842
-  name: 14｜  1.4M｜vless
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: QvT-t_h_AF2EAT4Ggh_a6pcCK3StY8G9WCXn6-dJbxk
-    short-id: 51079f144d661484
-  server: 13.143.180.104
-  servername: s12.bsh-net.ru
-  tls: true
-  type: vless
-  udp: true
-  uuid: a0fa7e19-70ec-41e0-b0cc-bcc984d4201a
-  name: 15｜  1.1M｜vless
-- client-fingerprint: chrome
-  network: xhttp
-  port: 33744
-  server: 132.243.231.14
-  servername: se-5060f39afb.shamanapp.online
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
-  xhttp-opts:
-    host: se-5060f39afb.shamanapp.online
-    mode: stream-up
-    path: /ShamanXHTTP2026
-  name: 16｜  0.8M｜vless
+  ws-opts:
+    headers:
+      Host: z1q3pv4g78.rucdncomp.pro
+    path: /useraction/events/b892639b7195/
+  name: 10｜  0.2M｜vless
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -265,41 +160,29 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  6.3M｜vless
-  - 02｜  5.7M｜vless
-  - 03｜  4.5M｜vless
-  - 04｜  3.9M｜vless
-  - 05｜  3.7M｜vless
-  - 06｜  3.5M｜trojan
-  - 07｜  3.4M｜vless
-  - 08｜  3.1M｜vless
-  - 09｜  3.1M｜vless
-  - 10｜  3.0M｜vless
-  - 11｜  2.9M｜vless
-  - 12｜  2.7M｜vless
-  - 13｜  2.0M｜vless
-  - 14｜  1.4M｜vless
-  - 15｜  1.1M｜vless
-  - 16｜  0.8M｜vless
+  - 01｜  2.9M｜vless
+  - 02｜  2.7M｜vless
+  - 03｜  2.0M｜vmess
+  - 04｜  2.0M｜trojan
+  - 05｜  2.0M｜ss
+  - 06｜  1.8M｜ss
+  - 07｜  0.3M｜ss
+  - 08｜  0.3M｜ss
+  - 09｜  0.2M｜ss
+  - 10｜  0.2M｜vless
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  6.3M｜vless
-  - 02｜  5.7M｜vless
-  - 03｜  4.5M｜vless
-  - 04｜  3.9M｜vless
-  - 05｜  3.7M｜vless
-  - 06｜  3.5M｜trojan
-  - 07｜  3.4M｜vless
-  - 08｜  3.1M｜vless
-  - 09｜  3.1M｜vless
-  - 10｜  3.0M｜vless
-  - 11｜  2.9M｜vless
-  - 12｜  2.7M｜vless
-  - 13｜  2.0M｜vless
-  - 14｜  1.4M｜vless
-  - 15｜  1.1M｜vless
-  - 16｜  0.8M｜vless
+  - 01｜  2.9M｜vless
+  - 02｜  2.7M｜vless
+  - 03｜  2.0M｜vmess
+  - 04｜  2.0M｜trojan
+  - 05｜  2.0M｜ss
+  - 06｜  1.8M｜ss
+  - 07｜  0.3M｜ss
+  - 08｜  0.3M｜ss
+  - 09｜  0.2M｜ss
+  - 10｜  0.2M｜vless
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
