@@ -36,6 +36,46 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
+- server: ench-snet-app.w-ctrip.cn
+  port: 26429
+  type: trojan
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  sni: cm.g.doubleclick.net
+  skip-cert-verify: true
+  udp: true
+  name: 01｜  2.9M｜trojan
+- cipher: aes-256-gcm
+  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+  port: 18443
+  server: 46.17.46.27
+  type: ss
+  udp: true
+  name: 02｜  2.7M｜ss
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  packet-encoding: xudp
+  port: 443
+  server: piracy-android.video-streams.org
+  servername: piracy-android.video-streams.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: c2917886-1bf3-4588-913f-8909a4b40792
+  ws-opts:
+    headers:
+      Host: piracy-android.video-streams.org
+    path: /ws
+  name: 03｜  2.6M｜vless
+- server: ench-snet-app.w-ctrip.cn
+  port: 24133
+  type: trojan
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  sni: cm.g.doubleclick.net
+  skip-cert-verify: true
+  udp: true
+  name: 04｜  2.6M｜trojan
 - alpn:
   - h3
   auth-str: dongtaiwang.com
@@ -47,172 +87,71 @@ proxies:
   sni: bing.com
   type: hysteria
   up: 11 Mbps
-  name: 01｜  6.1M｜hysteria
-- server: 135.106.153.131
+  name: 05｜  2.4M｜hysteria
+- server: 151.101.161.242
   port: 443
   type: vless
-  uuid: a5212bcb-ab85-459a-bec6-9f259eeeebfa
-  tls: true
-  reality-opts:
-    public-key: OIWmjOL9lOxVRm-ejEvQf_G-Km-5Rw3L-w5d8rhVzQw
-    short-id: 69b1363a7dfd97d3
-  servername: rug.tems.bet
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-  name: 02｜  5.8M｜vless
-- alpn:
-  - h3
-  auth: 69e41e64-a832-471a-b740-94577ca85520
-  down: 200
-  password: 69e41e64-a832-471a-b740-94577ca85520
-  port: 443
-  server: 217.60.73.56
-  skip-cert-verify: true
-  sni: forshynewh.duckdns.org
-  type: hysteria2
-  udp: true
-  up: 100
-  name: 03｜  5.6M｜hysteria2
-- server: hk03.dw.sh-cloudflare.sbs
-  port: 31101
-  type: anytls
-  password: c86efa7e-f7fb-47d6-b832-6b44cf5e8b71
-  udp: true
-  sni: hk03.shanhai.me
-  skip-cert-verify: true
-  alpn:
-  - h2
-  - http/1.1
-  name: 04｜  5.0M｜anytls
-- server: us01.dw.sh-cloudflare.sbs
-  port: 11104
-  type: anytls
-  password: c86efa7e-f7fb-47d6-b832-6b44cf5e8b71
-  udp: true
-  sni: us01.shanhai.me
-  skip-cert-verify: true
-  alpn:
-  - h2
-  - http/1.1
-  name: 05｜  5.0M｜anytls
-- alpn:
-  - http/1.1
-  - h2
-  client-fingerprint: qq
-  network: tcp
-  port: 443
-  server: 87.242.119.253
-  servername: hvtlr-ru-47sb.fade.mom
-  tls: true
-  type: vless
-  uuid: aba9cdd4-026c-0001-87a9-9b3e5f24dd82
-  ws-opts:
-    path: /
-  name: 06｜  4.7M｜vless
-- server: 107.172.16.232
-  port: 44444
-  type: hysteria2
-  password: 78585441-c8b3-40fb-9b94-15edd312fdcf
-  auth: 78585441-c8b3-40fb-9b94-15edd312fdcf
-  sni: www.bing.com
-  skip-cert-verify: true
-  name: 07｜  4.6M｜hysteria2
-- type: vless
-  server: 80.93.202.40
-  port: 8880
-  udp: true
-  skip-cert-verify: true
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime02.workers.dev
-  name: 08｜  4.6M｜vless
-- server: hw14.roghanmo.com
-  port: 465
-  type: vless
-  uuid: 98aa35fc-7d2f-4744-a91b-7e33b4fdd9c8
+  uuid: f80cfcb4-9bd1-4a0d-a50b-28e3eea107d8
   tls: true
   alpn:
   - http/1.1
-  servername: hw14.roghanmo.com.
+  servername: bounded-crammed.video-streams.org
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /ws
     headers:
-      Host: hw14.roghanmo.com
+      Host: bounded-crammed.video-streams.org
   udp: true
-  name: 09｜  4.5M｜vless
-- network: ws
+  name: 06｜  2.2M｜vless
+- server: 83.147.241.197
   port: 443
-  server: 80.211.170.53
-  servername: vp58.cc.cd
-  tls: true
   type: vless
-  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
+  uuid: 9c55c7eb-d53e-40fa-a0c9-e25d2a345073
+  tls: true
+  servername: se-sto.862400.xyz
+  client-fingerprint: random
+  network: ws
   ws-opts:
+    path: /announcement?ed=2048
     headers:
-      Host: vp58.cc.cd
-    path: /Telegram🇨🇳 fp=chromefp=chrome
-  name: 10｜  3.1M｜vless
-- server: mo01.dw.sh-cloudflare.sbs
-  port: 11107
-  type: vless
-  uuid: c86efa7e-f7fb-47d6-b832-6b44cf5e8b71
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: cIAvdh9g8o4OWaCs4yY1aKxz32F0N73O7kQpqp3oQHg
-    short-id: 9433bfa1
-  servername: cdn-dynmedia-1.microsoft.com
-  client-fingerprint: safari
-  network: tcp
+      Host: se-sto.862400.xyz
   udp: true
-  name: 11｜  2.9M｜vless
-- server: a736eb68-tmb1c0-tpkh0c-1r7od.hk2.hyhuawei.com
-  port: 443
-  type: vless
-  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
-  tls: true
-  reality-opts:
-    public-key: c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo
-  servername: download.windowsupdate.com
-  client-fingerprint: firefox
-  network: tcp
-  name: 12｜  2.4M｜vless
-- server: 179.253.179.109
-  port: 57043
-  type: vless
-  uuid: da8fab8e-4a25-4eb0-b224-88ab96c753ce
-  tls: true
-  servername: 87.121.86.24
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-  name: 13｜  1.5M｜vless
-- type: vless
-  network: tcp
-  server: 179.253.179.109
-  port: 50083
-  uuid: 268fac1e-bb07-4d6c-8942-92fef4d7ede1
-  servername: 177.3.219.252
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  tfo: false
-  client-fingerprint: chrome
-  name: 14｜  1.5M｜vless
-- password: 0324fbc29561
-  port: 443
-  server: 56481.df6h451rh.xin
+  name: 07｜  2.1M｜vless
+- server: ench-snet-app.w-ctrip.cn
+  port: 54815
+  type: trojan
+  password: b17e9b52db9623bd6c16eea3d7adb5b3
+  sni: cm.g.doubleclick.net
   skip-cert-verify: true
-  sni: images.ctfassets.net
-  type: anytls
   udp: true
-  name: 15｜  1.1M｜anytls
+  name: 08｜  2.0M｜trojan
+- server: 62.210.70.194
+  port: 37783
+  type: vless
+  uuid: a289c660-1b12-432b-a06c-c2ae469272b0
+  tls: true
+  encryption: mlkem768x25519plus.native.0rtt.I5ge5qOTUhKE8xpufKI84yktvqqG9qkViwYe20uFZUyGwbnK7QMv6Tih0subInSmZTyem1QFG1CDFvGfgMBu3Yw1ryNJfGjMnALAqZawBoukaROcTzxXmFAzuejDalyhxxfNJkeUefW3biOHIzcu_AairYSvJ8l_iHJpKVEKXZWPQWiq-tm_nPJz_oDDhFElaCHKnCslodSen2M6afQQ0HYKc6nKZmZwc1cHG1GKW9xHx6CBfLhFVOhT62tCvbxShul1NJgL-shELnovAtS1aHBFQKDOIiJYC7Ww0awUfsyGIFhnJIhdnqFHnkG7sOcdiWiH-ZkQ11p065zAWEQ14HTOi-aqCAsnWNwdRxwj1_qlArYd3nNF1dXKARRikbMFutC5GyyvSJxk7XwHRGWoK_q6_zK2amtIrsin6tov5kKs3UqywFJMJ2rMtgYZXpvK_TdXumLGUimIq9vFW7idpbMlv9F84NY8UbtrkyB87IQwdKqbtnuOMzxkYik-i9N5vaKcXLSdOGRpMgAKSMt5NbSyllcEh6qUTZoVb_h8ZmYij8csvbGWxodCj1WvOGoRtGGnTSpWMdG3X3ZxXlhNQ6tpIPGTfxkzjPtRjHQDcqm0fgrLjWONnkGxMQRO-Wi50vzNPzW9Vuy5BlZszdGqpjLNRLGw24JTAYKXpxiUkTxUxhO3LRC8kMvGVBgxjImwmwev1IqfPiVIMSwhV0FAMNw27nALh0qyPnNLbFpbTFuTL6V83YypFDl1yahns_AE86ufKnSAaSs_0PwMM_ZDfkhE7nRKCygaD9UjWWygRWq6fZarZahcTAqrZUYPXWxqDsrE7VRYO3ch70AHi6ZXTyKR1YcyM0Kiw3S0kxpjbtWReOJ3lXwry-BjcusDKhRsAxErDIBD6IFuY5ucRTtpfPoNgiq7rSFG8SFNvTe-_wh39Bwjj3JeRnw6kzujiKgxGiAH9GYm6LVvG2ljdWacJjSyoDE6mbFwgRCGdDh4h6eMCPs7hjQmNByx76lb0PYt-BuD9xCfiEFMoKJzTjWUvOy1gbmOrjY5xtkkByo8PCS40YRqXiYQ0Me9U5t_lsdxrvO6f7ajFHBNp_IiQOAstWu9UKC2hiABnVWbHaTFeQSp0tAx9rm5vehC0_a3EAHByGzGFUQ-QWpUO5mvGzZKpPVQrgovg2GsgepxgOMymOgv2CbLNKiwAJJyjDe5d5yXiueH3ZdppJqepXrOGuGOn3e-8RKVu3I-nCp-aMS769Yl5mmS8BYOpxW3HseSzZZMIta4hjsa7hqSgmycflvLV5x-8bM9iBFZ7iOey9oYyEkEbFN-6-Alh2dQfopjE2QNFqW6KatBKHXKHNVoayoc4ZegDKPNAEnAo9wIHkBpDFC-fVoCkGMDcRSeNbF67keruuE0xfMA8ltaklEyRwMcxVQwMhILq6vKlzpJF9OJMGVg5amP_-i4NAsKEfC8Ayp61gByykoWKTWkuLAEAYtXXNIfQ9BPvZca1BITgpC69lapO4SH1UAZ4KRxOTVtbHES_GsjM_lkTv940p3IDkG7jfvxIfY_Q9C3QVbkilRpPvg
+  reality-opts:
+    public-key: tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg
+    short-id: 21569dd6
+  servername: www.yahoo.com
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /OCrp5Ajs
+    host: www.yahoo.com
+    mode: auto
+  udp: true
+  name: 09｜  1.3M｜vless
+- type: anytls
+  server: er8u54dh.df6h451rh.xin
+  port: 443
+  password: 0324fbc29561
+  udp: true
+  sni: px.ads.linkedin.com
+  skip-cert-verify: true
+  name: 10｜  1.0M｜anytls
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -220,39 +159,29 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  6.1M｜hysteria
-  - 02｜  5.8M｜vless
-  - 03｜  5.6M｜hysteria2
-  - 04｜  5.0M｜anytls
-  - 05｜  5.0M｜anytls
-  - 06｜  4.7M｜vless
-  - 07｜  4.6M｜hysteria2
-  - 08｜  4.6M｜vless
-  - 09｜  4.5M｜vless
-  - 10｜  3.1M｜vless
-  - 11｜  2.9M｜vless
-  - 12｜  2.4M｜vless
-  - 13｜  1.5M｜vless
-  - 14｜  1.5M｜vless
-  - 15｜  1.1M｜anytls
+  - 01｜  2.9M｜trojan
+  - 02｜  2.7M｜ss
+  - 03｜  2.6M｜vless
+  - 04｜  2.6M｜trojan
+  - 05｜  2.4M｜hysteria
+  - 06｜  2.2M｜vless
+  - 07｜  2.1M｜vless
+  - 08｜  2.0M｜trojan
+  - 09｜  1.3M｜vless
+  - 10｜  1.0M｜anytls
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  6.1M｜hysteria
-  - 02｜  5.8M｜vless
-  - 03｜  5.6M｜hysteria2
-  - 04｜  5.0M｜anytls
-  - 05｜  5.0M｜anytls
-  - 06｜  4.7M｜vless
-  - 07｜  4.6M｜hysteria2
-  - 08｜  4.6M｜vless
-  - 09｜  4.5M｜vless
-  - 10｜  3.1M｜vless
-  - 11｜  2.9M｜vless
-  - 12｜  2.4M｜vless
-  - 13｜  1.5M｜vless
-  - 14｜  1.5M｜vless
-  - 15｜  1.1M｜anytls
+  - 01｜  2.9M｜trojan
+  - 02｜  2.7M｜ss
+  - 03｜  2.6M｜vless
+  - 04｜  2.6M｜trojan
+  - 05｜  2.4M｜hysteria
+  - 06｜  2.2M｜vless
+  - 07｜  2.1M｜vless
+  - 08｜  2.0M｜trojan
+  - 09｜  1.3M｜vless
+  - 10｜  1.0M｜anytls
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
