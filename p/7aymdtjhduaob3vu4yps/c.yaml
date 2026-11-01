@@ -37,115 +37,182 @@ dns:
   - 119.29.29.29
 proxies:
 - alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  port: 24667
+  protocol: udp
+  server: 62.210.28.175
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+  name: 01｜  6.1M｜hysteria
+- server: 135.106.153.131
+  port: 443
+  type: vless
+  uuid: a5212bcb-ab85-459a-bec6-9f259eeeebfa
+  tls: true
+  reality-opts:
+    public-key: OIWmjOL9lOxVRm-ejEvQf_G-Km-5Rw3L-w5d8rhVzQw
+    short-id: 69b1363a7dfd97d3
+  servername: rug.tems.bet
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+  name: 02｜  5.8M｜vless
+- alpn:
+  - h3
+  auth: 69e41e64-a832-471a-b740-94577ca85520
+  down: 200
+  password: 69e41e64-a832-471a-b740-94577ca85520
+  port: 443
+  server: 217.60.73.56
+  skip-cert-verify: true
+  sni: forshynewh.duckdns.org
+  type: hysteria2
+  udp: true
+  up: 100
+  name: 03｜  5.6M｜hysteria2
+- server: hk03.dw.sh-cloudflare.sbs
+  port: 31101
+  type: anytls
+  password: c86efa7e-f7fb-47d6-b832-6b44cf5e8b71
+  udp: true
+  sni: hk03.shanhai.me
+  skip-cert-verify: true
+  alpn:
   - h2
   - http/1.1
-  client-fingerprint: chrome
-  network: xhttp
+  name: 04｜  5.0M｜anytls
+- server: us01.dw.sh-cloudflare.sbs
+  port: 11104
+  type: anytls
+  password: c86efa7e-f7fb-47d6-b832-6b44cf5e8b71
+  udp: true
+  sni: us01.shanhai.me
+  skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+  name: 05｜  5.0M｜anytls
+- alpn:
+  - http/1.1
+  - h2
+  client-fingerprint: qq
+  network: tcp
   port: 443
-  server: yan10.aliboba.shop
-  servername: yan10.aliboba.shop
+  server: 87.242.119.253
+  servername: hvtlr-ru-47sb.fade.mom
   tls: true
   type: vless
-  udp: true
-  uuid: bdebb0d0-1ac7-4d3a-8f18-99171d74affd
-  xhttp-opts:
-    host: yan10.aliboba.shop
-    mode: packet-up
-    path: /api/api_v2/mediaupload_process
-    seq-key: segment
-    seq-placement: query
-    session-key: media_session
-    session-placement: query
-    uplink-data-key: data
-    uplink-data-placement: header
-    uplink-http-method: GET
-    x-padding-bytes: 64-320
-    x-padding-header: Referer
-    x-padding-key: cacheVersion
-    x-padding-method: tokenish
-    x-padding-obfs-mode: true
-    x-padding-placement: queryInHeader
-  name: 01｜  3.0M｜vless
-- network: ws
-  password: humanity
-  port: 443
-  server: 185.234.114.165
+  uuid: aba9cdd4-026c-0001-87a9-9b3e5f24dd82
+  ws-opts:
+    path: /
+  name: 06｜  4.7M｜vless
+- server: 107.172.16.232
+  port: 44444
+  type: hysteria2
+  password: 78585441-c8b3-40fb-9b94-15edd312fdcf
+  auth: 78585441-c8b3-40fb-9b94-15edd312fdcf
+  sni: www.bing.com
   skip-cert-verify: true
-  sni: www.cordweave.com
-  type: trojan
+  name: 07｜  4.6M｜hysteria2
+- type: vless
+  server: 80.93.202.40
+  port: 8880
   udp: true
+  skip-cert-verify: true
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime02.workers.dev
+  name: 08｜  4.6M｜vless
+- server: hw14.roghanmo.com
+  port: 465
+  type: vless
+  uuid: 98aa35fc-7d2f-4744-a91b-7e33b4fdd9c8
+  tls: true
+  alpn:
+  - http/1.1
+  servername: hw14.roghanmo.com.
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hw14.roghanmo.com
+  udp: true
+  name: 09｜  4.5M｜vless
+- network: ws
+  port: 443
+  server: 80.211.170.53
+  servername: vp58.cc.cd
+  tls: true
+  type: vless
+  uuid: 7b102311-43fd-4e8f-877e-8090623c101d
   ws-opts:
     headers:
-      Host: www.cordweave.com
-    path: /assignment
-  name: 02｜  2.8M｜trojan
-- network: ws
-  password: humanity
+      Host: vp58.cc.cd
+    path: /Telegram🇨🇳 fp=chromefp=chrome
+  name: 10｜  3.1M｜vless
+- server: mo01.dw.sh-cloudflare.sbs
+  port: 11107
+  type: vless
+  uuid: c86efa7e-f7fb-47d6-b832-6b44cf5e8b71
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: cIAvdh9g8o4OWaCs4yY1aKxz32F0N73O7kQpqp3oQHg
+    short-id: 9433bfa1
+  servername: cdn-dynmedia-1.microsoft.com
+  client-fingerprint: safari
+  network: tcp
+  udp: true
+  name: 11｜  2.9M｜vless
+- server: a736eb68-tmb1c0-tpkh0c-1r7od.hk2.hyhuawei.com
   port: 443
-  server: 88.218.92.205
-  skip-cert-verify: true
-  sni: www.cordweave.com
-  type: trojan
+  type: vless
+  uuid: 6d56436c-150d-11f0-b0c8-f23c913c8d2b
+  tls: true
+  reality-opts:
+    public-key: c9DdggKaJGSH7FN3JgGbi9ZvsUqOGGpIr7BhzTWeTCo
+  servername: download.windowsupdate.com
+  client-fingerprint: firefox
+  network: tcp
+  name: 12｜  2.4M｜vless
+- server: 179.253.179.109
+  port: 57043
+  type: vless
+  uuid: da8fab8e-4a25-4eb0-b224-88ab96c753ce
+  tls: true
+  servername: 87.121.86.24
+  client-fingerprint: firefox
+  network: tcp
   udp: true
-  ws-opts:
-    headers:
-      Host: www.cordweave.com
-    path: /assignment
-  name: 03｜  2.6M｜trojan
-- network: ws
-  password: humanity
+  name: 13｜  1.5M｜vless
+- type: vless
+  network: tcp
+  server: 179.253.179.109
+  port: 50083
+  uuid: 268fac1e-bb07-4d6c-8942-92fef4d7ede1
+  servername: 177.3.219.252
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  tfo: false
+  client-fingerprint: chrome
+  name: 14｜  1.5M｜vless
+- password: 0324fbc29561
   port: 443
-  server: 95.182.95.144
+  server: 56481.df6h451rh.xin
   skip-cert-verify: true
-  sni: www.cordweave.com
-  type: trojan
+  sni: images.ctfassets.net
+  type: anytls
   udp: true
-  ws-opts:
-    headers:
-      Host: www.cordweave.com
-    path: /assignment
-  name: 04｜  2.3M｜trojan
-- type: ss
-  server: 202.50.253.45
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  skip-cert-verify: true
-  udp: true
-  name: 05｜  2.2M｜ss
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.63
-  type: ss
-  name: 06｜  2.2M｜ss
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.27
-  type: ss
-  name: 07｜  1.9M｜ss
-- type: ss
-  server: 202.50.253.99
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  skip-cert-verify: true
-  udp: true
-  name: 08｜  1.9M｜ss
-- network: ws
-  password: humanity
-  port: 443
-  server: 109.248.170.245
-  skip-cert-verify: true
-  sni: www.cordweave.com
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      Host: www.cordweave.com
-    path: /assignment
-  name: 09｜  1.7M｜trojan
+  name: 15｜  1.1M｜anytls
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -153,27 +220,39 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  3.0M｜vless
-  - 02｜  2.8M｜trojan
-  - 03｜  2.6M｜trojan
-  - 04｜  2.3M｜trojan
-  - 05｜  2.2M｜ss
-  - 06｜  2.2M｜ss
-  - 07｜  1.9M｜ss
-  - 08｜  1.9M｜ss
-  - 09｜  1.7M｜trojan
+  - 01｜  6.1M｜hysteria
+  - 02｜  5.8M｜vless
+  - 03｜  5.6M｜hysteria2
+  - 04｜  5.0M｜anytls
+  - 05｜  5.0M｜anytls
+  - 06｜  4.7M｜vless
+  - 07｜  4.6M｜hysteria2
+  - 08｜  4.6M｜vless
+  - 09｜  4.5M｜vless
+  - 10｜  3.1M｜vless
+  - 11｜  2.9M｜vless
+  - 12｜  2.4M｜vless
+  - 13｜  1.5M｜vless
+  - 14｜  1.5M｜vless
+  - 15｜  1.1M｜anytls
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  3.0M｜vless
-  - 02｜  2.8M｜trojan
-  - 03｜  2.6M｜trojan
-  - 04｜  2.3M｜trojan
-  - 05｜  2.2M｜ss
-  - 06｜  2.2M｜ss
-  - 07｜  1.9M｜ss
-  - 08｜  1.9M｜ss
-  - 09｜  1.7M｜trojan
+  - 01｜  6.1M｜hysteria
+  - 02｜  5.8M｜vless
+  - 03｜  5.6M｜hysteria2
+  - 04｜  5.0M｜anytls
+  - 05｜  5.0M｜anytls
+  - 06｜  4.7M｜vless
+  - 07｜  4.6M｜hysteria2
+  - 08｜  4.6M｜vless
+  - 09｜  4.5M｜vless
+  - 10｜  3.1M｜vless
+  - 11｜  2.9M｜vless
+  - 12｜  2.4M｜vless
+  - 13｜  1.5M｜vless
+  - 14｜  1.5M｜vless
+  - 15｜  1.1M｜anytls
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
