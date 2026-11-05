@@ -44,7 +44,41 @@ proxies:
   servername: cn.cremedelamer.com
   sni: cn.cremedelamer.com
   skip-cert-verify: true
-  name: 01｜  4.0M｜hysteria2
+  name: 01｜  5.7M｜hysteria2
+- server: 78.17.39.129
+  port: 443
+  type: vless
+  uuid: c04522c4-3d53-4eab-b5b5-25385d5f11b1
+  tls: true
+  alpn:
+  - h2
+  - http/1.1
+  servername: 78.17.39.129
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /assets/finvip02/
+    host: 78.17.39.129
+    mode: packet-up
+  name: 02｜  5.2M｜vless
+- server: 62.210.70.194
+  port: 37783
+  type: vless
+  uuid: a289c660-1b12-432b-a06c-c2ae469272b0
+  tls: true
+  encryption: mlkem768x25519plus.native.0rtt.I5ge5qOTUhKE8xpufKI84yktvqqG9qkViwYe20uFZUyGwbnK7QMv6Tih0subInSmZTyem1QFG1CDFvGfgMBu3Yw1ryNJfGjMnALAqZawBoukaROcTzxXmFAzuejDalyhxxfNJkeUefW3biOHIzcu_AairYSvJ8l_iHJpKVEKXZWPQWiq-tm_nPJz_oDDhFElaCHKnCslodSen2M6afQQ0HYKc6nKZmZwc1cHG1GKW9xHx6CBfLhFVOhT62tCvbxShul1NJgL-shELnovAtS1aHBFQKDOIiJYC7Ww0awUfsyGIFhnJIhdnqFHnkG7sOcdiWiH-ZkQ11p065zAWEQ14HTOi-aqCAsnWNwdRxwj1_qlArYd3nNF1dXKARRikbMFutC5GyyvSJxk7XwHRGWoK_q6_zK2amtIrsin6tov5kKs3UqywFJMJ2rMtgYZXpvK_TdXumLGUimIq9vFW7idpbMlv9F84NY8UbtrkyB87IQwdKqbtnuOMzxkYik-i9N5vaKcXLSdOGRpMgAKSMt5NbSyllcEh6qUTZoVb_h8ZmYij8csvbGWxodCj1WvOGoRtGGnTSpWMdG3X3ZxXlhNQ6tpIPGTfxkzjPtRjHQDcqm0fgrLjWONnkGxMQRO-Wi50vzNPzW9Vuy5BlZszdGqpjLNRLGw24JTAYKXpxiUkTxUxhO3LRC8kMvGVBgxjImwmwev1IqfPiVIMSwhV0FAMNw27nALh0qyPnNLbFpbTFuTL6V83YypFDl1yahns_AE86ufKnSAaSs_0PwMM_ZDfkhE7nRKCygaD9UjWWygRWq6fZarZahcTAqrZUYPXWxqDsrE7VRYO3ch70AHi6ZXTyKR1YcyM0Kiw3S0kxpjbtWReOJ3lXwry-BjcusDKhRsAxErDIBD6IFuY5ucRTtpfPoNgiq7rSFG8SFNvTe-_wh39Bwjj3JeRnw6kzujiKgxGiAH9GYm6LVvG2ljdWacJjSyoDE6mbFwgRCGdDh4h6eMCPs7hjQmNByx76lb0PYt-BuD9xCfiEFMoKJzTjWUvOy1gbmOrjY5xtkkByo8PCS40YRqXiYQ0Me9U5t_lsdxrvO6f7ajFHBNp_IiQOAstWu9UKC2hiABnVWbHaTFeQSp0tAx9rm5vehC0_a3EAHByGzGFUQ-QWpUO5mvGzZKpPVQrgovg2GsgepxgOMymOgv2CbLNKiwAJJyjDe5d5yXiueH3ZdppJqepXrOGuGOn3e-8RKVu3I-nCp-aMS769Yl5mmS8BYOpxW3HseSzZZMIta4hjsa7hqSgmycflvLV5x-8bM9iBFZ7iOey9oYyEkEbFN-6-Alh2dQfopjE2QNFqW6KatBKHXKHNVoayoc4ZegDKPNAEnAo9wIHkBpDFC-fVoCkGMDcRSeNbF67keruuE0xfMA8ltaklEyRwMcxVQwMhILq6vKlzpJF9OJMGVg5amP_-i4NAsKEfC8Ayp61gByykoWKTWkuLAEAYtXXNIfQ9BPvZca1BITgpC69lapO4SH1UAZ4KRxOTVtbHES_GsjM_lkTv940p3IDkG7jfvxIfY_Q9C3QVbkilRpPvg
+  reality-opts:
+    public-key: tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg
+    short-id: 21569dd6
+  servername: www.yahoo.com
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /OCrp5Ajs
+    host: www.yahoo.com
+    mode: auto
+  udp: true
+  name: 03｜  4.9M｜vless
 - type: hysteria
   server: 163.172.117.163
   port: 36699
@@ -58,7 +92,63 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 02｜  2.9M｜hysteria
+  name: 04｜  4.8M｜hysteria
+- type: vless
+  server: 84.23.52.120
+  port: 28450
+  uuid: 4d8132cb-f4e3-428c-91ff-2b4f7a868551
+  tls: true
+  servername: pl.sparxiecn.com
+  sni: pl.sparxiecn.com
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /lovelive
+  name: 05｜  4.4M｜vless
+- server: swo2.nexfile.net
+  port: 4443
+  type: vless
+  uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  tls: true
+  servername: swo2.nexfile.net
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /api/v1/sync/
+    host: swo2.nexfile.net
+    mode: auto
+  name: 06｜  3.8M｜vless
+- type: vless
+  server: 87.232.88.27
+  port: 443
+  uuid: e08d9bc5-6832-4dd4-bd44-d9bbe61e5817
+  tls: true
+  servername: max.ru
+  sni: max.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 4qE0kXmxDvNzsns2jdwd74AN35RptcTD4eKo5REa9w8
+    short-id: '04'
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-67
+  name: 07｜  3.7M｜vless
+- type: hysteria
+  server: 5.83.129.90
+  port: 54177
+  password: dongtaiwang.com
+  tls: true
+  servername: apple.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '11'
+  down: '55'
+  auth-str: dongtaiwang.com
+  name: 08｜  3.5M｜hysteria
 - type: hysteria
   server: 198.200.57.142
   port: 22335
@@ -72,35 +162,38 @@ proxies:
   up: '11'
   down: '55'
   auth-str: github.com/Alvin9999-newpac/fanqiang
-  name: 03｜  2.7M｜hysteria
-- type: hysteria
-  server: 62.210.28.175
-  port: 24667
-  password: dongtaiwang.com
-  tls: true
-  servername: bing.com
-  sni: bing.com
+  name: 09｜  3.4M｜hysteria
+- server: Sclass-00.catcat321.com
+  port: 20123
+  type: trojan
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  sni: hk.catxstar.com
   skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 04｜  2.0M｜hysteria
-- type: hysteria
-  server: 137.175.82.44
+  udp: true
+  name: 10｜  3.2M｜trojan
+- server: sclass-c1.catcat321.com
+  port: 20086
+  type: trojan
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  sni: hk.catxstar.com
+  skip-cert-verify: true
+  udp: true
+  name: 11｜  3.1M｜trojan
+- alpn:
+  - h2
+  client-fingerprint: firefox
+  network: xhttp
   port: 443
-  password: dongtaiwang.com
+  server: 31.76.7.233
+  servername: e2865c20.con.rasterparcel.tech
   tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 05｜  2.0M｜hysteria
+  type: vless
+  udp: true
+  uuid: f8bdf363-ff05-4fe6-a013-a5605266657e
+  xhttp-opts:
+    mode: auto
+    path: /conv4/stream/d34366ecdd31367d0fc76955c6b8d77c
+  name: 12｜  3.0M｜vless
 - type: hysteria
   server: 137.175.82.43
   port: 443
@@ -114,51 +207,29 @@ proxies:
   up: '20'
   down: '20'
   auth-str: dongtaiwang.com
-  name: 06｜  1.3M｜hysteria
-- type: hysteria2
-  server: 13.143.189.147
-  port: 4444
-  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  tls: true
-  servername: pl2.nexfile.net
-  sni: pl2.nexfile.net
-  skip-cert-verify: true
-  name: 07｜  1.1M｜hysteria2
-- cipher: aes-256-gcm
-  password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
-  port: 18443
-  server: 46.17.46.27
-  type: ss
-  udp: true
-  name: 08｜  0.9M｜ss
+  name: 13｜  1.9M｜hysteria
 - type: hysteria
-  server: tw-25.497489.xyz
-  port: 10099
-  password: github.com/Alvin9999-newpac/fanqiang
+  server: 62.210.28.175
+  port: 24667
+  password: dongtaiwang.com
   tls: true
-  servername: tw-25.497489.xyz
-  sni: tw-25.497489.xyz
-  skip-cert-verify: false
+  servername: bing.com
+  sni: bing.com
+  skip-cert-verify: true
   alpn:
   - h3
-  up: '20'
-  down: '20'
-  auth-str: github.com/Alvin9999-newpac/fanqiang
-  name: 09｜  0.6M｜hysteria
-- server: 134.255.211.36
+  up: '11'
+  down: '55'
+  auth-str: dongtaiwang.com
+  name: 14｜  1.6M｜hysteria
+- password: 0324fbc29561
   port: 443
-  type: vless
-  uuid: c5f59ef3-9540-49fa-bd1e-c6c2f79df49a
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: KcI3PoYu2yF7whv-e0C7JnRyUoUiUDu6tOlUBPYYbCk
-    short-id: 2e96bf6afa823abb
-  servername: sg-sin.probe.geomyip.com
-  client-fingerprint: chrome
-  network: tcp
+  server: 56481.df6h451rh.xin
+  skip-cert-verify: true
+  sni: images.ctfassets.net
+  type: anytls
   udp: true
-  name: 10｜  0.5M｜vless
+  name: 15｜  0.5M｜anytls
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -166,29 +237,39 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  4.0M｜hysteria2
-  - 02｜  2.9M｜hysteria
-  - 03｜  2.7M｜hysteria
-  - 04｜  2.0M｜hysteria
-  - 05｜  2.0M｜hysteria
-  - 06｜  1.3M｜hysteria
-  - 07｜  1.1M｜hysteria2
-  - 08｜  0.9M｜ss
-  - 09｜  0.6M｜hysteria
-  - 10｜  0.5M｜vless
+  - 01｜  5.7M｜hysteria2
+  - 02｜  5.2M｜vless
+  - 03｜  4.9M｜vless
+  - 04｜  4.8M｜hysteria
+  - 05｜  4.4M｜vless
+  - 06｜  3.8M｜vless
+  - 07｜  3.7M｜vless
+  - 08｜  3.5M｜hysteria
+  - 09｜  3.4M｜hysteria
+  - 10｜  3.2M｜trojan
+  - 11｜  3.1M｜trojan
+  - 12｜  3.0M｜vless
+  - 13｜  1.9M｜hysteria
+  - 14｜  1.6M｜hysteria
+  - 15｜  0.5M｜anytls
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  4.0M｜hysteria2
-  - 02｜  2.9M｜hysteria
-  - 03｜  2.7M｜hysteria
-  - 04｜  2.0M｜hysteria
-  - 05｜  2.0M｜hysteria
-  - 06｜  1.3M｜hysteria
-  - 07｜  1.1M｜hysteria2
-  - 08｜  0.9M｜ss
-  - 09｜  0.6M｜hysteria
-  - 10｜  0.5M｜vless
+  - 01｜  5.7M｜hysteria2
+  - 02｜  5.2M｜vless
+  - 03｜  4.9M｜vless
+  - 04｜  4.8M｜hysteria
+  - 05｜  4.4M｜vless
+  - 06｜  3.8M｜vless
+  - 07｜  3.7M｜vless
+  - 08｜  3.5M｜hysteria
+  - 09｜  3.4M｜hysteria
+  - 10｜  3.2M｜trojan
+  - 11｜  3.1M｜trojan
+  - 12｜  3.0M｜vless
+  - 13｜  1.9M｜hysteria
+  - 14｜  1.6M｜hysteria
+  - 15｜  0.5M｜anytls
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
