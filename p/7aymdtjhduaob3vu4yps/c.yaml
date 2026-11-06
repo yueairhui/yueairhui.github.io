@@ -36,93 +36,6 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- type: hysteria
-  server: 62.210.28.175
-  port: 24667
-  password: dongtaiwang.com
-  tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 01｜  5.0M｜hysteria
-- type: hysteria
-  server: 163.172.117.163
-  port: 36699
-  password: dongtaiwang.com
-  tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 02｜  4.8M｜hysteria
-- type: hysteria
-  server: 5.83.129.90
-  port: 54177
-  password: dongtaiwang.com
-  tls: true
-  servername: apple.com
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 03｜  4.6M｜hysteria
-- server: 107.172.214.195
-  port: 443
-  type: vless
-  uuid: 2af77824-f83d-4f50-9dd0-560bb6e7cd45
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: jK8yu9AMtNQ4J_uKE1inAzJr6V5J4GNK3sAN6nZBbUo
-  servername: academy.nvidia.com
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-  name: 04｜  4.4M｜vless
-- server: uk.zarqivo.ir
-  port: 2053
-  type: vless
-  uuid: c25c2329-3038-4193-9b0c-2e115630c723
-  tls: true
-  encryption: mlkem768x25519plus.native.0rtt.woF94Ad5-2zSxgXgjcNStC2CeHOpje_TUapVXAcEIVM
-  servername: Filano.zarqivo.ir
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: uk.zarqivo.ir
-    mode: auto
-  udp: true
-  name: 05｜  4.4M｜vless
-- server: se-2.pythonsetupbib.online
-  port: 61374
-  type: vless
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-  tls: true
-  reality-opts:
-    public-key: QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI
-  servername: se-2.pythonsetupbib.online
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: se-2.pythonsetupbib.online
-    mode: packet-up
-    x-padding-bytes: 100-500
-  udp: true
-  name: 06｜  4.2M｜vless
 - alpn:
   - h2
   - http/1.1
@@ -153,59 +66,27 @@ proxies:
     x-padding-method: tokenish
     x-padding-obfs-mode: true
     x-padding-placement: header
-  name: 07｜  4.2M｜vless
+  name: 01｜  3.9M｜vless
 - alpn:
-  - ''
-  alterId: '0'
-  cipher: auto
-  http-opts:
-    headers:
-      Host:
-      - down-cdn.dingtalk.com
-    path:
-    - /QQqun-737805443
-  network: http
-  port: 52080
-  server: 23.94.83.37
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 355c1760-9bde-4b77-916b-5191e7f704a3
-  xudp: true
-  name: 08｜  4.1M｜vmess
-- server: ga1data.xyy123.bid
-  port: 443
-  type: vless
-  uuid: 81f686e2-0700-4e7d-b3aa-2f7fc544bcc3
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Z7B8VKvjAiBH93XEkHFWCVBfK8Mu5HTLtAwfr5LuYlk
-    short-id: 00b0389a
-  servername: www.amzn.com
-  client-fingerprint: chrome
-  network: tcp
-  name: 09｜  3.9M｜vless
-- server: latvia.zovip2.ir
-  port: 443
-  type: vless
-  uuid: 5a79e684-54c8-44c0-807a-225f9ea8c0ed
-  tls: true
-  alpn:
+  - h2
   - http/1.1
-  servername: nova.zovip2.ir
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /api/v3/pulse
-    headers:
-      Host: nova.zovip2.ir
+  client-fingerprint: firefox
+  network: xhttp
+  port: 8444
+  server: at-86-10.cdn-lab.online
+  servername: at-86-10.cdn-lab.online
+  tls: true
+  type: vless
   udp: true
-  name: 10｜  3.8M｜vless
+  uuid: 5fa16fdf-5b3c-4f57-988d-b24c6722c91a
+  xhttp-opts:
+    host: at-86-10.cdn-lab.online
+    mode: auto
+    path: /xh
+  name: 02｜  3.9M｜vless
 - type: hysteria
-  server: 137.175.82.44
-  port: 443
+  server: 163.172.117.163
+  port: 36699
   password: dongtaiwang.com
   tls: true
   servername: bing.com
@@ -216,18 +97,162 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 11｜  3.7M｜hysteria
-- server: 104.167.198.141
-  port: 9010
-  type: vless
-  uuid: d86bb8e6-ba84-96a9-1346-5af07bb85e79
+  name: 03｜  3.7M｜hysteria
+- auth: f4b80b26-b6d4-49a6-a460-f50efb7a457c
+  password: f4b80b26-b6d4-49a6-a460-f50efb7a457c
+  port: 443
+  server: 186.246.18.62
+  skip-cert-verify: true
+  sni: hy.cardlist24.shop
   tls: false
-  encryption: mlkem768x25519plus.native.0rtt.cQRUHo0p5mmP3i6Q9li2sGOm9LGKXmd_tzl6XdTrVQ4
-  network: ws
-  ws-opts:
-    path: /system-health-monitoring-portal-a7e32f91
+  type: hysteria2
+  name: 04｜  3.7M｜hysteria2
+- server: 178.214.109.1
+  port: 443
+  type: vless
+  uuid: 40a86b1b-239d-455e-b53f-4c270788ba6e
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 3p6W4rMBh1HCwbjq4lcbWO0KjkqTshJU5lkTix5nwTc
+    short-id: 1cfa55abe4d2dc7a
+  servername: promo-digital.wb.ru
+  client-fingerprint: edge
+  network: tcp
   udp: true
-  name: 12｜  3.4M｜vless
+  name: 05｜  3.6M｜vless
+- client-fingerprint: chrome
+  network: tcp
+  password: 6cddea99-9b18-4d42-8638-131bd9f5374f
+  port: 443
+  server: jp1.8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
+  skip-cert-verify: true
+  sni: 8b1c7c70-ecf1-6891-9fa7-68a86662f902.cheathub.net
+  type: trojan
+  udp: true
+  name: 06｜  3.3M｜trojan
+- client-fingerprint: firefox
+  network: xhttp
+  port: 8444
+  server: fi-94-10.cdn-lab.online
+  servername: fi-94-10.cdn-lab.online
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5fa16fdf-5b3c-4f57-988d-b24c6722c91a
+  xhttp-opts:
+    host: fi-94-10.cdn-lab.online
+    mode: auto
+    path: /xh
+  name: 07｜  2.6M｜vless
+- alpn:
+  - h3
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: xhttp
+  port: 443
+  server: 198.202.24.27
+  servername: nl29.dr-ping.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: 64c5f924-1c24-44a5-acff-2e3ebcd2f807
+  xhttp-opts:
+    host: nl29.dr-ping.ir
+    mode: auto
+    path: /
+  name: 08｜  2.5M｜vless
+- client-fingerprint: firefox
+  network: xhttp
+  port: 8444
+  server: 82.148.251.245
+  servername: at-86-10.cdn-lab.online
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5fa16fdf-5b3c-4f57-988d-b24c6722c91a
+  xhttp-opts:
+    host: at-86-10.cdn-lab.online
+    mode: auto
+    path: /xh
+  name: 09｜  2.2M｜vless
+- type: hysteria
+  server: 5.83.129.90
+  port: 54177
+  password: dongtaiwang.com
+  tls: true
+  servername: apple.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '11'
+  down: '55'
+  auth-str: dongtaiwang.com
+  name: 10｜  1.9M｜hysteria
+- type: anytls
+  server: user02.godvpn.lol
+  port: 62405
+  password: 4bbfa33a-449a-4a50-8dfc-6d0de880f7bc
+  tls: true
+  skip-cert-verify: true
+  name: 11｜  1.8M｜anytls
+- type: anytls
+  server: sdf65h46wr.df6h451rh.xin
+  port: 443
+  password: 0324fbc29561
+  tls: true
+  servername: images.ctfassets.net
+  sni: images.ctfassets.net
+  skip-cert-verify: true
+  name: 12｜  1.6M｜anytls
+- type: hysteria
+  server: 62.210.28.175
+  port: 24667
+  password: dongtaiwang.com
+  tls: true
+  servername: bing.com
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '11'
+  down: '55'
+  auth-str: dongtaiwang.com
+  name: 13｜  1.4M｜hysteria
+- type: vless
+  server: 106.75.143.18
+  port: 4022
+  uuid: e4e2afbe-1a21-4ca2-a22f-b5417e825687
+  tls: true
+  servername: buylite.tv.apple.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 2g8FZHxPWjphq568-OS8ypk7qb76HiMhWua0UAJfOl8
+    short-id: ace0f99d
+  name: 14｜  1.3M｜vless
+- type: ss
+  server: 202.50.253.90
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  tls: false
+  skip-cert-verify: false
+  name: 15｜  1.2M｜ss
+- server: 15d7fft.nl11.h1clayd.click
+  port: 443
+  type: vless
+  uuid: b7b8ee80-db83-4276-8c68-87dc88b0b0b5
+  tls: true
+  reality-opts:
+    public-key: xv6OUZcyzEHXFMTfumuJH-1Rd4NQ0cdmWikek4mm0m4
+    short-id: c71118d9399fb8c2
+  servername: 15d7fft.nl11.h1clayd.click
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 16｜  1.2M｜vless
 - type: hysteria
   server: 198.200.57.142
   port: 22335
@@ -241,17 +266,7 @@ proxies:
   up: '11'
   down: '55'
   auth-str: github.com/Alvin9999-newpac/fanqiang
-  name: 13｜  3.1M｜hysteria
-- client-fingerprint: chrome
-  network: tcp
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  port: 443
-  server: 216.106.186.46
-  skip-cert-verify: false
-  sni: cdn.findlocaljobnetworkandbuildcommunityconnections.com
-  type: trojan
-  udp: true
-  name: 14｜  2.9M｜trojan
+  name: 17｜  1.0M｜hysteria
 - type: hysteria
   server: 137.175.82.43
   port: 443
@@ -265,16 +280,27 @@ proxies:
   up: '20'
   down: '20'
   auth-str: dongtaiwang.com
-  name: 15｜  2.3M｜hysteria
-- type: anytls
-  server: er8u54dh.df6h451rh.xin
-  port: 443
-  password: 0324fbc29561
-  tls: true
-  servername: px.ads.linkedin.com
-  sni: px.ads.linkedin.com
+  name: 18｜  1.0M｜hysteria
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  http-opts:
+    headers:
+      Host:
+      - down-cdn.dingtalk.com
+    method: GET
+    path:
+    - /QQqun-737805443
+  network: http
+  port: 1288
+  server: 107.175.76.215
   skip-cert-verify: true
-  name: 16｜  1.0M｜anytls
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 29a72eac-a4d1-4526-8fa0-d3ecc4e38b44
+  name: 19｜  0.6M｜vmess
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -282,41 +308,47 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  5.0M｜hysteria
-  - 02｜  4.8M｜hysteria
-  - 03｜  4.6M｜hysteria
-  - 04｜  4.4M｜vless
-  - 05｜  4.4M｜vless
-  - 06｜  4.2M｜vless
-  - 07｜  4.2M｜vless
-  - 08｜  4.1M｜vmess
-  - 09｜  3.9M｜vless
-  - 10｜  3.8M｜vless
-  - 11｜  3.7M｜hysteria
-  - 12｜  3.4M｜vless
-  - 13｜  3.1M｜hysteria
-  - 14｜  2.9M｜trojan
-  - 15｜  2.3M｜hysteria
-  - 16｜  1.0M｜anytls
+  - 01｜  3.9M｜vless
+  - 02｜  3.9M｜vless
+  - 03｜  3.7M｜hysteria
+  - 04｜  3.7M｜hysteria2
+  - 05｜  3.6M｜vless
+  - 06｜  3.3M｜trojan
+  - 07｜  2.6M｜vless
+  - 08｜  2.5M｜vless
+  - 09｜  2.2M｜vless
+  - 10｜  1.9M｜hysteria
+  - 11｜  1.8M｜anytls
+  - 12｜  1.6M｜anytls
+  - 13｜  1.4M｜hysteria
+  - 14｜  1.3M｜vless
+  - 15｜  1.2M｜ss
+  - 16｜  1.2M｜vless
+  - 17｜  1.0M｜hysteria
+  - 18｜  1.0M｜hysteria
+  - 19｜  0.6M｜vmess
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  5.0M｜hysteria
-  - 02｜  4.8M｜hysteria
-  - 03｜  4.6M｜hysteria
-  - 04｜  4.4M｜vless
-  - 05｜  4.4M｜vless
-  - 06｜  4.2M｜vless
-  - 07｜  4.2M｜vless
-  - 08｜  4.1M｜vmess
-  - 09｜  3.9M｜vless
-  - 10｜  3.8M｜vless
-  - 11｜  3.7M｜hysteria
-  - 12｜  3.4M｜vless
-  - 13｜  3.1M｜hysteria
-  - 14｜  2.9M｜trojan
-  - 15｜  2.3M｜hysteria
-  - 16｜  1.0M｜anytls
+  - 01｜  3.9M｜vless
+  - 02｜  3.9M｜vless
+  - 03｜  3.7M｜hysteria
+  - 04｜  3.7M｜hysteria2
+  - 05｜  3.6M｜vless
+  - 06｜  3.3M｜trojan
+  - 07｜  2.6M｜vless
+  - 08｜  2.5M｜vless
+  - 09｜  2.2M｜vless
+  - 10｜  1.9M｜hysteria
+  - 11｜  1.8M｜anytls
+  - 12｜  1.6M｜anytls
+  - 13｜  1.4M｜hysteria
+  - 14｜  1.3M｜vless
+  - 15｜  1.2M｜ss
+  - 16｜  1.2M｜vless
+  - 17｜  1.0M｜hysteria
+  - 18｜  1.0M｜hysteria
+  - 19｜  0.6M｜vmess
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
