@@ -36,15 +36,6 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- type: anytls
-  server: sdf65h46wr.df6h451rh.xin
-  port: 443
-  password: 0324fbc29561
-  tls: true
-  servername: images.ctfassets.net
-  sni: images.ctfassets.net
-  skip-cert-verify: true
-  name: 01｜  3.0M｜anytls
 - type: hysteria
   server: 163.172.117.163
   port: 36699
@@ -58,27 +49,19 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 02｜  2.8M｜hysteria
-- server: api.ferrin.uk
-  port: 443
-  type: vless
-  uuid: 7d1a74fd-8a38-4a29-863f-5da53a9e557e
-  tls: true
-  alpn:
-  - h2
-  servername: 7d1a74fd.ferrin.uk
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /es
-    host: api.ferrin.uk
-    mode: stream-one
-  udp: true
-  name: 03｜  2.4M｜vless
+  name: 01｜  3.1M｜hysteria
+- type: ss
+  server: 202.50.253.36
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  tls: false
+  skip-cert-verify: false
+  name: 02｜  2.5M｜ss
 - type: hysteria
-  server: 198.200.57.142
-  port: 22335
-  password: github.com/Alvin9999-newpac/fanqiang
+  server: 62.210.28.175
+  port: 24667
+  password: dongtaiwang.com
   tls: true
   servername: bing.com
   sni: bing.com
@@ -87,46 +70,24 @@ proxies:
   - h3
   up: '11'
   down: '55'
-  auth-str: github.com/Alvin9999-newpac/fanqiang
-  name: 04｜  2.2M｜hysteria
-- server: light.ddddd.site
-  port: 46038
-  type: anytls
-  password: 1eb7f03a-59a4-4184-ae6d-7cb0e3b8e77a
-  sni: down.centos7.com
-  skip-cert-verify: true
-  name: 05｜  2.1M｜anytls
-- server: cdn-ya.shamanapp.online
-  port: 443
-  type: vless
-  uuid: 40c8a202-4b7f-45a6-b0aa-37db0fac4df8
-  tls: true
-  alpn:
-  - h2
-  - http/1.1
-  servername: cdn-ya.shamanapp.online
-  client-fingerprint: firefox
-  network: xhttp
-  xhttp-opts:
-    path: /media/hls/720p/
-    host: cdn-ya.shamanapp.online
-    mode: packet-up
-    no-grpc-header: true
-    sc-max-each-post-bytes: 20000
-    sc-min-posts-interval-ms: 5
-    seq-key: page
-    seq-placement: query
-    uplink-chunk-size: 20000
-    uplink-data-key: X-Request-Id
-    uplink-data-placement: header
-    uplink-http-method: GET
-    x-padding-bytes: 100-1000
-    x-padding-header: X-Cache
-    x-padding-key: _dc
-    x-padding-method: tokenish
-    x-padding-obfs-mode: true
-    x-padding-placement: header
-  name: 06｜  1.8M｜vless
+  auth-str: dongtaiwang.com
+  name: 03｜  2.3M｜hysteria
+- type: ss
+  server: 202.50.253.90
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  tls: false
+  skip-cert-verify: false
+  name: 04｜  2.3M｜ss
+- type: ss
+  server: 202.50.253.54
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  tls: false
+  skip-cert-verify: false
+  name: 05｜  2.1M｜ss
 - type: ss
   server: 202.50.253.63
   port: 19999
@@ -134,15 +95,7 @@ proxies:
   cipher: aes-256-gcm
   tls: false
   skip-cert-verify: false
-  name: 07｜  1.6M｜ss
-- type: ss
-  server: 88.216.254.18
-  port: 1080
-  password: V7WLaYdujkwnj6xxXq-2BSxGWEcSJtTA
-  cipher: chacha20-ietf-poly1305
-  tls: false
-  skip-cert-verify: false
-  name: 08｜  1.3M｜ss
+  name: 06｜  1.8M｜ss
 - type: hysteria
   server: 5.83.129.90
   port: 54177
@@ -156,57 +109,16 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 09｜  1.2M｜hysteria
-- type: ss
-  server: 202.50.253.81
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 10｜  1.1M｜ss
-- type: ss
-  server: 202.50.253.27
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 11｜  1.1M｜ss
-- type: ss
-  server: 202.50.253.36
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 12｜  1.0M｜ss
-- server: 162.159.128.17
+  name: 07｜  1.5M｜hysteria
+- type: hysteria2
+  server: starlink-ft.251313.xyz
   port: 443
-  type: vmess
-  uuid: c8b455ad-fff1-43e9-9af9-d97585c4534a
-  alterId: 0
-  cipher: auto
+  password: https://xship.best
   tls: true
-  alpn:
-  - ''
+  servername: xship.top
+  sni: xship.top
   skip-cert-verify: true
-  servername: ny-v2ray.ryin.vip
-  network: ws
-  ws-opts:
-    path: /ryinsocksv2board
-    headers:
-      Host: ny-v2ray.ryin.vip
-  udp: true
-  name: 13｜  0.8M｜vmess
-- type: ss
-  server: 202.50.253.90
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 14｜  0.5M｜ss
+  name: 08｜  0.8M｜hysteria2
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -214,37 +126,25 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  3.0M｜anytls
-  - 02｜  2.8M｜hysteria
-  - 03｜  2.4M｜vless
-  - 04｜  2.2M｜hysteria
-  - 05｜  2.1M｜anytls
-  - 06｜  1.8M｜vless
-  - 07｜  1.6M｜ss
-  - 08｜  1.3M｜ss
-  - 09｜  1.2M｜hysteria
-  - 10｜  1.1M｜ss
-  - 11｜  1.1M｜ss
-  - 12｜  1.0M｜ss
-  - 13｜  0.8M｜vmess
-  - 14｜  0.5M｜ss
+  - 01｜  3.1M｜hysteria
+  - 02｜  2.5M｜ss
+  - 03｜  2.3M｜hysteria
+  - 04｜  2.3M｜ss
+  - 05｜  2.1M｜ss
+  - 06｜  1.8M｜ss
+  - 07｜  1.5M｜hysteria
+  - 08｜  0.8M｜hysteria2
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  3.0M｜anytls
-  - 02｜  2.8M｜hysteria
-  - 03｜  2.4M｜vless
-  - 04｜  2.2M｜hysteria
-  - 05｜  2.1M｜anytls
-  - 06｜  1.8M｜vless
-  - 07｜  1.6M｜ss
-  - 08｜  1.3M｜ss
-  - 09｜  1.2M｜hysteria
-  - 10｜  1.1M｜ss
-  - 11｜  1.1M｜ss
-  - 12｜  1.0M｜ss
-  - 13｜  0.8M｜vmess
-  - 14｜  0.5M｜ss
+  - 01｜  3.1M｜hysteria
+  - 02｜  2.5M｜ss
+  - 03｜  2.3M｜hysteria
+  - 04｜  2.3M｜ss
+  - 05｜  2.1M｜ss
+  - 06｜  1.8M｜ss
+  - 07｜  1.5M｜hysteria
+  - 08｜  0.8M｜hysteria2
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
