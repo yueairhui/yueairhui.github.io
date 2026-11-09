@@ -37,28 +37,6 @@ dns:
   - 119.29.29.29
 proxies:
 - type: hysteria
-  server: 163.172.117.163
-  port: 36699
-  password: dongtaiwang.com
-  tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 01｜  3.1M｜hysteria
-- type: ss
-  server: 202.50.253.36
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 02｜  2.5M｜ss
-- type: hysteria
   server: 62.210.28.175
   port: 24667
   password: dongtaiwang.com
@@ -71,31 +49,72 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 03｜  2.3M｜hysteria
+  name: 01｜  5.8M｜hysteria
+- type: hysteria
+  server: 163.172.117.163
+  port: 36699
+  password: dongtaiwang.com
+  tls: true
+  servername: bing.com
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '11'
+  down: '55'
+  auth-str: dongtaiwang.com
+  name: 02｜  4.8M｜hysteria
+- type: vmess
+  server: 23.94.83.37
+  port: 52080
+  uuid: 355c1760-9bde-4b77-916b-5191e7f704a3
+  cipher: auto
+  alterId: 0
+  tls: false
+  servername: down-cdn.dingtalk.com
+  sni: down-cdn.dingtalk.com
+  network: http
+  http-opts:
+    path:
+    - /QQqun-737805443
+    headers:
+      Host:
+      - down-cdn.dingtalk.com
+  name: 03｜  4.0M｜vmess
+- type: vless
+  server: prvtch.titun.su
+  port: 443
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  udp: true
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  servername: perevodchiki.su
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  name: 04｜  3.9M｜vless
 - type: ss
-  server: 202.50.253.90
+  server: 202.50.253.45
   port: 19999
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   cipher: aes-256-gcm
   tls: false
   skip-cert-verify: false
-  name: 04｜  2.3M｜ss
-- type: ss
-  server: 202.50.253.54
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 05｜  2.1M｜ss
-- type: ss
-  server: 202.50.253.63
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 06｜  1.8M｜ss
+  name: 05｜  3.7M｜ss
+- type: vless
+  server: 179.43.166.190
+  port: 443
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  flow: xtls-rprx-vision
+  tls: true
+  servername: perevodchiki.su
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  name: 06｜  3.7M｜vless
 - type: hysteria
   server: 5.83.129.90
   port: 54177
@@ -109,7 +128,114 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 07｜  1.5M｜hysteria
+  name: 07｜  3.6M｜hysteria
+- type: hysteria
+  server: 198.200.57.142
+  port: 22335
+  password: github.com/Alvin9999-newpac/fanqiang
+  tls: true
+  servername: bing.com
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '11'
+  down: '55'
+  auth-str: github.com/Alvin9999-newpac/fanqiang
+  name: 08｜  3.5M｜hysteria
+- type: ss
+  server: 202.50.253.81
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  tls: false
+  skip-cert-verify: false
+  name: 09｜  3.4M｜ss
+- type: vless
+  network: ws
+  server: 104.26.1.117
+  port: 443
+  uuid: bdde0eb9-62c6-4d30-ac96-ab10d8eb7939
+  servername: erupencompanypdr.pages.dev
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  tfo: false
+  client-fingerprint: chrome
+  ws-opts:
+    headers:
+      Host: erupencompanypdr.pages.dev
+    path: /ISoOMY675XVPxHG4?ed=2560
+  name: 10｜  3.3M｜vless
+- type: ss
+  server: 202.50.253.72
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  tls: false
+  skip-cert-verify: false
+  name: 11｜  3.2M｜ss
+- type: ss
+  server: 202.50.253.90
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  tls: false
+  skip-cert-verify: false
+  name: 12｜  3.2M｜ss
+- server: 202.50.253.99
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+  name: 13｜  3.1M｜ss
+- client-fingerprint: chrome
+  encryption: none
+  grpc-opts:
+    grpc-service-name: a9w9wmko0k2od14hv8v
+  network: grpc
+  port: 443
+  server: 5.83.129.236
+  servername: host-de-upscale.cdn.cachefleet.com
+  tls: true
+  type: vless
+  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
+  name: 14｜  3.1M｜vless
+- type: ss
+  server: 202.50.253.27
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  tls: false
+  skip-cert-verify: false
+  name: 15｜  2.9M｜ss
+- type: ss
+  server: 202.50.253.54
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
+  tls: false
+  skip-cert-verify: false
+  name: 16｜  2.8M｜ss
+- type: anytls
+  server: sdf65h46wr.df6h451rh.xin
+  port: 443
+  password: 0324fbc29561
+  tls: true
+  servername: images.ctfassets.net
+  sni: images.ctfassets.net
+  skip-cert-verify: true
+  name: 17｜  2.7M｜anytls
+- type: vmess
+  network: tcp
+  server: df.668fx.com
+  port: 11353
+  uuid: d105eadc-c3ea-4a82-a299-373d75f2d2b7
+  skip-cert-verify: true
+  alterId: 0
+  cipher: auto
+  name: 18｜  1.7M｜vmess
 - type: hysteria2
   server: starlink-ft.251313.xyz
   port: 443
@@ -118,7 +244,7 @@ proxies:
   servername: xship.top
   sni: xship.top
   skip-cert-verify: true
-  name: 08｜  0.8M｜hysteria2
+  name: 19｜  0.9M｜hysteria2
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -126,25 +252,47 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  3.1M｜hysteria
-  - 02｜  2.5M｜ss
-  - 03｜  2.3M｜hysteria
-  - 04｜  2.3M｜ss
-  - 05｜  2.1M｜ss
-  - 06｜  1.8M｜ss
-  - 07｜  1.5M｜hysteria
-  - 08｜  0.8M｜hysteria2
+  - 01｜  5.8M｜hysteria
+  - 02｜  4.8M｜hysteria
+  - 03｜  4.0M｜vmess
+  - 04｜  3.9M｜vless
+  - 05｜  3.7M｜ss
+  - 06｜  3.7M｜vless
+  - 07｜  3.6M｜hysteria
+  - 08｜  3.5M｜hysteria
+  - 09｜  3.4M｜ss
+  - 10｜  3.3M｜vless
+  - 11｜  3.2M｜ss
+  - 12｜  3.2M｜ss
+  - 13｜  3.1M｜ss
+  - 14｜  3.1M｜vless
+  - 15｜  2.9M｜ss
+  - 16｜  2.8M｜ss
+  - 17｜  2.7M｜anytls
+  - 18｜  1.7M｜vmess
+  - 19｜  0.9M｜hysteria2
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  3.1M｜hysteria
-  - 02｜  2.5M｜ss
-  - 03｜  2.3M｜hysteria
-  - 04｜  2.3M｜ss
-  - 05｜  2.1M｜ss
-  - 06｜  1.8M｜ss
-  - 07｜  1.5M｜hysteria
-  - 08｜  0.8M｜hysteria2
+  - 01｜  5.8M｜hysteria
+  - 02｜  4.8M｜hysteria
+  - 03｜  4.0M｜vmess
+  - 04｜  3.9M｜vless
+  - 05｜  3.7M｜ss
+  - 06｜  3.7M｜vless
+  - 07｜  3.6M｜hysteria
+  - 08｜  3.5M｜hysteria
+  - 09｜  3.4M｜ss
+  - 10｜  3.3M｜vless
+  - 11｜  3.2M｜ss
+  - 12｜  3.2M｜ss
+  - 13｜  3.1M｜ss
+  - 14｜  3.1M｜vless
+  - 15｜  2.9M｜ss
+  - 16｜  2.8M｜ss
+  - 17｜  2.7M｜anytls
+  - 18｜  1.7M｜vmess
+  - 19｜  0.9M｜hysteria2
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
