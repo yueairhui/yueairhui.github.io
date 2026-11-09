@@ -36,188 +36,175 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- type: hysteria
-  server: 62.210.28.175
-  port: 24667
-  password: dongtaiwang.com
-  tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 01｜  5.8M｜hysteria
-- type: hysteria
-  server: 163.172.117.163
-  port: 36699
-  password: dongtaiwang.com
-  tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 02｜  4.8M｜hysteria
-- type: vmess
-  server: 23.94.83.37
-  port: 52080
-  uuid: 355c1760-9bde-4b77-916b-5191e7f704a3
-  cipher: auto
-  alterId: 0
-  tls: false
-  servername: down-cdn.dingtalk.com
-  sni: down-cdn.dingtalk.com
-  network: http
-  http-opts:
-    path:
-    - /QQqun-737805443
-    headers:
-      Host:
-      - down-cdn.dingtalk.com
-  name: 03｜  4.0M｜vmess
-- type: vless
-  server: prvtch.titun.su
-  port: 443
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  udp: true
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  servername: perevodchiki.su
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  name: 04｜  3.9M｜vless
-- type: ss
-  server: 202.50.253.45
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 05｜  3.7M｜ss
-- type: vless
-  server: 179.43.166.190
-  port: 443
-  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
-  flow: xtls-rprx-vision
-  tls: true
-  servername: perevodchiki.su
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-    short-id: 428ef87fd47a3a32
-  name: 06｜  3.7M｜vless
-- type: hysteria
-  server: 5.83.129.90
-  port: 54177
-  password: dongtaiwang.com
-  tls: true
-  servername: apple.com
-  sni: apple.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 07｜  3.6M｜hysteria
-- type: hysteria
-  server: 198.200.57.142
-  port: 22335
-  password: github.com/Alvin9999-newpac/fanqiang
-  tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: github.com/Alvin9999-newpac/fanqiang
-  name: 08｜  3.5M｜hysteria
-- type: ss
-  server: 202.50.253.81
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 09｜  3.4M｜ss
-- type: vless
-  network: ws
-  server: 104.26.1.117
-  port: 443
-  uuid: bdde0eb9-62c6-4d30-ac96-ab10d8eb7939
-  servername: erupencompanypdr.pages.dev
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  tfo: false
-  client-fingerprint: chrome
-  ws-opts:
-    headers:
-      Host: erupencompanypdr.pages.dev
-    path: /ISoOMY675XVPxHG4?ed=2560
-  name: 10｜  3.3M｜vless
-- type: ss
-  server: 202.50.253.72
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 11｜  3.2M｜ss
-- type: ss
-  server: 202.50.253.90
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 12｜  3.2M｜ss
-- server: 202.50.253.99
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-  name: 13｜  3.1M｜ss
-- client-fingerprint: chrome
-  encryption: none
+- alpn:
+  - h2
+  client-fingerprint: ios
   grpc-opts:
-    grpc-service-name: a9w9wmko0k2od14hv8v
+    grpc-mode: gun
+    grpc-service-name: stats.v2.StreamService
   network: grpc
   port: 443
-  server: 5.83.129.236
-  servername: host-de-upscale.cdn.cachefleet.com
+  server: images.mediacorphub.org
+  servername: images.mediacorphub.org
   tls: true
   type: vless
-  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-  name: 14｜  3.1M｜vless
-- type: ss
-  server: 202.50.253.27
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 15｜  2.9M｜ss
-- type: ss
-  server: 202.50.253.54
-  port: 19999
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
-  name: 16｜  2.8M｜ss
+  udp: true
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  name: 01｜  4.6M｜vless
+- alpn:
+  - h2
+  client-fingerprint: edge
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: api.v1.FeedService
+  network: grpc
+  port: 443
+  server: relay.mediacorphub.org
+  servername: relay.mediacorphub.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  name: 02｜  4.6M｜vless
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  network: xhttp
+  port: 443
+  server: link.onecloudtraining.com
+  servername: link.onecloudtraining.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0ad875ef-b751-46e3-aa89-e1ae20e43bcc
+  xhttp-opts:
+    host: link.onecloudtraining.com
+    mode: stream-up
+    path: /static/v3/object/OqyozN63ao
+  name: 03｜  4.3M｜vless
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  network: xhttp
+  port: 443
+  server: 46.33.8.253
+  servername: link.onecloudtraining.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0ad875ef-b751-46e3-aa89-e1ae20e43bcc
+  xhttp-opts:
+    mode: stream-up
+    path: /static/v3/object/OqyozN63ao
+  name: 04｜  4.3M｜vless
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  network: xhttp
+  port: 443
+  server: 46.33.8.246
+  servername: upload.onecloudtraining.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0ad875ef-b751-46e3-aa89-e1ae20e43bcc
+  xhttp-opts:
+    mode: stream-up
+    path: /assets/v1/ingest/5y2XX8T5BC
+  name: 05｜  4.2M｜vless
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  network: xhttp
+  port: 443
+  server: assets.onecloudtraining.com
+  servername: assets.onecloudtraining.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0ad875ef-b751-46e3-aa89-e1ae20e43bcc
+  xhttp-opts:
+    host: assets.onecloudtraining.com
+    mode: stream-up
+    path: /static/v1/blob/SUBAhgozTk
+  name: 06｜  3.9M｜vless
+- alpn:
+  - h2
+  client-fingerprint: edge
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: api.v1.FeedService
+  network: grpc
+  port: 443
+  server: rpc.mediacorphub.org
+  servername: rpc.mediacorphub.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  name: 07｜  3.5M｜vless
+- alpn:
+  - h2
+  client-fingerprint: ios
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: api.v1.FeedService
+  network: grpc
+  port: 443
+  server: fetch.mediacorphub.org
+  servername: fetch.mediacorphub.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  name: 08｜  3.2M｜vless
+- type: hysteria
+  server: 137.175.82.43
+  port: 20022
+  password: dongtaiwang.com
+  tls: true
+  servername: bing.com
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '20'
+  down: '20'
+  auth-str: dongtaiwang.com
+  name: 09｜  3.0M｜hysteria
+- type: hysteria
+  server: 137.175.82.44
+  port: 20022
+  password: dongtaiwang.com
+  tls: true
+  servername: bing.com
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '11'
+  down: '55'
+  auth-str: dongtaiwang.com
+  name: 10｜  2.5M｜hysteria
+- alpn:
+  - h2
+  client-fingerprint: edge
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: hub.v1.ObjectService
+  network: grpc
+  port: 443
+  server: assets.mediacorphub.org
+  servername: assets.mediacorphub.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  name: 11｜  2.5M｜vless
 - type: anytls
   server: sdf65h46wr.df6h451rh.xin
   port: 443
@@ -226,25 +213,79 @@ proxies:
   servername: images.ctfassets.net
   sni: images.ctfassets.net
   skip-cert-verify: true
-  name: 17｜  2.7M｜anytls
-- type: vmess
-  network: tcp
-  server: df.668fx.com
-  port: 11353
-  uuid: d105eadc-c3ea-4a82-a299-373d75f2d2b7
-  skip-cert-verify: true
-  alterId: 0
-  cipher: auto
-  name: 18｜  1.7M｜vmess
-- type: hysteria2
-  server: starlink-ft.251313.xyz
+  name: 12｜  2.4M｜anytls
+- server: 93.152.215.254
   port: 443
-  password: https://xship.best
+  type: vless
+  uuid: 6db6b948-655f-4f68-a9e7-865050e05b31
   tls: true
-  servername: xship.top
-  sni: xship.top
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: is-86tEDOjNbNAnVwc-YHHYSn1MF9SF68P6VjESfDHQ
+    short-id: a2fcac
+  servername: remote.propaint.cl
+  client-fingerprint: ios
+  network: tcp
+  udp: true
+  name: 13｜  2.0M｜vless
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  network: xhttp
+  port: 443
+  server: upload.onecloudtraining.com
+  servername: upload.onecloudtraining.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 0ad875ef-b751-46e3-aa89-e1ae20e43bcc
+  xhttp-opts:
+    host: upload.onecloudtraining.com
+    mode: stream-up
+    path: /assets/v1/ingest/5y2XX8T5BC
+  name: 14｜  1.9M｜vless
+- auth: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: pl3.nexfile.net
   skip-cert-verify: true
-  name: 19｜  0.9M｜hysteria2
+  sni: pl3.nexfile.net
+  tls: false
+  type: hysteria2
+  name: 15｜  1.7M｜hysteria2
+- server: 179.43.166.190
+  port: 443
+  type: vless
+  uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
+    short-id: 428ef87fd47a3a32
+  servername: perevodchiki.su
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 16｜  1.6M｜vless
+- alpn:
+  - h3
+  client-fingerprint: edge
+  network: xhttp
+  port: 443
+  server: 151.101.36.227
+  servername: accounts.fastly.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  xhttp-opts:
+    host: oh1.global.ssl.fastly.net
+    mode: auto
+    no-grpc-header: true
+    path: /
+    x-padding-bytes: 100-1000
+  name: 17｜  1.4M｜vless
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -252,47 +293,43 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  5.8M｜hysteria
-  - 02｜  4.8M｜hysteria
-  - 03｜  4.0M｜vmess
-  - 04｜  3.9M｜vless
-  - 05｜  3.7M｜ss
-  - 06｜  3.7M｜vless
-  - 07｜  3.6M｜hysteria
-  - 08｜  3.5M｜hysteria
-  - 09｜  3.4M｜ss
-  - 10｜  3.3M｜vless
-  - 11｜  3.2M｜ss
-  - 12｜  3.2M｜ss
-  - 13｜  3.1M｜ss
-  - 14｜  3.1M｜vless
-  - 15｜  2.9M｜ss
-  - 16｜  2.8M｜ss
-  - 17｜  2.7M｜anytls
-  - 18｜  1.7M｜vmess
-  - 19｜  0.9M｜hysteria2
+  - 01｜  4.6M｜vless
+  - 02｜  4.6M｜vless
+  - 03｜  4.3M｜vless
+  - 04｜  4.3M｜vless
+  - 05｜  4.2M｜vless
+  - 06｜  3.9M｜vless
+  - 07｜  3.5M｜vless
+  - 08｜  3.2M｜vless
+  - 09｜  3.0M｜hysteria
+  - 10｜  2.5M｜hysteria
+  - 11｜  2.5M｜vless
+  - 12｜  2.4M｜anytls
+  - 13｜  2.0M｜vless
+  - 14｜  1.9M｜vless
+  - 15｜  1.7M｜hysteria2
+  - 16｜  1.6M｜vless
+  - 17｜  1.4M｜vless
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  5.8M｜hysteria
-  - 02｜  4.8M｜hysteria
-  - 03｜  4.0M｜vmess
-  - 04｜  3.9M｜vless
-  - 05｜  3.7M｜ss
-  - 06｜  3.7M｜vless
-  - 07｜  3.6M｜hysteria
-  - 08｜  3.5M｜hysteria
-  - 09｜  3.4M｜ss
-  - 10｜  3.3M｜vless
-  - 11｜  3.2M｜ss
-  - 12｜  3.2M｜ss
-  - 13｜  3.1M｜ss
-  - 14｜  3.1M｜vless
-  - 15｜  2.9M｜ss
-  - 16｜  2.8M｜ss
-  - 17｜  2.7M｜anytls
-  - 18｜  1.7M｜vmess
-  - 19｜  0.9M｜hysteria2
+  - 01｜  4.6M｜vless
+  - 02｜  4.6M｜vless
+  - 03｜  4.3M｜vless
+  - 04｜  4.3M｜vless
+  - 05｜  4.2M｜vless
+  - 06｜  3.9M｜vless
+  - 07｜  3.5M｜vless
+  - 08｜  3.2M｜vless
+  - 09｜  3.0M｜hysteria
+  - 10｜  2.5M｜hysteria
+  - 11｜  2.5M｜vless
+  - 12｜  2.4M｜anytls
+  - 13｜  2.0M｜vless
+  - 14｜  1.9M｜vless
+  - 15｜  1.7M｜hysteria2
+  - 16｜  1.6M｜vless
+  - 17｜  1.4M｜vless
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
