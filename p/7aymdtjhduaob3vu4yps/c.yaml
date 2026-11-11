@@ -36,127 +36,108 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- server: 151.101.36.2
-  port: 443
-  type: vless
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  tls: true
-  alpn:
-  - h3
-  servername: accounts.fastly.com
-  client-fingerprint: edge
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: oh4.global.ssl.fastly.net
-    mode: auto
-  udp: true
-  name: 01｜  8.2M｜vless
-- server: 151.101.36.253
-  port: 443
-  type: vless
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  tls: true
-  alpn:
-  - h3
-  servername: accounts.fastly.com
-  client-fingerprint: edge
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: ovd9.global.ssl.fastly.net
-    mode: auto
-    no-grpc-header: true
-    x-padding-bytes: 100-1000
-  udp: true
-  name: 02｜  7.3M｜vless
-- server: 151.101.36.201
-  port: 443
-  type: vless
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  tls: true
-  alpn:
-  - h3
-  servername: accounts.fastly.com
-  client-fingerprint: ios
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: oh6.global.ssl.fastly.net
-    mode: auto
-  udp: true
-  name: 03｜  6.5M｜vless
-- server: 151.101.36.111
-  port: 443
-  type: vless
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  tls: true
-  alpn:
-  - h3
-  servername: accounts.fastly.com
-  client-fingerprint: edge
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: ovd11.global.ssl.fastly.net
-    mode: auto
-  udp: true
-  name: 04｜  6.3M｜vless
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: stats.v2.StreamService
-  network: grpc
-  port: 443
-  server: cdn.mediacorphub.org
-  servername: cdn.mediacorphub.org
-  tls: true
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-  name: 05｜  6.1M｜vless
 - alpn:
   - h3
   client-fingerprint: edge
   network: xhttp
   port: 443
-  server: 151.101.36.61
+  server: 151.101.36.2
   servername: accounts.fastly.com
   tls: true
   type: vless
   udp: true
   uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
   xhttp-opts:
-    host: ovd10.global.ssl.fastly.net
+    host: oh4.global.ssl.fastly.net
     mode: auto
     path: /
-  name: 06｜  5.8M｜vless
-- server: app.mediacorphub.org
+  name: 01｜  6.7M｜vless
+- alpn:
+  - h3
+  client-fingerprint: chrome
+  network: xhttp
   port: 443
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  server: 151.101.36.253
+  servername: accounts.fastly.com
   tls: true
-  servername: app.mediacorphub.org
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: stats.v2.StreamService
+  type: vless
   udp: true
-  name: 07｜  5.8M｜vless
-- server: images.mediacorphub.org
-  port: 443
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  xhttp-opts:
+    host: ovd9.global.ssl.fastly.net
+    mode: auto
+    no-grpc-header: true
+    path: /
+    reuse-settings:
+      c-max-reuse-times: '0'
+      h-keep-alive-period: 0
+      h-max-request-times: 600-900
+      h-max-reusable-secs: 1800-3000
+      max-connections: '16'
+    x-padding-bytes: 100-1000
+  xudp: true
+  name: 02｜  6.2M｜vless
+- type: vless
+  server: 201.58.189.105
+  port: 2083
+  uuid: d7ddade6-b7a0-4cab-a910-d5d5c378d98a
+  udp: true
+  network: grpc
   tls: true
-  alpn:
+  servername: dl.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: B7x5bYp-YhtLeH31zYcilpKFCkGTMe3jtSECSw-bMC4
+    short-id: 8bd80253
+  grpc-opts:
+    grpc-service-name: google.storage.v2.Storage
+  name: 03｜  5.2M｜vless
+- alpn:
   - h2
-  servername: images.mediacorphub.org
-  client-fingerprint: ios
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: stats.v2.StreamService
+  - http/1.1
+  client-fingerprint: firefox
+  network: xhttp
+  port: 443
+  server: cdn-ya.shamanapp.online
+  servername: cdn-ya.shamanapp.online
+  tls: true
+  type: vless
   udp: true
-  name: 08｜  5.7M｜vless
+  uuid: 40c8a202-4b7f-45a6-b0aa-37db0fac4df8
+  xhttp-opts:
+    host: cdn-ya.shamanapp.online
+    mode: packet-up
+    no-grpc-header: true
+    path: /media/hls/720p/
+    sc-max-each-post-bytes: 20000
+    sc-min-posts-interval-ms: 5
+    seq-key: page
+    seq-placement: query
+    uplink-chunk-size: 20000
+    uplink-data-key: X-Request-Id
+    uplink-data-placement: header
+    uplink-http-method: GET
+    x-padding-bytes: 100-1000
+    x-padding-header: X-Cache
+    x-padding-key: _dc
+    x-padding-method: tokenish
+    x-padding-obfs-mode: true
+    x-padding-placement: header
+  name: 04｜  4.6M｜vless
+- server: 9.163.235.73
+  port: 2083
+  type: vless
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: 0123456789abcdef
+  servername: www.apple.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 05｜  4.6M｜vless
 - type: hysteria
   server: 62.210.28.175
   port: 24667
@@ -170,26 +151,7 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 09｜  4.2M｜hysteria
-- type: anytls
-  server: dddz-1-x.473221.xyz
-  port: 43120
-  password: 65ec84f5-0dd4-4582-8b4f-592e50b22116
-  udp: true
-  sni: v1-dy.ixigua.com
-  skip-cert-verify: true
-  name: 10｜  4.0M｜anytls
-- server: ssr2.762988.xyz
-  port: 33336
-  type: ssr
-  cipher: chacha20-ietf
-  password: dongtaiwang.com
-  protocol: auth_chain_a
-  obfs: tls1.2_ticket_auth
-  protocolparam: ''
-  obfsparam: ''
-  udp: true
-  name: 11｜  4.0M｜ssr
+  name: 06｜  4.5M｜hysteria
 - type: hysteria
   server: 163.172.117.163
   port: 36699
@@ -203,21 +165,94 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 12｜  3.7M｜hysteria
-- type: hysteria
-  server: 198.200.57.142
-  port: 22335
-  password: github.com/Alvin9999-newpac/fanqiang
+  name: 07｜  4.2M｜hysteria
+- type: vless
+  server: 104.36.69.105
+  port: 443
+  uuid: 4dbf1ade-33f1-40dc-9273-e51babd570fe
+  udp: true
+  network: tcp
+  flow: xtls-rprx-vision
   tls: true
-  servername: bing.com
-  sni: bing.com
+  servername: portal.citygrainla.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE
+    short-id: 051f20c2344a2dfd
+  name: 08｜  3.9M｜vless
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  network: ws
+  port: 443
+  server: web-production-416e4892.up.railway.app
+  servername: web-production-416e4892.up.railway.app
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2afe043f-7ab2-465c-b3b1-f1060ff77a7f
+  ws-opts:
+    headers:
+      Host: web-production-416e4892.up.railway.app
+      User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24
+    path: /ws/2afe043f-7ab2-465c-b3b1-f1060ff77a7f
+  xudp: true
+  name: 09｜  3.9M｜vless
+- server: 2.26.88.140
+  port: 4443
+  type: vless
+  uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  tls: true
+  servername: lv3.nexfile.net
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /api/v1/sync/
+    host: lv3.nexfile.net
+  udp: true
+  name: 10｜  3.8M｜vless
+- server: 50.7.86.214
+  port: 2053
+  type: vless
+  uuid: 746c7209-49e1-494e-9ad1-a630d48ed26d
+  tls: true
+  tfo: false
+  flow: xtls-rprx-vision
   skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: github.com/Alvin9999-newpac/fanqiang
-  name: 13｜  3.6M｜hysteria
+  reality-opts:
+    public-key: jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs
+    short-id: 55986a94e2228791
+  servername: www.apple.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 11｜  3.8M｜vless
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: BlSccfT5tvDIOS7v9VaPd0ulUNhUdvlMjGiNzDNDUHE
+    short-id: 051f20c2344a2dfd
+  server: 104.225.239.235
+  servername: portal.citygrainla.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4dbf1ade-33f1-40dc-9273-e51babd570fe
+  name: 12｜  3.7M｜vless
+- type: vmess
+  server: 39.108.113.127
+  port: 10086
+  uuid: b0253c6c-0b96-4950-bde1-669f13bc1a01
+  cipher: auto
+  alterId: 0
+  tls: false
+  network: ws
+  ws-opts:
+    path: /
+  name: 13｜  3.5M｜vmess
 - type: hysteria
   server: 137.175.82.44
   port: 20022
@@ -231,7 +266,7 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 14｜  3.5M｜hysteria
+  name: 14｜  2.5M｜hysteria
 - type: hysteria
   server: 137.175.82.43
   port: 20022
@@ -245,40 +280,44 @@ proxies:
   up: '20'
   down: '20'
   auth-str: dongtaiwang.com
-  name: 15｜  3.4M｜hysteria
-- type: anytls
-  server: sdf65h46wr.df6h451rh.xin
+  name: 15｜  2.3M｜hysteria
+- type: vless
+  server: 95.163.232.240
   port: 443
-  password: 0324fbc29561
+  uuid: 010be6fa-ab5f-404a-9edf-ab2db1f09f0c
   tls: true
-  servername: images.ctfassets.net
-  sni: images.ctfassets.net
+  servername: files.neurixai.app
+  sni: files.neurixai.app
   skip-cert-verify: true
-  name: 16｜  3.1M｜anytls
-- server: vpn-de-002.fastervpn.world
-  port: 443
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  auth: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-de-002.fastervpn.world
-  skip-cert-verify: true
-  name: 17｜  2.9M｜hysteria2
-- server: n2.topingr.ir
-  port: 443
-  type: vless
-  uuid: d5748db0-0031-4b9e-b43c-6c3986a9b5ed
-  tls: true
-  alpn:
-  - http/1.1
-  servername: riga.zovip2.ir
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /api/v3/pulse
+    path: /api/generate
     headers:
-      Host: riga.zovip2.ir
+      Host: files.neurixai.app
+  name: 16｜  1.9M｜vless
+- server: 157.22.185.68
+  port: 2058
+  type: vless
+  uuid: 4ad9f982-b56a-444a-9684-35ce51307a36
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: lJBsn9ndieTIUBzXkJUhf6O0OE8pm29_z1fUtARwL0s
+    short-id: 937255313d6ce673
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+  network: tcp
   udp: true
-  name: 18｜  2.2M｜vless
+  name: 17｜  1.7M｜vless
+- server: forwarded.frnhk.xyz
+  port: 2053
+  type: anytls
+  password: 047e0e0c-1843-4f16-9812-ec2cc94f7a99
+  udp: true
+  sni: my.gosthk.site
+  skip-cert-verify: true
+  name: 18｜  0.6M｜anytls
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -286,45 +325,45 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  8.2M｜vless
-  - 02｜  7.3M｜vless
-  - 03｜  6.5M｜vless
-  - 04｜  6.3M｜vless
-  - 05｜  6.1M｜vless
-  - 06｜  5.8M｜vless
-  - 07｜  5.8M｜vless
-  - 08｜  5.7M｜vless
-  - 09｜  4.2M｜hysteria
-  - 10｜  4.0M｜anytls
-  - 11｜  4.0M｜ssr
-  - 12｜  3.7M｜hysteria
-  - 13｜  3.6M｜hysteria
-  - 14｜  3.5M｜hysteria
-  - 15｜  3.4M｜hysteria
-  - 16｜  3.1M｜anytls
-  - 17｜  2.9M｜hysteria2
-  - 18｜  2.2M｜vless
+  - 01｜  6.7M｜vless
+  - 02｜  6.2M｜vless
+  - 03｜  5.2M｜vless
+  - 04｜  4.6M｜vless
+  - 05｜  4.6M｜vless
+  - 06｜  4.5M｜hysteria
+  - 07｜  4.2M｜hysteria
+  - 08｜  3.9M｜vless
+  - 09｜  3.9M｜vless
+  - 10｜  3.8M｜vless
+  - 11｜  3.8M｜vless
+  - 12｜  3.7M｜vless
+  - 13｜  3.5M｜vmess
+  - 14｜  2.5M｜hysteria
+  - 15｜  2.3M｜hysteria
+  - 16｜  1.9M｜vless
+  - 17｜  1.7M｜vless
+  - 18｜  0.6M｜anytls
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  8.2M｜vless
-  - 02｜  7.3M｜vless
-  - 03｜  6.5M｜vless
-  - 04｜  6.3M｜vless
-  - 05｜  6.1M｜vless
-  - 06｜  5.8M｜vless
-  - 07｜  5.8M｜vless
-  - 08｜  5.7M｜vless
-  - 09｜  4.2M｜hysteria
-  - 10｜  4.0M｜anytls
-  - 11｜  4.0M｜ssr
-  - 12｜  3.7M｜hysteria
-  - 13｜  3.6M｜hysteria
-  - 14｜  3.5M｜hysteria
-  - 15｜  3.4M｜hysteria
-  - 16｜  3.1M｜anytls
-  - 17｜  2.9M｜hysteria2
-  - 18｜  2.2M｜vless
+  - 01｜  6.7M｜vless
+  - 02｜  6.2M｜vless
+  - 03｜  5.2M｜vless
+  - 04｜  4.6M｜vless
+  - 05｜  4.6M｜vless
+  - 06｜  4.5M｜hysteria
+  - 07｜  4.2M｜hysteria
+  - 08｜  3.9M｜vless
+  - 09｜  3.9M｜vless
+  - 10｜  3.8M｜vless
+  - 11｜  3.8M｜vless
+  - 12｜  3.7M｜vless
+  - 13｜  3.5M｜vmess
+  - 14｜  2.5M｜hysteria
+  - 15｜  2.3M｜hysteria
+  - 16｜  1.9M｜vless
+  - 17｜  1.7M｜vless
+  - 18｜  0.6M｜anytls
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
