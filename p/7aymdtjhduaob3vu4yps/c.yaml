@@ -36,49 +36,6 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- server: 151.101.36.201
-  port: 443
-  type: vless
-  uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: firefox
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: oh6.global.ssl.fastly.net
-    mode: auto
-  udp: true
-  name: 01｜  6.0M｜vless
-- server: 200.102.183.57
-  port: 80
-  type: vless
-  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
-  tls: true
-  alpn:
-  - h2
-  servername: 68r2nrw6avta71yq.cdn.cachefleet.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: qi8ws15c7jv5q2fa
-  udp: true
-  name: 02｜  5.2M｜vless
-- server: 151.101.36.88
-  port: 443
-  type: vless
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: ovd5.global.ssl.fastly.net
-    mode: auto
-  udp: true
-  name: 03｜  5.2M｜vless
 - server: 109.104.153.43
   port: 33336
   type: ssr
@@ -88,37 +45,33 @@ proxies:
   obfs: tls1.2_ticket_auth
   protocolparam: ''
   obfsparam: ''
-  name: 04｜  4.8M｜ssr
-- server: 151.101.36.111
-  port: 443
-  type: vless
-  uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
+  name: 01｜  2.9M｜ssr
+- client-fingerprint: chrome
+  network: tcp
+  password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 20027
+  server: sclass-b1.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  sub_tag: C002-260622
+  type: trojan
+  udp: true
+  x-toolall-mihomo: true
+  name: 02｜  2.5M｜trojan
+- type: vless
+  server: zfapi.zalolink.com
+  port: 43149
+  udp: true
+  skip-cert-verify: true
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
   tls: true
-  servername: accounts.fastly.com
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: ovd11.global.ssl.fastly.net
-    mode: auto
-  udp: true
-  name: 05｜  4.6M｜vless
-- encryption: mlkem768x25519plus.native.0rtt.idIqJLbBRhVvjLcCi75qK-I68clo9tz132HIDrp6JVA
+  servername: psstatic.cdn.bcebos.com
+  client-fingerprint: firefox
   flow: xtls-rprx-vision
-  http-opts:
-    headers:
-      Host:
-      - tgju.org
-    path:
-    - /@TurboConfigs---@TurboConfigs---@TurboConfigs--@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs--@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs--@TurboConfigs---@TurboConfigs---@TurboConfigs---
-  network: http
-  port: 2091
-  server: 167.233.182.104
-  type: vless
-  udp: true
-  uuid: 3a667b02-3e6e-439e-9fdb-720ab7a5d306
-  xudp: true
-  name: 06｜  4.5M｜vless
+  reality-opts:
+    public-key: cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE
+    short-id: 15aa0ad4
+  name: 03｜  2.2M｜vless
 - type: hysteria
   server: 163.172.117.163
   port: 36699
@@ -132,105 +85,99 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 07｜  4.5M｜hysteria
-- fingerprint: ''
-  password: b80fb17e-082a-40ce-9e38-ee2f92c1a6ea
-  port: 36035
-  server: site.ddddd.site
-  skip-cert-verify: true
-  sni: virtual.ubuntu24.com
-  type: anytls
-  udp: true
-  username: b80fb17e-082a-40ce-9e38-ee2f92c1a6ea
-  name: 08｜  4.3M｜anytls
-- type: hysteria
-  server: 62.210.28.175
-  port: 24667
-  password: dongtaiwang.com
+  name: 04｜  2.2M｜hysteria
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.18
+  type: ss
+  name: 05｜  1.8M｜ss
+- server: 9.247.174.134
+  port: 8443
+  type: vless
+  uuid: 585a421d-d782-4420-912e-dd58ff5966d7
   tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 09｜  4.0M｜hysteria
-- type: anytls
-  server: site.ddddd.site
-  port: 36032
-  password: b80fb17e-082a-40ce-9e38-ee2f92c1a6ea
-  udp: true
-  sni: virtual.ubuntu24.com
-  skip-cert-verify: true
+  reality-opts:
+    public-key: 7jPluypHwPilf_Mq7JOY96SwKkbK35WuIlN1HwGQ_0A
+    short-id: 974f7f8f
+  servername: play.googleapis.com
   client-fingerprint: chrome
-  name: 10｜  3.9M｜anytls
-- server: p05.rghvf.sbs
-  port: 12330
-  type: vmess
-  uuid: 68adffea-4146-4f92-b2f9-955cd634c274
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: gb.uniquenames.net
-  udp: true
-  name: 11｜  3.1M｜vmess
-- server: zfapi.zalolink.com
-  port: 35460
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: mkVsbEvwaiSo9QwnrVN65YZ92QntQQyYs2iDxN6yTlw
-    short-id: 30d976db3eab32
-  servername: psstatic.cdn.bcebos.com
-  client-fingerprint: ios
   network: tcp
   udp: true
-  name: 12｜  3.0M｜vless
-- server: zfapi.zalolink.com
-  port: 43149
+  name: 06｜  1.7M｜vless
+- client-fingerprint: firefox
+  network: xhttp
+  port: 8443
+  server: earlytrain.net
+  servername: earlytrain.net
+  tls: true
   type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE
-    short-id: 15aa0ad4
-  servername: psstatic.cdn.bcebos.com
-  client-fingerprint: firefox
-  network: tcp
   udp: true
-  name: 13｜  2.5M｜vless
-- type: hysteria
-  server: 137.175.82.43
-  port: 20022
-  password: dongtaiwang.com
+  uuid: 37af0181-5598-4aad-a040-d926bcb65757
+  xhttp-opts:
+    host: earlytrain.net
+    mode: auto
+    path: /api/v1/upload
+  name: 07｜  1.7M｜vless
+- client-fingerprint: firefox
+  network: xhttp
+  port: 8443
+  server: 37.18.15.112
+  servername: earlytrain.net
   tls: true
-  servername: bing.com
-  sni: bing.com
+  type: vless
+  udp: true
+  uuid: 37af0181-5598-4aad-a040-d926bcb65757
+  xhttp-opts:
+    host: earlytrain.net
+    mode: auto
+    path: /api/v1/upload
+    x-padding-bytes: 100-1000
+    x-padding-obfs-mode: false
+  name: 08｜  1.7M｜vless
+- password: d7563108-615c-4338-a7bd-77f359869a4a
+  port: 20028
+  server: sclass-b1.catcat321.com
   skip-cert-verify: true
-  alpn:
-  - h3
-  up: '20'
-  down: '20'
-  auth-str: dongtaiwang.com
-  name: 14｜  2.5M｜hysteria
-- type: vless
-  network: ws
-  server: radar.cloudflare.com
-  port: 8080
-  uuid: cfa71937-73d5-4eb8-9b25-eadecd944803
+  sni: hk.catxstar.com
+  type: trojan
+  name: 09｜  1.6M｜trojan
+- type: ss
+  server: 202.50.253.45
+  port: 19999
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  cipher: aes-256-gcm
   tls: false
-  encryption: none
-  ws-opts:
-    headers:
-      Host: sh-harand.shcharand00.workers.dev
-    path: /
-  name: 15｜  2.2M｜vless
+  skip-cert-verify: false
+  name: 10｜  1.5M｜ss
+- server: 192.177.26.55
+  port: 443
+  type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: cC6kqzQ1mdCXyPey8xRXS7TQ1S4kF3nJW-h1ItJ4SH8
+    short-id: bdaddda4cbc8c7bf
+  servername: repo-16.topp-con.xyz
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 11｜  1.4M｜vless
+- client-fingerprint: chrome
+  network: xhttp
+  port: 4443
+  server: lv3.nexfile.net
+  servername: lv3.nexfile.net
+  tls: true
+  type: vless
+  udp: true
+  uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  xhttp-opts:
+    host: lv3.nexfile.net
+    mode: auto
+    path: /api/v1/sync/
+  name: 12｜  1.2M｜vless
 - type: hysteria
   server: 137.175.82.44
   port: 20022
@@ -244,14 +191,34 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 16｜  2.0M｜hysteria
-- type: anytls
-  server: forwarded.frnhk.xyz
-  port: 8880
-  password: a2d955fb-a739-4771-99bb-be80cad577f6
-  udp: true
-  sni: jp2.gosthk.site
-  name: 17｜  1.7M｜anytls
+  name: 13｜  1.1M｜hysteria
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: grpc
+  network: grpc
+  port: 443
+  server: 212.113.116.181
+  servername: de.oncloudvpn.com
+  tls: true
+  type: vless
+  uuid: 1d46250c-f015-439d-a7fd-c4d9e2a4c63d
+  name: 14｜  0.8M｜vless
+- type: hysteria
+  server: 137.175.82.43
+  port: 20022
+  password: dongtaiwang.com
+  tls: true
+  servername: bing.com
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '20'
+  down: '20'
+  auth-str: dongtaiwang.com
+  name: 15｜  0.8M｜hysteria
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -259,43 +226,39 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  6.0M｜vless
-  - 02｜  5.2M｜vless
-  - 03｜  5.2M｜vless
-  - 04｜  4.8M｜ssr
-  - 05｜  4.6M｜vless
-  - 06｜  4.5M｜vless
-  - 07｜  4.5M｜hysteria
-  - 08｜  4.3M｜anytls
-  - 09｜  4.0M｜hysteria
-  - 10｜  3.9M｜anytls
-  - 11｜  3.1M｜vmess
-  - 12｜  3.0M｜vless
-  - 13｜  2.5M｜vless
-  - 14｜  2.5M｜hysteria
-  - 15｜  2.2M｜vless
-  - 16｜  2.0M｜hysteria
-  - 17｜  1.7M｜anytls
+  - 01｜  2.9M｜ssr
+  - 02｜  2.5M｜trojan
+  - 03｜  2.2M｜vless
+  - 04｜  2.2M｜hysteria
+  - 05｜  1.8M｜ss
+  - 06｜  1.7M｜vless
+  - 07｜  1.7M｜vless
+  - 08｜  1.7M｜vless
+  - 09｜  1.6M｜trojan
+  - 10｜  1.5M｜ss
+  - 11｜  1.4M｜vless
+  - 12｜  1.2M｜vless
+  - 13｜  1.1M｜hysteria
+  - 14｜  0.8M｜vless
+  - 15｜  0.8M｜hysteria
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  6.0M｜vless
-  - 02｜  5.2M｜vless
-  - 03｜  5.2M｜vless
-  - 04｜  4.8M｜ssr
-  - 05｜  4.6M｜vless
-  - 06｜  4.5M｜vless
-  - 07｜  4.5M｜hysteria
-  - 08｜  4.3M｜anytls
-  - 09｜  4.0M｜hysteria
-  - 10｜  3.9M｜anytls
-  - 11｜  3.1M｜vmess
-  - 12｜  3.0M｜vless
-  - 13｜  2.5M｜vless
-  - 14｜  2.5M｜hysteria
-  - 15｜  2.2M｜vless
-  - 16｜  2.0M｜hysteria
-  - 17｜  1.7M｜anytls
+  - 01｜  2.9M｜ssr
+  - 02｜  2.5M｜trojan
+  - 03｜  2.2M｜vless
+  - 04｜  2.2M｜hysteria
+  - 05｜  1.8M｜ss
+  - 06｜  1.7M｜vless
+  - 07｜  1.7M｜vless
+  - 08｜  1.7M｜vless
+  - 09｜  1.6M｜trojan
+  - 10｜  1.5M｜ss
+  - 11｜  1.4M｜vless
+  - 12｜  1.2M｜vless
+  - 13｜  1.1M｜hysteria
+  - 14｜  0.8M｜vless
+  - 15｜  0.8M｜hysteria
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
