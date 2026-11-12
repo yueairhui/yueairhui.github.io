@@ -36,20 +36,89 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- type: hysteria
-  server: 198.200.57.142
-  port: 22335
-  password: github.com/Alvin9999-newpac/fanqiang
+- server: 151.101.36.201
+  port: 443
+  type: vless
+  uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
   tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
+  servername: accounts.fastly.com
+  client-fingerprint: firefox
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: oh6.global.ssl.fastly.net
+    mode: auto
+  udp: true
+  name: 01｜  6.0M｜vless
+- server: 200.102.183.57
+  port: 80
+  type: vless
+  uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
+  tls: true
   alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: github.com/Alvin9999-newpac/fanqiang
-  name: 01｜  2.9M｜hysteria
+  - h2
+  servername: 68r2nrw6avta71yq.cdn.cachefleet.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: qi8ws15c7jv5q2fa
+  udp: true
+  name: 02｜  5.2M｜vless
+- server: 151.101.36.88
+  port: 443
+  type: vless
+  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: ovd5.global.ssl.fastly.net
+    mode: auto
+  udp: true
+  name: 03｜  5.2M｜vless
+- server: 109.104.153.43
+  port: 33336
+  type: ssr
+  cipher: chacha20-ietf
+  password: dongtaiwang.com
+  protocol: auth_chain_a
+  obfs: tls1.2_ticket_auth
+  protocolparam: ''
+  obfsparam: ''
+  name: 04｜  4.8M｜ssr
+- server: 151.101.36.111
+  port: 443
+  type: vless
+  uuid: 9a46fb8c-fde6-492c-b5c6-8b44af0ce75f
+  tls: true
+  servername: accounts.fastly.com
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /
+    host: ovd11.global.ssl.fastly.net
+    mode: auto
+  udp: true
+  name: 05｜  4.6M｜vless
+- encryption: mlkem768x25519plus.native.0rtt.idIqJLbBRhVvjLcCi75qK-I68clo9tz132HIDrp6JVA
+  flow: xtls-rprx-vision
+  http-opts:
+    headers:
+      Host:
+      - tgju.org
+    path:
+    - /@TurboConfigs---@TurboConfigs---@TurboConfigs--@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs--@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs--@TurboConfigs---@TurboConfigs---@TurboConfigs---
+  network: http
+  port: 2091
+  server: 167.233.182.104
+  type: vless
+  udp: true
+  uuid: 3a667b02-3e6e-439e-9fdb-720ab7a5d306
+  xudp: true
+  name: 06｜  4.5M｜vless
 - type: hysteria
   server: 163.172.117.163
   port: 36699
@@ -63,57 +132,79 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 02｜  2.5M｜hysteria
-- client-fingerprint: chrome
-  network: xhttp
-  port: 4443
-  server: lv3.nexfile.net
-  servername: lv3.nexfile.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  xhttp-opts:
-    host: lv3.nexfile.net
-    mode: auto
-    path: /api/v1/sync/
-  name: 03｜  2.2M｜vless
-- type: trojan
-  server: 191.44.112.170.sslip.io
-  port: 443
-  password: 46d221fa-e9b4-748c-4eae-019a88e42991
-  tls: true
-  servername: orbylume.my.to
-  sni: orbylume.my.to
+  name: 07｜  4.5M｜hysteria
+- fingerprint: ''
+  password: b80fb17e-082a-40ce-9e38-ee2f92c1a6ea
+  port: 36035
+  server: site.ddddd.site
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /tvpn-trojan/bg
-    headers:
-      Host: orbylume.my.to
-  name: 04｜  2.0M｜trojan
+  sni: virtual.ubuntu24.com
+  type: anytls
+  udp: true
+  username: b80fb17e-082a-40ce-9e38-ee2f92c1a6ea
+  name: 08｜  4.3M｜anytls
+- type: hysteria
+  server: 62.210.28.175
+  port: 24667
+  password: dongtaiwang.com
+  tls: true
+  servername: bing.com
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '11'
+  down: '55'
+  auth-str: dongtaiwang.com
+  name: 09｜  4.0M｜hysteria
 - type: anytls
-  server: sdf65h46wr.df6h451rh.xin
-  port: 443
-  password: 0324fbc29561
-  tls: true
-  servername: images.ctfassets.net
-  sni: images.ctfassets.net
-  skip-cert-verify: true
-  name: 05｜  2.0M｜anytls
-- server: 138.124.242.46
-  port: 8443
-  type: vless
-  uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3
-  tls: true
-  servername: pl2-edge.gacvpn.site
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: connect-pl
+  server: site.ddddd.site
+  port: 36032
+  password: b80fb17e-082a-40ce-9e38-ee2f92c1a6ea
   udp: true
-  name: 06｜  1.8M｜vless
+  sni: virtual.ubuntu24.com
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  name: 10｜  3.9M｜anytls
+- server: p05.rghvf.sbs
+  port: 12330
+  type: vmess
+  uuid: 68adffea-4146-4f92-b2f9-955cd634c274
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: gb.uniquenames.net
+  udp: true
+  name: 11｜  3.1M｜vmess
+- server: zfapi.zalolink.com
+  port: 35460
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: mkVsbEvwaiSo9QwnrVN65YZ92QntQQyYs2iDxN6yTlw
+    short-id: 30d976db3eab32
+  servername: psstatic.cdn.bcebos.com
+  client-fingerprint: ios
+  network: tcp
+  udp: true
+  name: 12｜  3.0M｜vless
+- server: zfapi.zalolink.com
+  port: 43149
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE
+    short-id: 15aa0ad4
+  servername: psstatic.cdn.bcebos.com
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+  name: 13｜  2.5M｜vless
 - type: hysteria
   server: 137.175.82.43
   port: 20022
@@ -127,102 +218,40 @@ proxies:
   up: '20'
   down: '20'
   auth-str: dongtaiwang.com
-  name: 07｜  1.8M｜hysteria
-- server: site.ddddd.site
-  port: 36031
-  type: anytls
-  password: b80fb17e-082a-40ce-9e38-ee2f92c1a6ea
-  sni: virtual.ubuntu24.com
-  skip-cert-verify: true
-  name: 08｜  1.3M｜anytls
+  name: 14｜  2.5M｜hysteria
+- type: vless
+  network: ws
+  server: radar.cloudflare.com
+  port: 8080
+  uuid: cfa71937-73d5-4eb8-9b25-eadecd944803
+  tls: false
+  encryption: none
+  ws-opts:
+    headers:
+      Host: sh-harand.shcharand00.workers.dev
+    path: /
+  name: 15｜  2.2M｜vless
 - type: hysteria
-  server: 5.83.129.90
-  port: 54177
+  server: 137.175.82.44
+  port: 20022
   password: dongtaiwang.com
   tls: true
-  servername: apple.com
-  sni: apple.com
+  servername: bing.com
+  sni: bing.com
   skip-cert-verify: true
   alpn:
   - h3
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 09｜  1.2M｜hysteria
-- server: 94.183.234.245
-  port: 443
-  type: vless
-  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc
-    short-id: 7f1e29593aa94ad1
-  servername: www.bing.com
-  client-fingerprint: qq
-  network: tcp
+  name: 16｜  2.0M｜hysteria
+- type: anytls
+  server: forwarded.frnhk.xyz
+  port: 8880
+  password: a2d955fb-a739-4771-99bb-be80cad577f6
   udp: true
-  name: 10｜  1.1M｜vless
-- client-fingerprint: chrome
-  network: xhttp
-  port: 443
-  server: 185.22.172.249
-  servername: fortuna.golden-dragon.de5.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: b7374077-9fdc-4d28-9fb1-5cbc262fb53d
-  xhttp-opts:
-    host: fortuna.golden-dragon.de5.net
-    mode: packet-up
-    path: /dragon-stream
-  name: 11｜  0.8M｜vless
-- alpn:
-  - h3
-  client-fingerprint: chrome
-  network: xhttp
-  port: 443
-  server: 151.101.36.88
-  servername: accounts.fastly.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  xhttp-opts:
-    host: ovd5.global.ssl.fastly.net
-    mode: auto
-    path: /
-  name: 12｜  0.8M｜vless
-- server: 151.101.36.2
-  port: 443
-  type: vless
-  uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
-  tls: true
-  alpn:
-  - h3
-  servername: accounts.fastly.com
-  client-fingerprint: edge
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: oh4.global.ssl.fastly.net
-    mode: auto
-  udp: true
-  name: 13｜  0.7M｜vless
-- server: 196.196.149.80
-  port: 443
-  type: vless
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
-    short-id: 42426c882c5fcd41
-  servername: 7aa271t.es1.h1clayd.click
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-  name: 14｜  0.6M｜vless
+  sni: jp2.gosthk.site
+  name: 17｜  1.7M｜anytls
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -230,37 +259,43 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  2.9M｜hysteria
-  - 02｜  2.5M｜hysteria
-  - 03｜  2.2M｜vless
-  - 04｜  2.0M｜trojan
-  - 05｜  2.0M｜anytls
-  - 06｜  1.8M｜vless
-  - 07｜  1.8M｜hysteria
-  - 08｜  1.3M｜anytls
-  - 09｜  1.2M｜hysteria
-  - 10｜  1.1M｜vless
-  - 11｜  0.8M｜vless
-  - 12｜  0.8M｜vless
-  - 13｜  0.7M｜vless
-  - 14｜  0.6M｜vless
+  - 01｜  6.0M｜vless
+  - 02｜  5.2M｜vless
+  - 03｜  5.2M｜vless
+  - 04｜  4.8M｜ssr
+  - 05｜  4.6M｜vless
+  - 06｜  4.5M｜vless
+  - 07｜  4.5M｜hysteria
+  - 08｜  4.3M｜anytls
+  - 09｜  4.0M｜hysteria
+  - 10｜  3.9M｜anytls
+  - 11｜  3.1M｜vmess
+  - 12｜  3.0M｜vless
+  - 13｜  2.5M｜vless
+  - 14｜  2.5M｜hysteria
+  - 15｜  2.2M｜vless
+  - 16｜  2.0M｜hysteria
+  - 17｜  1.7M｜anytls
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  2.9M｜hysteria
-  - 02｜  2.5M｜hysteria
-  - 03｜  2.2M｜vless
-  - 04｜  2.0M｜trojan
-  - 05｜  2.0M｜anytls
-  - 06｜  1.8M｜vless
-  - 07｜  1.8M｜hysteria
-  - 08｜  1.3M｜anytls
-  - 09｜  1.2M｜hysteria
-  - 10｜  1.1M｜vless
-  - 11｜  0.8M｜vless
-  - 12｜  0.8M｜vless
-  - 13｜  0.7M｜vless
-  - 14｜  0.6M｜vless
+  - 01｜  6.0M｜vless
+  - 02｜  5.2M｜vless
+  - 03｜  5.2M｜vless
+  - 04｜  4.8M｜ssr
+  - 05｜  4.6M｜vless
+  - 06｜  4.5M｜vless
+  - 07｜  4.5M｜hysteria
+  - 08｜  4.3M｜anytls
+  - 09｜  4.0M｜hysteria
+  - 10｜  3.9M｜anytls
+  - 11｜  3.1M｜vmess
+  - 12｜  3.0M｜vless
+  - 13｜  2.5M｜vless
+  - 14｜  2.5M｜hysteria
+  - 15｜  2.2M｜vless
+  - 16｜  2.0M｜hysteria
+  - 17｜  1.7M｜anytls
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
