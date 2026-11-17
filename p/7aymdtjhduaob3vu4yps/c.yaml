@@ -36,176 +36,233 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- type: trojan
-  server: 112.49.65.212
-  port: 18000
-  password: 3b985d60-e252-4935-8e03-06afeb1144c9
-  tls: true
-  servername: www.biliimg.com
-  sni: www.biliimg.com
-  skip-cert-verify: true
-  name: 01｜  4.0M｜trojan
-- auth: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  down: ''
-  fingerprint: ''
-  obfs: ''
-  obfs-password: ''
-  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  port: 4444
-  server: bl1.nexfile.net
-  skip-cert-verify: true
-  sni: bl1.nexfile.net
-  tls: false
-  type: hysteria2
-  up: ''
-  name: 02｜  3.6M｜hysteria2
-- type: anytls
-  server: sdf65h46wr.df6h451rh.xin
-  port: 443
-  password: 0324fbc29561
-  tls: true
-  servername: images.ctfassets.net
-  sni: images.ctfassets.net
-  skip-cert-verify: true
-  name: 03｜  3.1M｜anytls
-- type: hysteria
-  server: 5.83.129.143
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: '55'
+  password: dongtaiwang.com
   port: 26691
-  password: dongtaiwang.com
-  tls: true
+  server: 5.83.129.143
   skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 04｜  2.5M｜hysteria
-- type: hysteria
-  server: 163.172.117.163
-  port: 36699
-  password: dongtaiwang.com
   tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
+  type: hysteria
   up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 05｜  2.4M｜hysteria
-- type: hysteria
-  server: 198.200.57.142
-  port: 22335
-  password: github.com/Alvin9999-newpac/fanqiang
-  tls: true
-  servername: bing.com
-  sni: bing.com
+  x-toolall-mihomo: true
+  name: 01｜  5.4M｜hysteria
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  http-opts:
+    headers:
+      Host:
+      - down-cdn.dingtalk.com
+    method: GET
+    path:
+    - /3x
+  network: http
+  port: 42831
+  server: 179.43.140.24
   skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: github.com/Alvin9999-newpac/fanqiang
-  name: 06｜  2.4M｜hysteria
-- server: bbcdd4t.de-p2.h1clayd.click
+  tls: false
+  type: vmess
+  udp: true
+  uuid: a925a98c-ad7a-40c6-9fdf-130a1de69416
+  name: 02｜  4.3M｜vmess
+- server: 31.58.213.31
   port: 443
   type: vless
-  uuid: 4618cebd-e1e9-45c3-be98-d9d6e3ee8bef
+  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
   tls: true
-  reality-opts:
-    public-key: n9cdr2Qf9h3S_jf5Rcd15fl-4fxuztHvlexE7G-QvW8
-    short-id: 1aab0b827885a8b4
-  servername: bbcdd4t.de-p2.h1clayd.click
+  flow: xtls-rprx-vision
+  servername: app.streamru2.net
   client-fingerprint: firefox
   network: tcp
   udp: true
-  name: 07｜  1.7M｜vless
-- server: b998f03d.de-p2.h1clayd.click
+  name: 03｜  3.3M｜vless
+- client-fingerprint: chrome
+  encryption: none
+  network: xhttp
   port: 443
-  type: vless
-  uuid: 474638a5-dc58-4453-9e40-70bcaa4ef74c
-  tls: true
   reality-opts:
-    public-key: RjoTK5x2_y3hb4nsOUnjii7IAu6gy5GrC-VN-H_AIh0
-    short-id: c10f4100fa3a8d47
-  servername: b998f03d.de-p2.h1clayd.click
-  client-fingerprint: chrome
-  network: tcp
+    public-key: bPxKgZHO13GJGKjbHz0BVnsw8UIcOjz2yz8VCgGv5BI
+    short-id: 6fce2d08
+  server: 185.14.29.29
+  servername: static.gcore.pro
+  tls: true
+  type: vless
   udp: true
-  name: 08｜  1.3M｜vless
-- server: 196.245.153.112
+  uuid: 6b1607f1-3a08-4681-8abd-83663a8155e7
+  xhttp-opts:
+    host: static.gcore.pro
+    mode: auto
+    path: /js/libs
+  xudp: true
+  name: 04｜  3.3M｜vless
+- server: 84.32.149.211
   port: 443
   type: vless
-  uuid: 474638a5-dc58-4453-9e40-70bcaa4ef74c
+  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
   tls: true
   reality-opts:
-    public-key: RjoTK5x2_y3hb4nsOUnjii7IAu6gy5GrC-VN-H_AIh0
-    short-id: c10f4100fa3a8d47
-  servername: b998f03d.de-p2.h1clayd.click
+    public-key: M-cE7q2hNgBeNv7COM8DS2QC3GGi6Pu7pD1lvUfG0mo
+    short-id: e4fc6803b3212ad4
+  servername: acorn.willowfen.top
   client-fingerprint: firefox
-  network: tcp
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: grpc
   udp: true
-  name: 09｜  1.3M｜vless
-- type: hysteria
-  server: 137.175.82.43
-  port: 20022
-  password: dongtaiwang.com
+  name: 05｜  3.2M｜vless
+- client-fingerprint: chrome
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: mEo4kHPpRns7efJfVW1G-gDEsPag0jELFQK-HIwrvjY
+    short-id: 6562cf617728186e
+  server: 31.77.28.68
+  servername: nl2.soshelper.space
   tls: true
-  servername: bing.com
-  sni: bing.com
+  type: vless
+  udp: true
+  uuid: 372931d3-91c5-4564-b79c-041302de9a17
+  xudp: true
+  name: 06｜  3.0M｜vless
+- alterId: 64
+  cipher: auto
+  network: ws
+  port: 30004
+  server: 192.74.236.148
   skip-cert-verify: true
-  alpn:
-  - h3
-  up: '20'
-  down: '20'
-  auth-str: dongtaiwang.com
-  name: 10｜  1.2M｜hysteria
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.91334565.xyz
+    path: /path/1733477783705
+  name: 07｜  2.9M｜vmess
 - alpn:
   - http/1.1
-  client-fingerprint: chrome
+  client-fingerprint: unsafe
+  encryption: none
+  network: ws
   port: 443
-  server: base.hosamobenl.co.uk
-  servername: base.hosamobenl.co.uk
+  server: 172.67.141.182
+  servername: 6qwoom7kdrcoan3ui4ra5dy.pages.dev
   tls: true
   type: vless
-  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
-  name: 11｜  1.0M｜vless
-- type: hysteria
-  server: 137.175.82.44
-  port: 20022
-  password: dongtaiwang.com
+  uuid: ce440dcf-e570-4a50-af37-bf588ee8a988
+  ws-opts:
+    headers:
+      Host: 6qwoom7kdrcoan3ui4ra5dy.pages.dev
+    path: /vl/KSPdmco70dfoXFS292o2Nv6yPt?ed=2560#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+  name: 08｜  2.9M｜vless
+- server: zfapi.zalolink.com
+  port: 43149
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
   tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 12｜  1.0M｜hysteria
-- type: ss
-  server: 47.254.175.2
-  port: 443
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE
+    short-id: 15aa0ad4
+  servername: psstatic.cdn.bcebos.com
+  client-fingerprint: firefox
+  network: tcp
   udp: true
-  name: 13｜  0.9M｜ss
-- type: hysteria
-  server: 62.210.28.175
-  port: 24667
-  password: dongtaiwang.com
+  name: 09｜  2.8M｜vless
+- server: 178.18.158.17
+  port: 43000
+  type: vless
+  uuid: 0809eed6-5204-49b8-8312-b82a10024022
   tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 14｜  0.5M｜hysteria
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: U_dxFnbfesmgSwL-SlpvGYFbpY5vlJ1kb52knlCXkkI
+    short-id: 8cfe1563
+  servername: 178.18.158.17
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+  name: 10｜  2.6M｜vless
+- client-fingerprint: ios
+  flow: xtls-rprx-vision
+  network: raw
+  port: 54528
+  reality-opts:
+    public-key: 7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo
+    short-id: 54cca3c1c1c7
+  server: zfapi.zalolink.com
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  x-toolall-mihomo: true
+  name: 11｜  2.5M｜vless
+- server: 109.104.153.43
+  port: 33336
+  type: ssr
+  cipher: chacha20-ietf
+  password: dongtaiwang.com
+  protocol: auth_chain_a
+  obfs: tls1.2_ticket_auth
+  protocolparam: ''
+  obfsparam: ''
+  udp: true
+  name: 12｜  2.3M｜ssr
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: tKA5ivaRbvqJ9RcSgp1ZtcCNfHAAuhWfve3tjMXse2w
+    short-id: 678ce913b8266e
+  server: 23.129.180.171
+  servername: us5.gofizzin.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  xudp: true
+  name: 13｜  1.6M｜vless
+- server: 195.72.62.7
+  port: 443
+  type: vless
+  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU
+    short-id: 2a67748b0d641e16
+  servername: fexzoo.net
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+  name: 14｜  1.4M｜vless
+- client-fingerprint: firefox
+  encryption: none
+  network: xhttp
+  port: 443
+  reality-opts:
+    public-key: pvD_MkqLy0ebirhteNx4A9GILH8GMtzgsnASqRLxxC8
+    short-id: c1f47b92f3f9cbb4
+  server: 23.237.59.229
+  servername: vale.quietgrove.forum
+  tls: true
+  type: vless
+  udp: true
+  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
+  xhttp-opts:
+    mode: auto
+  xudp: true
+  name: 15｜  1.2M｜vless
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -213,37 +270,39 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  4.0M｜trojan
-  - 02｜  3.6M｜hysteria2
-  - 03｜  3.1M｜anytls
-  - 04｜  2.5M｜hysteria
-  - 05｜  2.4M｜hysteria
-  - 06｜  2.4M｜hysteria
-  - 07｜  1.7M｜vless
-  - 08｜  1.3M｜vless
-  - 09｜  1.3M｜vless
-  - 10｜  1.2M｜hysteria
-  - 11｜  1.0M｜vless
-  - 12｜  1.0M｜hysteria
-  - 13｜  0.9M｜ss
-  - 14｜  0.5M｜hysteria
+  - 01｜  5.4M｜hysteria
+  - 02｜  4.3M｜vmess
+  - 03｜  3.3M｜vless
+  - 04｜  3.3M｜vless
+  - 05｜  3.2M｜vless
+  - 06｜  3.0M｜vless
+  - 07｜  2.9M｜vmess
+  - 08｜  2.9M｜vless
+  - 09｜  2.8M｜vless
+  - 10｜  2.6M｜vless
+  - 11｜  2.5M｜vless
+  - 12｜  2.3M｜ssr
+  - 13｜  1.6M｜vless
+  - 14｜  1.4M｜vless
+  - 15｜  1.2M｜vless
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  4.0M｜trojan
-  - 02｜  3.6M｜hysteria2
-  - 03｜  3.1M｜anytls
-  - 04｜  2.5M｜hysteria
-  - 05｜  2.4M｜hysteria
-  - 06｜  2.4M｜hysteria
-  - 07｜  1.7M｜vless
-  - 08｜  1.3M｜vless
-  - 09｜  1.3M｜vless
-  - 10｜  1.2M｜hysteria
-  - 11｜  1.0M｜vless
-  - 12｜  1.0M｜hysteria
-  - 13｜  0.9M｜ss
-  - 14｜  0.5M｜hysteria
+  - 01｜  5.4M｜hysteria
+  - 02｜  4.3M｜vmess
+  - 03｜  3.3M｜vless
+  - 04｜  3.3M｜vless
+  - 05｜  3.2M｜vless
+  - 06｜  3.0M｜vless
+  - 07｜  2.9M｜vmess
+  - 08｜  2.9M｜vless
+  - 09｜  2.8M｜vless
+  - 10｜  2.6M｜vless
+  - 11｜  2.5M｜vless
+  - 12｜  2.3M｜ssr
+  - 13｜  1.6M｜vless
+  - 14｜  1.4M｜vless
+  - 15｜  1.2M｜vless
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
