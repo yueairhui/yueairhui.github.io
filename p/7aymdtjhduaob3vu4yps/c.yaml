@@ -36,233 +36,105 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: '55'
-  password: dongtaiwang.com
-  port: 26691
-  server: 5.83.129.143
-  skip-cert-verify: true
-  tls: true
-  type: hysteria
-  up: '11'
-  x-toolall-mihomo: true
-  name: 01｜  5.4M｜hysteria
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  http-opts:
-    headers:
-      Host:
-      - down-cdn.dingtalk.com
-    method: GET
-    path:
-    - /3x
-  network: http
-  port: 42831
-  server: 179.43.140.24
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: a925a98c-ad7a-40c6-9fdf-130a1de69416
-  name: 02｜  4.3M｜vmess
-- server: 31.58.213.31
+- type: vless
+  server: 201.24.116.192
   port: 443
-  type: vless
-  uuid: 2232d904-8e6a-4202-8240-6efd8aec02e9
-  tls: true
-  flow: xtls-rprx-vision
-  servername: app.streamru2.net
-  client-fingerprint: firefox
-  network: tcp
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
   udp: true
-  name: 03｜  3.3M｜vless
-- client-fingerprint: chrome
-  encryption: none
-  network: xhttp
-  port: 443
-  reality-opts:
-    public-key: bPxKgZHO13GJGKjbHz0BVnsw8UIcOjz2yz8VCgGv5BI
-    short-id: 6fce2d08
-  server: 185.14.29.29
-  servername: static.gcore.pro
-  tls: true
-  type: vless
-  udp: true
-  uuid: 6b1607f1-3a08-4681-8abd-83663a8155e7
-  xhttp-opts:
-    host: static.gcore.pro
-    mode: auto
-    path: /js/libs
-  xudp: true
-  name: 04｜  3.3M｜vless
-- server: 84.32.149.211
-  port: 443
-  type: vless
-  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
-  tls: true
-  reality-opts:
-    public-key: M-cE7q2hNgBeNv7COM8DS2QC3GGi6Pu7pD1lvUfG0mo
-    short-id: e4fc6803b3212ad4
-  servername: acorn.willowfen.top
-  client-fingerprint: firefox
   network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: grpc
-  udp: true
-  name: 05｜  3.2M｜vless
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: mEo4kHPpRns7efJfVW1G-gDEsPag0jELFQK-HIwrvjY
-    short-id: 6562cf617728186e
-  server: 31.77.28.68
-  servername: nl2.soshelper.space
   tls: true
-  type: vless
-  udp: true
-  uuid: 372931d3-91c5-4564-b79c-041302de9a17
-  xudp: true
-  name: 06｜  3.0M｜vless
-- alterId: 64
-  cipher: auto
+  servername: vps3.nemnogogo.com
+  client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
+  name: 01｜  2.4M｜vless
+- type: vmess
   network: ws
-  port: 30004
   server: 192.74.236.148
+  port: 30004
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   skip-cert-verify: true
   tls: true
-  type: vmess
   udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
   ws-opts:
     headers:
       Host: www.91334565.xyz
     path: /path/1733477783705
-  name: 07｜  2.9M｜vmess
-- alpn:
-  - http/1.1
-  client-fingerprint: unsafe
-  encryption: none
-  network: ws
-  port: 443
-  server: 172.67.141.182
-  servername: 6qwoom7kdrcoan3ui4ra5dy.pages.dev
-  tls: true
-  type: vless
-  uuid: ce440dcf-e570-4a50-af37-bf588ee8a988
-  ws-opts:
+  name: 02｜  2.2M｜vmess
+- type: vless
+  network: http
+  server: shh-hja-bbw.speedbluepanel.sbs
+  port: 2053
+  uuid: 39397ce8-51f5-4780-957f-942b4dfd75f7
+  tls: false
+  udp: true
+  encryption: mlkem768x25519plus.native.0rtt.4ABzCb9yeBZzvV-bRT5Tqpb3kejYBGn4Vib4PJiSyUg
+  http-opts:
     headers:
-      Host: 6qwoom7kdrcoan3ui4ra5dy.pages.dev
-    path: /vl/KSPdmco70dfoXFS292o2Nv6yPt?ed=2560#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-  name: 08｜  2.9M｜vless
-- server: zfapi.zalolink.com
-  port: 43149
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: cvong7paE8XIzzbKWgV5iUruP1pBqI2IhMuBHc8c0UE
-    short-id: 15aa0ad4
-  servername: psstatic.cdn.bcebos.com
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-  name: 09｜  2.8M｜vless
-- server: 178.18.158.17
-  port: 43000
-  type: vless
-  uuid: 0809eed6-5204-49b8-8312-b82a10024022
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: U_dxFnbfesmgSwL-SlpvGYFbpY5vlJ1kb52knlCXkkI
-    short-id: 8cfe1563
-  servername: 178.18.158.17
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-  name: 10｜  2.6M｜vless
-- client-fingerprint: ios
-  flow: xtls-rprx-vision
-  network: raw
-  port: 54528
-  reality-opts:
-    public-key: 7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo
-    short-id: 54cca3c1c1c7
-  server: zfapi.zalolink.com
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  x-toolall-mihomo: true
-  name: 11｜  2.5M｜vless
-- server: 109.104.153.43
-  port: 33336
-  type: ssr
-  cipher: chacha20-ietf
-  password: dongtaiwang.com
-  protocol: auth_chain_a
-  obfs: tls1.2_ticket_auth
-  protocolparam: ''
-  obfsparam: ''
-  udp: true
-  name: 12｜  2.3M｜ssr
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
+      Host:
+      - docs.github.com
+    method: GET
+    path:
+    - /
+  name: 03｜  2.1M｜vless
+- type: vless
+  server: 201.51.12.98
   port: 443
-  reality-opts:
-    public-key: tKA5ivaRbvqJ9RcSgp1ZtcCNfHAAuhWfve3tjMXse2w
-    short-id: 678ce913b8266e
-  server: 23.129.180.171
-  servername: us5.gofizzin.com
-  tls: true
-  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
   udp: true
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
-  xudp: true
-  name: 13｜  1.6M｜vless
-- server: 195.72.62.7
-  port: 443
-  type: vless
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  network: grpc
   tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU
-    short-id: 2a67748b0d641e16
-  servername: fexzoo.net
+  servername: vps3.nemnogogo.com
   client-fingerprint: firefox
-  network: tcp
-  udp: true
-  name: 14｜  1.4M｜vless
-- client-fingerprint: firefox
-  encryption: none
-  network: xhttp
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
+  name: 04｜  1.6M｜vless
+- type: vless
+  server: vps3.nemnogogo.com
   port: 443
-  reality-opts:
-    public-key: pvD_MkqLy0ebirhteNx4A9GILH8GMtzgsnASqRLxxC8
-    short-id: c1f47b92f3f9cbb4
-  server: 23.237.59.229
-  servername: vale.quietgrove.forum
-  tls: true
-  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
   udp: true
-  uuid: 49db4ce7-ad48-41a3-9b6f-4c6dabd94504
-  xhttp-opts:
-    mode: auto
-  xudp: true
-  name: 15｜  1.2M｜vless
+  network: grpc
+  tls: true
+  servername: vps3.nemnogogo.com
+  client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
+  name: 05｜  0.9M｜vless
+- type: vless
+  server: 345739t.de15.h1clayd.click
+  port: 443
+  udp: true
+  skip-cert-verify: true
+  uuid: 95c2ba1e-a330-4e6b-bd81-bf9c0f647b2f
+  tls: true
+  servername: 345739t.de15.h1clayd.click
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
+    short-id: 23732d14a527990d
+  name: 06｜  0.7M｜vless
+- server: 202.50.253.99
+  port: 19999
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+  name: 07｜  0.7M｜ss
+- type: ss
+  server: 202.50.253.27
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 08｜  0.7M｜ss
+- type: ss
+  server: 202.50.253.54
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  name: 09｜  0.5M｜ss
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -270,39 +142,27 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  5.4M｜hysteria
-  - 02｜  4.3M｜vmess
-  - 03｜  3.3M｜vless
-  - 04｜  3.3M｜vless
-  - 05｜  3.2M｜vless
-  - 06｜  3.0M｜vless
-  - 07｜  2.9M｜vmess
-  - 08｜  2.9M｜vless
-  - 09｜  2.8M｜vless
-  - 10｜  2.6M｜vless
-  - 11｜  2.5M｜vless
-  - 12｜  2.3M｜ssr
-  - 13｜  1.6M｜vless
-  - 14｜  1.4M｜vless
-  - 15｜  1.2M｜vless
+  - 01｜  2.4M｜vless
+  - 02｜  2.2M｜vmess
+  - 03｜  2.1M｜vless
+  - 04｜  1.6M｜vless
+  - 05｜  0.9M｜vless
+  - 06｜  0.7M｜vless
+  - 07｜  0.7M｜ss
+  - 08｜  0.7M｜ss
+  - 09｜  0.5M｜ss
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  5.4M｜hysteria
-  - 02｜  4.3M｜vmess
-  - 03｜  3.3M｜vless
-  - 04｜  3.3M｜vless
-  - 05｜  3.2M｜vless
-  - 06｜  3.0M｜vless
-  - 07｜  2.9M｜vmess
-  - 08｜  2.9M｜vless
-  - 09｜  2.8M｜vless
-  - 10｜  2.6M｜vless
-  - 11｜  2.5M｜vless
-  - 12｜  2.3M｜ssr
-  - 13｜  1.6M｜vless
-  - 14｜  1.4M｜vless
-  - 15｜  1.2M｜vless
+  - 01｜  2.4M｜vless
+  - 02｜  2.2M｜vmess
+  - 03｜  2.1M｜vless
+  - 04｜  1.6M｜vless
+  - 05｜  0.9M｜vless
+  - 06｜  0.7M｜vless
+  - 07｜  0.7M｜ss
+  - 08｜  0.7M｜ss
+  - 09｜  0.5M｜ss
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
