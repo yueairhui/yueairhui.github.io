@@ -36,184 +36,138 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- server: 62.210.70.191
-  port: 24667
-  type: hysteria
-  auth_str: dongtaiwang.com
-  auth-str: dongtaiwang.com
-  up: 10
-  down: 50
-  skip-cert-verify: true
-  alpn:
-  - h3
-  name: 01｜  3.5M｜hysteria
-- server: 88.216.214.159
+- down: ''
+  fingerprint: ''
+  obfs: ''
+  obfs-password: ''
+  password: 3a17ce52-4547-45aa-9820-a7d03ad5faca
   port: 443
+  server: 45.86.74.193
+  skip-cert-verify: false
+  sni: media.embrofree.org
+  type: hysteria2
+  up: ''
+  name: 01｜  3.0M｜hysteria2
+- server: 191.217.252.92
+  port: 2053
   type: vless
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  uuid: 4cf2635f-400a-4556-bb66-645990da5fe1
   tls: true
+  flow: xtls-rprx-vision
   reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-    short-id: a7c92e4b10d6f835
-  servername: api-svc-mgr.galioncc.com
+    public-key: uc610xVav3aFo020WeOeitgSp-_hecAeCDYRBuNa7Sg
+    short-id: 5a8e1a04f3d92b67
+  servername: tabletestgame.mooo.com
   client-fingerprint: firefox
   network: tcp
   udp: true
-  name: 02｜  3.2M｜vless
-- server: 192.74.236.148
-  port: 30004
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
+  name: 02｜  2.0M｜vless
+- server: 191.217.206.147
+  port: 6443
+  type: vless
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
   tls: true
+  reality-opts:
+    public-key: RBQhVV7u-QBkQL79vHRE2tQEeR1SA8CJ9zI9i99XA24
+    short-id: 3bcbfe3856680516
+  servername: nl.krabvpn.pro
+  client-fingerprint: firefox
+  network: xhttp
+  xhttp-opts:
+    path: /assets/e19f8e871ca55b3d77d42ae7
+    host: nl.krabvpn.pro
+    mode: auto
+  udp: true
+  name: 03｜  1.6M｜vless
+- server: 88.216.127.115
+  port: 443
+  type: vless
+  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: cc2mDH9C31IlAwrn1eEhbuzZ3l4Ijw3mKl7rF75GUDo
+  servername: lt-modx.nodexphere.net
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+  name: 04｜  1.5M｜vless
+- auth: HATATEAYA
+  obfs: salamander
+  obfs-password: HATATEAYA
+  password: HATATEAYA
+  port: 8964
+  server: 77.90.15.183
   skip-cert-verify: true
+  sni: ganlanc.at
+  type: hysteria2
+  name: 05｜  1.4M｜hysteria2
+- type: vless
+  server: free-config-bot-development-33s35.lucity.app
+  port: 443
+  uuid: 474c5a2e-96eb-fa3f-6639-cbd2129c8027
+  tls: true
+  servername: free-config-bot-development-33s35.lucity.app
+  sni: free-config-bot-development-33s35.lucity.app
+  skip-cert-verify: true
+  client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /path/1733477783705
+    path: /ws/474c5a2e-96eb-fa3f-6639-cbd2129c8027
     headers:
-      Host: www.91334565.xyz
-  udp: true
-  name: 03｜  3.0M｜vmess
-- server: 130.78.31.25
-  port: 443
+      Host: free-config-bot-development-33s35.lucity.app
+  name: 06｜  1.4M｜vless
+- server: 191.217.206.147
+  port: 9443
   type: vless
-  uuid: 146d567c-6335-4e63-a8aa-7ec068642440
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
   tls: true
   reality-opts:
-    public-key: fDrDDz_GCqhDgG8kMxWXk2vRuyfBHTTNwVa7k7nJHgw
-    short-id: 5c42ed8c
-  servername: pl2.obxodvpn.us
+    public-key: zd4L59ejBo94N8N9GQtZMox2eBBF9TQf2TLyIgpwlCg
+    short-id: fd7624659f1e7d66
+  servername: fin.krabvpn.pro
   client-fingerprint: firefox
   network: xhttp
   xhttp-opts:
-    path: /xhttp
-    host: pl2.obxodvpn.us
-    mode: packet-up
-  udp: true
-  name: 04｜  2.7M｜vless
-- server: 92.255.58.59
-  port: 443
-  type: vless
-  uuid: a30903dc-1bf0-0001-8b1b-603a3a56211c
-  tls: true
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-    short-id: 344f83372596eea2
-  servername: api-gw-cfg.galioncc.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: grpc
-  udp: true
-  name: 05｜  2.4M｜vless
-- server: 48.103.120.7
-  port: 443
-  type: vless
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-  tls: true
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-    short-id: 868419504747f6de
-  servername: svc-net-ctl.galioncc.com
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-  name: 06｜  1.5M｜vless
-- server: 185.14.29.29
-  port: 443
-  type: vless
-  uuid: 6b1607f1-3a08-4681-8abd-83663a8155e7
-  tls: true
-  reality-opts:
-    public-key: bPxKgZHO13GJGKjbHz0BVnsw8UIcOjz2yz8VCgGv5BI
-    short-id: 6fce2d08
-  servername: static.gcore.pro
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /js/libs
-    host: static.gcore.pro
+    path: /assets/246a109dceaa6b7832a98d17
+    host: fin.krabvpn.pro
     mode: auto
   udp: true
   name: 07｜  1.3M｜vless
-- type: vless
-  server: 345739t.de15.h1clayd.click
+- server: 88.216.189.192
   port: 443
+  type: vless
+  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 1VhM5R3IlHPjzxEeTuik1lcUad-HI6C57MzXxppyXg4
+  servername: modx.wey-land.net
+  client-fingerprint: firefox
+  network: tcp
   udp: true
+  name: 08｜  0.8M｜vless
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  port: 24667
+  protocol: udp
+  server: 62.210.124.132
   skip-cert-verify: true
-  uuid: 95c2ba1e-a330-4e6b-bd81-bf9c0f647b2f
-  tls: true
-  servername: 345739t.de15.h1clayd.click
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
-    short-id: 23732d14a527990d
-  name: 08｜  1.2M｜vless
-- server: czechia.richforever.ru
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+  name: 09｜  0.6M｜hysteria
+- type: hysteria2
+  server: starlink-ft.251313.xyz
   port: 443
-  type: vless
-  uuid: 3dbd9377-43cc-46c3-b32c-2605908024eb
+  password: https://xship.2fa.cat
   tls: true
-  reality-opts:
-    public-key: PA1xWXjxZLn68I-6cjWVdqc0dYhWbu9W5c1GpjEOZgE
-    short-id: 8a9442353eebbe0f
-  servername: czechia.richforever.ru
-  client-fingerprint: firefox
-  network: xhttp
-  xhttp-opts:
-    path: /49b9f446
-    host: czechia.richforever.ru
-    mode: auto
-    x-padding-bytes: 100-300
-  udp: true
-  name: 09｜  0.9M｜vless
-- server: 217.60.94.115
-  port: 443
-  type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-  servername: de13-r.bankai.party
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-  name: 10｜  0.8M｜vless
-- server: 103.118.211.38
-  port: 443
-  type: vless
-  uuid: 3dbd9377-43cc-46c3-b32c-2605908024eb
-  tls: true
-  reality-opts:
-    public-key: PA1xWXjxZLn68I-6cjWVdqc0dYhWbu9W5c1GpjEOZgE
-    short-id: 8a9442353eebbe0f
-  servername: czechia.richforever.ru
-  client-fingerprint: firefox
-  network: xhttp
-  xhttp-opts:
-    path: /49b9f446
-    host: czechia.richforever.ru
-    mode: auto
-    x-padding-bytes: 100-300
-  udp: true
-  name: 11｜  0.6M｜vless
-- server: free.fugui.lol
-  port: 51283
-  type: vless
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
-    short-id: fa514b83
-  servername: swdist.apple.com
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-  name: 12｜  0.5M｜vless
+  servername: xship.top
+  sni: xship.top
+  skip-cert-verify: true
+  name: 10｜  0.5M｜hysteria2
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -221,33 +175,29 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  3.5M｜hysteria
-  - 02｜  3.2M｜vless
-  - 03｜  3.0M｜vmess
-  - 04｜  2.7M｜vless
-  - 05｜  2.4M｜vless
-  - 06｜  1.5M｜vless
+  - 01｜  3.0M｜hysteria2
+  - 02｜  2.0M｜vless
+  - 03｜  1.6M｜vless
+  - 04｜  1.5M｜vless
+  - 05｜  1.4M｜hysteria2
+  - 06｜  1.4M｜vless
   - 07｜  1.3M｜vless
-  - 08｜  1.2M｜vless
-  - 09｜  0.9M｜vless
-  - 10｜  0.8M｜vless
-  - 11｜  0.6M｜vless
-  - 12｜  0.5M｜vless
+  - 08｜  0.8M｜vless
+  - 09｜  0.6M｜hysteria
+  - 10｜  0.5M｜hysteria2
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  3.5M｜hysteria
-  - 02｜  3.2M｜vless
-  - 03｜  3.0M｜vmess
-  - 04｜  2.7M｜vless
-  - 05｜  2.4M｜vless
-  - 06｜  1.5M｜vless
+  - 01｜  3.0M｜hysteria2
+  - 02｜  2.0M｜vless
+  - 03｜  1.6M｜vless
+  - 04｜  1.5M｜vless
+  - 05｜  1.4M｜hysteria2
+  - 06｜  1.4M｜vless
   - 07｜  1.3M｜vless
-  - 08｜  1.2M｜vless
-  - 09｜  0.9M｜vless
-  - 10｜  0.8M｜vless
-  - 11｜  0.6M｜vless
-  - 12｜  0.5M｜vless
+  - 08｜  0.8M｜vless
+  - 09｜  0.6M｜hysteria
+  - 10｜  0.5M｜hysteria2
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
