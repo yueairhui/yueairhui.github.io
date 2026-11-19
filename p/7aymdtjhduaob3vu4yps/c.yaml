@@ -36,196 +36,76 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- obfs: salamander
-  obfs-password: mn1g0eianbese7bl
-  password: u9axzkplfc3463am
-  port: 16146
-  server: sub.macdonalder.cyou
-  skip-cert-verify: false
-  sni: sub.macdonalder.cyou
-  tls: false
-  type: hysteria2
-  name: 01｜  5.7M｜hysteria2
-- client-fingerprint: chrome
+- client-fingerprint: random
   encryption: none
-  grpc-opts:
-    grpc-service-name: api-mod
-  network: grpc
+  network: ws
   port: 443
-  reality-opts:
-    public-key: eyEGQfdxyhZG0bCKlwp8hSihdc5WHTGmw4umrW4_bxY
-    short-id: ''
-  server: 37.114.37.192
-  servername: api-mod.storagedirectguide.com
+  server: ct.877774.xyz
+  servername: us-lax.862400.xyz
   tls: true
   type: vless
   udp: true
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
+  uuid: d38b03c3-ff14-4ee0-80de-cd089f84ee38
+  ws-opts:
+    headers:
+      Host: us-lax.862400.xyz
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
+    path: /announcement?ed=2048
   xudp: true
-  name: 02｜  4.7M｜vless
+  name: 01｜  2.4M｜vless
 - cipher: aes-256-gcm
-  password: itzvpn@321
-  port: 8388
-  server: 57.131.27.21
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.18
   type: ss
   udp: true
-  name: 03｜  3.7M｜ss
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: '55'
-  password: dongtaiwang.com
-  port: 54177
-  server: 5.83.129.90
-  servername: apple.com
+  name: 02｜  2.1M｜ss
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.72
+  type: ss
+  udp: true
+  name: 03｜  1.9M｜ss
+- alterId: 64
+  cipher: auto
+  network: ws
+  port: 30004
+  server: 192.74.236.148
   skip-cert-verify: true
-  sni: apple.com
   tls: true
-  type: hysteria
-  up: '11'
-  name: 04｜  3.1M｜hysteria
-- encryption: mlkem768x25519plus.native.0rtt.jBZbmkgY90BVK1aIyJu5VvLA9lyGsIUMonmRnxJD8NWRudiZ5llyrDKLYpfArQdsGWpZ2JGkXwJxuZEK-_F4uCC9Gcth_PphfxQPi5kydSJvesqCRrDFzYMpzfpEcMSeM4l7z7O9zKTGiYuEXStjWmJOW3pw4gdKg0DALApQu4W1zVExUld6DeG7ouREdpGpw-ygmjqwrzaJDEqa55ZfwQRGgbUz6SdQpgCT5jBCF7gQzzGnLuVt8xpsGRW1CSUCT0G9dmEsCgYtA8WTvlFTVCQ0Y9yylYAAkgBhoQUNgVA_C6MABjVNjHtoT3oGYoeNNARS2lmh86UkZvgBhmMNLasxJ9upPfHMGvmYpfoKCTYJuZgl5Fg9bmWfaVYdgfAyWwPIPIN6cbF9EGYGileIvbZwXBx8p7Zyj2rKk-F7OJw-tHg_21NBAPMtzuHPZzmUjvaP8kKQUpuKu5xy3fxyW0VFjanK7MnCpvfJ4Oe3vYUAQnFxlaRRFwA9S7HIxHSBLaEaDDAskYV3ICZMh_QIg9fPfzkqe2dATdYB4edGpllF3mWAyYkJ4Kk4-kZlPstpPwhvHEW-_VYsc4p0OOBO69EX9aaLXMJhXlAbDcPJk_RukTW9myFe2RtfHYyN1rY1lKwQoCEnfJOyWNDCauJVe4k-XDJFStYn5paxUcVaOMxrKgqI0aew2qpB-1c0oETP7-Mh8_ZgPKvN_GCLceylAVpydhN-02vBzno07aBlZyqL4baWdmrDd3u_xTwynLxCRPKTe_ZiRImidlIS9ES1Q2sRr8Iajlutn_GUtFWI2EMwgaEXEfCOPBA-P_ElfGQXiogSqvsqEgBu0QthXmABQ9MoPidREqcVDDEWWYI_XPcVo7hzjLa4gpYlRLib8MO3HjK9ULWbaImem6mQZbxlrImK-DtfM0oUrtw8mFcQIhZtSpAe90Kx6ohe6Fo8QVcYKlNCR_RWJWtZGkibssFOzVI7XOmA4UW1LpnAPYzN2FTOcgQtaVzJW7mgWIpq-XGaxNSA8-Fdh7hgRnye82JuJXIxikqgB4kuaEh-UhtJdzs2jFVmFJO8b1EvffgbBtdXBbyb5eyspaR6BtUyO6EVUEO_6wskr7szhxWc2yc8O0Ge4RESvqpqNne6SFcWEpPPdclj4KAupBIyBEwk_XYSofCcVHpOFxmeZgOpLyKHF8IzRCUK2hDEROLOIUCgh9axHJWivwqxtsKktQVgx2weipqnmvhj7ItbCymvWgi8ndU6KVJAtKaNUCMA5iojgGKoKgVII-Y6TaU3BAcaYdl9p1BLr4awr9OslliPLPNzxuVBuNySGkJWFLkVeHpW_SYS0oJj3QwboyGGooJVJJykE4K_p9xBeEWR4ZJ9aii1oIwHkRijvBWnurUCRVAuFFYfWGIgHDuqz_xC4lYVLEA74UUHorpl6HZjNhWCEVJtZEUvxsem2XpQqPUt8Nxy5AwprAo9srMpWmegspyreEgCQ0s1ojqe9THOE1XKC3uwB6Y9rIITpBtbIwC4mIJeFcqPj5Napz6XpG7eqHsEy86tjD4z5pi8X7kvMUS5MplObQk
-  network: tcp
-  port: 18434
-  server: ryanserver.ir
-  tls: false
+  type: vmess
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    headers:
+      Host: www.91334565.xyz
+    path: /path/1733477783705
+  name: 04｜  1.8M｜vmess
+- server: 2.27.14.122
+  port: 5443
   type: vless
-  udp: true
-  uuid: Inetiran
-  name: 05｜  3.1M｜vless
-- fingerprint: ''
-  password: 0324fbc29561
-  port: 443
-  server: sdf65h46wr.df6h451rh.xin
-  skip-cert-verify: true
-  sni: images.ctfassets.net
-  type: anytls
-  udp: true
-  username: 0324fbc29561
-  name: 06｜  3.0M｜anytls
-- client-fingerprint: firefox
-  network: xhttp
-  port: 9443
+  uuid: 67864856-8730-40cc-9e1a-a0df697d912b
+  tls: true
   reality-opts:
-    public-key: zd4L59ejBo94N8N9GQtZMox2eBBF9TQf2TLyIgpwlCg
-    short-id: fd7624659f1e7d66
-  server: 191.217.206.147
-  servername: fin.krabvpn.pro
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  xhttp-opts:
-    host: fin.krabvpn.pro
-    mode: auto
-    path: /assets/246a109dceaa6b7832a98d17
-  name: 07｜  2.9M｜vless
-- type: ss
-  server: 130.61.145.251
-  port: 59924
-  cipher: 2022-blake3-chacha20-poly1305
-  password: uou5NTq+xna9PBIG+8jtSSyQ6idxiXZgeK+Uw52qopY=
-  udp: true
-  name: 08｜  2.8M｜ss
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: 1VhM5R3IlHPjzxEeTuik1lcUad-HI6C57MzXxppyXg4
-  server: 88.216.189.192
-  servername: modx.wey-land.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  name: 09｜  2.7M｜vless
-- type: ss
-  server: 47.85.162.44
-  port: 443
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 3NBsnBLanPfG6i3S2GTHineswr6EeSJPb0PCeMQoGoA=
-  udp: true
-  name: 10｜  2.7M｜ss
-- type: hysteria
-  server: 62.210.124.132
-  port: 24667
-  password: dongtaiwang.com
-  tls: true
-  servername: bing.com
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 11｜  2.2M｜hysteria
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: '50'
-  port: 24667
-  server: 62.210.70.191
-  skip-cert-verify: true
-  type: hysteria
-  up: '10'
-  x-toolall-mihomo: true
-  name: 12｜  1.7M｜hysteria
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: Wv7JkcxhkaWGIl2YjzM_8jlmAS99IwsvseYDSIkqt1k
-    short-id: ''
-  server: 2.26.191.219
-  servername: gsdfhjb.wey-land.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  xudp: true
-  name: 13｜  1.6M｜vless
-- client-fingerprint: chrome
-  encryption: none
-  flow: xtls-rprx-vision
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: AiLOqdc8MtLlRdtyjM9wNd1CIStXleOlP6-NCOSKlTg
-    short-id: ''
-  server: 46.247.109.129
-  servername: auto-2.storagedirectguide.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  xudp: true
-  name: 14｜  1.6M｜vless
-- type: vless
-  server: 88.216.60.73
-  port: 443
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-  tls: true
-  servername: ns-api-gw.galioncc.com
+    public-key: YWaSbf7NwwCZNuB3cQ_VCF20mUwWJBcfMysIZN4j6mI
+    short-id: 7a8c9b0e1d2f3456
+  servername: sw.krabvpn.pro
   client-fingerprint: firefox
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-    short-id: a7c92e4b10d6f835
-  name: 15｜  0.8M｜vless
-- client-fingerprint: firefox
-  port: 443
-  reality-opts:
-    public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ
-    short-id: a7c92e4b10d6f835
-  server: 80.47.10.106
-  servername: pl8.galioncc.com
-  tls: true
-  type: vless
+  network: xhttp
+  xhttp-opts:
+    path: /assets/f9c8d7e6a5b4c3d2e1f02468
+    host: sw.krabvpn.pro
+    mode: auto
   udp: true
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-  name: 16｜  0.8M｜vless
+  name: 05｜  1.3M｜vless
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.81
+  type: ss
+  udp: true
+  name: 06｜  1.2M｜ss
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -233,41 +113,21 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  5.7M｜hysteria2
-  - 02｜  4.7M｜vless
-  - 03｜  3.7M｜ss
-  - 04｜  3.1M｜hysteria
-  - 05｜  3.1M｜vless
-  - 06｜  3.0M｜anytls
-  - 07｜  2.9M｜vless
-  - 08｜  2.8M｜ss
-  - 09｜  2.7M｜vless
-  - 10｜  2.7M｜ss
-  - 11｜  2.2M｜hysteria
-  - 12｜  1.7M｜hysteria
-  - 13｜  1.6M｜vless
-  - 14｜  1.6M｜vless
-  - 15｜  0.8M｜vless
-  - 16｜  0.8M｜vless
+  - 01｜  2.4M｜vless
+  - 02｜  2.1M｜ss
+  - 03｜  1.9M｜ss
+  - 04｜  1.8M｜vmess
+  - 05｜  1.3M｜vless
+  - 06｜  1.2M｜ss
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  5.7M｜hysteria2
-  - 02｜  4.7M｜vless
-  - 03｜  3.7M｜ss
-  - 04｜  3.1M｜hysteria
-  - 05｜  3.1M｜vless
-  - 06｜  3.0M｜anytls
-  - 07｜  2.9M｜vless
-  - 08｜  2.8M｜ss
-  - 09｜  2.7M｜vless
-  - 10｜  2.7M｜ss
-  - 11｜  2.2M｜hysteria
-  - 12｜  1.7M｜hysteria
-  - 13｜  1.6M｜vless
-  - 14｜  1.6M｜vless
-  - 15｜  0.8M｜vless
-  - 16｜  0.8M｜vless
+  - 01｜  2.4M｜vless
+  - 02｜  2.1M｜ss
+  - 03｜  1.9M｜ss
+  - 04｜  1.8M｜vmess
+  - 05｜  1.3M｜vless
+  - 06｜  1.2M｜ss
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
