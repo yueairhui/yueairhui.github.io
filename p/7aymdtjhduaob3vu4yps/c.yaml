@@ -36,37 +36,46 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- client-fingerprint: random
-  encryption: none
-  network: ws
+- server: 191.217.204.101
   port: 443
-  server: ct.877774.xyz
-  servername: us-lax.862400.xyz
-  tls: true
+  type: hysteria2
+  password: ca60984f-b1f0-4073-bd33-4c75168f749a
+  auth: ca60984f-b1f0-4073-bd33-4c75168f749a
+  sni: ge-beer-10.fantoff.online
+  skip-cert-verify: true
+  name: 01｜  4.8M｜hysteria2
+- server: 89.58.16.116
+  port: 2342
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: wuW04H6Tq10Zw7ZVOUg6j1
+  udp: true
+  name: 02｜  4.6M｜ss
+- server: 88.216.74.37
+  port: 443
   type: vless
+  uuid: a6142d9d-3f9f-47b7-b7e9-1245dd6a15d6
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: UpOOm5-gcSp3fLuCzWl2HJnnqtUHpnbyOWU2yUCcsRI
+    short-id: 0492eabdb9
+  servername: yw0ein72.dendi.top
+  client-fingerprint: firefox
+  network: tcp
   udp: true
-  uuid: d38b03c3-ff14-4ee0-80de-cd089f84ee38
-  ws-opts:
-    headers:
-      Host: us-lax.862400.xyz
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
-    path: /announcement?ed=2048
-  xudp: true
-  name: 01｜  2.4M｜vless
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.18
-  type: ss
+  name: 03｜  4.3M｜vless
+- server: 217.60.100.222
+  port: 443
+  type: vless
+  uuid: a6142d9d-3f9f-47b7-b7e9-1245dd6a15d6
+  tls: true
+  flow: xtls-rprx-vision
+  servername: 217.60.100.222
+  client-fingerprint: firefox
+  network: tcp
   udp: true
-  name: 02｜  2.1M｜ss
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.72
-  type: ss
-  udp: true
-  name: 03｜  1.9M｜ss
+  name: 04｜  4.0M｜vless
 - alterId: 64
   cipher: auto
   network: ws
@@ -81,31 +90,117 @@ proxies:
     headers:
       Host: www.91334565.xyz
     path: /path/1733477783705
-  name: 04｜  1.8M｜vmess
-- server: 2.27.14.122
-  port: 5443
+  name: 05｜  3.9M｜vmess
+- server: 45.95.98.139
+  port: 443
   type: vless
-  uuid: 67864856-8730-40cc-9e1a-a0df697d912b
+  uuid: a6142d9d-3f9f-47b7-b7e9-1245dd6a15d6
   tls: true
-  reality-opts:
-    public-key: YWaSbf7NwwCZNuB3cQ_VCF20mUwWJBcfMysIZN4j6mI
-    short-id: 7a8c9b0e1d2f3456
-  servername: sw.krabvpn.pro
+  alpn:
+  - h2
+  - http/1.1
+  flow: xtls-rprx-vision
+  servername: 45.95.98.130
   client-fingerprint: firefox
+  network: tcp
+  udp: true
+  name: 06｜  3.8M｜vless
+- client-fingerprint: chrome
+  encryption: none
+  grpc-opts:
+    grpc-service-name: ebl
+  network: grpc
+  port: 443
+  reality-opts:
+    public-key: _KeOS5u_irk1547CMVB3RdwQzz1SzrQZk-IV-btF7TU
+    short-id: ''
+  server: 94.183.164.176
+  servername: optim.tildacdn.pub
+  tls: true
+  type: vless
+  udp: true
+  uuid: b4192dfb-f458-4303-b877-29a41a6d8416
+  xudp: true
+  name: 07｜  3.6M｜vless
+- client-fingerprint: qq
+  encryption: none
   network: xhttp
+  port: 8444
+  reality-opts:
+    public-key: jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ
+    short-id: 635a76c25a4b1820
+  server: 31.77.144.255
+  servername: www.amd.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 95580a09-cce7-4b62-af74-a514083ba9e4
   xhttp-opts:
-    path: /assets/f9c8d7e6a5b4c3d2e1f02468
-    host: sw.krabvpn.pro
-    mode: auto
+    mode: stream-one
+    path: /xh
+  xudp: true
+  name: 08｜  3.1M｜vless
+- alterId: 0
+  cipher: auto
+  network: ws
+  port: 16616
+  server: dp8yk.xiaoyan.io
+  skip-cert-verify: false
+  tls: false
+  type: vmess
   udp: true
-  name: 05｜  1.3M｜vless
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.81
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
+  ws-opts:
+    headers:
+      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+    path: /
+  xudp: true
+  name: 09｜  2.5M｜vmess
+- server: sdf65h46wr.df6h451rh.xin
+  port: 443
+  type: anytls
+  password: 0324fbc29561
+  udp: true
+  sni: images.ctfassets.net
+  skip-cert-verify: true
+  name: 10｜  2.1M｜anytls
+- server: 161.35.37.106
+  port: 443
+  type: vless
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+  tls: false
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - fast.com
+  udp: true
+  name: 11｜  2.0M｜vless
+- server: 146.190.21.145
+  port: 443
+  type: vless
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+  tls: false
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - fast.com
+  udp: true
+  name: 12｜  1.5M｜vless
+- server: 129.159.0.53
+  port: 59924
   type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: zpdYERRY+i9wkj3G766aELYAVoITvCv9kKrIGG8ykzY=
   udp: true
-  name: 06｜  1.2M｜ss
+  name: 13｜  1.5M｜ss
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -113,21 +208,35 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  2.4M｜vless
-  - 02｜  2.1M｜ss
-  - 03｜  1.9M｜ss
-  - 04｜  1.8M｜vmess
-  - 05｜  1.3M｜vless
-  - 06｜  1.2M｜ss
+  - 01｜  4.8M｜hysteria2
+  - 02｜  4.6M｜ss
+  - 03｜  4.3M｜vless
+  - 04｜  4.0M｜vless
+  - 05｜  3.9M｜vmess
+  - 06｜  3.8M｜vless
+  - 07｜  3.6M｜vless
+  - 08｜  3.1M｜vless
+  - 09｜  2.5M｜vmess
+  - 10｜  2.1M｜anytls
+  - 11｜  2.0M｜vless
+  - 12｜  1.5M｜vless
+  - 13｜  1.5M｜ss
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  2.4M｜vless
-  - 02｜  2.1M｜ss
-  - 03｜  1.9M｜ss
-  - 04｜  1.8M｜vmess
-  - 05｜  1.3M｜vless
-  - 06｜  1.2M｜ss
+  - 01｜  4.8M｜hysteria2
+  - 02｜  4.6M｜ss
+  - 03｜  4.3M｜vless
+  - 04｜  4.0M｜vless
+  - 05｜  3.9M｜vmess
+  - 06｜  3.8M｜vless
+  - 07｜  3.6M｜vless
+  - 08｜  3.1M｜vless
+  - 09｜  2.5M｜vmess
+  - 10｜  2.1M｜anytls
+  - 11｜  2.0M｜vless
+  - 12｜  1.5M｜vless
+  - 13｜  1.5M｜ss
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
