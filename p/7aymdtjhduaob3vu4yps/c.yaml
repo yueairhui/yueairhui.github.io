@@ -36,68 +36,100 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- server: 202.50.253.99
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-  name: 01｜  1.7M｜ss
-- server: 202.50.253.63
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-  name: 02｜  1.6M｜ss
-- server: 202.50.253.45
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-  name: 03｜  1.5M｜ss
-- type: ss
-  server: 202.50.253.90
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-  name: 04｜  1.0M｜ss
-- server: 202.50.253.27
-  port: 19999
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-  name: 05｜  1.0M｜ss
-- type: vless
-  server: 196.196.149.80
+- server: germanyafterpool.fun
   port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  flow: xtls-rprx-vision
-  tls: true
-  servername: 7aa271t.es1.h1clayd.click
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE
-    short-id: 42426c882c5fcd41
-  name: 06｜  1.0M｜vless
-- type: vmess
+  type: hysteria2
+  password: 9a9f167d-b461-466f-be50-f0ffd598a6f8
+  auth: 9a9f167d-b461-466f-be50-f0ffd598a6f8
+  sni: germanyafterpool.fun
+  skip-cert-verify: true
+  name: 01｜  4.3M｜hysteria2
+- alterId: 64
+  cipher: auto
   network: ws
-  server: 192.74.236.148
   port: 30004
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  server: 192.74.236.148
   skip-cert-verify: true
   tls: true
+  type: vmess
   udp: true
-  alterId: 64
-  cipher: auto
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
     headers:
       Host: www.91334565.xyz
     path: /path/1733477783705
-  name: 07｜  1.0M｜vmess
+  name: 02｜  3.7M｜vmess
+- server: 109.106.15.99
+  port: 443
+  type: vless
+  uuid: bc93a03d-13b5-0004-8ee7-d50c11459dab
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
+    short-id: 1c3e8241a8743df9
+  servername: key-master-saver.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+  name: 03｜  3.3M｜vless
+- server: 45.86.245.122
+  port: 8444
+  type: vless
+  uuid: 0f2dc4af-951f-4690-922e-07c6e8bab26a
+  tls: true
+  servername: at-43-wt6w.new-wave-split.site
+  client-fingerprint: firefox
+  network: xhttp
+  xhttp-opts:
+    path: /xh
+    host: at-43-wt6w.new-wave-split.site
+  udp: true
+  name: 04｜  3.0M｜vless
+- server: 47.254.128.109
+  port: 443
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  udp: true
+  name: 05｜  2.8M｜ss
+- server: dp8yk.xiaoyan.io
+  port: 16616
+  type: vmess
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+  udp: true
+  name: 06｜  2.7M｜vmess
+- type: ss
+  server: 47.254.167.157
+  port: 443
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  cipher: 2022-blake3-chacha20-poly1305
+  tls: false
+  skip-cert-verify: false
+  name: 07｜  2.5M｜ss
+- client-fingerprint: firefox
+  network: xhttp
+  port: 8443
+  server: plaindune.com
+  servername: plaindune.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 37af0181-5598-4aad-a040-d926bcb65757
+  xhttp-opts:
+    host: plaindune.com
+    mode: auto
+    path: /api/v1/upload
+  name: 08｜  2.3M｜vless
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -105,23 +137,25 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  1.7M｜ss
-  - 02｜  1.6M｜ss
-  - 03｜  1.5M｜ss
-  - 04｜  1.0M｜ss
-  - 05｜  1.0M｜ss
-  - 06｜  1.0M｜vless
-  - 07｜  1.0M｜vmess
+  - 01｜  4.3M｜hysteria2
+  - 02｜  3.7M｜vmess
+  - 03｜  3.3M｜vless
+  - 04｜  3.0M｜vless
+  - 05｜  2.8M｜ss
+  - 06｜  2.7M｜vmess
+  - 07｜  2.5M｜ss
+  - 08｜  2.3M｜vless
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  1.7M｜ss
-  - 02｜  1.6M｜ss
-  - 03｜  1.5M｜ss
-  - 04｜  1.0M｜ss
-  - 05｜  1.0M｜ss
-  - 06｜  1.0M｜vless
-  - 07｜  1.0M｜vmess
+  - 01｜  4.3M｜hysteria2
+  - 02｜  3.7M｜vmess
+  - 03｜  3.3M｜vless
+  - 04｜  3.0M｜vless
+  - 05｜  2.8M｜ss
+  - 06｜  2.7M｜vmess
+  - 07｜  2.5M｜ss
+  - 08｜  2.3M｜vless
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
