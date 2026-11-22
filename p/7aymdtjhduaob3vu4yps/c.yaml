@@ -36,137 +36,21 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- server: 189.24.82.30
-  port: 443
-  type: vless
-  uuid: b354463f-ac84-422e-9a26-556c81ba001c
-  tls: true
-  tfo: false
-  flow: xtls-rprx-vision
-  skip-cert-verify: true
-  reality-opts:
-    public-key: 77HTpkO_F3cUfA5Trka3eSh8V18atRMLyclGqZ__8C8
-    short-id: b73c53b18b65dd90
-  servername: www.apple.com
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-  name: 01｜  4.9M｜vless
-- alterId: 0
-  cipher: auto
-  http-opts:
-    method: GET
-    path:
-    - /QQqun-737805443
-  network: http
-  port: 52080
-  server: 107.174.133.115
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: e7fb8bc6-5e0a-4e64-86cc-eb0ddd7ef4dd
-  name: 02｜  4.3M｜vmess
 - alpn:
   - h3
-  client-fingerprint: chrome
-  network: ws
-  password: bpb-trojan
+  auth: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  down: 200
+  obfs: salamander
+  obfs-password: e3ymhs6gbzptjysj
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
   port: 443
-  server: russia.com
-  skip-cert-verify: false
-  sni: kargar001.pages.dev
-  type: trojan
-  udp: true
-  ws-opts:
-    headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36
-    path: /tr?ed=2560
-  name: 03｜  3.8M｜trojan
-- type: vmess
-  network: ws
-  server: dp8yk.xiaoyan.io
-  port: 16616
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  skip-cert-verify: false
-  tls: false
-  alterId: 0
-  cipher: auto
-  ws-opts:
-    headers:
-      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
-    path: /
-  name: 04｜  3.4M｜vmess
-- server: rtifgjdr.df6h451rh.xin
-  port: 443
-  type: anytls
-  password: 2902c46c8493
-  udp: true
-  sni: docs.microsoft.com
+  server: dg3rb.ianai.it.com
   skip-cert-verify: true
-  name: 05｜  3.4M｜anytls
-- type: vmess
-  server: 39.108.113.127
-  port: 10086
-  uuid: a625d148-e988-4008-b957-e9051a6371d2
-  cipher: auto
-  alterId: 0
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-  name: 06｜  3.2M｜vmess
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 16617
-  server: afzuv.xiaoyan.io
-  skip-cert-verify: true
-  tls: false
-  type: vmess
+  sni: dg3rb.ianai.it.com
+  type: hysteria2
   udp: true
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
-    path: /
-  name: 07｜  3.2M｜vmess
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 16616
-  server: afzuv.xiaoyan.io
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
-    path: /
-  name: 08｜  3.1M｜vmess
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  network: ws
-  port: 16617
-  server: d1eyz.xiaoyan.io
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
-    path: /
-  name: 09｜  2.8M｜vmess
+  up: 100
+  name: 01｜  1.6M｜hysteria2
 - type: hysteria
   server: 137.175.82.41
   port: 20022
@@ -180,89 +64,7 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 10｜  2.5M｜hysteria
-- alterId: 0
-  cipher: auto
-  http-opts:
-    headers:
-      Host:
-      - mmsc.vnet.mobi
-    method: GET
-    path:
-    - /3x
-  network: http
-  port: 52080
-  server: 192.204.58.87
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 700dc5c3-9b7b-4ac8-8ee5-010ca3d03789
-  name: 11｜  1.4M｜vmess
-- server: 116.213.43.43
-  port: 11103
-  type: vless
-  uuid: bb836d81-d0c5-4f01-a584-806cdf65e36a
-  tls: true
-  tfo: false
-  flow: xtls-rprx-vision
-  skip-cert-verify: true
-  reality-opts:
-    public-key: 5NNdXPMTBLP-xeDKFwcG-j6u-c4DhXIfnlHMqMJZ4n4
-    short-id: 9564e1a7a1cf8b3a
-  servername: www.apple.com
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-  name: 12｜  1.1M｜vless
-- server: 116.213.43.43
-  port: 11107
-  type: vless
-  uuid: 08a37d1f-7bf1-4b5d-a2ec-5ced6a633d7f
-  tls: true
-  tfo: false
-  flow: xtls-rprx-vision
-  skip-cert-verify: true
-  reality-opts:
-    public-key: 6GRzkPbs12fKBdBBFzs5dmtmbSHCXMngUCBKLrXYm3U
-    short-id: e2ccd8eedcbee2ce
-  servername: www.apple.com
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-  name: 13｜  0.7M｜vless
-- server: 116.213.43.43
-  port: 11102
-  type: vless
-  uuid: 530d31fc-2690-49e4-bfc9-3f991e145008
-  tls: true
-  tfo: false
-  flow: xtls-rprx-vision
-  skip-cert-verify: true
-  reality-opts:
-    public-key: oW6HMjniDmBJdjGKwhBAIS2zMS1VvHORubh9vdazqQ0
-    short-id: ed571d022f7bc3bf
-  servername: www.apple.com
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-  name: 14｜  0.7M｜vless
-- server: 47.243.230.253
-  port: 443
-  type: vless
-  uuid: 27c26119-090b-4ae3-80d2-e9f08a575862
-  tls: true
-  tfo: false
-  flow: xtls-rprx-vision
-  skip-cert-verify: true
-  reality-opts:
-    public-key: NNBFlHVb2xbmURjkxXCZfqZNFmd5MprUtg5usEg_LRw
-    short-id: 58d234c8c6a009bc
-  servername: www.apple.com
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-  name: 15｜  0.6M｜vless
+  name: 02｜  1.0M｜hysteria
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -270,39 +72,13 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  4.9M｜vless
-  - 02｜  4.3M｜vmess
-  - 03｜  3.8M｜trojan
-  - 04｜  3.4M｜vmess
-  - 05｜  3.4M｜anytls
-  - 06｜  3.2M｜vmess
-  - 07｜  3.2M｜vmess
-  - 08｜  3.1M｜vmess
-  - 09｜  2.8M｜vmess
-  - 10｜  2.5M｜hysteria
-  - 11｜  1.4M｜vmess
-  - 12｜  1.1M｜vless
-  - 13｜  0.7M｜vless
-  - 14｜  0.7M｜vless
-  - 15｜  0.6M｜vless
+  - 01｜  1.6M｜hysteria2
+  - 02｜  1.0M｜hysteria
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  4.9M｜vless
-  - 02｜  4.3M｜vmess
-  - 03｜  3.8M｜trojan
-  - 04｜  3.4M｜vmess
-  - 05｜  3.4M｜anytls
-  - 06｜  3.2M｜vmess
-  - 07｜  3.2M｜vmess
-  - 08｜  3.1M｜vmess
-  - 09｜  2.8M｜vmess
-  - 10｜  2.5M｜hysteria
-  - 11｜  1.4M｜vmess
-  - 12｜  1.1M｜vless
-  - 13｜  0.7M｜vless
-  - 14｜  0.7M｜vless
-  - 15｜  0.6M｜vless
+  - 01｜  1.6M｜hysteria2
+  - 02｜  1.0M｜hysteria
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
