@@ -36,46 +36,58 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- server: 5641sdds.df6h451rh.xin
-  port: 443
-  type: anytls
-  password: 0324fbc29561
-  client-fingerprint: chrome
-  udp: true
-  sni: images.ctfassets.net
-  skip-cert-verify: true
-  name: 01｜  4.1M｜anytls
-- type: vless
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
   network: ws
-  server: 104.26.7.96
-  port: 8443
-  uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
-  servername: edgetunnel-pages-di9.pages.dev
-  skip-cert-verify: false
-  tls: true
+  port: 16641
+  server: p6-olduser.linuxlh.xin
+  skip-cert-verify: true
+  tls: false
+  type: vmess
   udp: true
-  tfo: false
-  client-fingerprint: chrome
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
   ws-opts:
     headers:
-      Host: edgetunnel-pages-di9.pages.dev
-  name: 02｜  3.7M｜vless
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: v4-clequinix-globalinetforallalwaysandneverbanyoubelieveme-com
-  network: grpc
-  port: 443
-  server: 109.248.17.252
-  servername: v4.clequinix.globalinetforallalwaysandneverbanyoubelieveme.com
-  tls: true
-  type: vless
+      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+    path: /
+  name: 01｜  3.5M｜vmess
+- alterId: '0'
+  cipher: auto
+  network: ws
+  port: 16622
+  server: byr3a.xiaoyan.io
+  skip-cert-verify: false
+  tls: false
+  type: vmess
   udp: true
-  uuid: 9000a7f3-df2a-49a8-ae56-3e7777bd32f7
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
+  ws-opts:
+    headers:
+      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+    path: /
   xudp: true
-  name: 03｜  3.6M｜vless
+  name: 02｜  3.0M｜vmess
+- alterId: 0
+  cipher: auto
+  network: ws
+  port: 16632
+  server: pdmv4.xiaoyan.io
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 904f0569-8695-466f-97cf-0de2face1b46
+  ws-opts:
+    headers:
+      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
+    path: /
+  xudp: true
+  name: 03｜  2.2M｜vmess
 - type: hysteria
-  server: 137.175.82.41
-  port: 20022
+  server: 38.6.222.132
+  port: 11008
   password: dongtaiwang.com
   tls: true
   servername: bing.com
@@ -86,60 +98,31 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-  name: 04｜  3.5M｜hysteria
+  name: 04｜  1.8M｜hysteria
 - password: 2902c46c8493
   port: 443
   server: er8u54dh.df6h451rh.xin
   skip-cert-verify: true
   sni: px.ads.linkedin.com
   type: anytls
-  name: 05｜  3.4M｜anytls
-- server: a54ge.df6h451rh.xin
-  port: 443
-  type: anytls
-  password: 0324fbc29561
-  client-fingerprint: chrome
-  udp: true
-  sni: docs.microsoft.com
-  skip-cert-verify: true
-  name: 06｜  3.2M｜anytls
-- server: 14.44.19.57
-  port: 12101
-  type: vless
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-  tls: true
-  tfo: false
-  skip-cert-verify: true
-  servername: senflarelink-node-nwz76h.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: senflarelink-node-nwz76h.pages.dev
-    v2ray-http-upgrade: false
-  udp: true
-  name: 07｜  3.1M｜vless
-- server: 31.77.142.19
+  name: 05｜  1.3M｜anytls
+- server: 196.196.208.22
   port: 443
   type: vless
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  uuid: cae99415-10a6-4317-81bd-19a4586b5d76
   tls: true
-  servername: calendarbaseline.lucheeebezlimitnoekino.stream
+  reality-opts:
+    public-key: _yJGJ5q-8IxTuWFcoy5wpKKYtk9p9q4lQ6svfXC1IUU
+    short-id: 621290c77645b731
+  servername: 9303d6x.fi-p1b.h1clayd.click
   client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /media/ws/
+  network: xhttp
+  xhttp-opts:
+    path: /f57a81c99fea
+    host: 9303d6x.fi-p1b.h1clayd.click
+    mode: auto
   udp: true
-  name: 08｜  2.2M｜vless
-- server: nu2rb.supertoolify.com
-  port: 443
-  type: trojan
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  sni: nu2rb.supertoolify.com
-  skip-cert-verify: true
-  udp: true
-  name: 09｜  1.5M｜trojan
+  name: 06｜  0.8M｜vless
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -147,27 +130,21 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  4.1M｜anytls
-  - 02｜  3.7M｜vless
-  - 03｜  3.6M｜vless
-  - 04｜  3.5M｜hysteria
-  - 05｜  3.4M｜anytls
-  - 06｜  3.2M｜anytls
-  - 07｜  3.1M｜vless
-  - 08｜  2.2M｜vless
-  - 09｜  1.5M｜trojan
+  - 01｜  3.5M｜vmess
+  - 02｜  3.0M｜vmess
+  - 03｜  2.2M｜vmess
+  - 04｜  1.8M｜hysteria
+  - 05｜  1.3M｜anytls
+  - 06｜  0.8M｜vless
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  4.1M｜anytls
-  - 02｜  3.7M｜vless
-  - 03｜  3.6M｜vless
-  - 04｜  3.5M｜hysteria
-  - 05｜  3.4M｜anytls
-  - 06｜  3.2M｜anytls
-  - 07｜  3.1M｜vless
-  - 08｜  2.2M｜vless
-  - 09｜  1.5M｜trojan
+  - 01｜  3.5M｜vmess
+  - 02｜  3.0M｜vmess
+  - 03｜  2.2M｜vmess
+  - 04｜  1.8M｜hysteria
+  - 05｜  1.3M｜anytls
+  - 06｜  0.8M｜vless
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
