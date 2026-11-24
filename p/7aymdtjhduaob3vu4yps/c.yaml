@@ -36,93 +36,174 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- alpn:
-  - ''
+- obfs: salamander
+  obfs-password: 6fltjteoyab7fjf1
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  port: 40055
+  server: 64.118.154.18
+  servername: psstatic.cdn.bcebos.com
+  skip-cert-verify: true
+  sni: psstatic.cdn.bcebos.com
+  type: hysteria2
+  udp: true
+  name: 01｜  2.0M｜hysteria2
+- server: uk2-2.998998.best
+  port: 443
+  type: vmess
+  uuid: bfc876fe-ecbc-4c13-a969-4b757e9e76fb
   alterId: 0
   cipher: auto
-  network: ws
-  port: 16641
-  server: p6-olduser.linuxlh.xin
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
-    path: /
-  name: 01｜  3.5M｜vmess
-- alterId: '0'
-  cipher: auto
-  network: ws
-  port: 16622
-  server: byr3a.xiaoyan.io
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
-    path: /
-  xudp: true
-  name: 02｜  3.0M｜vmess
-- alterId: 0
-  cipher: auto
-  network: ws
-  port: 16632
-  server: pdmv4.xiaoyan.io
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 904f0569-8695-466f-97cf-0de2face1b46
-  ws-opts:
-    headers:
-      Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com
-    path: /
-  xudp: true
-  name: 03｜  2.2M｜vmess
-- type: hysteria
-  server: 38.6.222.132
-  port: 11008
-  password: dongtaiwang.com
   tls: true
-  servername: bing.com
-  sni: bing.com
   skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
-  name: 04｜  1.8M｜hysteria
-- password: 2902c46c8493
+  servername: server3.9966338.xyz
+  network: ws
+  ws-opts:
+    path: /waetasiuofguiwer?ed=2560
+    headers:
+      Host: server3.9966338.xyz
+  udp: true
+  name: 02｜  1.9M｜vmess
+- server: eu2.998998.best
   port: 443
-  server: er8u54dh.df6h451rh.xin
+  type: vmess
+  uuid: bfc876fe-ecbc-4c13-a969-4b757e9e76fb
+  alterId: 0
+  cipher: auto
+  tls: true
   skip-cert-verify: true
-  sni: px.ads.linkedin.com
-  type: anytls
-  name: 05｜  1.3M｜anytls
-- server: 196.196.208.22
+  servername: server47.9966338.xyz
+  network: ws
+  ws-opts:
+    path: /socks
+    headers:
+      Host: server47.9966338.xyz
+  udp: true
+  name: 03｜  1.6M｜vmess
+- cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  port: 443
+  server: 47.254.167.157
+  type: ss
+  name: 04｜  1.6M｜ss
+- type: anytls
+  server: 5641sdds.df6h451rh.xin
+  port: 443
+  password: 0324fbc29561
+  tls: true
+  servername: images.ctfassets.net
+  sni: images.ctfassets.net
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  name: 05｜  1.2M｜anytls
+- server: mix2.998998.best
+  port: 443
+  type: vmess
+  uuid: bfc876fe-ecbc-4c13-a969-4b757e9e76fb
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: server10.9966338.xyz
+  network: ws
+  ws-opts:
+    path: /rthiugoyretdsuigg?ed=2560
+    headers:
+      Host: server10.9966338.xyz
+  udp: true
+  name: 06｜  1.1M｜vmess
+- server: 13.141.36.75
   port: 443
   type: vless
-  uuid: cae99415-10a6-4317-81bd-19a4586b5d76
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   tls: true
   reality-opts:
-    public-key: _yJGJ5q-8IxTuWFcoy5wpKKYtk9p9q4lQ6svfXC1IUU
-    short-id: 621290c77645b731
-  servername: 9303d6x.fi-p1b.h1clayd.click
-  client-fingerprint: firefox
+    public-key: jhVdP7NFUaEXGfrmOqJlMCHTvqn3fymbzPfPT6NO4i0
+    short-id: f72d4a2c7cbbacb1
+  servername: 80cb66x.nl13.h1clayd.click
+  client-fingerprint: chrome
   network: xhttp
   xhttp-opts:
-    path: /f57a81c99fea
-    host: 9303d6x.fi-p1b.h1clayd.click
+    path: /d610f026b146
+    host: 80cb66x.nl13.h1clayd.click
     mode: auto
   udp: true
-  name: 06｜  0.8M｜vless
+  name: 07｜  1.0M｜vless
+- cipher: 2022-blake3-chacha20-poly1305
+  password: 1KRWYoNOBU1OXV+dLChiRageSP9uIRY2wsJPieRC7kY=
+  port: 50356
+  server: 129.146.200.42
+  type: ss
+  udp: true
+  name: 08｜  0.9M｜ss
+- server: uk3-2.998998.best
+  port: 443
+  type: vmess
+  uuid: bfc876fe-ecbc-4c13-a969-4b757e9e76fb
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: server22.9966338.xyz
+  network: ws
+  ws-opts:
+    path: /serhrdftshg?ed=2560
+    headers:
+      Host: server22.9966338.xyz
+  udp: true
+  name: 09｜  0.9M｜vmess
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  port: 24667
+  protocol: udp
+  server: 62.210.124.132
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+  name: 10｜  0.9M｜hysteria
+- type: anytls
+  server: rtifgjdr.df6h451rh.xin
+  port: 443
+  password: 2902c46c8493
+  tls: true
+  servername: docs.microsoft.com
+  sni: docs.microsoft.com
+  skip-cert-verify: true
+  name: 11｜  0.8M｜anytls
+- type: vless
+  server: 79.110.231.7
+  port: 443
+  uuid: fe38b644-d563-46a5-855d-a9dec4fe88d4
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.yahoo.co.jp
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: sg0tdkCXEdTLIya2MRKcvlqF6whA5fBNWZeFBNR9TGI
+    short-id: 6437318ca6efde86
+  name: 12｜  0.6M｜vless
+- server: us2-2.998998.best
+  port: 443
+  type: vless
+  uuid: bfc876fe-ecbc-4c13-a969-4b757e9e76fb
+  tls: true
+  servername: server6.9966338.xyz
+  network: ws
+  ws-opts:
+    path: /fiughoieuhti834t90?ed=2560
+    headers:
+      Host: server6.9966338.xyz
+  udp: true
+  name: 13｜  0.5M｜vless
+- server: 47.85.227.36
+  port: 443
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 3NBsnBLanPfG6i3S2GTHineswr6EeSJPb0PCeMQoGoA=
+  udp: true
+  name: 14｜  0.5M｜ss
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -130,21 +211,37 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  3.5M｜vmess
-  - 02｜  3.0M｜vmess
-  - 03｜  2.2M｜vmess
-  - 04｜  1.8M｜hysteria
-  - 05｜  1.3M｜anytls
-  - 06｜  0.8M｜vless
+  - 01｜  2.0M｜hysteria2
+  - 02｜  1.9M｜vmess
+  - 03｜  1.6M｜vmess
+  - 04｜  1.6M｜ss
+  - 05｜  1.2M｜anytls
+  - 06｜  1.1M｜vmess
+  - 07｜  1.0M｜vless
+  - 08｜  0.9M｜ss
+  - 09｜  0.9M｜vmess
+  - 10｜  0.9M｜hysteria
+  - 11｜  0.8M｜anytls
+  - 12｜  0.6M｜vless
+  - 13｜  0.5M｜vless
+  - 14｜  0.5M｜ss
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  3.5M｜vmess
-  - 02｜  3.0M｜vmess
-  - 03｜  2.2M｜vmess
-  - 04｜  1.8M｜hysteria
-  - 05｜  1.3M｜anytls
-  - 06｜  0.8M｜vless
+  - 01｜  2.0M｜hysteria2
+  - 02｜  1.9M｜vmess
+  - 03｜  1.6M｜vmess
+  - 04｜  1.6M｜ss
+  - 05｜  1.2M｜anytls
+  - 06｜  1.1M｜vmess
+  - 07｜  1.0M｜vless
+  - 08｜  0.9M｜ss
+  - 09｜  0.9M｜vmess
+  - 10｜  0.9M｜hysteria
+  - 11｜  0.8M｜anytls
+  - 12｜  0.6M｜vless
+  - 13｜  0.5M｜vless
+  - 14｜  0.5M｜ss
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
