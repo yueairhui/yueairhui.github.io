@@ -36,185 +36,50 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
 proxies:
-- server: vl-x2.qz10086.top
-  port: 37998
-  type: vless
-  uuid: d235ad20-8f30-441e-871e-ee2695e4c430
-  tls: true
-  packet-encoding: xudp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: j7lihAdLvNKWg67WMGQsRSM8WFbaUK5dAi7D2R7iXHM
-    short-id: d5a01375
-  servername: www.apple.com
-  client-fingerprint: firefox
-  network: tcp
-  name: 01｜  5.9M｜vless
-- type: anytls
-  server: ibsdsf.df6h451rh.xin
-  port: 443
-  password: 2902c46c8493
-  tls: true
-  servername: docs.microsoft.com
-  sni: docs.microsoft.com
-  skip-cert-verify: true
-  name: 02｜  4.5M｜anytls
-- server: vl-x2.qz10086.top
-  port: 38101
-  type: vless
-  uuid: d235ad20-8f30-441e-871e-ee2695e4c430
-  tls: true
-  packet-encoding: xudp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: j7lihAdLvNKWg67WMGQsRSM8WFbaUK5dAi7D2R7iXHM
-    short-id: d5a01375
-  servername: www.apple.com
-  client-fingerprint: firefox
-  network: tcp
-  name: 03｜  3.9M｜vless
-- server: 71b840t.de7.h1clayd.click
+- server: 185.134.203.106
   port: 443
   type: vless
-  uuid: 26843758-24de-4f76-b5d0-624038e353c4
+  uuid: 3af3f8f0-569f-4dd3-be99-2ef4bfe7867c
   tls: true
+  flow: xtls-rprx-vision
   reality-opts:
-    public-key: 3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE
-    short-id: e572b6579ea525d4
-  servername: 71b840t.de7.h1clayd.click
+    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
+    short-id: db04ce8bdb8900f1
+  servername: api.vk.me
   client-fingerprint: chrome
   network: tcp
   udp: true
-  name: 04｜  3.8M｜vless
+  name: 01｜  5.0M｜vless
+- password: 2902c46c8493
+  port: 443
+  server: rtifgjdr.df6h451rh.xin
+  skip-cert-verify: true
+  sni: docs.microsoft.com
+  type: anytls
+  udp: true
+  name: 02｜  3.5M｜anytls
 - client-fingerprint: chrome
-  network: tcp
+  password: 0324fbc29561
+  port: 443
+  server: 5641sdds.df6h451rh.xin
+  skip-cert-verify: true
+  sni: images.ctfassets.net
+  type: anytls
+  udp: true
+  name: 03｜  2.4M｜anytls
+- server: 156.229.167.109
   port: 8443
+  type: vless
+  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
+  tls: true
   reality-opts:
     public-key: 4g6gX0ueJap7pY_iTDx23h6bzo3KIOTcFzP1Uacn0QA
     short-id: 4ad2e4e660550e43
-  server: 156.229.167.109
   servername: github.githubassets.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
-  name: 05｜  3.7M｜vless
-- alpn:
-  - h3
-  auth_str: dongtaiwang.com
-  down: '50'
-  obfs: ''
-  port: 24667
-  protocol: ''
-  server: 62.210.70.191
-  skip-cert-verify: true
-  sni: ''
-  type: hysteria
-  up: '10'
-  name: 06｜  3.7M｜hysteria
-- server: 13.140.95.76
-  port: 2087
-  type: vless
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-  tls: true
-  tfo: false
-  skip-cert-verify: true
-  servername: senflarelink-node-6b9.pages.dev
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: senflarelink-node-6b9.pages.dev
-    v2ray-http-upgrade: false
-  udp: true
-  name: 07｜  3.4M｜vless
-- server: vl-x2.qz10086.top
-  port: 38105
-  type: vless
-  uuid: d235ad20-8f30-441e-871e-ee2695e4c430
-  tls: true
-  packet-encoding: xudp
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: y0p1yI8OoWqcOE4XEv7ueudaSOOc5UIb5yFyA3SstD8
-    short-id: 7e7e8c23
-  servername: www.apple.com
-  client-fingerprint: firefox
   network: tcp
-  name: 08｜  3.0M｜vless
-- server: rtifgjdr.df6h451rh.xin
-  port: 443
-  type: anytls
-  password: 2902c46c8493
   udp: true
-  sni: docs.microsoft.com
-  skip-cert-verify: true
-  name: 09｜  2.8M｜anytls
-- server: 14.44.19.57
-  port: 12101
-  type: vless
-  uuid: b69cf773-da16-486e-afce-a45b94f998b3
-  tls: true
-  tfo: false
-  skip-cert-verify: true
-  servername: senflarelink-node-nwz76h.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: senflarelink-node-nwz76h.pages.dev
-    v2ray-http-upgrade: false
-  udp: true
-  name: 10｜  2.5M｜vless
-- server: sdf65h46wr.df6h451rh.xin
-  port: 443
-  type: anytls
-  password: 0324fbc29561
-  udp: true
-  sni: images.ctfassets.net
-  skip-cert-verify: true
-  name: 11｜  2.2M｜anytls
-- encryption: mlkem768x25519plus.native.0rtt.i-mCIgozdUXjdnvwa_1h7C1tM-A4lq45e1XfJTCQawk
-  http-opts:
-    headers:
-      Host:
-      - play.googleapis.com
-    path:
-    - /
-  network: http
-  port: 8443
-  server: tr.subscriptionservice.ir
-  type: vless
-  udp: true
-  uuid: c28b9935-9392-48e9-947a-abad1ad9c933
-  xudp: true
-  name: 12｜  2.0M｜vless
-- type: anytls
-  server: a54ge.df6h451rh.xin
-  port: 443
-  password: 0324fbc29561
-  tls: true
-  servername: docs.microsoft.com
-  sni: docs.microsoft.com
-  skip-cert-verify: true
-  client-fingerprint: chrome
-  name: 13｜  1.3M｜anytls
-- type: vless
-  server: 43.163.112.174
-  port: 443
-  udp: true
-  skip-cert-verify: true
-  uuid: 0dedd47d-47b9-4ed1-9c9f-cbeecad57a68
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: mXQudYHNu0pebcdk1_qn-UgcmwhjaV7y9UrYu3HX7Rg
-    short-id: 0123456789abcdef
-  name: 14｜  0.6M｜vless
+  name: 04｜  2.3M｜vless
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -222,37 +87,17 @@ proxy-groups:
   - 🔯 故障转移
   - ♻️ 自动选择
   - DIRECT
-  - 01｜  5.9M｜vless
-  - 02｜  4.5M｜anytls
-  - 03｜  3.9M｜vless
-  - 04｜  3.8M｜vless
-  - 05｜  3.7M｜vless
-  - 06｜  3.7M｜hysteria
-  - 07｜  3.4M｜vless
-  - 08｜  3.0M｜vless
-  - 09｜  2.8M｜anytls
-  - 10｜  2.5M｜vless
-  - 11｜  2.2M｜anytls
-  - 12｜  2.0M｜vless
-  - 13｜  1.3M｜anytls
-  - 14｜  0.6M｜vless
+  - 01｜  5.0M｜vless
+  - 02｜  3.5M｜anytls
+  - 03｜  2.4M｜anytls
+  - 04｜  2.3M｜vless
 - name: 🔯 故障转移
   type: fallback
   proxies: &id001
-  - 01｜  5.9M｜vless
-  - 02｜  4.5M｜anytls
-  - 03｜  3.9M｜vless
-  - 04｜  3.8M｜vless
-  - 05｜  3.7M｜vless
-  - 06｜  3.7M｜hysteria
-  - 07｜  3.4M｜vless
-  - 08｜  3.0M｜vless
-  - 09｜  2.8M｜anytls
-  - 10｜  2.5M｜vless
-  - 11｜  2.2M｜anytls
-  - 12｜  2.0M｜vless
-  - 13｜  1.3M｜anytls
-  - 14｜  0.6M｜vless
+  - 01｜  5.0M｜vless
+  - 02｜  3.5M｜anytls
+  - 03｜  2.4M｜anytls
+  - 04｜  2.3M｜vless
   url: http://www.gstatic.com/generate_204
   interval: 120
 - name: ♻️ 自动选择
